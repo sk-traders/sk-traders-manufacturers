@@ -44,13 +44,14 @@ nav a {
   font-weight: 500;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
   height: 85vh;
   background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
   url("../assets/images/hero-industrial-machinery.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
+  justify-content: flex-start;   /* 🔥 THIS IS THE REAL FIX */
   margin-top: 70px;
 }
 
