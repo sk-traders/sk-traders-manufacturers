@@ -453,3 +453,12 @@ footer .container > div + div {
   }
 
 }
+
+/* ABOUT PAGE HERO ONLY */
+.about-hero {
+  height: 650px;
+  background-image: url("../assets/images/about-hero-factory.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
