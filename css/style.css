@@ -307,3 +307,38 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== FOOTER COLUMN DIVIDERS ===== */
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  position: relative;
+}
+
+.site-footer .footer-col {
+  position: relative;
+  padding-right: 30px;
+}
+
+/* vertical line between columns */
+.site-footer .footer-col:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 1px;
+  height: 80%;
+  background: #e5e7eb; /* light grey line */
+}
+
+/* mobile clean */
+@media (max-width: 768px) {
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer .footer-col::after {
+    display: none;
+  }
+}
