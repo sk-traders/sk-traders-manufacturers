@@ -374,3 +374,28 @@ footer .container > div + div {
     padding-left: 0;
   }
 }
+
+/* ===== FOOTER COLUMN DIVIDERS (SAFE GRID METHOD) ===== */
+
+.footer-grid {
+  position: relative;
+}
+
+.footer-grid > div {
+  position: relative;
+  padding-left: 30px;
+}
+
+.footer-grid > div:first-child {
+  padding-left: 0;
+}
+
+.footer-grid > div:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: #e0e0e0;
+}
