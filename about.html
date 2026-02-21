@@ -1,248 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>About Us | SK Traders & Manufacturers</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>About Us | SK Traders & Manufacturers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-color:#111;
-background:#fff;
-}
-
-/* ================= HEADER (SAME STYLE CLEAN) ================= */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-background:#fff;
-border-bottom:1px solid #eee;
-}
-
-header img{
-height:45px;
-}
-
-nav a{
-text-decoration:none;
-margin-left:28px;
-color:#111;
-font-weight:500;
-}
-
-nav a:hover{
-color:#e11d48;
-}
-
-/* ================= HERO ================= */
-
-.about-hero{
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
-padding:80px 8%;
-background:#f5f7fa;
-gap:60px;
-}
-
-.about-hero h1{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-.about-hero p{
-font-size:1.05rem;
-line-height:1.8;
-}
-
-.about-hero img{
-width:100%;
-border-radius:18px;
-}
-
-/* ================= SECTION BASE ================= */
-
-.section{
-padding:80px 8%;
-}
-
-.section h2{
-font-size:2.2rem;
-margin-bottom:30px;
-}
-
-/* ================= WHO WE ARE ================= */
-
-.who-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.who-grid img{
-width:100%;
-border-radius:18px;
-}
-
-.who-grid p{
-font-size:1.05rem;
-line-height:1.9;
-}
-
-/* ================= INDUSTRIES (UNCHANGED + HOVER) ================= */
-
-.industries{
-background:#f9fafb;
-}
-
-.industry-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.industry-card{
-background:#fff;
-padding:25px;
-border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.06);
-transition:0.3s ease;
-}
-
-.industry-card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.12);
-}
-
-.industry-card h4{
-margin-bottom:10px;
-}
-
-.industry-card p{
-font-size:0.95rem;
-line-height:1.6;
-}
-
-/* ================= WHY CHOOSE US ================= */
-
-.why{
-background:#f3f4f6;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.why-card{
-background:#fff;
-padding:25px;
-border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.06);
-transition:0.3s ease;
-}
-
-.why-card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.12);
-}
-
-.why-card h4{
-margin-bottom:10px;
-}
-
-/* ================= FOOTER (WHITE SAME FOR ALL) ================= */
-
-footer{
-background:#fff;
-padding:60px 8% 30px;
-border-top:1px solid #eee;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:2fr 1fr 1fr 1.2fr;
-gap:40px;
-}
-
-footer h4{
-margin-bottom:15px;
-}
-
-footer a{
-display:block;
-text-decoration:none;
-color:#111;
-margin-bottom:8px;
-font-size:0.95rem;
-}
-
-.footer-bottom{
-text-align:center;
-margin-top:40px;
-font-size:0.9rem;
-color:#666;
-}
-</style>
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <!-- ================= HEADER ================= -->
-
-<header>
-<img src="assets/images/logo.png" alt="SK Logo">
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="products.html">Products</a>
-<a href="contact.html">Contact</a>
-</nav>
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="SK Traders & Manufacturers">
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <!-- ================= HERO ================= -->
-
-<section class="about-hero">
-<div>
-<h1>15+ Years of Industrial Supply Excellence</h1>
-<p>
-SK Traders & Manufacturers is a trusted supplier of industrial adhesives, tapes and packaging materials serving manufacturing, construction and warehousing industries across Delhi NCR. We also supply selected Acrabond adhesive solutions for demanding industrial applications, ensuring reliability, performance and consistent supply for industrial clients.
-</p>
-</div>
-
-<img src="assets/images/factory-interior-blue.jpg" alt="Industrial Factory">
+<section class="about-hero" style="
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('assets/images/hero-industrial-machinery.jpg')
+    center/cover no-repeat;
+">
+  <div class="about-hero-content">
+    <h1>15+ Years of Industrial Supply Excellence</h1>
+    <p>
+      SK Traders & Manufacturers is a trusted supplier of industrial adhesives,
+      tapes and packaging materials serving manufacturing, construction and
+      warehousing industries across Delhi NCR.
+    </p>
+  </div>
 </section>
 
 <!-- ================= WHO WE ARE ================= -->
+<section class="about-section">
+  <div class="about-container">
 
-<section class="section">
-<h2>Who We Are</h2>
-<div class="who-grid">
-<p>
-Based in Noida, SK Traders & Manufacturers has been supporting industrial clients for over 15 years with a strong focus on reliability, consistency and bulk supply capability. We specialise in industrial adhesives, industrial tapes and complete packaging consumables designed for high-performance manufacturing, warehousing and commercial environments. Our portfolio includes bonding solutions, sealing tapes and packaging materials trusted by factories, warehouses and commercial operations across multiple sectors. With a clear understanding of industrial operations and supply chain demands, we ensure competitive pricing, dependable delivery and long-term partnership support for our clients.
-</p>
+    <div class="about-text">
+      <h2>Who We Are</h2>
+      <p>
+        Based in Noida, SK Traders & Manufacturers has been supporting industrial
+        clients for over 15 years with a strong focus on reliability, consistency
+        and bulk supply capability.
+      </p>
+      <p>
+        We specialise in industrial adhesives, industrial tapes and complete
+        packaging consumables designed for high-performance manufacturing,
+        warehousing and commercial environments.
+      </p>
+      <p>
+        Our long-term partnerships are built on dependable supply, competitive
+        pricing and a clear understanding of industrial operations.
+      </p>
+    </div>
 
-<img src="assets/images/warehouse-packaging-work.jpg" alt="Warehouse Work">
-</div>
+    <div class="about-image">
+      <img src="assets/images/warehouse-packaging-work.jpg" alt="Warehouse Operations">
+    </div>
+
+  </div>
 </section>
 
- <section class="mission-vision-section">
+<!-- ================= MISSION / VISION ================= -->
+<section class="mission-vision-section">
   <div class="mv-container">
 
     <div class="mv-box">
       <h3>Our Mission</h3>
       <p>
-        Our mission is to deliver reliable, high-quality industrial adhesives,
-        tapes and packaging materials that support uninterrupted manufacturing
-        and commercial operations. We focus on consistent supply, competitive
-        pricing and long-term partnership support for our clients.
+        To deliver reliable, high-quality industrial adhesives, tapes and
+        packaging materials that support uninterrupted manufacturing and
+        commercial operations. We focus on consistent supply, competitive pricing
+        and long-term partnership support.
       </p>
     </div>
 
@@ -251,10 +90,9 @@ Based in Noida, SK Traders & Manufacturers has been supporting industrial client
     <div class="mv-box">
       <h3>Our Vision</h3>
       <p>
-        Our vision is to become a trusted industrial supply partner for
-        manufacturing, construction, warehousing and logistics sectors across
-        Delhi NCR by delivering dependable solutions, adapting to evolving
-        industry needs and maintaining strong service standards.
+        To become a trusted industrial supply partner for manufacturing,
+        construction, warehousing and logistics sectors across Delhi NCR by
+        delivering dependable solutions and maintaining strong service standards.
       </p>
     </div>
 
@@ -262,132 +100,66 @@ Based in Noida, SK Traders & Manufacturers has been supporting industrial client
 </section>
 
 <!-- ================= INDUSTRIES ================= -->
+<section class="industries-section">
+  <h2>Industries We Serve</h2>
 
-<section class="section industries">
-<h2>Industries We Serve</h2>
-<div class="industry-grid">
-
-<div class="industry-card">
-<h4>Manufacturing</h4>
-<p>Heavy-duty adhesives, industrial tapes and consumables for production, assembly, sealing and precision bonding environments.</p>
-</div>
-
-<div class="industry-card">
-<h4>Construction</h4>
-<p>Bonding and sealing solutions for flooring, interiors, structural applications and construction-grade durability.</p>
-</div>
-
-<div class="industry-card">
-<h4>Automotive</h4>
-<p>Assembly tapes, surface protection and packaging solutions for automotive components and transit safety.</p>
-</div>
-
-<div class="industry-card">
-<h4>Warehousing</h4>
-<p>Complete packaging support including tapes, wraps and consumables for storage, handling and dispatch operations.</p>
-</div>
-
-<div class="industry-card">
-<h4>Packaging</h4>
-<p>High-quality packaging materials supporting bulk packing, labeling and secure shipment.</p>
-</div>
-
-<div class="industry-card">
-<h4>Logistics</h4>
-<p>Reliable packaging consumables ensuring reduced damage and smooth logistics operations across supply chains.</p>
-</div>
-
-</div>
-</section>
-
-<!-- ================= WHY ================= -->
-
-<section class="section why">
-<h2>Why Industries Choose SK Traders</h2>
-
-<div class="why-grid">
-
-<div class="why-card">
-<h4>Bulk Supply Capability</h4>
-<p>Strong sourcing network and inventory management to support continuous industrial demand.</p>
-</div>
-
-<div class="why-card">
-<h4>Consistent Product Quality</h4>
-<p>Products tested for durability, reliability and long-term industrial performance.</p>
-</div>
-
-<div class="why-card">
-<h4>Fast & Reliable Dispatch</h4>
-<p>Timely deliveries ensuring uninterrupted factory and warehouse operations.</p>
-</div>
-
-<div class="why-card">
-<h4>15+ Years Experience</h4>
-<p>Deep understanding of industrial supply chains and operational needs.</p>
-</div>
-
-<div class="why-card">
-<h4>Wide Product Range</h4>
-<p>Adhesives, tapes and packaging solutions under one reliable supply partner.</p>
-</div>
-
-<div class="why-card">
-<h4>Trusted Industrial Brands</h4>
-<p>Selected high-performance brands including Acrabond solutions.</p>
-</div>
-
-<div class="why-card">
-<h4>Competitive Bulk Pricing</h4>
-<p>Cost-effective pricing structures for long-term industrial contracts.</p>
-</div>
-
-<div class="why-card">
-<h4>Delhi NCR Focused Support</h4>
-<p>Strong regional presence ensuring quick coordination and dispatch.</p>
-</div>
-
-</div>
+  <div class="industries-grid">
+    <div class="industry-card">
+      <h4>Manufacturing</h4>
+      <p>Heavy-duty adhesives, tapes and consumables for production and assembly.</p>
+    </div>
+    <div class="industry-card">
+      <h4>Construction</h4>
+      <p>Bonding and sealing solutions for interiors and structural applications.</p>
+    </div>
+    <div class="industry-card">
+      <h4>Automotive</h4>
+      <p>Assembly tapes, surface protection and packaging solutions.</p>
+    </div>
+    <div class="industry-card">
+      <h4>Warehousing</h4>
+      <p>Complete packaging support for storage, handling and dispatch.</p>
+    </div>
+    <div class="industry-card">
+      <h4>Packaging</h4>
+      <p>High-quality materials supporting bulk packing and shipment.</p>
+    </div>
+    <div class="industry-card">
+      <h4>Logistics</h4>
+      <p>Reliable consumables ensuring reduced damage and smooth transit.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-container">
 
-<footer>
-<div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="SK Traders & Manufacturers">
+      <p>Industrial adhesives, tapes and packaging solutions for Indian industries.</p>
+    </div>
 
-<div>
-<img src="assets/images/logo.png" alt="SK Logo" style="height:45px;margin-bottom:15px;">
-<p>Industrial adhesives, tapes and packaging solutions for Indian industries.</p>
-</div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-<div>
-<h4>Quick Links</h4>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="products.html">Products</a>
-<a href="contact.html">Contact</a>
-</div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Noida, Delhi NCR</p>
+      <p>📞 +91 98710 95529</p>
+      <p>✉️ sktraders.noida011@gmail.com</p>
+    </div>
 
-<div>
-<h4>Industries</h4>
-<a>Manufacturing</a>
-<a>Construction</a>
-<a>Automotive</a>
-<a>Warehousing</a>
-</div>
+  </div>
 
-<div>
-<h4>Contact</h4>
-<p>📍 Noida, Delhi NCR</p>
-<p>📞 +91 98710 95529</p>
-<p>✉️ sktraders.noida011@gmail.com</p>
-</div>
-
-</div>
-
-<div class="footer-bottom">
-© 2026 SK Traders & Manufacturers | All Rights Reserved
-</div>
+  <div class="footer-bottom">
+    © 2026 SK Traders & Manufacturers | All Rights Reserved
+  </div>
 </footer>
 
 </body>
