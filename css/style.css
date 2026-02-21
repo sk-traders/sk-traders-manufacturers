@@ -542,3 +542,26 @@ footer .container > div + div {
 .about-hero .hero-btn {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
+
+/* ================= ABOUT HERO TEXT VISIBILITY FIX ================= */
+
+/* ONLY About page hero text */
+.about-hero .hero-content h1 {
+  color: #ffffff;
+  font-weight: 800;
+  text-shadow: 
+    0 2px 6px rgba(0,0,0,0.65),
+    0 4px 12px rgba(0,0,0,0.45);
+}
+
+.about-hero .hero-content p {
+  color: #f1f1f1;
+  font-size: 17px;
+  line-height: 1.7;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Contact button spacing */
+.about-hero .hero-btn {
+  margin-top: 22px;
+}
