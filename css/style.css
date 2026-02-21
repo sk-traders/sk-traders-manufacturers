@@ -196,3 +196,52 @@ footer {
     padding-left: 20px;
   }
 }
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 80px 0;
+}
+
+.light-bg {
+  background: #f6f7f8;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+/* ===== CARDS GRID ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ===== INFO CARDS ===== */
+.info-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.info-card p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #444;
+}
