@@ -343,7 +343,7 @@ footer {
   }
 }
 
-/* ===== FOOTER COLUMN DIVIDERS – FORCE MODE ===== */
+/* ===== FOOTER CLEAN COLUMN DIVIDERS ===== */
 footer .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -355,23 +355,35 @@ footer .container > div {
   padding-right: 30px;
 }
 
+/* REMOVE divider from empty / logo blocks */
+footer .container > div:empty,
+footer .container > div.logo,
+footer .container > div:first-child {
+  padding-right: 0;
+}
+
+footer .container > div:empty::after,
+footer .container > div.logo::after,
+footer .container > div:first-child::after {
+  display: none;
+}
+
 /* vertical divider */
 footer .container > div:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 10px;
   right: 0;
   width: 1px;
   height: 85%;
   background-color: #e0e0e0;
 }
 
-/* mobile safe */
+/* mobile */
 @media (max-width: 768px) {
   footer .container {
     grid-template-columns: 1fr;
   }
-
   footer .container > div::after {
     display: none;
   }
