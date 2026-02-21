@@ -399,3 +399,27 @@ footer .container > div + div {
   width: 1px;
   background: #e0e0e0;
 }
+
+/* ===== PRODUCTS MOBILE VIEW FIX ===== */
+@media (max-width: 768px) {
+
+  .products,
+  .product-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .product-card,
+  .products > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .product-card img,
+  .products img {
+    height: 180px !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+
+}
