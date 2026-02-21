@@ -209,3 +209,35 @@ body {
   border-radius: 10px;
   text-align: center;
 }
+
+/* ===== Mission & Vision Section ===== */
+
+.mission-vision-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.mv-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.mv-box h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.mv-box p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.mv-divider {
+  background: #ddd;
+  width: 1px;
+}
