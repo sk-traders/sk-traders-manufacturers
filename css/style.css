@@ -95,16 +95,39 @@ nav a {
   margin-bottom: 40px;
 }
 
-/* CAPABILITIES */
+/* ===== CAPABILITIES FIXED ===== */
 .capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.cap-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .cap-card img {
   width: 100%;
-  border-radius: 10px;
+  height: 280px;           /* 🔥 FIXED HEIGHT */
+  object-fit: cover;       /* 🔥 CROPS PROPERLY */
+}
+
+.cap-card h3 {
+  padding: 20px 20px 10px;
+}
+
+.cap-card p {
+  padding: 0 20px 25px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cap-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
 .cap-card h3 {
