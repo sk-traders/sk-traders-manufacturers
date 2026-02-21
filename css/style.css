@@ -245,3 +245,65 @@ footer {
   line-height: 1.7;
   color: #444;
 }
+
+/* ====== SECTION BACKGROUND ====== */
+.section-soft {
+  background: #f6f7f9;
+  padding: 80px 0;
+}
+
+/* ====== COMMON SECTION TITLE ====== */
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+/* ====== GRID 3x3 ====== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ====== BUBBLE CARD ====== */
+.bubble-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.bubble-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ====== CARD TEXT ====== */
+.bubble-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.bubble-card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
