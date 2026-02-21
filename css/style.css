@@ -1,3 +1,4 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +9,37 @@
 body {
   color: #111;
   background: #fff;
+  padding-top: 80px; /* FIXED HEADER SPACE */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= COMMON ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-light {
+  background: #f7f7f7;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 /* ================= HEADER ================= */
-header {
+.site-header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -20,61 +48,56 @@ header {
   border-bottom: 1px solid #eee;
 }
 
-.header-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 12px 20px;
+.header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
 }
 
-.header-container img {
-  height: 40px;
+.logo {
+  height: 50px;
 }
 
 nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #111;
+  margin-left: 25px;
   font-weight: 500;
 }
 
 /* ================= HERO ================= */
 .hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("../assets/images/hero-industrial-machinery.jpg") center/cover no-repeat;
+  height: 80vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("../assets/images/hero-industrial-machinery.jpg") center/cover
+      no-repeat;
   display: flex;
   align-items: center;
-  padding-top: 80px;
 }
 
 .hero-content {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
   color: #fff;
+  max-width: 650px;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
 }
 
-.hero-content p {
-  max-width: 600px;
-  line-height: 1.6;
-  margin-bottom: 25px;
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .hero-buttons a {
   display: inline-block;
+  padding: 14px 26px;
   margin-right: 15px;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 .btn-primary {
@@ -87,44 +110,96 @@ nav a {
   color: #fff;
 }
 
-/* ================= SECTION ================= */
-.section {
-  max-width: 1200px;
-  margin: auto;
-  padding: 80px 20px;
+/* ================= CAPABILITIES ================= */
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
-.section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+.cap-card img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-/* ================= WHO WE ARE ================= */
-.who-grid {
+.cap-card h3 {
+  margin: 15px 0 8px;
+}
+
+.cap-card p {
+  color: #555;
+}
+
+/* ================= INDUSTRIES ================= */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.industry-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.industry-card h4 {
+  margin-bottom: 10px;
+}
+
+/* ================= WHY CHOOSE ================= */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.why-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.why-card h4 {
+  margin-bottom: 10px;
+}
+
+/* ================= ABOUT ================= */
+.about-flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
 }
 
-.who-grid img {
+.about-flex img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
-.who-grid p {
+.about-flex p {
   line-height: 1.8;
   color: #444;
 }
 
-/* ================= MISSION VISION ================= */
-.mv-container {
-  margin-top: 60px;
-  background: #f8f9fb;
-  padding: 50px;
+/* Mission Vision */
+.mission-vision {
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
   gap: 40px;
+  margin-top: 60px;
 }
 
 .mv-divider {
@@ -135,69 +210,37 @@ nav a {
   margin-bottom: 15px;
 }
 
-/* ================= INDUSTRIES ================= */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
-}
-
-/* ================= WHY US ================= */
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
 /* ================= FOOTER ================= */
 footer {
   background: #fff;
   border-top: 1px solid #eee;
+  padding: 60px 0 30px;
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 20px;
+.footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
 }
 
-footer img {
-  height: 45px;
+.footer-logo {
+  height: 50px;
   margin-bottom: 15px;
 }
 
-footer h4 {
-  margin-bottom: 12px;
+.footer-grid h4 {
+  margin-bottom: 15px;
 }
 
-footer a {
-  display: block;
-  text-decoration: none;
+.footer-grid p,
+.footer-grid li {
   color: #555;
-  margin-bottom: 6px;
-  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .footer-bottom {
   text-align: center;
-  padding: 15px;
-  font-size: 13px;
+  margin-top: 40px;
   color: #777;
-  border-top: 1px solid #eee;
+  font-size: 14px;
 }
