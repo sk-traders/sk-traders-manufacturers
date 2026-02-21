@@ -423,3 +423,33 @@ footer .container > div + div {
   }
 
 }
+
+/* ===== UNIVERSAL MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  section {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .products,
+  .product-grid,
+  .container,
+  .row {
+    display: block !important;
+  }
+
+  .products > *,
+  .product-grid > *,
+  .container > *,
+  .row > * {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+}
