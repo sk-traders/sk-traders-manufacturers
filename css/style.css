@@ -462,3 +462,19 @@ footer .container > div + div {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* ABOUT PAGE HERO OVERLAY */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* shadow level */
+  z-index: 1;
+}
+.about-hero {
+  position: relative;
+}
+.about-hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
