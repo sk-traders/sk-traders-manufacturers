@@ -466,12 +466,6 @@ footer .container > div + div {
 /* ================= ABOUT PAGE HERO FIX ================= */
 
 /* Hero image dark overlay for text visibility */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* shadow strength */
-  z-index: 1;
 }
 
 /* Hero content above overlay */
@@ -521,4 +515,13 @@ footer .container > div + div {
 
 .about-hero .hero-btn:hover::after {
   transform: translateX(4px);
+}
+
+/* ABOUT PAGE HERO OVERLAY ONLY */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
