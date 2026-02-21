@@ -342,3 +342,37 @@ footer {
     display: none;
   }
 }
+
+/* ===== FOOTER COLUMN DIVIDERS – FORCE MODE ===== */
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+footer .container > div {
+  position: relative;
+  padding-right: 30px;
+}
+
+/* vertical divider */
+footer .container > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 1px;
+  height: 85%;
+  background-color: #e0e0e0;
+}
+
+/* mobile safe */
+@media (max-width: 768px) {
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+
+  footer .container > div::after {
+    display: none;
+  }
+}
