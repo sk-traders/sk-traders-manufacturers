@@ -463,18 +463,31 @@ footer .container > div + div {
   background-repeat: no-repeat;
 }
 
-/* ABOUT PAGE HERO OVERLAY */
-.about-hero::before {
+/* ================= ABOUT PAGE HERO FIX ================= */
+
+/* Hero image dark overlay for text visibility */
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* shadow level */
+  background: rgba(0, 0, 0, 0.45); /* shadow strength */
   z-index: 1;
 }
-.about-hero {
-  position: relative;
-}
-.about-hero .hero-content {
+
+/* Hero content above overlay */
+.hero .hero-content {
   position: relative;
   z-index: 2;
+  max-width: 650px;
+}
+
+/* Hero description spacing */
+.hero .hero-content p {
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+/* Contact button spacing in hero */
+.hero .btn {
+  margin-top: 20px;
 }
