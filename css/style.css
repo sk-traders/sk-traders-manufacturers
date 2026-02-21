@@ -470,7 +470,7 @@ footer .container > div + div {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* shadow strength */
+  background: rgba(0, 0, 0, 0.55); /* shadow strength */
   z-index: 1;
 }
 
@@ -490,4 +490,35 @@ footer .container > div + div {
 /* Contact button spacing in hero */
 .hero .btn {
   margin-top: 20px;
+}
+
+/* Hero CTA button improvements */
+.about-hero .hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 14px 32px;
+  background: #c00000;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transition: all 0.25s ease;
+}
+
+.about-hero .hero-btn::after {
+  content: "→";
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.about-hero .hero-btn:hover {
+  background: #9a0000;
+  transform: translateY(-2px);
+}
+
+.about-hero .hero-btn:hover::after {
+  transform: translateX(4px);
 }
