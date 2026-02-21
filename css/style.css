@@ -161,3 +161,15 @@ footer {
   font-size: 14px;
   color: #666;
 }
+
+/* ===== FORCE HERO LEFT ALIGN FIX ===== */
+.hero .container {
+  margin-left: 0 !important;
+  padding-left: 80px;
+}
+
+@media (max-width: 768px) {
+  .hero .container {
+    padding-left: 20px;
+  }
+}
