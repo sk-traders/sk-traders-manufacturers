@@ -565,3 +565,41 @@ footer .container > div + div {
 .about-hero .hero-btn {
   margin-top: 22px;
 }
+
+/* ABOUT PAGE HERO TEXT VISIBILITY */
+.about-hero h1 {
+  color: #ffffff;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+}
+
+.about-hero p {
+  color: #f5f5f5;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+
+.about-hero .hero-btn {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ABOUT PAGE OVERLAY FIX */
+.about-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.about-hero::before {
+  z-index: 0;
+}
+
+.about-hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero + section,
+.about-hero ~ section {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+}
