@@ -1624,7 +1624,7 @@ footer .container > div + div {
 
 /* FOOTER LOGO FIX */
 .footer-logo {
-  width: 160px;
+  width: 150px;
   max-width: 100%;
   height: auto;
   display: block;
