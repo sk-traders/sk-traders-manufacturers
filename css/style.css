@@ -2098,3 +2098,76 @@ footer .container > div + div {
 .floating-bubbles {
   pointer-events: none !important;
 }
+
+/* FAQ Section */
+.faq-section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+.faq-accordion {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-4px);
+}
+
+/* Question */
+.faq-question {
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Icon */
+.faq-icon {
+  font-size: 26px;
+  transition: transform 0.3s ease;
+}
+
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 26px;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding-bottom: 22px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Active state */
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
