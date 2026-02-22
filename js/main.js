@@ -1,33 +1,14 @@
 console.log("SK Traders premium website loaded");
 
-// FAQ Accordion Script
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".faq-question").forEach(question => {
-    question.addEventListener("click", function () {
-      const item = this.closest(".faq-item");
+document.addEventListener("click", function (e) {
+  const question = e.target.closest(".faq-question");
+  if (!question) return;
 
-      document.querySelectorAll(".faq-item").forEach(faq => {
-        if (faq !== item) faq.classList.remove("active");
-      });
+  const item = question.closest(".faq-item");
 
-      item.classList.toggle("active");
-    });
+  document.querySelectorAll(".faq-item").forEach(faq => {
+    if (faq !== item) faq.classList.remove("active");
   });
-});
 
-// FAQ Accordion Script
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".faq-question").forEach(question => {
-    question.addEventListener("click", () => {
-      const item = question.closest(".faq-item");
-
-      document.querySelectorAll(".faq-item").forEach(faq => {
-        if (faq !== item) {
-          faq.classList.remove("active");
-        }
-      });
-
-      item.classList.toggle("active");
-    });
-  });
+  item.classList.toggle("active");
 });
