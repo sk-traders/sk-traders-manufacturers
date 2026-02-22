@@ -2171,3 +2171,18 @@ footer .container > div + div {
 .faq-item.active .faq-icon {
   transform: rotate(45deg);
 }
+
+/* FORCE FAQ TO BE CLICKABLE */
+.faq-section,
+.faq-accordion,
+.faq-item,
+.faq-question {
+  position: relative;
+  z-index: 999;
+}
+
+/* DISABLE CLICKS ON BUBBLES */
+.bubbles,
+.bubbles * {
+  pointer-events: none;
+}
