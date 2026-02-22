@@ -1648,3 +1648,14 @@ footer .container > div + div {
 .footer-grid > div:first-child {
   align-self: flex-start;
 }
+
+/* FOOTER QUICK LINKS */
+.site-footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #c62828;
+  text-decoration: underline;
+}
