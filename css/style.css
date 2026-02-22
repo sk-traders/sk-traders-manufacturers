@@ -1845,6 +1845,7 @@ footer .container > div + div {
 .products-overview h2 {
   font-size: 36px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .products-intro {
