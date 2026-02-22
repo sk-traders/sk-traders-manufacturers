@@ -1128,3 +1128,21 @@ footer .container > div + div {
   position: relative;
   z-index: 2;
 }
+
+.about-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .about-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
