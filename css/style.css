@@ -1217,3 +1217,76 @@ footer .container > div + div {
 .bubbles span {
   transition: all 0.4s ease;
 }
+
+/* VALUE SECTION */
+.value-section {
+  position: relative;
+  padding: 80px 0;
+  background: #f8f9fb;
+  overflow: hidden;
+}
+
+.value-section .section-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARDS */
+.value-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+.value-card h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.value-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* BUBBLES */
+.bubbles span {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255,0,0,0.08);
+  border-radius: 50%;
+  animation: float 12s infinite ease-in-out;
+}
+
+.bubbles span:nth-child(1) { top: 10%; left: 5%; }
+.bubbles span:nth-child(2) { bottom: 15%; right: 10%; animation-delay: 3s; }
+.bubbles span:nth-child(3) { top: 40%; right: 25%; animation-delay: 6s; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+}
