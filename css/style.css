@@ -1069,3 +1069,34 @@ footer .container > div + div {
     margin-bottom: 6px;
   }
 }
+
+/* ================= ABOUT PAGE HERO FIX ================= */
+
+/* About hero button – same as home */
+.hero-about .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #c00000;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.hero-about .btn:hover {
+  background: #9a0000;
+}
+
+/* About hero description readability */
+.hero-about p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+/* Ensure text stays above image */
+.hero-about .hero-content {
+  position: relative;
+  z-index: 2;
+}
