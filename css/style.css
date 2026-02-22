@@ -1290,3 +1290,98 @@ footer .container > div + div {
     grid-template-columns: 1fr;
   }
 }
+
+/* PRODUCT SPECIALIZATION SECTION */
+.product-specialization {
+  position: relative;
+  background: #ffffff;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.product-specialization h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.product-specialization .section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* GRID */
+.specialization-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* CARD */
+.spec-card {
+  background: #f8f9fb;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spec-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+.spec-card h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.spec-card p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* BUBBLES */
+.product-specialization .bubbles span {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(220,0,0,0.06);
+  border-radius: 50%;
+  animation: float 20s infinite linear;
+}
+
+.product-specialization .bubbles span:nth-child(1) {
+  top: 10%;
+  left: 5%;
+}
+.product-specialization .bubbles span:nth-child(2) {
+  bottom: 15%;
+  right: 10%;
+}
+.product-specialization .bubbles span:nth-child(3) {
+  top: 40%;
+  right: 30%;
+}
+.product-specialization .bubbles span:nth-child(4) {
+  bottom: 30%;
+  left: 25%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+  100% { transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .specialization-grid {
+    grid-template-columns: 1fr;
+  }
+}
