@@ -1849,7 +1849,8 @@ footer .container > div + div {
 
 .products-intro {
   max-width: 700px;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;   
+  text-align: center;    
   color: #555;
   line-height: 1.7;
 }
