@@ -2238,3 +2238,18 @@ footer .container > div + div {
 .faq-item.active .icon {
   transform: rotate(45deg);
 }
+
+/* FIX: allow clicks on FAQ */
+.faq-section,
+.faq-accordion,
+.faq-item,
+.faq-question {
+  position: relative;
+  z-index: 5;
+}
+
+.bubble,
+.bubbles,
+.background-bubbles {
+  pointer-events: none;
+}
