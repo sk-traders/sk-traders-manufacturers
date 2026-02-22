@@ -2260,3 +2260,21 @@ footer .container > div + div {
 .background-bubbles {
   display: none !important;
 }
+
+/* FORCE FAQ CLICK FIX */
+.faq-section,
+.faq-section *,
+.faq-item,
+.faq-question {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 9999;
+}
+
+/* Kill invisible overlays */
+section::before,
+section::after,
+.container::before,
+.container::after {
+  pointer-events: none !important;
+}
