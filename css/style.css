@@ -1156,3 +1156,37 @@ footer .container > div + div {
   max-width: 1100px;
   margin: auto;
 }
+
+/* WHO WE ARE – TEXT POLISH */
+.who-we-are h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.who-we-are p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 520px;
+}
+
+/* WHO WE ARE – IMAGE CARD */
+.about-image img {
+  border-radius: 10px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* WHO WE ARE – SECTION BACKGROUND */
+.who-we-are {
+  background: #f8f9fb;
+}
+
+/* SOFT BUBBLES */
+.bubbles span {
+  opacity: 0.15;
+}
+
+/* OPTIONAL SPACING */
+.who-we-are .about-text {
+  padding-right: 20px;
+}
