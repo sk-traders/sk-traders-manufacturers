@@ -1190,3 +1190,16 @@ footer .container > div + div {
 .who-we-are .about-text {
   padding-right: 20px;
 }
+
+/* WHO WE ARE – FINAL POLISH */
+.who-we-are .container {
+  max-width: 1100px;
+}
+
+.who-we-are {
+  padding: 80px 0;
+}
+
+.about-grid-2 {
+  align-items: center;
+}
