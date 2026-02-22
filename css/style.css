@@ -1769,3 +1769,67 @@ footer .container > div + div {
   border-top: 1px solid #eee;
   font-size: 14px;
 }
+
+/* ===============================
+   PRODUCT PAGE – HERO SECTION
+================================ */
+
+.product-hero {
+  position: relative;
+  height: 85vh;
+  background: url("../assets/images/product-hero-warehouse.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.product-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.product-hero-content {
+  position: relative;
+  color: #fff;
+  max-width: 650px;
+}
+
+.product-hero h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.product-hero p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.product-hero-btn {
+  display: inline-block;
+  background: #c40000;
+  color: #fff;
+  padding: 14px 34px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Floating / Bubble feel */
+.product-hero-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(196, 0, 0, 0.5);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .product-hero {
+    height: auto;
+    padding: 90px 0;
+  }
+
+  .product-hero h1 {
+    font-size: 32px;
+  }
+}
