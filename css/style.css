@@ -2278,3 +2278,49 @@ section::after,
 .container::after {
   pointer-events: none !important;
 }
+
+.faq-section {
+  padding: 80px 0;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.faq-item summary {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  float: right;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  margin-top: 15px;
+  line-height: 1.7;
+  color: #555;
+}
