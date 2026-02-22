@@ -724,3 +724,85 @@ footer .container > div + div {
     list-style: none;
   }
 }
+
+/* ================= MOBILE HEADER FIX ================= */
+@media (max-width: 768px) {
+
+  header.site-header {
+    position: relative;
+    background: #ffffff;
+    z-index: 1000;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .header-flex .logo {
+    max-width: 140px;
+    height: auto;
+  }
+
+  nav {
+    margin-top: 6px;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* push hero BELOW header */
+  .hero {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+}
+
+/* ============ OUR CAPABILITIES MOBILE FIX ============ */
+@media (max-width: 768px) {
+
+  .capabilities-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .capability-card {
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  .capability-card img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+  }
+}
+
+/* ================= FOOTER MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+  footer {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+
+  .footer-column::before {
+    display: none;
+  }
+}
