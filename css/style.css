@@ -1385,3 +1385,25 @@ footer .container > div + div {
     grid-template-columns: 1fr;
   }
 }
+
+/* PRODUCT SPECIALIZATION POLISH */
+.product-specialization h2 {
+  letter-spacing: 0.5px;
+}
+
+.spec-card {
+  cursor: pointer;
+}
+
+.spec-card:hover {
+  background: #ffffff;
+}
+
+.spec-card h3 {
+  letter-spacing: 0.3px;
+}
+
+/* Slight bubble interaction */
+.product-specialization:hover .bubbles span {
+  opacity: 0.22;
+}
