@@ -1551,3 +1551,58 @@ footer .container > div + div {
   right: 35%;
   bottom: 20%;
 }
+
+/* ================= FOOTER IMPROVEMENT ================= */
+
+footer {
+  background: #f8f9fb;
+  padding: 60px 20px 40px;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+footer h3 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+footer p,
+footer a {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #e30613;
+}
+
+footer .quick-links a {
+  display: block;
+  margin-bottom: 8px;
+}
+
+footer .contact-info p {
+  margin-bottom: 6px;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  footer .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
