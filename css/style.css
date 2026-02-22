@@ -1659,3 +1659,27 @@ footer .container > div + div {
   color: #c62828;
   text-decoration: underline;
 }
+
+/* FOOTER LOGO FIX */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  max-width: 140px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* FOOTER COLUMN DIVIDERS FIX */
+.footer-grid > div {
+  border-left: 1px solid #e0e0e0;
+  padding-left: 24px;
+}
+
+.footer-grid > div:first-child {
+  border-left: none;
+  padding-left: 0;
+}
