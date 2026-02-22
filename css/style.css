@@ -603,3 +603,74 @@ footer .container > div + div {
   z-index: 1;
   background: #ffffff;
 }
+
+/* ================= MOBILE HEADER FIX ================= */
+@media (max-width: 768px) {
+
+  .site-header {
+    position: relative;
+    padding: 12px 0;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    max-width: 140px;
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
+
+/* ================= OUR CAPABILITIES MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+  .capabilities-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .capability-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .capability-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* ================= MOBILE FOOTER FIX ================= */
+@media (max-width: 768px) {
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer img {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+}
