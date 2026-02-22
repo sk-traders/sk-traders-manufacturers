@@ -1100,3 +1100,12 @@ footer .container > div + div {
   position: relative;
   z-index: 2;
 }
+
+/* ===== ABOUT PAGE HERO IMAGE ===== */
+
+.hero-about {
+  background-image: url("../assets/images/about-hero-factory.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
