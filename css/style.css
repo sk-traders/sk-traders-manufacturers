@@ -862,3 +862,46 @@ footer .container > div + div {
     margin-bottom: 24px;
   }
 }
+
+/* ===== HEADER FIX ===== */
+.site-header {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+}
+
+.hero {
+  margin-top: 80px; /* header height ke barabar */
+}
+
+/* ===== MOBILE HEADER ALIGNMENT ===== */
+@media (max-width: 768px) {
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-header nav {
+    margin-top: 10px;
+  }
+
+  .site-header nav a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+}
+
+/* ===== CAPABILITIES CARD FIX ===== */
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.capability-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
