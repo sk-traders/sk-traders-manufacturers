@@ -2253,3 +2253,10 @@ footer .container > div + div {
 .background-bubbles {
   pointer-events: none;
 }
+
+/* TEMP FIX: Disable bubbles completely */
+.bubble,
+.bubbles,
+.background-bubbles {
+  display: none !important;
+}
