@@ -1643,3 +1643,8 @@ footer .container > div + div {
   color: #e30613;
   padding-left: 5px;
 }
+
+/* FOOTER LOGO ALIGN FIX */
+.footer-grid > div:first-child {
+  align-self: flex-start;
+}
