@@ -1203,3 +1203,17 @@ footer .container > div + div {
 .about-grid-2 {
   align-items: center;
 }
+
+/* BUBBLE HOVER FEEL */
+.about-image {
+  position: relative;
+}
+
+.about-image:hover .bubbles span {
+  transform: scale(1.15);
+  opacity: 0.25;
+}
+
+.bubbles span {
+  transition: all 0.4s ease;
+}
