@@ -674,3 +674,53 @@ footer .container > div + div {
     margin: 0 auto;
   }
 }
+
+@media (max-width: 768px) {
+  .capabilities-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .capability-card {
+    transform: none !important;
+    scale: 1 !important;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    position: static;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-grid ul {
+    padding: 0;
+    list-style: none;
+  }
+}
