@@ -1780,18 +1780,20 @@ footer .container > div + div {
   background: url("../assets/images/product-hero-warehouse.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .product-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .product-hero-content {
   position: relative;
   color: #fff;
   max-width: 650px;
+  margin-left: 80px;
 }
 
 .product-hero h1 {
