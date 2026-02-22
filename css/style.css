@@ -2090,3 +2090,11 @@ footer .container > div + div {
 .faq-item.active .faq-question span {
   transform: rotate(45deg);
 }
+
+/* 🚨 FORCE CLICK FIX */
+.bubbles,
+.bubbles *,
+.bubble,
+.floating-bubbles {
+  pointer-events: none !important;
+}
