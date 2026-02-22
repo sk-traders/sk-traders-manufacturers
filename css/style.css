@@ -1146,3 +1146,13 @@ footer .container > div + div {
     grid-template-columns: 1fr;
   }
 }
+
+/* FIX WHO WE ARE ALIGNMENT */
+.who-we-are {
+  padding: 80px 0;
+}
+
+.who-we-are .about-grid-2 {
+  max-width: 1100px;
+  margin: auto;
+}
