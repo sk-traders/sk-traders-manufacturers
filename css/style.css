@@ -871,10 +871,6 @@ footer .container > div + div {
   z-index: 1000;
 }
 
-.hero {
-  margin-top: 80px; /* header height ke barabar */
-}
-
 /* ===== MOBILE HEADER ALIGNMENT ===== */
 @media (max-width: 768px) {
   .header-container {
