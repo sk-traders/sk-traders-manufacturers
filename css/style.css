@@ -2477,3 +2477,45 @@ section::after,
   object-fit: cover;
   border-radius: 18px;
 }
+
+/* What We Do Section */
+.what-we-do-section {
+  padding: 80px 0;
+}
+
+.what-we-do-flex {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.what-we-do-image img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.what-we-do-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.what-we-do-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .what-we-do-flex {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .what-we-do-image img {
+    max-width: 100%;
+  }
+}
