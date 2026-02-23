@@ -3106,3 +3106,36 @@ section::after,
     grid-template-columns: 1fr;
   }
 }
+
+/* ================================
+   FIX: MISSION & VISION ICON SIZE
+   ================================ */
+
+/* Mission & Vision ICON BIG */
+.mission-card i,
+.mission-card svg,
+.vision-card i,
+.vision-card svg {
+  font-size: 64px !important;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+/* Mission & Vision TITLE slightly bigger */
+.mission-card h3,
+.vision-card h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* ================================
+   LOCK VALUES ICON SIZE (NO GROW)
+   ================================ */
+
+.values-section i,
+.values-section svg {
+  font-size: 46px !important;
+  width: 46px;
+  height: 46px;
+}
