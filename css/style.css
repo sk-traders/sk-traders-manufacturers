@@ -3006,3 +3006,103 @@ section::after,
     max-width: 100%;
   }
 }
+
+/* ===== FORCE WIDE + BULKY MISSION / VISION / VALUES ===== */
+
+.mission-vision-wrapper,
+.values-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Mission & Vision cards */
+.mission-card,
+.vision-card,
+.value-card {
+  position: relative;
+  background: #ffffff;
+  padding: 40px 36px;
+  border-radius: 18px;
+  min-height: 260px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* ICON SIZE — FORCE */
+.mission-card i,
+.vision-card i,
+.value-card i {
+  font-size: 56px;           /* 🔥 BIG ICON */
+  margin-bottom: 20px;
+  color: #c62828;
+  display: inline-block;
+}
+
+/* HEADING BIGGER */
+.mission-card h3,
+.vision-card h3,
+.value-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* PARAGRAPH — 3 LINE FEEL */
+.mission-card p,
+.vision-card p,
+.value-card p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  max-width: 95%;
+}
+
+/* GRID — WIDER LOOK */
+.mission-vision-grid,
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* ===== BUBBLE EFFECT — FORCE ON ALL ===== */
+.mission-card::before,
+.vision-card::before,
+.value-card::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: rgba(198, 40, 40, 0.08);
+  border-radius: 50%;
+  top: -40px;
+  right: -40px;
+  z-index: 0;
+}
+
+.mission-card::after,
+.vision-card::after,
+.value-card::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: rgba(198, 40, 40, 0.06);
+  border-radius: 50%;
+  bottom: -30px;
+  left: -30px;
+  z-index: 0;
+}
+
+.mission-card *,
+.vision-card *,
+.value-card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .mission-vision-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
