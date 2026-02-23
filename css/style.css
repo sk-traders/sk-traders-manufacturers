@@ -2799,3 +2799,93 @@ section::after,
   50% { transform: translateY(-18px); }
   100% { transform: translateY(0); }
 }
+
+/* =========================================
+   OUR VALUES – WIDE, BULKY, GHOSHI STYLE
+   ONE TIME FIX
+========================================= */
+
+/* 2x2 wide grid */
+.values-grid {
+  max-width: 1280px;              /* overall section wide */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* Card heavy look */
+.value-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 40px 42px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.07);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon bigger (Ghoshi feel) */
+.value-card i {
+  font-size: 42px;
+  margin-bottom: 18px;
+  color: #c62828;
+}
+
+/* Heading thoda heavy */
+.value-card h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+/* 👇 MAIN GHOSHI TRICK – TEXT WIDTH CONTROL */
+.value-card p {
+  max-width: 420px;              /* yahi magic hai */
+  font-size: 15.5px;
+  line-height: 1.85;
+}
+
+/* Bubble effect */
+.value-card::before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: rgba(198,40,40,0.08);
+  border-radius: 50%;
+  top: -90px;
+  right: -90px;
+  animation: bubbleFloat 9s ease-in-out infinite;
+}
+
+.value-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(198,40,40,0.06);
+  border-radius: 50%;
+  bottom: -70px;
+  left: -70px;
+  animation: bubbleFloatReverse 11s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes bubbleFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}
+
+@keyframes bubbleFloatReverse {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .value-card p {
+    max-width: 100%;
+  }
+}
