@@ -2688,3 +2688,114 @@ section::after,
     font-size: 28px;
   }
 }
+
+/* ===============================
+   OUR MISSION / VISION / VALUES – HEAVY LOOK
+================================ */
+
+.mission-vision-section,
+.values-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* Grid ko thoda wide feel dena */
+.mission-vision-grid,
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Card ko bulky banana */
+.mission-card,
+.value-card {
+  background: #ffffff;
+  padding: 36px 32px;
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover me thoda premium lift */
+.mission-card:hover,
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Icons ko thoda powerful look */
+.mission-card .icon,
+.value-icon {
+  font-size: 34px;
+  margin-bottom: 18px;
+  color: #c62828; /* logo red */
+}
+
+/* Headings ko bold & readable */
+.mission-card h3,
+.value-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Text ko thoda open space dena */
+.mission-card p,
+.value-card p {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #555;
+}
+
+/* ===============================
+   BUBBLE BACKGROUND EFFECT
+================================ */
+
+.mission-card,
+.value-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bubble 1 */
+.mission-card::before,
+.value-card::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: rgba(198, 40, 40, 0.08); /* logo red bubble */
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+  animation: bubbleFloat 8s ease-in-out infinite;
+}
+
+/* Bubble 2 */
+.mission-card::after,
+.value-card::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: rgba(198, 40, 40, 0.06);
+  border-radius: 50%;
+  bottom: -50px;
+  left: -50px;
+  animation: bubbleFloatReverse 10s ease-in-out infinite;
+}
+
+/* Bubble animations */
+@keyframes bubbleFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(18px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes bubbleFloatReverse {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
