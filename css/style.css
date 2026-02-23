@@ -2889,3 +2889,120 @@ section::after,
     max-width: 100%;
   }
 }
+
+/* ===============================
+   GLOBAL CARD WIDE FIX (GHOSHI)
+=============================== */
+
+/* Mission, Vision, Values – common */
+.mission-card,
+.vision-card,
+.value-card {
+  width: 100%;
+  max-width: 560px;        /* 👈 CARD WIDE */
+  padding: 42px 44px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 22px 55px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* INNER CONTENT CONTROL = GHOSHI MAGIC */
+.mission-card p,
+.vision-card p,
+.value-card p {
+  max-width: 420px;        /* 👈 TEXT WRAP CONTROL */
+  line-height: 1.85;
+  font-size: 15.5px;
+}
+
+/* HEADINGS */
+.mission-card h3,
+.vision-card h3,
+.value-card h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+/* ICON SIZE */
+.mission-card i,
+.vision-card i,
+.value-card i {
+  font-size: 42px;
+  margin-bottom: 18px;
+  color: #c62828;
+}
+
+/* ===============================
+   2x2 GRID – VALUES
+=============================== */
+.values-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+}
+
+/* ===============================
+   BUBBLE EFFECT – ALL CARDS
+=============================== */
+.mission-card::before,
+.vision-card::before,
+.value-card::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: rgba(198,40,40,0.08);
+  border-radius: 50%;
+  top: -90px;
+  right: -90px;
+  animation: bubbleFloat 9s ease-in-out infinite;
+}
+
+.mission-card::after,
+.vision-card::after,
+.value-card::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: rgba(198,40,40,0.06);
+  border-radius: 50%;
+  bottom: -70px;
+  left: -70px;
+  animation: bubbleFloatReverse 11s ease-in-out infinite;
+}
+
+@keyframes bubbleFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(22px); }
+}
+
+@keyframes bubbleFloatReverse {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+/* ===============================
+   MOBILE
+=============================== */
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card,
+  .vision-card,
+  .value-card {
+    max-width: 100%;
+  }
+
+  .mission-card p,
+  .vision-card p,
+  .value-card p {
+    max-width: 100%;
+  }
+}
