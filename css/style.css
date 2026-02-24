@@ -3343,3 +3343,35 @@ section::after,
     grid-template-columns: 1fr;
   }
 }
+
+/* ===============================
+   Mission & Vision – Bubble Effect Fix
+   (DO NOT touch Our Values)
+================================ */
+
+.mv-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-card::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: rgba(220, 38, 38, 0.15);
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+}
+
+.mv-card::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: rgba(220, 38, 38, 0.10);
+  border-radius: 50%;
+  bottom: -50px;
+  left: -50px;
+}
