@@ -3508,3 +3508,15 @@ section::after,
   width: auto;
   object-fit: contain;
 }
+
+/* FORCE LOGO SIZE — FINAL FIX */
+
+.site-header img.logo {
+  height: 60px !important;
+  max-height: none !important;
+  width: auto !important;
+}
+
+.header-flex {
+  align-items: center;
+}
