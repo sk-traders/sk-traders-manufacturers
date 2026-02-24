@@ -3375,3 +3375,31 @@ section::after,
   bottom: -50px;
   left: -50px;
 }
+
+/* FORCE bubble on Mission & Vision cards */
+.mv-container > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-container > div::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: rgba(220, 38, 38, 0.15);
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+}
+
+.mv-container > div::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: rgba(220, 38, 38, 0.1);
+  border-radius: 50%;
+  bottom: -50px;
+  left: -50px;
+}
