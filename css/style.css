@@ -3139,3 +3139,67 @@ section::after,
   width: 46px;
   height: 46px;
 }
+
+/* =====================================================
+   FIX 1: Mission & Vision ko heavy + wide banana
+   FIX 2: Our Values se proper spacing
+   NOTE: Our Values section untouched
+   ===================================================== */
+
+/* Mission & Vision section wrapper */
+.mission-vision-section {
+  margin-bottom: 90px; /* spacing fix */
+}
+
+/* Mission & Vision cards */
+.mission-vision-section .card {
+  max-width: 100%;
+  padding: 42px 48px;        /* heavy feel */
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Mission & Vision heading */
+.mission-vision-section .card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* Mission & Vision text */
+.mission-vision-section .card p {
+  font-size: 16.5px;
+  line-height: 1.7;
+  max-width: 92%;           /* wider text block */
+}
+
+/* Mission & Vision icons — BIG like Our Values */
+.mission-vision-section .icon,
+.mission-vision-section .icon img,
+.mission-vision-section .icon svg {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .mission-vision-section {
+    margin-bottom: 70px;
+  }
+
+  .mission-vision-section .card {
+    padding: 32px 26px;
+  }
+
+  .mission-vision-section .card h3 {
+    font-size: 22px;
+  }
+
+  .mission-vision-section .icon,
+  .mission-vision-section .icon img,
+  .mission-vision-section .icon svg {
+    width: 56px;
+    height: 56px;
+  }
+}
