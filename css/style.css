@@ -3253,3 +3253,93 @@ section::after,
     grid-template-columns: 1fr;
   }
 }
+
+/* ================================
+   FIX: Mission & Vision spacing + bubble
+================================ */
+
+/* 1️⃣ Proper gap so Our Values chipke nahi */
+.mv-section {
+  padding: 100px 0 140px;   /* bottom extra gap */
+  position: relative;
+}
+
+/* 2️⃣ Wider layout (already working, safe keep) */
+.mv-container {
+  max-width: 1200px;
+  margin: 0 auto 80px;      /* space before Our Values */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* 3️⃣ Card heavy + bubble base */
+.mv-card {
+  position: relative;
+  padding: 42px 38px;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  overflow: hidden;
+  min-height: 260px;
+}
+
+/* 4️⃣ BUBBLE EFFECT (THIS WAS MISSING) */
+.mv-card::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: rgba(220, 38, 38, 0.08); /* brand red soft */
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+}
+
+.mv-card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(220, 38, 38, 0.05);
+  border-radius: 50%;
+  bottom: -50px;
+  left: -50px;
+}
+
+/* 5️⃣ BIG ICON (same visual weight as Our Values) */
+.mv-icon {
+  font-size: 54px;
+  margin-bottom: 18px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* 6️⃣ Text hierarchy */
+.mv-card h3 {
+  font-size: 26px;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.mv-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 95%;
+  position: relative;
+  z-index: 1;
+}
+
+/* 7️⃣ Ensure Our Values breathes */
+.values-section {
+  margin-top: 120px;
+}
+
+/* Mobile safety */
+@media (max-width: 900px) {
+  .mv-container {
+    grid-template-columns: 1fr;
+  }
+}
