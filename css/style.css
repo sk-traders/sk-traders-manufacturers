@@ -3403,3 +3403,20 @@ section::after,
   bottom: -50px;
   left: -50px;
 }
+
+/* sabse neeche paste kar */
+.bubble-card::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: rgba(220, 38, 38, 0.08);
+  border-radius: 50%;
+  top: -40px;
+  right: -40px;
+}
+
+.mv-card {
+  position: relative;
+  overflow: hidden;
+}
