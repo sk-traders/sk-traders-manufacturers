@@ -3496,3 +3496,15 @@ section::after,
   width: 300px;
   height: 300px;
 }
+
+/* ================= HEADER FIX: LOGO + HEIGHT ================= */
+
+.site-header {
+  padding: 10px 0;           /* header height control */
+}
+
+.site-header .logo {
+  height: 48px;              /* logo readable but not oversized */
+  width: auto;
+  object-fit: contain;
+}
