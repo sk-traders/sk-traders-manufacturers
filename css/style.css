@@ -3662,3 +3662,11 @@ section::after,
   margin-top: 12px;
   max-width: 600px;
 }
+
+.why-choose-card::before,
+.why-choose-card::after,
+.industries-card::before,
+.industries-card::after {
+  display: none !important;
+  content: none !important;
+}
