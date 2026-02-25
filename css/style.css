@@ -3614,3 +3614,21 @@ section::after,
   text-align: left;
   max-width: 700px;
 }
+
+.contact-hero {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.contact-hero .hero-content.left {
+  text-align: left;
+  max-width: 700px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
