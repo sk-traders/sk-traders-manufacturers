@@ -3632,3 +3632,17 @@ section::after,
   inset: 0;
   background: rgba(0,0,0,0.35);
 }
+
+.contact-hero {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 700px;
+  margin-left: 80px;   /* LEFT shift */
+}
