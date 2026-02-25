@@ -1,119 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BASIC META -->
   <meta charset="UTF-8">
-  <title>Contact Us | SK Traders & Manufacturers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#f7f7f7;
-    }
 
-    .contact-section{
-      max-width:1100px;
-      margin:60px auto;
-      background:#fff;
-      padding:40px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:40px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
+  <!-- SEO META -->
+  <title>Contact Us | SK Traders & Manufacturers</title>
+  <meta name="description" content="Contact SK Traders & Manufacturers for industrial adhesives, tapes, and packaging materials in Noida & Delhi NCR. Bulk supply and reliable industrial support.">
 
-    h2{
-      margin-bottom:15px;
-      color:#111;
-    }
-
-    .reach-us p{
-      margin:8px 0;
-      color:#444;
-      font-size:15px;
-    }
-
-    .reach-us strong{
-      color:#000;
-    }
-
-    .contact-form input,
-    .contact-form textarea{
-      width:100%;
-      padding:12px;
-      margin-bottom:12px;
-      border:1px solid #ccc;
-      border-radius:6px;
-      font-size:14px;
-    }
-
-    .contact-form textarea{
-      resize:none;
-      height:120px;
-    }
-
-    .contact-form button{
-      background:#c62828;
-      color:#fff;
-      border:none;
-      padding:12px 20px;
-      font-size:15px;
-      border-radius:6px;
-      cursor:pointer;
-    }
-
-    .contact-form button:hover{
-      background:#a61f1f;
-    }
-
-    .map{
-      grid-column:1 / -1;
-      margin-top:20px;
-    }
-
-    .map iframe{
-      width:100%;
-      height:350px;
-      border:0;
-      border-radius:8px;
-    }
-
-    @media(max-width:768px){
-      .contact-section{
-        grid-template-columns:1fr;
-      }
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <section class="contact-section">
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-flex">
 
-    <div class="reach-us">
+    <a href="index.html">
+      <img src="assets/images/logo.png" class="logo" alt="SK Traders & Manufacturers">
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <a href="contact.html" class="btn-quote">Get Quote</a>
+
+  </div>
+</header>
+<!-- =============== HEADER END =============== -->
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="contact-hero" style="background-image:url('assets/images/contact-sk-traders-industrial-warehouse.jpg');">
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+    <h1>Contact SK Traders & Manufacturers</h1>
+    <p>
+      Get in touch with SK Traders & Manufacturers for reliable industrial adhesives,
+      industrial tapes, and packaging materials across Noida and Delhi NCR with
+      bulk-ready inventory and dependable industrial support.
+    </p>
+  </div>
+</section>
+<!-- =============== HERO END ================= -->
+
+
+<!-- ================= CONTACT MAIN SECTION ================= -->
+<section class="contact-main">
+  <div class="container contact-grid">
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
       <h2>Reach Us</h2>
-      <p><strong>Address:</strong> G-17 Sector-6, Noida Gautam Budh Nagar Uttar Pradesh-201301</p>
-      <p><strong>Phone:</strong> +91 9871095529</p>
-      <p><strong>Email:</strong> sktraders.noida011@gmail.com</p>
-      <p>Bulk supply • Industrial support • Reliable timelines</p>
+
+      <p><strong>Address:</strong><br>
+        G-17, Sector-6, Noida,<br>
+        Gautam Budh Nagar,<br>
+        Uttar Pradesh – 201301
+      </p>
+
+      <p><strong>Phone:</strong><br>
+        +91 9871095529
+      </p>
+
+      <p><strong>Email:</strong><br>
+        sktraders.noida011@gmail.com
+      </p>
+
+      <p class="contact-note">
+        For bulk orders and industrial supply enquiries including Acrabond adhesives,
+        industrial tapes, and packaging materials, connect with our team for prompt support.
+      </p>
     </div>
 
+    <!-- CONTACT FORM -->
     <div class="contact-form">
-      <h2>Send Enquiry</h2>
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Email Address">
-      <input type="text" placeholder="Phone Number">
-      <textarea placeholder="Your Requirement"></textarea>
-      <button>Submit Enquiry</button>
+      <h2>Send Your Requirement</h2>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Company Name">
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Your Industrial Requirement"></textarea>
+        <button type="submit">Send Enquiry</button>
+      </form>
     </div>
 
-    <div class="map">
-      <iframe 
-        src="https://share.google/4RoIvkB55MA0yBEkJ"
-        loading="lazy">
-      </iframe>
+  </div>
+</section>
+<!-- =============== CONTACT MAIN END ================= -->
+
+
+<!-- ================= MAP SECTION ================= -->
+<section class="contact-map">
+  <div class="container">
+    <h2>Find Us at Our Location</h2>
+    <iframe
+      src="https://www.google.com/maps?q=G-17%20Sector-6%20Noida%20201301&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+<!-- =============== MAP END ================= -->
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-flex">
+
+    <div class="footer-left">
+      <p><strong>SK Traders & Manufacturers</strong></p>
+      <p>Industrial Adhesives, Tapes & Packaging Materials Supplier</p>
+      <p>Noida, Delhi NCR</p>
     </div>
 
-  </section>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 SK Traders & Manufacturers. All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- =============== FOOTER END ================= -->
 
 </body>
 </html>
