@@ -3587,10 +3587,30 @@ section::after,
   transition: 0.3s;
 }
 
-.nav-links a:hover::after {
+..nav-links a::after {
+  width: 0%;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
 }
 
-.nav-links a.active::after {
-  width: 100%;
+/* Contact Hero */
+.contact-hero {
+  height: 65vh;
+  position: relative;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.contact-hero .hero-content {
+  position: relative;
+  text-align: left;
+  max-width: 700px;
 }
