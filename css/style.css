@@ -3675,3 +3675,14 @@ section::after,
 *::after {
   pointer-events: none !important;
 }
+
+/* REMOVE RED CIRCLE / HOVER ARTIFACT */
+.why-card::before,
+.why-card::after,
+.choose-card::before,
+.choose-card::after,
+.industries-card::before,
+.industries-card::after {
+  content: none !important;
+  display: none !important;
+}
