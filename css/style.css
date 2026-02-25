@@ -3646,3 +3646,19 @@ section::after,
   max-width: 700px;
   margin-left: 80px;   /* LEFT shift */
 }
+
+.contact-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 700px;
+  margin-left: 120px;   /* pehle 80px tha */
+  padding-right: 20px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 12px;
+  max-width: 600px;
+}
