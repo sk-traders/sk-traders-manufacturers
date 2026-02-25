@@ -3629,10 +3629,6 @@ body.products-page .nav-links a[href="products.html"]::after {
   position: relative;
 }
 
-.contact-hero .hero-content.left {
-  text-align: left;
-  max-width: 700px;
-}
 
 .hero-overlay {
   position: absolute;
@@ -3644,14 +3640,6 @@ body.products-page .nav-links a[href="products.html"]::after {
   height: 65vh;
   display: flex;
   align-items: center;
-}
-
-.contact-hero .hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: left;
-  max-width: 700px;
-  margin-left: 80px;   /* LEFT shift */
 }
 
 .contact-hero .hero-content {
