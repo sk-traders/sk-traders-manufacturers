@@ -3686,3 +3686,18 @@ section::after,
   content: none !important;
   display: none !important;
 }
+
+/* 🔥 KILL BUBBLE EFFECT COMPLETELY */
+.bubble-card::before,
+.bubble-card::after {
+  content: none !important;
+  display: none !important;
+}
+
+.bubble-card {
+  overflow: hidden !important;
+}
+
+.bubble-card * {
+  pointer-events: auto;
+}
