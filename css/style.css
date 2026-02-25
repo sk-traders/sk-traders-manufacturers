@@ -3670,3 +3670,8 @@ section::after,
   display: none !important;
   content: none !important;
 }
+
+*::before,
+*::after {
+  pointer-events: none !important;
+}
