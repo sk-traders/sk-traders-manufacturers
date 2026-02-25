@@ -3460,8 +3460,15 @@ section::after,
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* active page underline (body class se) */
+body.contact-page .nav-links a[href="contact.html"]::after,
+body.home-page .nav-links a[href="index.html"]::after,
+body.about-page .nav-links a[href="about.html"]::after,
+body.products-page .nav-links a[href="products.html"]::after {
   width: 100%;
 }
 
