@@ -99,9 +99,15 @@
 
     <input type="text" name="name" placeholder="Your Name" required>
 
-    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
 
-    <input type="email" name="email" placeholder="Email Address" required>
+    <input 
+    type="email" 
+    name="email" 
+    placeholder="Email Address"
+    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+    title="Please enter a valid email address"
+    required>
 
     <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
 
