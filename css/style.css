@@ -4006,23 +4006,24 @@ body.products-page .nav-links a[href="products.html"]::after {
     transform: translateY(-2px);
 }
 
-.whatsapp-float {
+.floating-buttons {
     position: fixed;
     right: 25px;
-    bottom: 80px;   /* thoda upar kar diya */
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     z-index: 9999;
-    animation: float 2s ease-in-out infinite;
 }
 
-.whatsapp-float img {
+.float-btn img {
     width: 55px;
     height: 55px;
     border-radius: 50%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
 }
 
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0px); }
+.float-btn img:hover {
+    transform: scale(1.1);
 }
