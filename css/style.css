@@ -3785,6 +3785,13 @@ body.products-page .nav-links a[href="products.html"]::after {
     max-width: 700px;
 }
 
+.contact-hero {
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
 .call-btn {
     display: inline-block;
     margin-top: 25px;
