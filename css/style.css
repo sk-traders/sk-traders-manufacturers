@@ -3773,3 +3773,14 @@ body.products-page .nav-links a[href="products.html"]::after {
     grid-template-columns: 1fr;
   }
 }
+
+.contact-hero h1 {
+    font-size: 48px;   /* Desktop */
+    font-weight: 700;
+}
+
+.contact-hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 700px;
+}
