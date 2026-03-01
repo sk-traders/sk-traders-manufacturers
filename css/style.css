@@ -3951,3 +3951,56 @@ body.products-page .nav-links a[href="products.html"]::after {
         height: 350px;
     }
 }
+
+.form-box {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.form-box h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+    border-color: #e10600;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(225,6,0,0.1);
+}
+
+.form-box button {
+    padding: 15px;
+    background: #e10600;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-box button:hover {
+    background: #bb0000;
+    transform: translateY(-2px);
+}
