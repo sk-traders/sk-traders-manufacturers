@@ -95,13 +95,19 @@
         <div class="form-box">
             <h2>Send Us an Enquiry</h2>
 
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Submit Enquiry</button>
-            </form>
+            <form action="https://formspree.io/f/xojnzldq" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+    <input type="email" name="email" placeholder="Email Address" required>
+
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+    <button type="submit" class="submit-btn">Submit Enquiry</button>
+
+</form>
         </div>
 
     </div>
