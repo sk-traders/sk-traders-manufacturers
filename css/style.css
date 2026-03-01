@@ -3784,3 +3784,41 @@ body.products-page .nav-links a[href="products.html"]::after {
     line-height: 1.6;
     max-width: 700px;
 }
+
+.call-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: #e10600;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.call-btn:hover {
+    background: #b80000;
+    transform: scale(1.05);
+}
+
+/* Bubble effect */
+.call-btn::after {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: rgba(255,255,255,0.2);
+    top: -100%;
+    left: -100%;
+    border-radius: 50%;
+    animation: bubble 4s linear infinite;
+}
+
+@keyframes bubble {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(50%,50%); }
+}
