@@ -4711,3 +4711,24 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: auto !important;
+    flex: 0 0 auto;
+  }
+
+  .menu-toggle {
+    position: relative;
+    z-index: 1000;
+    margin-left: 0 !important;
+  }
+
+}
