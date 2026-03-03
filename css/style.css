@@ -4504,3 +4504,22 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .site-header .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    margin-left: 0;
+  }
+
+}
