@@ -4325,3 +4325,46 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 10px 15px;
+  }
+
+  .header-flex {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .logo {
+    display: block;
+    width: 110px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .btn-primary {
+    display: inline-block;
+    width: auto !important;
+    padding: 10px 22px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: left;
+  }
+}
