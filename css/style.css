@@ -4409,3 +4409,47 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+/* ===== MOBILE HEADER ONLY FIX ===== */
+@media (max-width: 768px) {
+
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links a {
+    padding: 8px 0;
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .site-header {
+    position: relative;
+    z-index: 1000;
+  }
+
+}
