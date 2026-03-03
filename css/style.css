@@ -4676,3 +4676,20 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+/* ===== MOBILE HEADER BUTTON FIX ONLY ===== */
+
+@media (max-width: 768px) {
+
+  .header-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+}
