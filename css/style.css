@@ -4211,3 +4211,68 @@ body.products-page .nav-links a[href="products.html"]::after {
     bottom: 90px;
   }
 }
+
+/* ================= MOBILE COMPLETE FIX ================= */
+@media (max-width: 768px) {
+
+  /* HEADER FIX */
+  .site-header {
+    padding: 10px 15px;
+  }
+
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .menu-toggle {
+    font-size: 26px;
+    line-height: 1;
+  }
+
+  /* HERO FIX */
+  .hero {
+    height: auto;
+    min-height: 85vh;
+    padding: 80px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero .btn,
+  .hero button,
+  .btn-quote {
+    display: inline-block;
+    width: auto;
+    padding: 10px 18px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  /* FLOATING BUTTON FIX */
+  .floating-buttons {
+    right: 15px;
+    bottom: 100px;
+  }
+
+  .floating-buttons a {
+    width: 50px;
+    height: 50px;
+  }
+
+}
