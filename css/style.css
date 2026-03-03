@@ -4159,3 +4159,55 @@ body.products-page .nav-links a[href="products.html"]::after {
     color: #fff;
   }
 }
+
+/* ===== MOBILE HEADER FIX ===== */
+@media (max-width: 992px) {
+
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .menu-toggle {
+    font-size: 26px;
+  }
+
+}
+
+/* ===== MOBILE HERO FIX ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 70vh;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .btn,
+  .hero button {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .floating-buttons {
+    right: 15px;
+    bottom: 90px;
+  }
+}
