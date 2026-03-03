@@ -4453,3 +4453,35 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+/* ===== PROFESSIONAL MOBILE MENU ===== */
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background: #111;
+    flex-direction: column;
+    padding-top: 100px;
+    transition: 0.3s ease;
+    z-index: 2000;
+  }
+
+  .nav-links a {
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    z-index: 3000;
+  }
+
+}
