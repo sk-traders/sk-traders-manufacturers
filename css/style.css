@@ -4732,3 +4732,31 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .container.header-flex {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .logo {
+    flex: 0 0 auto !important;
+  }
+
+  .menu-toggle {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    z-index: 9999 !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
