@@ -4656,3 +4656,7 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+.menu-toggle {
+  background: red !important;
+}
