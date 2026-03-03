@@ -4581,3 +4581,78 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+/* ================= CLEAN MOBILE RESET ================= */
+@media (max-width: 768px) {
+
+  /* Container full width */
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  /* Header clean */
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-links,
+  .desktop-quote {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Hero section fix */
+  .hero {
+    height: auto;
+    padding: 90px 20px 60px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    width: auto;
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+
+  /* Section spacing */
+  section {
+    padding: 50px 0;
+  }
+
+  /* Grid stack */
+  .grid,
+  .about-grid-2 {
+    display: block;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  /* Footer stack */
+  .footer-container {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 25px;
+  }
+
+}
