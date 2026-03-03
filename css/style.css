@@ -4749,3 +4749,37 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+/* ===== HEADER FIX WITHOUT BREAKING DESKTOP ===== */
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: #111;
+    flex-direction: column;
+    padding-top: 80px;
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+}
