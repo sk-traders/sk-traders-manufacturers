@@ -4551,3 +4551,20 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .site-header {
+    position: relative;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+}
