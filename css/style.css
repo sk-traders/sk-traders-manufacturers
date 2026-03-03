@@ -4485,3 +4485,22 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .header-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+}
