@@ -4693,3 +4693,21 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+/* ===== FINAL MOBILE HEADER OVERRIDE (SAFE) ===== */
+
+@media (max-width: 768px) {
+
+  .container.header-flex {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .menu-toggle {
+    margin-left: auto !important;
+    display: block !important;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+}
