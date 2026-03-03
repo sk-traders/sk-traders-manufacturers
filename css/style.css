@@ -4776,3 +4776,24 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .site-header {
+    position: relative;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 1;
+  }
+
+}
