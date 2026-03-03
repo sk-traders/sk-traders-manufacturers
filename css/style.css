@@ -4760,3 +4760,19 @@ body.products-page .nav-links a[href="products.html"]::after {
     padding-right: 15px !important;
   }
 }
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
+
+  .site-header {
+    position: relative;
+  }
+
+}
