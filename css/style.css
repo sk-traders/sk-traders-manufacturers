@@ -4276,3 +4276,52 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
 
 }
+
+/* ================= MOBILE CLEAN FIX ================= */
+@media (max-width: 768px) {
+
+  /* HEADER FIX */
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .btn-quote {
+    display: none; /* mobile me header button hide kar rahe hain */
+  }
+
+  /* HERO FIX */
+  .hero {
+    padding: 100px 20px 60px;
+    height: auto;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  /* FLOATING BUTTON FIX */
+  .floating-buttons {
+    right: 15px;
+    bottom: 90px;
+  }
+
+}
