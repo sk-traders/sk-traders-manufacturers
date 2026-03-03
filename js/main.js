@@ -12,3 +12,18 @@ document.addEventListener("click", function (e) {
 
   item.classList.toggle("active");
 });
+
+// ===== MOBILE MENU TOGGLE =====
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("active");
+    });
+  }
+
+});
