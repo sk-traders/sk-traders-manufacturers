@@ -5101,3 +5101,26 @@ color:black;
 .footer-column h4{
 margin-bottom:15px;
 }
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+max-width:1200px;
+margin:auto;
+gap:40px;
+}
+
+.footer-column{
+flex:1;
+min-width:220px;
+}
+
+.footer-column ul{
+list-style:none;
+padding:0;
+}
+
+.footer-column ul li{
+margin-bottom:8px;
+}
