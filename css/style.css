@@ -4868,3 +4868,42 @@ body.products-page .nav-links a[href="products.html"]::after {
     width: 100%;
   }
 }
+
+  /* FINAL OVERRIDE FIX */
+
+.acr-wrapper {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+
+.acr-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.acr-section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.acr-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #d32f2f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .acr-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+}
