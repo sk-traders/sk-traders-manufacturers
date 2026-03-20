@@ -4872,18 +4872,22 @@ body.products-page .nav-links a[href="products.html"]::after {
   /* FINAL OVERRIDE FIX */
 
 .acr-wrapper {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 40px;
-  max-width: 1200px;
-  margin: auto;
+  display: flex !important;
   align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.acr-box {
+  flex: 1;
 }
 
 .acr-box img {
   width: 100%;
+  max-width: 500px;   /* 🔥 IMPORTANT */
   height: auto;
-  border-radius: 10px;
+  display: block;
+  margin: auto;
 }
 
 .acr-section {
