@@ -4795,21 +4795,21 @@ body.products-page .nav-links a[href="products.html"]::after {
     position: relative;
     z-index: 1;
   }
-
-}
-
-/* ===== ACRABOND SECTION ===== */
+  
+/* ACRABOND FINAL FIX */
 
 .acr-section {
   padding: 60px 20px;
   background: #f9f9f9;
 }
 
-.acr-flex {
+.acr-wrapper {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 40px;
 }
 
 .acr-text {
@@ -4824,7 +4824,6 @@ body.products-page .nav-links a[href="products.html"]::after {
 .acr-text p {
   margin-bottom: 15px;
   color: #555;
-  line-height: 1.6;
 }
 
 .acr-text ul {
@@ -4834,18 +4833,14 @@ body.products-page .nav-links a[href="products.html"]::after {
 
 .acr-text ul li {
   margin-bottom: 10px;
-  font-size: 15px;
 }
 
-/* IMAGE */
 .acr-image {
   width: 50%;
-  text-align: center;
 }
 
 .acr-image img {
   width: 100%;
-  height: auto;
   border-radius: 10px;
 }
 
@@ -4858,63 +4853,16 @@ body.products-page .nav-links a[href="products.html"]::after {
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s;
 }
 
-.acr-btn:hover {
-  background: #b71c1c;
-}
-
-/* CONTAINER FIX */
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
-  .acr-flex {
+  .acr-wrapper {
     flex-direction: column;
   }
 
   .acr-text,
   .acr-image {
     width: 100%;
-  }
-}
-
-/* FORCE FIX ACRABOND SECTION */
-
-.acr-section .acr-flex {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 50px !important;
-}
-
-.acr-section .acr-text {
-  width: 50% !important;
-}
-
-.acr-section .acr-image {
-  width: 50% !important;
-}
-
-.acr-section .acr-image img {
-  width: 100% !important;
-  height: auto !important;
-  border-radius: 10px;
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .acr-section .acr-flex {
-    flex-direction: column !important;
-  }
-
-  .acr-section .acr-text,
-  .acr-section .acr-image {
-    width: 100% !important;
   }
 }
