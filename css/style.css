@@ -4798,6 +4798,8 @@ body.products-page .nav-links a[href="products.html"]::after {
 
 }
 
+/* ===== ACRABOND SECTION ===== */
+
 .acr-section {
   padding: 60px 20px;
   background: #f9f9f9;
@@ -4807,13 +4809,11 @@ body.products-page .nav-links a[href="products.html"]::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .acr-text {
-  flex: 1;
-  min-width: 300px;
+  width: 50%;
 }
 
 .acr-text h2 {
@@ -4824,6 +4824,7 @@ body.products-page .nav-links a[href="products.html"]::after {
 .acr-text p {
   margin-bottom: 15px;
   color: #555;
+  line-height: 1.6;
 }
 
 .acr-text ul {
@@ -4833,20 +4834,22 @@ body.products-page .nav-links a[href="products.html"]::after {
 
 .acr-text ul li {
   margin-bottom: 10px;
+  font-size: 15px;
 }
 
+/* IMAGE */
 .acr-image {
-  flex: 1;
-  min-width: 300px;
+  width: 50%;
   text-align: center;
 }
 
 .acr-image img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
-/* BUTTON STYLE 🔥 */
+/* BUTTON */
 .acr-btn {
   display: inline-block;
   margin-top: 15px;
@@ -4856,8 +4859,27 @@ body.products-page .nav-links a[href="products.html"]::after {
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
+  transition: 0.3s;
 }
 
 .acr-btn:hover {
   background: #b71c1c;
+}
+
+/* CONTAINER FIX */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .acr-flex {
+    flex-direction: column;
+  }
+
+  .acr-text,
+  .acr-image {
+    width: 100%;
+  }
 }
