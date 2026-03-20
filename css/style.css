@@ -4883,3 +4883,38 @@ body.products-page .nav-links a[href="products.html"]::after {
     width: 100%;
   }
 }
+
+/* FORCE FIX ACRABOND SECTION */
+
+.acr-section .acr-flex {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 50px !important;
+}
+
+.acr-section .acr-text {
+  width: 50% !important;
+}
+
+.acr-section .acr-image {
+  width: 50% !important;
+}
+
+.acr-section .acr-image img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 10px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .acr-section .acr-flex {
+    flex-direction: column !important;
+  }
+
+  .acr-section .acr-text,
+  .acr-section .acr-image {
+    width: 100% !important;
+  }
+}
