@@ -5130,3 +5130,7 @@ body.products-page .nav-links a[href="products.html"]::after {
   padding: 10px 20px;
   text-decoration: none;
 }
+
+  body {
+  background: red !important;
+}
