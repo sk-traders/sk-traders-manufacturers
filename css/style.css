@@ -5085,11 +5085,11 @@ body.products-page .nav-links a[href="products.html"]::after {
 .hero-content {
   position: absolute;
   top: 50%;
-  left: 80px;
+  left: 5%;
   transform: translateY(-50%);
-  z-index: 9999;
-  color: #fff;
+  z-index: 10;
   max-width: 600px;
+  color: #fff;
 }
 
 /* FORCE */
