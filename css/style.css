@@ -4930,7 +4930,7 @@ body.products-page .nav-links a[href="products.html"]::after {
 .hero-new {
   position: relative !important;
   height: 100vh !important;
-  background-image: url("../images/hero-industrial-machinery.jpg") !important;
+  background-image: url("/assets/images/hero-industrial-machinery.jpg");
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
