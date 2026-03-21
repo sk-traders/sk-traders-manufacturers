@@ -4923,3 +4923,7 @@ header {
     rgba(0,0,0,0.25) 100%
   );
 }
+
+  .hero-new {
+  border: 5px solid red !important;
+}
