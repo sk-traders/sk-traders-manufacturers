@@ -4980,3 +4980,95 @@ body.products-page .nav-links a[href="products.html"]::after {
   border: 1px solid #fff;
   color: #fff;
 }
+
+  /* HERO FINAL FIX */
+
+.hero-new {
+  height: 90vh; /* पहले 100vh था – अब balance */
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-new::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+}
+
+/* CONTENT */
+.hero-new div {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  padding-left: 60px;
+}
+
+/* TEXT ANIMATION */
+.hero-new h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-new p {
+  animation: fadeUp 1.3s ease forwards;
+}
+
+.hero-new a {
+  animation: fadeUp 1.6s ease forwards;
+}
+
+/* BUTTON HOVER */
+.hero-new a:hover {
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+/* BUBBLE EFFECT */
+.hero-new::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  top: 20%;
+  right: 10%;
+  animation: float 6s infinite ease-in-out;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .hero-new {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-new div {
+    padding-left: 20px;
+  }
+
+  .hero-new h1 {
+    font-size: 28px;
+  }
+}
