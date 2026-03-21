@@ -4970,3 +4970,17 @@ body.products-page .nav-links a[href="products.html"]::after {
   margin-top: 15px;
   color: #ddd;
 }
+
+  .hero-content {
+  position: absolute;   /* 🔥 CHANGE */
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  z-index: 10;
+  max-width: 600px;
+  color: #fff;
+}
+
+  .hero-content {
+  background: rgba(255,0,0,0.2); /* sirf test ke liye */
+}
