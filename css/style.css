@@ -4984,3 +4984,28 @@ body.products-page .nav-links a[href="products.html"]::after {
   .hero-content {
   background: rgba(255,0,0,0.2); /* sirf test ke liye */
 }
+
+  /* 🔥 FINAL HERO FIX */
+
+.hero {
+  position: relative;
+}
+
+.hero-img {
+  position: absolute;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  z-index: 2;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  z-index: 9999; /* 🔥 सबसे ऊपर */
+  color: #fff;
+}
