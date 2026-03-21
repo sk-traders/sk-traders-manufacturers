@@ -4797,318 +4797,100 @@ body.products-page .nav-links a[href="products.html"]::after {
   }
   
 .hero-new {
-  padding: 80px 20px;
-  background: #f5f5f5;
-}
-
-.hero-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 50px;
-}
-
-.hero-tag {
-  color: #d32f2f;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.hero-text h1 {
-  font-size: 38px;
-  margin-bottom: 15px;
-}
-
-.hero-desc {
-  color: #555;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.hero-buttons a {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-.btn-primary {
-  background: #d32f2f;
-  color: #fff;
-}
-
-.btn-secondary {
-  border: 1px solid #333;
-  color: #333;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-text h1 {
-    font-size: 26px;
-  }
-}
-
-  .hero-new {
-  position: relative;
-  height: 90vh;
-  background: url("../images/hero-industrial-machinery.jpg") center center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-}
-
-.hero-content {
-  position: relative;
-  max-width: 700px;
-  color: #fff;
-}
-
-.hero-tag {
-  color: #ff4d4d;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.hero-content h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-  line-height: 1.2;
-}
-
-.hero-desc {
-  margin-bottom: 20px;
-  color: #ddd;
-  line-height: 1.6;
-}
-
-.hero-buttons a {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 12px 22px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.btn-primary {
-  background: #d32f2f;
-  color: #fff;
-}
-
-.btn-secondary {
-  border: 1px solid #fff;
-  color: #fff;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 28px;
-  }
-}
-
-  /* FORCE HERO FIX */
-.hero-new {
-  position: relative !important;
-  height: 100vh !important;
-  background-image: url("/assets/images/hero-industrial-machinery.jpg");
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  display: flex !important;
-  align-items: center !important;
-  padding: 0 40px !important;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-  position: relative;
-  max-width: 700px;
-  color: #fff;
-  z-index: 2;
-}
-
-.hero-content h1 {
-  font-size: 42px;
-  line-height: 1.2;
-  margin-bottom: 15px;
-}
-
-.hero-desc {
-  color: #ddd;
-  margin-bottom: 20px;
-}
-
-.hero-buttons a {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 12px 22px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-.btn-primary {
-  background: #d32f2f;
-  color: #fff;
-}
-
-.btn-secondary {
-  border: 1px solid #fff;
-  color: #fff;
-}
-
-  /* HERO FINAL FIX */
-
-.hero-new {
-  height: 90vh; /* पहले 100vh था – अब balance */
+  height: 100vh; /* full screen वापस */
   position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
+/* DARK OVERLAY (important for readability) */
 .hero-new::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.6) 40%,
+    rgba(0,0,0,0.2) 100%
+  );
 }
 
 /* CONTENT */
-.hero-new div {
+.hero-content {
   position: relative;
   z-index: 2;
-  max-width: 650px;
-  padding-left: 60px;
-}
-
-/* TEXT ANIMATION */
-.hero-new h1 {
-  font-size: 42px;
-  line-height: 1.2;
-  animation: fadeUp 1s ease forwards;
-}
-
-.hero-new p {
-  animation: fadeUp 1.3s ease forwards;
-}
-
-.hero-new a {
-  animation: fadeUp 1.6s ease forwards;
-}
-
-/* BUTTON HOVER */
-.hero-new a:hover {
-  transform: translateY(-3px);
-  transition: 0.3s;
-}
-
-/* BUBBLE EFFECT */
-.hero-new::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 50%;
-  top: 20%;
-  right: 10%;
-  animation: float 6s infinite ease-in-out;
-}
-
-/* ANIMATIONS */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .hero-new {
-    height: auto;
-    padding: 80px 20px;
-  }
-
-  .hero-new div {
-    padding-left: 20px;
-  }
-
-  .hero-new h1 {
-    font-size: 28px;
-  }
-}
-
-  .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 650px;
-  padding-left: 60px;
+  max-width: 700px;
+  padding-left: 80px;
   color: #fff;
 }
 
+/* TEXT IMPROVEMENT */
 .hero-tag {
   color: #ff4d4d;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 .hero-desc {
-  margin: 15px 0;
+  margin: 18px 0;
   color: #ddd;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
+/* BUTTONS */
 .hero-buttons {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .btn-primary {
   background: #d32f2f;
   color: #fff;
-  padding: 12px 22px;
+  padding: 14px 26px;
   border-radius: 6px;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 12px;
+  font-weight: 600;
 }
 
 .btn-outline {
   border: 2px solid #fff;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
+  font-weight: 600;
+}
+
+/* HOVER EFFECT */
+.btn-primary:hover,
+.btn-outline:hover {
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-new {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+  .hero-content {
+    padding-left: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
 }
