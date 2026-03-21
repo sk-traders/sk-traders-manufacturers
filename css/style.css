@@ -4795,16 +4795,19 @@ body.products-page .nav-links a[href="products.html"]::after {
     position: relative;
     z-index: 1;
   }
-  
+
+  /* HERO FINAL CLEAN */
+
 .hero-new {
-  height: 100vh; /* full screen वापस */
+  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
+  padding-top: 80px;
   overflow: hidden;
 }
 
-/* DARK OVERLAY (important for readability) */
+/* DARK OVERLAY */
 .hero-new::after {
   content: "";
   position: absolute;
@@ -4812,8 +4815,8 @@ body.products-page .nav-links a[href="products.html"]::after {
   background: linear-gradient(
     to right,
     rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.6) 40%,
-    rgba(0,0,0,0.2) 100%
+    rgba(0,0,0,0.65) 45%,
+    rgba(0,0,0,0.25) 100%
   );
 }
 
@@ -4826,7 +4829,7 @@ body.products-page .nav-links a[href="products.html"]::after {
   color: #fff;
 }
 
-/* TEXT IMPROVEMENT */
+/* TEXT */
 .hero-tag {
   color: #ff4d4d;
   font-weight: 600;
@@ -4872,7 +4875,7 @@ body.products-page .nav-links a[href="products.html"]::after {
   font-weight: 600;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .btn-primary:hover,
 .btn-outline:hover {
   transform: translateY(-3px);
@@ -4893,37 +4896,4 @@ body.products-page .nav-links a[href="products.html"]::after {
   .hero-content h1 {
     font-size: 30px;
   }
-}
-
-  /* HERO POSITION FIX */
-
-.hero-new {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-top: 80px; /* header ke liye space */
-}
-
-/* HEADER HEIGHT ADJUST */
-header {
-  height: 80px;
-}
-
-/* TEXT CENTER FIX */
-.hero-content {
-  margin-top: -40px; /* thoda upar lift karega perfectly */
-}
-
-/* IMAGE VISIBILITY BOOST */
-.hero-new::after {
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.65) 45%,
-    rgba(0,0,0,0.25) 100%
-  );
-}
-
-  .hero-new {
-  border: 5px solid red !important;
 }
