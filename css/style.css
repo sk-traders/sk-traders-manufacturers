@@ -4796,25 +4796,14 @@ body.products-page .nav-links a[href="products.html"]::after {
     z-index: 1;
   }
 
-  /* HERO FINAL FIX */
+  /* ===== HERO SECTION FINAL ===== */
 
 .hero {
   position: relative;
-  height: 85vh;
+  height: 100vh;
+  background: url('../assets/images/hero-industrial-machinery.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
-  overflow: hidden;
-}
-
-/* IMAGE */
-.hero-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
 
 /* OVERLAY */
@@ -4824,313 +4813,88 @@ body.products-page .nav-links a[href="products.html"]::after {
   background: linear-gradient(
     to right,
     rgba(0,0,0,0.85),
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.2)
+    rgba(0,0,0,0.3)
   );
-  z-index: 2;
+  z-index: 1;
 }
 
-/* CONTENT (TEXT FIX) */
+/* CONTENT */
 .hero-content {
   position: relative;
-  z-index: 10; /* सबसे ऊपर */
+  z-index: 2;
+  margin-left: 6%;
   max-width: 650px;
-  padding-left: 20px;
   color: #fff;
-}
-
-  .hero-content {
-  margin-left: 5%;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
 }
 
 /* TEXT */
 .hero-tag {
-  color: #ff4d4d;
-  font-weight: 600;
-  margin-bottom: 10px;
   font-size: 14px;
+  color: #ff4d4d;
+  margin-bottom: 10px;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 52px;
   line-height: 1.2;
   font-weight: 700;
 }
 
 .hero-desc {
-  margin: 18px 0;
+  margin: 20px 0;
   color: #ddd;
-  font-size: 16px;
   line-height: 1.6;
 }
 
-/* BUTTONS */
+/* BUTTON SPACE */
 .hero-buttons {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
-.btn-primary {
-  background: #d32f2f;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-right: 10px;
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.btn-outline {
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 10px 22px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-  .hero {
-  position: relative;
-}
-
-.hero-img {
+/* BUBBLE EFFECT */
+.hero::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,77,77,0.15), transparent 70%);
+  top: -100px;
+  left: -100px;
   z-index: 1;
+  animation: floatBubble 8s infinite ease-in-out;
 }
 
-.hero-overlay {
+.hero::after {
+  content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.8),
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.1)
-  );
-  z-index: 2;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 10; /* SABSE IMPORTANT */
-}
-
-  /* HERO FINAL FIX */
-
-.hero {
-  position: relative;
-  height: 85vh;   /* 🔥 IMPORTANT */
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-/* IMAGE */
-.hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+  bottom: -100px;
+  right: -100px;
   z-index: 1;
+  animation: floatBubble 10s infinite ease-in-out;
 }
 
-/* OVERLAY */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.85),
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.2)
-  );
-  z-index: 2;
-}
-
-/* TEXT */
-.hero-content {
-  position: relative;
-  z-index: 10;
-  max-width: 650px;
-  padding-left: 60px;
-  color: #fff;
-}
-
-/* TEXT SIZE FIX */
-.hero-content h1 {
-  font-size: 48px;
-  line-height: 1.2;
-}
-
-.hero-desc {
-  margin-top: 15px;
-  color: #ddd;
-}
-
-  .hero-content {
-  position: absolute;   /* 🔥 CHANGE */
-  top: 50%;
-  left: 80px;
-  transform: translateY(-50%);
-  z-index: 10;
-  max-width: 600px;
-  color: #fff;
-}
-
-  .hero-content {
-  background: rgba(255,0,0,0.2); /* sirf test ke liye */
-}
-
-  /* 🔥 FINAL HERO FIX */
-
-.hero {
-  position: relative;
-}
-
-.hero-img {
-  position: absolute;
-  z-index: 1;
-}
-
-.hero-overlay {
-  position: absolute;
-  z-index: 2;
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 80px;
-  transform: translateY(-50%);
-  z-index: 9999; /* 🔥 सबसे ऊपर */
-  color: #fff;
-}
-
-  /* 🔥 FINAL HERO FIX - WORKING */
-
-.hero {
-  position: relative;
-  height: 90vh;
-  overflow: hidden;
-}
-
-/* IMAGE */
-.hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-/* OVERLAY */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 2;
-}
-
-/* TEXT */
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 80px;
-  transform: translateY(-50%);
-  z-index: 9999;
-  color: #fff;
-  max-width: 600px;
-}
-
-/* FORCE VISIBILITY */
-.hero-content * {
-  position: relative;
-  z-index: 9999;
-}
-
-  /* 🔥 CLEAN HERO FINAL */
-
-.hero {
-  position: relative;
-  height: 90vh;
-  overflow: hidden;
-}
-
-/* IMAGE */
-.hero-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-/* OVERLAY */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 2;
-}
-
-/* TEXT */
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-  z-index: 10;
-  max-width: 600px;
-  color: #fff;
-}
-
-/* FORCE */
-.hero-content * {
-  z-index: 9999;
-  position: relative;
-}
-
-/* TEXT STYLING */
-.hero-tag {
-  color: #ff4d4d;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-.hero-content h1 {
-  font-size: 48px;
-  line-height: 1.2;
-}
-
-.hero-desc {
-  margin: 15px 0;
-  color: #ddd;
-}
-
-/* BUTTONS */
-.btn-primary {
-  background: #d32f2f;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-.btn-outline {
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-  body {
-  background: red !important;
+@keyframes floatBubble {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
 }
