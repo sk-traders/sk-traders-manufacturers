@@ -4826,7 +4826,6 @@ body.products-page .nav-links a[href="products.html"]::after {
   max-width: 650px;
   color: #fff;
   animation: fadeUp 1s ease forwards;
-  opacity: 0;
 }
 
 /* TEXT */
