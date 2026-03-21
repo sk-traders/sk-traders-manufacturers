@@ -4860,3 +4860,68 @@ body.products-page .nav-links a[href="products.html"]::after {
     font-size: 26px;
   }
 }
+
+  .hero-new {
+  position: relative;
+  height: 90vh;
+  background: url("../images/hero-industrial-machinery.jpg") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  color: #fff;
+}
+
+.hero-tag {
+  color: #ff4d4d;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-desc {
+  margin-bottom: 20px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #d32f2f;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+}
