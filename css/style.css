@@ -5072,3 +5072,43 @@ body.products-page .nav-links a[href="products.html"]::after {
     font-size: 28px;
   }
 }
+
+  .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  padding-left: 60px;
+  color: #fff;
+}
+
+.hero-tag {
+  color: #ff4d4d;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-desc {
+  margin: 15px 0;
+  color: #ddd;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: #d32f2f;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
