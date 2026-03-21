@@ -4835,8 +4835,12 @@ body.products-page .nav-links a[href="products.html"]::after {
   position: relative;
   z-index: 10; /* सबसे ऊपर */
   max-width: 650px;
-  padding-left: 80px;
+  padding-left: 20px;
   color: #fff;
+}
+
+  .hero-content {
+  margin-left: 5%;
 }
 
 /* TEXT */
