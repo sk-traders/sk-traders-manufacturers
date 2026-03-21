@@ -4897,3 +4897,15 @@ body.products-page .nav-links a[href="products.html"]::after {
     transform: translateY(-30px);
   }
 }
+
+  /* ===== FINAL FORCE FIX ===== */
+
+.hero-content {
+  position: relative !important;
+  z-index: 999 !important;
+  margin-left: 6% !important;
+  max-width: 650px !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
