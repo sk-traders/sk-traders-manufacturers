@@ -4833,6 +4833,12 @@ body.products-page .nav-links a[href="products.html"]::after {
 }
 
   /* ===== HERO ALIGNMENT FIX ===== */
+  .hero-content {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+}
 
 .hero {
   display: flex;
