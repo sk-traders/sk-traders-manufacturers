@@ -5126,3 +5126,7 @@ body.products-page .nav-links a[href="products.html"]::after {
   .hero h1 {
   letter-spacing: -0.5px;
 }
+
+  body {
+  background: red !important;
+}
