@@ -4796,32 +4796,25 @@ body.products-page .nav-links a[href="products.html"]::after {
     z-index: 1;
   }
 
-  /* ===== COMPLETE HERO FIX ===== */
-/* CSS Variables (Pro tarika data store karne ka) */
+/* ===== FINAL HERO FIX (Correct Name) ===== */
 :root {
-    --hero-bg: url('../assets/images/factory-interior-blue-.jpg');
-    --hero-fallback: #1a1a1a; /* Jab tak image load nahi hoti, ye dark color dikhega */
+    /* Maine ab ye naam 'hero-industrial-machinery.jpg' kar diya hai */
+    --hero-bg: url('../assets/images/hero-industrial-machinery.jpg');
+    --hero-fallback: #1a1a1a;
 }
 
 .hero-section {
     position: relative;
     width: 100%;
-    
-    /* PRO FIX: 'vh' ki jagah 'dvh' (Dynamic Viewport Height) */
     min-height: 100dvh; 
-    
-    /* Fallback color ke sath optimized background */
     background: var(--hero-fallback) var(--hero-bg) no-repeat center center / cover;
-    
     display: flex;
     align-items: center;
     overflow: hidden;
-    
-    /* PRO PERFORMANCE BOOST */
     contain: paint; 
 }
 
-/* Layer to make text readable over the image */
+/* Baaki overlay aur text wala code waisa hi rahega */
 .dark-overlay {
     position: absolute;
     top: 0;
@@ -4855,7 +4848,7 @@ body.products-page .nav-links a[href="products.html"]::after {
 }
 
 .hero-content h1 span {
-    color: #ff4d4d; /* Red highlight for emphasis */
+    color: #ff4d4d;
 }
 
 .hero-content p {
@@ -4891,7 +4884,6 @@ body.products-page .nav-links a[href="products.html"]::after {
 .btn-main:hover {
     background-color: #e63939;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 77, 77, 0.3);
 }
 
 .btn-outline {
@@ -4906,7 +4898,7 @@ body.products-page .nav-links a[href="products.html"]::after {
     transform: translateY(-3px);
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
     .hero-content { text-align: center; }
     .hero-content h1 { font-size: 32px; }
