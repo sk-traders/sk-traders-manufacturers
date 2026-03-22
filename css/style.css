@@ -4882,3 +4882,37 @@ body.products-page .nav-links a[href="products.html"]::after {
   position: absolute;
   z-index: 3;
 }
+
+  /* ===== FORCE HERO FIX ===== */
+
+.hero-new {
+  position: relative !important;
+  height: 90vh !important;
+}
+
+.hero-new-img {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-new-overlay {
+  position: absolute !important;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+  z-index: 2;
+}
+
+.hero-new-content {
+  position: absolute !important;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 3;
+  color: #fff;
+  max-width: 600px;
+}
