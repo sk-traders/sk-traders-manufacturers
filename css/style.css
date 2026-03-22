@@ -4942,3 +4942,28 @@ body.products-page .nav-links a[href="products.html"]::after {
   position: relative;
   z-index: 1;
 }
+
+  /* ===== KILL ALL HERO BACKGROUNDS (HOME ONLY) ===== */
+
+.home-hero,
+.home-hero::before,
+.home-hero::after {
+  background: none !important;
+  background-image: none !important;
+}
+
+/* ensure only <img> is visible */
+.home-hero img.hero-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* remove any hidden injected layers */
+.home-hero::before,
+.home-hero::after {
+  content: none !important;
+}
