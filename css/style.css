@@ -4796,32 +4796,26 @@ body.products-page .nav-links a[href="products.html"]::after {
     z-index: 1;
   }
 
-/* ===== FINAL HERO FIX (Correct Name) ===== */
-:root {
-    /* Maine ab ye naam 'hero-industrial-machinery.jpg' kar diya hai */
-    --hero-bg: url('../assets/images/hero-industrial-machinery.jpg');
-    --hero-fallback: #1a1a1a;
-}
-
+/* ===== HERO SECTION PRO FIX ===== */
 .hero-section {
     position: relative;
+    height: 100vh; /* Full Screen Height */
     width: 100%;
-    min-height: 100dvh; 
-    background: var(--hero-fallback) var(--hero-bg) no-repeat center center / cover;
+    /* Image Path Fix */
+    background: url('../assets/images/hero-industrial-machinery.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     overflow: hidden;
-    contain: paint; 
 }
 
-/* Baaki overlay aur text wala code waisa hi rahega */
+/* Image ko dark karne ke liye overlay */
 .dark-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.65); 
+    background: rgba(0, 0, 0, 0.7); /* 0.7 se image dark ho jayegi */
     z-index: 1;
 }
 
@@ -4848,7 +4842,7 @@ body.products-page .nav-links a[href="products.html"]::after {
 }
 
 .hero-content h1 span {
-    color: #ff4d4d;
+    color: #ff4d4d; /* Red Highlight */
 }
 
 .hero-content p {
@@ -4858,7 +4852,7 @@ body.products-page .nav-links a[href="products.html"]::after {
     color: #e0e0e0;
 }
 
-/* BUTTONS */
+/* BUTTONS ALIGNMENT */
 .hero-cta-group {
     display: flex;
     gap: 20px;
@@ -4898,13 +4892,9 @@ body.products-page .nav-links a[href="products.html"]::after {
     transform: translateY(-3px);
 }
 
-/* MOBILE */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-    .hero-content { text-align: center; }
     .hero-content h1 { font-size: 32px; }
-    .hero-cta-group { 
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
+    .hero-content { text-align: center; }
+    .hero-cta-group { justify-content: center; flex-direction: column; }
 }
