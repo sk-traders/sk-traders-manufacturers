@@ -4796,41 +4796,29 @@ body.products-page .nav-links a[href="products.html"]::after {
     z-index: 1;
   }
 
-  /* HERO SECTION CLEAN RESET */
+  /* ===== HERO NEW ===== */
+
 .hero {
-  position: relative;
   height: 90vh;
   display: flex;
   align-items: center;
-  overflow: hidden;
-}
-
-/* BACKGROUND IMAGE */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+  position: relative;
   background: url('../assets/images/hero-industrial-machinery.jpg') center/cover no-repeat;
-  z-index: 1;
 }
 
-/* DARK OVERLAY */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.3));
-  z-index: 2;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
 }
 
-/* CONTENT */
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   padding-left: 8%;
   max-width: 650px;
   color: #fff;
-  animation: fadeUp 1s ease forwards;
 }
 
 /* TEXT */
@@ -4840,7 +4828,7 @@ body.products-page .nav-links a[href="products.html"]::after {
   margin-bottom: 10px;
 }
 
-.hero-content h1 {
+.hero h1 {
   font-size: 48px;
   line-height: 1.2;
   margin-bottom: 15px;
@@ -4861,18 +4849,23 @@ body.products-page .nav-links a[href="products.html"]::after {
   border-radius: 6px;
   text-decoration: none;
   margin-right: 10px;
+  display: inline-block;
 }
 
-.hero-buttons .btn-primary {
+.btn-primary {
   background: #ff4d4d;
   color: #fff;
 }
 
-.hero-buttons .btn-secondary {
+.btn-secondary {
   color: #4da6ff;
 }
 
-/* ANIMATION */
+/* SIMPLE ANIMATION */
+.hero-content {
+  animation: fadeUp 1s ease;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
