@@ -4868,3 +4868,17 @@ body.products-page .nav-links a[href="products.html"]::after {
   background: #4da6ff;
   color: #fff;
 }
+
+  .hero-new-img {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-new-overlay {
+  z-index: 2;
+}
+
+.hero-new-content {
+  position: absolute;
+  z-index: 3;
+}
