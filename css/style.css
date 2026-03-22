@@ -4831,3 +4831,33 @@ body.products-page .nav-links a[href="products.html"]::after {
   border: 2px solid #4da6ff;
   color: #4da6ff;
 }
+
+  /* ===== HERO ALIGNMENT FIX ===== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  padding-left: 8%;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+}
