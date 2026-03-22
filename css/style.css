@@ -4927,3 +4927,18 @@ body.products-page .nav-links a[href="products.html"]::after {
   position: relative;
   z-index: 3;
 }
+
+  /* ===== FORCE FIX HERO (ONLY HOME) ===== */
+
+.home-hero,
+.home-hero::before,
+.home-hero::after {
+  background: none !important;
+  background-image: none !important;
+  content: none !important;
+}
+
+.home-hero img.hero-img {
+  position: relative;
+  z-index: 1;
+}
