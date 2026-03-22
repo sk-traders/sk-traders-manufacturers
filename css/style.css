@@ -5108,3 +5108,21 @@ body.products-page .nav-links a[href="products.html"]::after {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-25px); }
 }
+
+  .hero {
+  padding-left: 8% !important;
+}
+
+.hero-content {
+  margin-top: -30px !important;
+}
+
+  .btn-outline {
+  margin-left: 15px;
+  color: #4da6ff;
+  font-weight: 600;
+}
+
+  .hero h1 {
+  letter-spacing: -0.5px;
+}
