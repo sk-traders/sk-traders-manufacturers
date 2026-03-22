@@ -4795,5 +4795,76 @@ body.products-page .nav-links a[href="products.html"]::after {
     position: relative;
     z-index: 1;
   }
+/* ===== NEW HERO CLEAN ===== */
 
-  /* ===== HERO FINAL CLEAN ===== */
+.hero-new {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-new-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-new-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+}
+
+.hero-new-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  max-width: 600px;
+  color: #fff;
+}
+
+.hero-new-tag {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.hero-new-content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero-new-desc {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.hero-new-buttons {
+  margin-top: 20px;
+}
+
+.hero-new-buttons a {
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 1px solid #4da6ff;
+  color: #4da6ff;
+}
+
+.btn-secondary:hover {
+  background: #4da6ff;
+  color: #fff;
+}
