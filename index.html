@@ -538,60 +538,129 @@
 </section>
 
 <!-- WHY CHOOSE SK TRADERS -->
-<section class="section-soft">
-  <div class="container">
-    <h2 class="section-title">Why Choose SK Traders</h2>
+<section id="sk-why-choose-premium" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif; overflow: hidden;">
+    <div style="max-width: 1250px; margin: 0 auto; padding: 0 5%;">
+        
+        <div style="text-align: center; margin-bottom: 70px;">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; margin-bottom: 12px; font-size: 14px;">Our Edge</h4>
+            <h2 style="font-size: clamp(30px, 4.5vw, 46px); color: #1a1a1a; font-weight: 800; line-height: 1.1;">
+                Why Choose <span style="color: #ff4d4d;">SK Traders</span>
+            </h2>
+            <p style="color: #666; max-width: 600px; margin: 20px auto 0; font-size: 16px;">
+                Partnering with manufacturing leaders since 2015 with a commitment to quality and speed.
+            </p>
+        </div>
 
-    <div class="grid-3">
-      <div class="bubble-card">
-        <h3>Bulk Supply Capability</h3>
-        <p>
-          Strong sourcing network and inventory planning ensure uninterrupted
-          supply even for high-volume industrial demand.
-        </p>
-      </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+            
+            <style>
+                .choose-card-premium {
+                    background: #fff;
+                    border: 1px solid #f0f0f0;
+                    border-radius: 20px;
+                    padding: 50px 30px;
+                    flex: 1;
+                    min-width: 300px;
+                    max-width: 380px;
+                    text-align: center;
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth Pop-out effect */
+                    position: relative;
+                    z-index: 1;
+                }
 
-      <div class="bubble-card">
-        <h3>Consistent Quality</h3>
-        <p>
-          Products tested for reliability, durability and long-term
-          performance across demanding industrial applications.
-        </p>
-      </div>
+                /* Subtle Hover Animation */
+                .choose-card-premium:hover {
+                    transform: translateY(-12px) scale(1.02);
+                    box-shadow: 0 20px 40px rgba(255, 77, 77, 0.12); /* Soft Red Glow */
+                    border-color: #ff4d4d;
+                    z-index: 2;
+                }
 
-      <div class="bubble-card">
-        <h3>Fast Dispatch</h3>
-        <p>
-          Timely deliveries across Delhi NCR backed by efficient coordination
-          and dependable logistics partners.
-        </p>
-      </div>
+                /* Icon Background Circle */
+                .icon-circle {
+                    width: 80px;
+                    height: 80px;
+                    background: #fdf2f2;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 25px auto;
+                    transition: 0.4s;
+                }
+                .choose-card-premium:hover .icon-circle {
+                    background: #ff4d4d;
+                    transform: rotateY(180deg); /* Subtle 3D Flip */
+                }
 
-      <div class="bubble-card">
-        <h3>15+ Years Experience</h3>
-        <p>
-          Deep understanding of industrial requirements built through
-          more than a decade of on-ground supply expertise.
-        </p>
-      </div>
+                .choose-icon-new {
+                    font-size: 32px;
+                    color: #ff4d4d;
+                    transition: 0.4s;
+                }
+                .choose-card-premium:hover .choose-icon-new {
+                    color: #fff;
+                    transform: rotateY(-180deg);
+                }
 
-      <div class="bubble-card">
-        <h3>Wide Product Range</h3>
-        <p>
-          One-stop supplier for industrial adhesives, tapes and packaging
-          materials including trusted brands like Acrabond.
-        </p>
-      </div>
+                .choose-card-premium h3 {
+                    font-size: 21px;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin-bottom: 15px;
+                }
+                .choose-card-premium p {
+                    font-size: 15px;
+                    color: #555;
+                    line-height: 1.7;
+                    margin: 0;
+                }
 
-      <div class="bubble-card">
-        <h3>Competitive Pricing</h3>
-        <p>
-          Cost-effective bulk pricing structures designed for long-term
-          industrial partnerships and repeat supply.
-        </p>
-      </div>
+                /* Mobile View Fix */
+                @media (max-width: 768px) {
+                    .choose-card-premium { max-width: 100%; padding: 40px 20px; }
+                }
+            </style>
+
+            <div class="choose-card-premium">
+                <div class="icon-circle"><i class="fas fa-boxes-stacked choose-icon-new"></i></div>
+                <h3>Bulk Supply</h3>
+                <p>Ensuring uninterrupted inventory for high-volume industrial and manufacturing needs across NCR.</p>
+            </div>
+
+            <div class="choose-card-premium">
+                <div class="icon-circle"><i class="fas fa-shield-check choose-icon-new"></i></div>
+                <h3>Consistent Quality</h3>
+                <p>Every batch of Acrabond and packaging materials is tested for high-performance durability.</p>
+            </div>
+
+            <div class="choose-card-premium">
+                <div class="icon-circle"><i class="fas fa-truck-fast choose-icon-new"></i></div>
+                <h3>Fast Dispatch</h3>
+                <p>Strategically located in Noida Sector 6 to provide rapid same-day or next-day delivery cycles.</p>
+            </div>
+
+            <div class="choose-card-premium">
+                <div class="icon-circle"><span style="font-size: 24px; font-weight: 800; color: #ff4d4d;" class="exp-text">11+</span></div>
+                <style> .choose-card-premium:hover .exp-text { color: #fff !important; } </style>
+                <h3>Industry Expertise</h3>
+                <p>Over a decade of on-ground experience in sourcing and distributing industrial consumables.</p>
+            </div>
+
+            <div class="choose-card-premium">
+                <div class="icon-circle"><i class="fas fa-layer-group choose-icon-new"></i></div>
+                <h3>Wide Range</h3>
+                <p>From high-tack adhesives to specialized stretch films, we are your one-stop industrial shop.</p>
+            </div>
+
+            <div class="choose-card-premium">
+                <div class="icon-circle"><i class="fas fa-tags choose-icon-new"></i></div>
+                <h3>Factory Pricing</h3>
+                <p>Direct wholesale pricing structures designed to reduce overheads for our long-term partners.</p>
+            </div>
+
+        </div>
     </div>
-  </div>
 </section>
 
   <div class="floating-buttons">
