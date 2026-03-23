@@ -5033,3 +5033,90 @@ body.products-page .nav-links a[href="products.html"]::after {
 }
 
 .btn-secondary-outline:hover { background: white; color: black; }
+
+  /* ============================================================
+   ULTIMATE FIXED LAYOUT (DESKTOP + MOBILE FRIENDLY)
+   ============================================================ */
+
+/* 1. Header Horizontal Fix */
+body .site-header .nav-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 1250px !important;
+    margin: 0 auto !important;
+}
+
+body .site-header .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 30px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. Hero Section Alignment */
+body .hero-section-new {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding-top: 80px !important;
+}
+
+body .hero-btns {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+}
+
+/* ============================================================
+   MOBILE VIEW CODE (FOR SMARTPHONES)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Mobile Header */
+    body .site-header .nav-links {
+        display: none !important; /* Menu hides on mobile for now */
+    }
+
+    body .logo img {
+        height: 45px !important;
+    }
+
+    /* Mobile Hero Content */
+    body .hero-section-new {
+        height: auto !important;
+        min-height: 85vh !important;
+        padding: 100px 20px 50px 20px !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    body .hero-title {
+        font-size: 28px !important; /* Mobile friendly font size */
+        line-height: 1.2 !important;
+    }
+
+    body .hero-subtitle {
+        font-size: 1rem !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* Mobile Buttons Stacking */
+    body .hero-btns {
+        flex-direction: column !important; /* One button per line on mobile */
+        width: 100% !important;
+        align-items: center !important;
+    }
+
+    body .btn-primary-bubble, 
+    body .btn-secondary-outline {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+}
