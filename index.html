@@ -102,11 +102,10 @@
 <div style="height: 100px;"></div>
 
 <!-- ================= HERO ================= -->
- <section class="hero-section" style="
+<section class="hero-section" style="
     position: relative; 
-    min-height: 92vh; /* Height thodi kam kar di (100 se 92) */
+    min-height: 92vh; 
     width: 100%; 
-    /* Dark Overlay ke saath Background Image */
     background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.75)), url('assets/images/hero-industrial-machinery.jpg') no-repeat center center/cover; 
     display: flex; 
     align-items: center; 
@@ -117,70 +116,45 @@
         width: 100%; 
         max-width: 1200px; 
         margin: 0 auto; 
-        padding: 0 4% 0 1%; /* Left side padding kam karke, text left ki taraf shift kiya */
+        padding: 0 4% 0 1%; 
         position: relative; 
         z-index: 2;">
         
         <style>
-            /* 1. Content Fade/Slide In animation */
             @keyframes heroFadeIn {
                 0% { opacity: 0; transform: translateY(20px); }
                 100% { opacity: 1; transform: translateY(0); }
             }
-
-            /* 2. Red Highlight Text pulse animation (subtle) */
             @keyframes pulseRed {
                 0% { color: #ff4d4d; text-shadow: 0 0 5px rgba(255, 77, 77, 0.5); }
                 50% { color: #ff6666; text-shadow: 0 0 15px rgba(255, 102, 102, 0.8); }
                 100% { color: #ff4d4d; text-shadow: 0 0 5px rgba(255, 77, 77, 0.5); }
             }
-
-            /* 3. Button Bubble/Pulse effect on loop */
             @keyframes buttonBubble {
                 0% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
                 50% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4); }
                 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
             }
-
-            /* Main Content animation application */
-            .hero-animate-content {
-                animation: heroFadeIn 1s ease-out forwards;
-            }
-
-            /* Pulse for red span */
-            .hero-animate-pulse-text {
-                animation: pulseRed 2.5s infinite;
-            }
-
-            /* Bubble for main button */
-            .hero-animate-bubble-btn {
-                animation: buttonBubble 3s infinite ease-in-out;
-                transition: 0.3s;
-            }
-
-            /* Bubble hover effect extension */
+            .hero-animate-content { animation: heroFadeIn 1s ease-out forwards; }
+            .hero-animate-pulse-text { animation: pulseRed 2.5s infinite; }
+            .hero-animate-bubble-btn { animation: buttonBubble 3s infinite ease-in-out; transition: 0.3s; }
             .hero-animate-bubble-btn:hover {
                 transform: scale(1.08) translateY(-3px) !important;
                 box-shadow: 0 10px 30px rgba(255, 77, 77, 0.6) !important;
                 background-color: #e63939 !important;
             }
-            
-            /* Outline button simple pulse */
             @keyframes outlinePulse {
                 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
                 70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
                 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
             }
-            .hero-animate-outline-btn {
-                 transition: 0.3s;
-            }
+            .hero-animate-outline-btn { transition: 0.3s; }
             .hero-animate-outline-btn:hover {
                 animation: outlinePulse 1s;
                 background-color: white !important;
                 color: #000 !important;
                 transform: scale(1.03) !important;
             }
-
         </style>
         
         <div class="hero-content hero-animate-content" style="max-width: 850px;">
@@ -191,9 +165,9 @@
                 margin-bottom: 25px; 
                 text-transform: uppercase;
                 text-shadow: 3px 3px 15px rgba(0,0,0,0.6);">
-                Industrial Adhesives, <br>
-                <span class="hero-animate-pulse-text" style="color: #ff4d4d;">Tapes & Packaging</span> <br>
-                Supplier in Noida
+                Acrabond Adhesives, <br>
+                <span class="hero-animate-pulse-text" style="color: #ff4d4d;">Industrial Tapes & Packaging</span> <br>
+                Wholesale Supplier in Noida
             </h1>
             
             <p style="
@@ -202,7 +176,7 @@
                 line-height: 1.6; 
                 color: #e0e0e0;
                 max-width: 650px;">
-                Reliable industrial supply partner for manufacturing and packaging industries. High-quality products at competitive prices.
+                Leading B2B industrial partner for manufacturing and packaging industries in Noida Sector 6 & Delhi NCR. Premium quality Acrabond products at wholesale prices.
             </p>
             
             <div class="hero-cta-group" style="display: flex; gap: 20px;">
@@ -216,7 +190,7 @@
                     text-transform: uppercase; 
                     font-size: 14px;
                     display: inline-block;">
-                    Get Quote
+                    Get Wholesale Quote
                 </a>
                 
                 <a href="tel:+919871095529" class="hero-animate-outline-btn" style="
@@ -229,7 +203,7 @@
                     text-transform: uppercase; 
                     font-size: 14px;
                     display: inline-block;">
-                    Call Now
+                    Call Expert Now
                 </a>
             </div>
         </div>
