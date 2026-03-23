@@ -5120,3 +5120,100 @@ body .hero-btns {
         text-align: center !important;
     }
 }
+
+  /* ============================================================
+   PREMIUM HEADER - LOGO + BUTTONS + ANIMATIONS
+   ============================================================ */
+
+.site-header {
+    position: fixed !important;
+    top: 0; left: 0; width: 100%;
+    z-index: 10000 !important;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.95); /* Glass effect */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 4%;
+}
+
+.logo img {
+    height: 60px !important;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none !important;
+    gap: 30px !important;
+    margin: 0 !important;
+}
+
+.nav-links a {
+    text-decoration: none !important;
+    color: #333 !important;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Hover Effect: Bottom Line Animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: #ff4d4d; /* Brand Red [cite: 14] */
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover::after { width: 100%; }
+
+/* Get Quote Button with Pulse Animation */
+.btn-quote-header {
+    background: #ff4d4d !important;
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-quote-header:hover {
+    background: #800000 !important; /* Dark Maroon from logo */
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   MOBILE VIEW FIX
+   ============================================================ */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none !important; /* Mobile menu handles separately later */
+    }
+    
+    .nav-container {
+        padding: 0 15px !important;
+    }
+
+    .logo img { height: 45px !important; }
+    
+    .btn-quote-header {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
