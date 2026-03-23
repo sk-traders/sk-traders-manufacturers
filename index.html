@@ -418,12 +418,11 @@
 <!-- ================= FOOTER ================= -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<footer id="sk-premium-footer" style="background: #111 !important; color: #fff !important; padding: 60px 0 30px 0 !important; font-family: 'Poppins', sans-serif !important; border-top: 4px solid #ff4d4d !important; position: relative; overflow: hidden;">
+<footer id="sk-premium-footer" style="background: #111 !important; color: #fff !important; padding: 60px 0 30px 0 !important; font-family: 'Poppins', sans-serif !important; border-top: 4px solid #ff4d4d !important;">
     
     <style>
-        /* Animation & Hover Effects */
-        #sk-premium-footer a { transition: all 0.3s ease !important; display: inline-block; }
-        #sk-premium-footer a:hover { transform: translateY(-3px) scale(1.05); color: #ff4d4d !important; }
+        #sk-premium-footer a { transition: all 0.3s ease !important; }
+        #sk-premium-footer a:hover { transform: translateY(-3px); color: #ff4d4d !important; }
         
         .footer-column { 
             flex: 1; 
@@ -432,7 +431,7 @@
             position: relative;
         }
 
-        /* Desktop Dividers (Lines between columns) */
+        /* Desktop Dividers */
         @media (min-width: 992px) {
             .footer-column:not(:last-child)::after {
                 content: '';
@@ -441,22 +440,29 @@
                 top: 10%;
                 height: 80%;
                 width: 1px;
-                background: linear-gradient(to bottom, transparent, #333, transparent);
+                background: rgba(255,255,255,0.1);
             }
         }
 
-        /* Mobile Adjustments */
+        /* Mobile View: FORCE LEFT ALIGNMENT */
         @media (max-width: 768px) {
-            .footer-column { padding: 0 15px; text-align: center; border-bottom: 1px solid #222; padding-bottom: 20px; }
+            .footer-column { 
+                padding: 0 20px !important; 
+                text-align: left !important; /* Force Left */
+                border-bottom: 1px solid #222; 
+                padding-bottom: 30px;
+                margin-bottom: 20px;
+            }
             .footer-column:last-child { border-bottom: none; }
-            .social-icons-wrapper { justify-content: center !important; }
+            .social-icons-wrapper { justify-content: flex-start !important; } /* Force Left */
+            #sk-premium-footer div { align-items: flex-start !important; }
         }
     </style>
 
     <div style="max-width: 1250px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
         
         <div class="footer-column">
-            <img src="assets/images/logo.png" style="height: 75px; background: white; padding: 8px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(255,255,255,0.1);" alt="SK Traders">
+            <img src="assets/images/logo.png" style="height: 70px; background: white; padding: 8px; border-radius: 5px; margin-bottom: 20px;" alt="SK Traders">
             <p style="color: #bbb; font-size: 14px; line-height: 1.6;">Noida's premier supplier for Industrial Adhesives and Packaging solutions. Quality & Reliability guaranteed since 2026.</p>
             
             <div class="social-icons-wrapper" style="display: flex; gap: 15px; margin-top: 25px;">
@@ -467,7 +473,7 @@
         </div>
 
         <div class="footer-column">
-            <h4 style="color: #ff4d4d; margin-bottom: 25px; font-size: 19px; text-transform: uppercase; letter-spacing: 1px;">Links</h4>
+            <h4 style="color: #ff4d4d; margin-bottom: 25px; font-size: 19px; text-transform: uppercase;">Links</h4>
             <ul style="list-style: none; padding: 0; line-height: 2.5; font-size: 15px;">
                 <li><a href="index.html" style="color: #bbb; text-decoration: none;">Home</a></li>
                 <li><a href="about.html" style="color: #bbb; text-decoration: none;">About Us</a></li>
@@ -477,17 +483,19 @@
         </div>
 
         <div class="footer-column" style="flex: 1.2;">
-            <h4 style="color: #ff4d4d; margin-bottom: 25px; font-size: 19px; text-transform: uppercase; letter-spacing: 1px;">Reach Us</h4>
+            <h4 style="color: #ff4d4d; margin-bottom: 25px; font-size: 19px; text-transform: uppercase;">Reach Us</h4>
             <div style="font-size: 15px; color: #bbb;">
                 <p style="margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="color:#ff4d4d; margin-right: 12px;"></i> G-17, Sector 6, Noida, UP 201301</p>
                 <p style="margin-bottom: 15px;"><i class="fas fa-phone-alt" style="color:#ff4d4d; margin-right: 12px;"></i> +91 9871095529</p>
-                <p><i class="fas fa-envelope" style="color:#ff4d4d; margin-right: 12px;"></i> sktraders.noida011@gmail.com</p>
+                <p style="margin-bottom: 20px;"><i class="fas fa-envelope" style="color:#ff4d4d; margin-right: 12px;"></i> sktraders.noida011@gmail.com</p>
             </div>
-            <a href="https://share.google/kbMkRaPjOZeJocJut" target="_blank" style="margin-top: 20px; border: 1px solid #444; padding: 8px 15px; border-radius: 4px; color: #fff; text-decoration: none; font-size: 13px;">View on Google Maps</a>
+            <a href="https://share.google/kbMkRaPjOZeJocJut" target="_blank" style="display: inline-block; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 600; background: rgba(255,255,255,0.05);">
+                <i class="fas fa-directions" style="margin-right: 8px;"></i> View on Google Maps
+            </a>
         </div>
     </div>
 
-    <div style="text-align: center; border-top: 1px solid #222; margin-top: 50px; padding-top: 25px; font-size: 13px; color: #666; letter-spacing: 0.5px;">
+    <div style="text-align: center; border-top: 1px solid #222; margin-top: 50px; padding-top: 25px; font-size: 13px; color: #666;">
         <p>© 2026 SK Traders & Manufacturers. Trusted Partner in Noida & PAN India.</p>
     </div>
 </footer>
