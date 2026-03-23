@@ -538,7 +538,7 @@
 </section>
 
 <!-- WHY CHOOSE SK TRADERS -->
-<section id="sk-why-choose-premium" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif; overflow: hidden;">
+<section id="sk-why-choose-final" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif; overflow: hidden;">
     <div style="max-width: 1250px; margin: 0 auto; padding: 0 5%;">
         
         <div style="text-align: center; margin-bottom: 70px;">
@@ -554,7 +554,7 @@
         <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
             
             <style>
-                .choose-card-premium {
+                .choose-card-v3 {
                     background: #fff;
                     border: 1px solid #f0f0f0;
                     border-radius: 20px;
@@ -563,21 +563,18 @@
                     min-width: 300px;
                     max-width: 380px;
                     text-align: center;
-                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth Pop-out effect */
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                     position: relative;
-                    z-index: 1;
                 }
 
-                /* Subtle Hover Animation */
-                .choose-card-premium:hover {
-                    transform: translateY(-12px) scale(1.02);
-                    box-shadow: 0 20px 40px rgba(255, 77, 77, 0.12); /* Soft Red Glow */
+                .choose-card-v3:hover {
+                    transform: translateY(-12px);
+                    box-shadow: 0 20px 40px rgba(255, 77, 77, 0.12);
                     border-color: #ff4d4d;
-                    z-index: 2;
                 }
 
-                /* Icon Background Circle */
-                .icon-circle {
+                /* Icon Circle Fix */
+                .icon-circle-v3 {
                     width: 80px;
                     height: 80px;
                     background: #fdf2f2;
@@ -588,73 +585,70 @@
                     margin: 0 auto 25px auto;
                     transition: 0.4s;
                 }
-                .choose-card-premium:hover .icon-circle {
+                .choose-card-v3:hover .icon-circle-v3 {
                     background: #ff4d4d;
-                    transform: rotateY(180deg); /* Subtle 3D Flip */
                 }
 
-                .choose-icon-new {
-                    font-size: 32px;
+                /* Standard Icons that always load */
+                .choose-icon-v3 {
+                    font-size: 30px;
                     color: #ff4d4d;
                     transition: 0.4s;
                 }
-                .choose-card-premium:hover .choose-icon-new {
+                .choose-card-v3:hover .choose-icon-v3 {
                     color: #fff;
-                    transform: rotateY(-180deg);
+                    transform: scale(1.1);
                 }
 
-                .choose-card-premium h3 {
+                .choose-card-v3 h3 {
                     font-size: 21px;
                     font-weight: 700;
                     color: #1a1a1a;
                     margin-bottom: 15px;
                 }
-                .choose-card-premium p {
+                .choose-card-v3 p {
                     font-size: 15px;
                     color: #555;
                     line-height: 1.7;
                     margin: 0;
                 }
-
-                /* Mobile View Fix */
-                @media (max-width: 768px) {
-                    .choose-card-premium { max-width: 100%; padding: 40px 20px; }
-                }
             </style>
 
-            <div class="choose-card-premium">
-                <div class="icon-circle"><i class="fas fa-boxes-stacked choose-icon-new"></i></div>
+            <div class="choose-card-v3">
+                <div class="icon-circle-v3"><i class="fas fa-cubes choose-icon-v3"></i></div>
                 <h3>Bulk Supply</h3>
                 <p>Ensuring uninterrupted inventory for high-volume industrial and manufacturing needs across NCR.</p>
             </div>
 
-            <div class="choose-card-premium">
-                <div class="icon-circle"><i class="fas fa-shield-check choose-icon-new"></i></div>
+            <div class="choose-card-v3">
+                <div class="icon-circle-v3"><i class="fas fa-check-circle choose-icon-v3"></i></div>
                 <h3>Consistent Quality</h3>
                 <p>Every batch of Acrabond and packaging materials is tested for high-performance durability.</p>
             </div>
 
-            <div class="choose-card-premium">
-                <div class="icon-circle"><i class="fas fa-truck-fast choose-icon-new"></i></div>
+            <div class="choose-card-v3">
+                <div class="icon-circle-v3"><i class="fas fa-shipping-fast choose-icon-v3"></i></div>
                 <h3>Fast Dispatch</h3>
                 <p>Strategically located in Noida Sector 6 to provide rapid same-day or next-day delivery cycles.</p>
             </div>
 
-            <div class="choose-card-premium">
-                <div class="icon-circle"><span style="font-size: 24px; font-weight: 800; color: #ff4d4d;" class="exp-text">11+</span></div>
-                <style> .choose-card-premium:hover .exp-text { color: #fff !important; } </style>
+            <div class="choose-card-v3">
+                <div class="icon-circle-v3">
+                    <span style="font-size: 24px; font-weight: 800; color: #ff4d4d; transition: 0.4s;" class="exp-v3">11+</span>
+                </div>
+                <style>.choose-card-v3:hover .exp-v3 { color: #fff !important; }</style>
                 <h3>Industry Expertise</h3>
                 <p>Over a decade of on-ground experience in sourcing and distributing industrial consumables.</p>
             </div>
 
-            <div class="choose-card-premium">
-                <div class="icon-circle"><i class="fas fa-layer-group choose-icon-new"></i></div>
+            <div class="choose-card-v3">
+                <div class="icon-circle-v3"><i class="fas fa-th-large choose-icon-v3"></i></div>
                 <h3>Wide Range</h3>
                 <p>From high-tack adhesives to specialized stretch films, we are your one-stop industrial shop.</p>
             </div>
 
-            <div class="choose-card-premium">
-                <div class="icon-circle"><i class="fas fa-tags choose-icon-new"></i></div>
+            <div class="choose-card-v3">
+                <div class="icon-circle-v3"><i class="fas fa-tag choose-icon-v3"></i></div>
                 <h3>Factory Pricing</h3>
                 <p>Direct wholesale pricing structures designed to reduce overheads for our long-term partners.</p>
             </div>
