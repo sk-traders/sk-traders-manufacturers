@@ -235,22 +235,73 @@
     </div>
 </section>
   
-  <section class="about-preview-section">
-  <div class="about-preview-container">
-    
-    <div class="about-preview-text">
-      <h2>Know SK Traders & Manufacturers</h2>
-      <p>
-        SK Traders & Manufacturers is a trusted industrial supply partner based in Noida, supporting industries across Delhi NCR with high-performance Acrabond adhesives, industrial tapes, and packaging materials while ensuring reliable sourcing, bulk-ready inventory, and consistent supply that helps businesses operate smoothly and grow with confidence.
-      </p>
-      <a href="about.html" class="about-read-btn">Read More</a>
-    </div>
+  <section id="sk-about-preview" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif; overflow: hidden;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%; display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+        
+        <div style="flex: 1; min-width: 320px; position: relative;" class="about-img-container">
+            <style>
+                .about-img-frame {
+                    position: relative;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 15px 15px 0px #ff4d4d; /* Red Accent Offset */
+                    transition: 0.5s ease;
+                }
+                .about-img-frame:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 10px 10px 0px #800000; /* Maroon Hover */
+                }
+                .about-read-more {
+                    display: inline-block;
+                    padding: 15px 40px;
+                    background: #800000;
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 700;
+                    border-radius: 50px;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                    transition: 0.4s;
+                    box-shadow: 0 4px 15px rgba(128, 0, 0, 0.2);
+                }
+                .about-read-more:hover {
+                    background: #ff4d4d;
+                    transform: translateX(10px);
+                    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
+                }
+                @media (max-width: 768px) {
+                    #sk-about-preview { padding: 60px 0; text-align: center; }
+                    .about-img-container { order: 2; margin-top: 40px; }
+                    .about-img-frame { box-shadow: 10px 10px 0px #ff4d4d; }
+                    .about-text-box { order: 1; }
+                }
+            </style>
+            <div class="about-img-frame">
+                <img src="assets/images/about-sk-traders-industrial-supply.jpg" alt="Industrial Supply Warehouse Noida - SK Traders" style="width: 100%; display: block; filter: brightness(0.95);">
+            </div>
+        </div>
 
-    <div class="about-preview-image bubble-effect">
-      <img src="assets/images/about-sk-traders-industrial-supply.jpg" alt="SK Traders Industrial Supply Team">
-    </div>
+        <div style="flex: 1.2; min-width: 320px;" class="about-text-box">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; margin-bottom: 12px; font-size: 14px;">Since 2026 | Noida Sector 6</h4>
+            <h2 style="font-size: clamp(28px, 4vw, 42px); color: #1a1a1a; font-weight: 800; line-height: 1.2; margin-bottom: 25px;">
+                Know <span style="color: #ff4d4d;">SK Traders</span> & <br>Manufacturers
+            </h2>
+            
+            <p style="font-size: 16px; color: #444; line-height: 1.8; margin-bottom: 20px;">
+                <strong>SK Traders & Manufacturers</strong> is a trusted industrial supply partner based in Noida, supporting industries across Delhi NCR with high-performance <strong>Acrabond adhesives</strong>, industrial tapes, and packaging materials.
+            </p>
+            
+            <p style="font-size: 16px; color: #444; line-height: 1.8; margin-bottom: 35px;">
+                We ensure reliable sourcing, bulk-ready inventory, and consistent supply that helps businesses operate smoothly and grow with confidence. Whether it's heavy manufacturing or precision packaging, we've got you covered.
+            </p>
 
-  </div>
+            <a href="about.html" class="about-read-more">
+                Read More About Us <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+            </a>
+        </div>
+        
+    </div>
 </section>
 
 <!-- ================= CAPABILITIES ================= -->
