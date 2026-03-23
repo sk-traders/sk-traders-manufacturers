@@ -244,53 +244,88 @@
 
 </div>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Column 1 -->
-    <div class="footer-brand">
-      <img src="assets/images/logo.png" alt="SK Traders & Manufacturers">
-      <p>
-        Industrial adhesives, tapes and packaging solutions
-        for manufacturing and warehousing industries in India.
-      </p>
+<footer id="sk-premium-footer" style="background: #111 !important; color: #fff !important; padding: 60px 0 30px 0 !important; font-family: 'Poppins', sans-serif !important; border-top: 4px solid #ff4d4d !important;">
+    
+    <style>
+        #sk-premium-footer a { transition: all 0.3s ease !important; }
+        #sk-premium-footer a:hover { transform: translateY(-3px); color: #ff4d4d !important; }
+        
+        .footer-column { 
+            flex: 1; 
+            min-width: 250px; 
+            padding: 0 25px; 
+            position: relative;
+        }
+
+        /* Desktop Dividers */
+        @media (min-width: 992px) {
+            .footer-column:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 10%;
+                height: 80%;
+                width: 1px;
+                background: rgba(255,255,255,0.1);
+            }
+        }
+
+        /* Mobile View: FORCE LEFT ALIGNMENT */
+        @media (max-width: 768px) {
+            .footer-column { 
+                padding: 0 20px !important; 
+                text-align: left !important; /* Force Left */
+                border-bottom: 1px solid #222; 
+                padding-bottom: 30px;
+                margin-bottom: 20px;
+            }
+            .footer-column:last-child { border-bottom: none; }
+            .social-icons-wrapper { justify-content: flex-start !important; } /* Force Left */
+            #sk-premium-footer div { align-items: flex-start !important; }
+        }
+    </style>
+
+    <div style="max-width: 1250px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+        
+        <div class="footer-column">
+            <img src="assets/images/logo.png" style="height: 70px; background: white; padding: 8px; border-radius: 5px; margin-bottom: 20px;" alt="SK Traders">
+            <p style="color: #bbb; font-size: 14px; line-height: 1.6;">Noida's premier supplier for Industrial Adhesives and Packaging solutions. Quality & Reliability guaranteed since 2026.</p>
+            
+            <div class="social-icons-wrapper" style="display: flex; gap: 15px; margin-top: 25px;">
+                <a href="https://www.facebook.com/share/18HMdKh2vN/" target="_blank" style="color: #fff; background: #3b5998; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/sk_traders_manufacturers011?igsh=enUzbWxsY2VjbTkw" target="_blank" style="color: #fff; background: #e4405f; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-instagram"></i></a>
+                <a href="https://share.google/kbMkRaPjOZeJocJut" target="_blank" style="color: #fff; background: #4285F4; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4 style="color: #ff4d4d; margin-bottom: 25px; font-size: 19px; text-transform: uppercase;">Links</h4>
+            <ul style="list-style: none; padding: 0; line-height: 2.5; font-size: 15px;">
+                <li><a href="index.html" style="color: #bbb; text-decoration: none;">Home</a></li>
+                <li><a href="about.html" style="color: #bbb; text-decoration: none;">About Us</a></li>
+                <li><a href="products.html" style="color: #bbb; text-decoration: none;">Products</a></li>
+                <li><a href="contact.html" style="color: #bbb; text-decoration: none;">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column" style="flex: 1.2;">
+            <h4 style="color: #ff4d4d; margin-bottom: 25px; font-size: 19px; text-transform: uppercase;">Reach Us</h4>
+            <div style="font-size: 15px; color: #bbb;">
+                <p style="margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="color:#ff4d4d; margin-right: 12px;"></i> G-17, Sector 6, Noida, UP 201301</p>
+                <p style="margin-bottom: 15px;"><i class="fas fa-phone-alt" style="color:#ff4d4d; margin-right: 12px;"></i> +91 9871095529</p>
+                <p style="margin-bottom: 20px;"><i class="fas fa-envelope" style="color:#ff4d4d; margin-right: 12px;"></i> sktraders.noida011@gmail.com</p>
+            </div>
+            <a href="https://share.google/kbMkRaPjOZeJocJut" target="_blank" style="display: inline-block; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 600; background: rgba(255,255,255,0.05);">
+                <i class="fas fa-directions" style="margin-right: 8px;"></i> View on Google Maps
+            </a>
+        </div>
     </div>
 
-    <!-- Column 2 -->
-    <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div style="text-align: center; border-top: 1px solid #222; margin-top: 50px; padding-top: 25px; font-size: 13px; color: #666;">
+        <p>© 2026 SK Traders & Manufacturers. Trusted Partner in Noida & PAN India.</p>
     </div>
-
-    <!-- Column 3 -->
-    <div>
-      <h4>Industries</h4>
-      <ul>
-        <li>Manufacturing</li>
-        <li>Construction</li>
-        <li>Automobile</li>
-        <li>Warehousing</li>
-      </ul>
-    </div>
-
-    <!-- Column 4 -->
-    <div>
-      <h4>Contact</h4>
-      <p>G-17, Sector-6, Noida, Uttar Pradesh – 201301</p>
-      <p>+91 98710 95529</p>
-      <p>sktraders.noida01@gmail.com</p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2026 SK Traders & Manufacturers. All Rights Reserved.</p>
-  </div>
 </footer>
 
 <script src="js/main.js"></script>
