@@ -408,61 +408,100 @@
 </section>
 
 <!-- INDUSTRIES WE SERVE -->
-<section class="section-soft">
-  <div class="container">
-    <h2 class="section-title">Industries We Serve</h2>
+<section id="sk-industries" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif;">
+    <div style="max-width: 1250px; margin: 0 auto; padding: 0 5%;">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px; font-size: 14px;">Our Network</h4>
+            <h2 style="font-size: clamp(28px, 4vw, 42px); color: #1a1a1a; font-weight: 800;">
+                Industries We <span style="color: #ff4d4d;">Directly Support</span>
+            </h2>
+            <p style="color: #666; max-width: 600px; margin: 15px auto 0; font-size: 16px;">
+                Providing reliable supply chain support to businesses across Noida and Delhi NCR since 2015.
+            </p>
+        </div>
 
-    <div class="grid-3">
-      <div class="bubble-card">
-        <h3>Manufacturing</h3>
-        <p>
-          Heavy-duty industrial adhesives, tapes and consumables designed
-          for high-precision production lines and continuous manufacturing
-          environments.
-        </p>
-      </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
+            
+            <style>
+                .ind-card {
+                    background: #fff;
+                    border: 1px solid #eee;
+                    border-radius: 12px;
+                    padding: 40px 30px;
+                    flex: 1;
+                    min-width: 280px;
+                    max-width: 300px;
+                    transition: all 0.4s ease;
+                    text-align: left;
+                    position: relative;
+                    overflow: hidden;
+                }
+                .ind-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0; left: 0; width: 4px; height: 100%;
+                    background: #ff4d4d;
+                    transform: scaleY(0);
+                    transition: 0.4s;
+                }
+                .ind-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+                    border-color: #ff4d4d;
+                }
+                .ind-card:hover::before { transform: scaleY(1); }
+                
+                .ind-icon {
+                    font-size: 35px;
+                    color: #800000;
+                    margin-bottom: 20px;
+                    display: block;
+                }
+                .ind-card h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin-bottom: 15px;
+                }
+                .ind-card p {
+                    font-size: 14px;
+                    color: #666;
+                    line-height: 1.6;
+                }
+                @media (max-width: 768px) {
+                    .ind-card { max-width: 100%; text-align: center; }
+                    .ind-card::before { width: 100%; height: 4px; top: auto; bottom: 0; transform: scaleX(0); }
+                    .ind-card:hover::before { transform: scaleX(1); }
+                }
+            </style>
 
-      <div class="bubble-card">
-        <h3>Construction</h3>
-        <p>
-          Reliable bonding and sealing solutions for interiors,
-          insulation, structural applications and long-term durability.
-        </p>
-      </div>
+            <div class="ind-card">
+                <i class="fas fa-industry ind-icon"></i>
+                <h3>Manufacturing</h3>
+                <p>Bulk supply of Acrabond adhesives and industrial consumables for production lines in Noida Sector 6 & beyond.</p>
+            </div>
 
-      <div class="bubble-card">
-        <h3>Automotive</h3>
-        <p>
-          Assembly and surface protection tapes used for automotive
-          components ensuring safety, durability and clean finishes.
-        </p>
-      </div>
+            <div class="ind-card">
+                <i class="fas fa-box-open ind-icon"></i>
+                <h3>E-com & Logistics</h3>
+                <p>Specialized packaging tapes, stretch films, and security seals for high-volume shipping and warehouse operations.</p>
+            </div>
 
-      <div class="bubble-card">
-        <h3>Warehousing</h3>
-        <p>
-          Complete packaging and dispatch support to streamline storage,
-          handling and daily warehouse operations.
-        </p>
-      </div>
+            <div class="ind-card">
+                <i class="fas fa-store-alt ind-icon"></i>
+                <h3>Wholesale Trade</h3>
+                <p>Providing bulk inventory to retail suppliers and hardware distributors across Delhi NCR at competitive factory rates.</p>
+            </div>
 
-      <div class="bubble-card">
-        <h3>Packaging</h3>
-        <p>
-          Bulk packaging materials including tapes, wraps and labels
-          ensuring safe packing, secure shipment and brand protection.
-        </p>
-      </div>
+            <div class="ind-card">
+                <i class="fas fa-print ind-icon"></i>
+                <h3>Printing & Media</h3>
+                <p>High-tack double-sided tapes and surface protection films for signage, printing, and advertising industries.</p>
+            </div>
 
-      <div class="bubble-card">
-        <h3>Logistics</h3>
-        <p>
-          Secure transport consumables that reduce damage risk and support
-          smooth logistics and supply chain movement.
-        </p>
-      </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- WHY CHOOSE SK TRADERS -->
