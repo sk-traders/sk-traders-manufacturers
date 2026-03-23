@@ -104,105 +104,130 @@
 <!-- ================= HERO ================= -->
 <section class="hero-section" style="
     position: relative; 
-    min-height: 92vh; 
+    min-height: 100vh; /* Mobile pe buttons na chhupen isliye 100vh kiya */
     width: 100%; 
-    background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.75)), url('assets/images/hero-industrial-machinery.jpg') no-repeat center center/cover; 
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.78)), url('assets/images/hero-industrial-machinery.jpg') no-repeat center center/cover; 
     display: flex; 
     align-items: center; 
     overflow: hidden;
-    color: #ffffff;">
+    color: #ffffff;
+    padding-top: 80px; /* Header ke liye space */">
 
     <div class="hero-container" style="
         width: 100%; 
         max-width: 1200px; 
         margin: 0 auto; 
-        padding: 0 4% 0 1%; 
+        padding: 0 5%; 
         position: relative; 
         z-index: 2;">
         
         <style>
+            /* Animations */
             @keyframes heroFadeIn {
                 0% { opacity: 0; transform: translateY(20px); }
                 100% { opacity: 1; transform: translateY(0); }
             }
             @keyframes pulseRed {
-                0% { color: #ff4d4d; text-shadow: 0 0 5px rgba(255, 77, 77, 0.5); }
-                50% { color: #ff6666; text-shadow: 0 0 15px rgba(255, 102, 102, 0.8); }
-                100% { color: #ff4d4d; text-shadow: 0 0 5px rgba(255, 77, 77, 0.5); }
+                0% { color: #ff4d4d; text-shadow: 0 0 5px rgba(255, 77, 77, 0.3); }
+                50% { color: #ff6666; text-shadow: 0 0 12px rgba(255, 102, 102, 0.6); }
+                100% { color: #ff4d4d; text-shadow: 0 0 5px rgba(255, 77, 77, 0.3); }
             }
             @keyframes buttonBubble {
                 0% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-                50% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4); }
+                50% { transform: scale(1.04); box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4); }
                 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
             }
+            
             .hero-animate-content { animation: heroFadeIn 1s ease-out forwards; }
             .hero-animate-pulse-text { animation: pulseRed 2.5s infinite; }
             .hero-animate-bubble-btn { animation: buttonBubble 3s infinite ease-in-out; transition: 0.3s; }
+            
             .hero-animate-bubble-btn:hover {
-                transform: scale(1.08) translateY(-3px) !important;
-                box-shadow: 0 10px 30px rgba(255, 77, 77, 0.6) !important;
+                transform: scale(1.06) translateY(-2px) !important;
                 background-color: #e63939 !important;
+                box-shadow: 0 10px 30px rgba(255, 77, 77, 0.5) !important;
             }
-            @keyframes outlinePulse {
-                0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
-                70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
-                100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
-            }
-            .hero-animate-outline-btn { transition: 0.3s; }
-            .hero-animate-outline-btn:hover {
-                animation: outlinePulse 1s;
-                background-color: white !important;
-                color: #000 !important;
-                transform: scale(1.03) !important;
+
+            /* Mobile Responsive Fixes */
+            @media (max-width: 768px) {
+                .hero-section { 
+                    padding-top: 120px !important; 
+                    text-align: center !important;
+                    align-items: flex-start !important;
+                }
+                .hero-content h1 { 
+                    font-size: 28px !important; 
+                    line-height: 1.2 !important; 
+                    margin-bottom: 15px !important;
+                }
+                .hero-content p { 
+                    font-size: 15px !important; 
+                    margin-bottom: 30px !important;
+                    padding: 0 10px;
+                }
+                .hero-cta-group { 
+                    flex-direction: column !important; 
+                    gap: 15px !important; 
+                    align-items: center !important;
+                }
+                .hero-cta-group a { 
+                    width: 100% !important; 
+                    max-width: 280px !important; 
+                    padding: 14px !important;
+                }
             }
         </style>
         
-        <div class="hero-content hero-animate-content" style="max-width: 850px;">
+        <div class="hero-content hero-animate-content" style="max-width: 800px;">
             <h1 style="
-                font-size: 56px; 
+                font-size: clamp(30px, 4.5vw, 54px); 
                 line-height: 1.1; 
                 font-weight: 800; 
-                margin-bottom: 25px; 
+                margin-bottom: 20px; 
                 text-transform: uppercase;
-                text-shadow: 3px 3px 15px rgba(0,0,0,0.6);">
+                text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">
                 Acrabond Adhesives, <br>
                 <span class="hero-animate-pulse-text" style="color: #ff4d4d;">Industrial Tapes & Packaging</span> <br>
                 Wholesale Supplier in Noida
             </h1>
             
             <p style="
-                font-size: 1.3rem; 
-                margin-bottom: 40px; 
-                line-height: 1.6; 
+                font-size: clamp(15px, 2vw, 18px); 
+                margin-bottom: 35px; 
+                line-height: 1.5; 
                 color: #e0e0e0;
-                max-width: 650px;">
-                Leading B2B industrial partner for manufacturing and packaging industries in Noida Sector 6 & Delhi NCR. Premium quality Acrabond products at wholesale prices.
+                max-width: 620px;">
+                Leading B2B partner for manufacturing and packaging industries in Noida Sector 6 & Delhi NCR. Premium Acrabond products at wholesale prices.
             </p>
             
             <div class="hero-cta-group" style="display: flex; gap: 20px;">
                 <a href="contact.html" class="hero-animate-bubble-btn" style="
-                    padding: 16px 40px; 
+                    padding: 16px 35px; 
                     background: #ff4d4d; 
                     color: white; 
                     text-decoration: none; 
                     font-weight: 700; 
                     border-radius: 4px; 
                     text-transform: uppercase; 
-                    font-size: 14px;
-                    display: inline-block;">
+                    font-size: 13px;
+                    display: inline-block;
+                    letter-spacing: 0.5px;">
                     Get Wholesale Quote
                 </a>
                 
-                <a href="tel:+919871095529" class="hero-animate-outline-btn" style="
-                    padding: 16px 40px; 
+                <a href="tel:+919871095529" style="
+                    padding: 16px 35px; 
                     border: 2px solid white; 
                     color: white; 
                     text-decoration: none; 
                     font-weight: 700; 
                     border-radius: 4px; 
                     text-transform: uppercase; 
-                    font-size: 14px;
-                    display: inline-block;">
+                    font-size: 13px;
+                    display: inline-block;
+                    transition: 0.3s;"
+                    onmouseover="this.style.backgroundColor='white'; this.style.color='black';"
+                    onmouseout="this.style.backgroundColor='transparent'; this.style.color='white';">
                     Call Expert Now
                 </a>
             </div>
