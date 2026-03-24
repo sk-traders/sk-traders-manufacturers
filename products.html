@@ -323,60 +323,168 @@
     </div>
 </section>
 
-<section class="faq-section">
-  <div class="container">
-    <h2>Frequently Asked Questions</h2>
+<section id="industrial-faq" style="padding: 100px 0; background: #f8f9fa; font-family: 'Poppins', sans-serif;">
+    <div style="max-width: 900px; margin: 0 auto; padding: 0 5%;">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; font-size: 13px; margin-bottom: 10px;">Common Inquiries</h4>
+            <h2 style="font-size: clamp(28px, 4vw, 38px); font-weight: 900; color: #1a1a1a;">Frequently Asked <span style="color: #ff4d4d;">Questions</span></h2>
+            <div style="width: 50px; height: 4px; background: #ff4d4d; margin: 20px auto;"></div>
+        </div>
 
-    <details class="faq-item">
-      <summary>Which industrial adhesives do you supply?</summary>
-      <p>
-        We supply Acrabond industrial adhesives including yellow bond, rubber adhesives,
-        cyanoacrylate instant adhesives, epoxy systems, thread lockers,
-        potting compounds, and RTV silicone sealants.
-      </p>
-    </details>
+        <div class="faq-container">
+            <style>
+                .faq-item {
+                    background: #fff;
+                    margin-bottom: 15px;
+                    border-radius: 12px;
+                    border: 1px solid #eee;
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                }
+                .faq-item:hover {
+                    border-color: #ff4d4d;
+                    box-shadow: 0 10px 25px rgba(255, 77, 77, 0.08);
+                    transform: translateY(-2px);
+                }
+                .faq-question {
+                    padding: 22px 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    font-size: 16px;
+                    user-select: none;
+                }
+                .faq-answer {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    background: #fff;
+                }
+                .faq-answer-content {
+                    padding: 0 30px 25px 30px;
+                    color: #555;
+                    line-height: 1.8;
+                    font-size: 15px;
+                }
+                .faq-icon {
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    transition: transform 0.3s ease;
+                }
+                .faq-icon::before, .faq-icon::after {
+                    content: '';
+                    position: absolute;
+                    background: #ff4d4d;
+                    transition: transform 0.3s ease;
+                }
+                /* Horizontal line */
+                .faq-icon::before {
+                    width: 100%;
+                    height: 2px;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+                /* Vertical line */
+                .faq-icon::after {
+                    width: 2px;
+                    height: 100%;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                /* Active State */
+                .faq-item.active .faq-answer {
+                    max-height: 300px; /* Adjust as needed */
+                }
+                .faq-item.active .faq-icon {
+                    transform: rotate(45deg);
+                }
+                @media (max-width: 600px) {
+                    .faq-question { padding: 18px 20px; font-size: 15px; }
+                    .faq-answer-content { padding: 0 20px 20px 20px; }
+                }
+            </style>
 
-    <details class="faq-item">
-      <summary>Do you supply Acrabond adhesives in bulk?</summary>
-      <p>
-        Yes, we supply Acrabond adhesives in small packs as well as bulk industrial
-        packaging for manufacturing and production requirements.
-      </p>
-    </details>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Is S.K. Traders an authorized distributor for Acrabond?
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes, S.K. Traders & Manufacturers is an <strong>Authorized Strategic Partner</strong> with exclusive distribution rights for Acrabond Adhesives in Delhi, Uttar Pradesh, and Haryana. We ensure 100% genuine products directly from the manufacturer[cite: 5].
+                    </div>
+                </div>
+            </div>
 
-    <details class="faq-item">
-      <summary>Which industries use your adhesive products?</summary>
-      <p>
-        Our products are widely used in manufacturing, electrical & electronics,
-        automotive, packaging, warehousing, and industrial assembly applications.
-      </p>
-    </details>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Do you maintain bulk inventory for immediate industrial supply?
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Absolutely. We maintain a ready-to-dispatch buffer of top products like <strong>Acrabond 997, 978, and 4552</strong> at our Noida hub to support uninterrupted manufacturing cycles and prevent production delays.
+                    </div>
+                </div>
+            </div>
 
-    <details class="faq-item">
-      <summary>Do you provide delivery in Noida and Delhi NCR?</summary>
-      <p>
-        Yes, we provide reliable and timely delivery across Noida, Delhi NCR,
-        and nearby industrial locations.
-      </p>
-    </details>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    What is the typical delivery timeline for Noida and Delhi NCR?
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Leveraging our location in <strong>Noida Sector 9</strong>, we provide rapid <strong>24 to 48-hour dispatch</strong> across all major industrial hubs in Delhi, Noida, Gurgaon, and Haryana[cite: 4, 5].
+                    </div>
+                </div>
+            </div>
 
-    <details class="faq-item">
-      <summary>What packaging sizes are available for industrial adhesives?</summary>
-      <p>
-       We offer industrial adhesives in multiple packaging options including small tubes, bottles,
-      cartridges, and bulk packs to suit different manufacturing and production requirements.
-      </p>
-    </details>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Can you help us select the right adhesive for our specific application?
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes, our technical team offers consultancy to find the perfect match. Whether you need high-speed bonding with <strong>Acracyno 415</strong> or heavy-duty locking with <strong>Acrabond 998</strong>, we ensure optimal performance for your facility.
+                    </div>
+                </div>
+            </div>
 
-     <details class="faq-item">
-      <summary>Can you help us choose the right adhesive for our application?</summary>
-      <p>
-        Yes, our technical team assists customers in selecting the most suitable adhesive based on
-      material type, bonding strength, application conditions, and industry requirements.
-      </p>
-    </details>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Are your adhesives compliant with industrial safety standards?
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Most of our primary range, including <strong>Acrabond 978</strong>, is <strong>ROHS-compliant</strong>, meeting the rigorous safety and quality standards required for the electrical, automotive, and manufacturing industries[cite: 5].
+                    </div>
+                </div>
+            </div>
 
-  </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    How can we request wholesale pricing for large procurement?
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        As an authorized distributor, we offer <strong>competitive factory rates</strong>[cite: 5]. Simply click the "Get Bulk Price" button on our product catalog or contact our sales team directly for a volume-based customized quote.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
 <div class="floating-buttons">
