@@ -81,37 +81,62 @@
 <div style="height: 100px;"></div>
 
   <!-- ================= HERO ================= -->
-  <section id="about-hero" style="position: relative; height: 85vh; min-height: 500px; background: url('assets/images/about-factory-bg.jpg') center/cover no-repeat; display: flex; align-items: center; font-family: 'Poppins', sans-serif; overflow: hidden;">
+  <section id="about-hero" style="position: relative; height: 85vh; min-height: 500px; background: url('assets/images/about-hero-factory.jpg') center/cover no-repeat; display: flex; align-items: center; font-family: 'Poppins', sans-serif; overflow: hidden;">
     
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%); z-index: 1;"></div>
 
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 2; width: 100%;">
         
-        <div style="max-width: 750px;">
-            <span style="display: inline-block; background: #ff4d4d; color: #fff; padding: 5px 15px; border-radius: 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+        <div style="max-width: 780px;">
+            <span style="display: inline-block; background: #ff4d4d; color: #fff; padding: 6px 16px; border-radius: 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px;">
                 Since 2015 | Noida Sector 6
             </span>
 
-            <h1 style="font-size: clamp(32px, 5vw, 56px); color: #ffffff; font-weight: 800; line-height: 1.1; margin-bottom: 25px;">
+            <h1 style="font-size: clamp(32px, 5.2vw, 58px); color: #ffffff; font-weight: 800; line-height: 1.1; margin-bottom: 28px; letter-spacing: -1px;">
                 The Force Behind <br>
                 <span style="color: #ff4d4d;">Industrial Excellence</span>
             </h1>
 
-            <p style="font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,0.9); line-height: 1.7; margin-bottom: 35px; font-weight: 400;">
-                SK Traders & Manufacturers is North India's leading <strong>industrial adhesive expert</strong> and <strong>Acrabond specialist</strong>. Based in Noida, we fuel the supply chains of manufacturing, warehousing, and logistics giants with premium tapes and bulk packaging materials.
+            <p style="font-size: clamp(16px, 2.1vw, 20px); color: rgba(255,255,255,0.9); line-height: 1.7; margin-bottom: 40px; font-weight: 400;">
+                SK Traders & Manufacturers is North India's trusted <strong style="color: #ff4d4d;">industrial adhesive expert</strong> and <strong style="color: #ff4d4d;">Acrabond specialist</strong>. Delivering bulk industrial tapes and packaging materials across Delhi NCR.
             </p>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-                <a href="contact.html" style="background: #ff4d4d; color: #fff; padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: 700; transition: 0.3s; box-shadow: 0 10px 20px rgba(255,77,77,0.3);" 
-                   onmouseover="this.style.transform='translateY(-3px)'; this.style.backgroundColor='#800000';" 
-                   onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='#ff4d4d';">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+                
+                <style>
+                    @keyframes btn-float {
+                        0% { transform: translateY(0); }
+                        50% { transform: translateY(-5px); }
+                        100% { transform: translateY(0); }
+                    }
+                    .animated-quote-btn {
+                        background: #ff4d4d; 
+                        color: #fff; 
+                        padding: 16px 38px; 
+                        border-radius: 6px; 
+                        text-decoration: none; 
+                        font-weight: 700; 
+                        font-size: 16px; 
+                        display: inline-block;
+                        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        box-shadow: 0 10px 25px rgba(255,77,77,0.35);
+                        animation: btn-float 3s ease-in-out infinite;
+                    }
+                    .animated-quote-btn:hover {
+                        background: #800000 !important;
+                        transform: scale(1.05) !important;
+                        box-shadow: 0 15px 30px rgba(255,77,77,0.5) !important;
+                    }
+                </style>
+
+                <a href="contact.html" class="animated-quote-btn">
                     Get a Quote
                 </a>
                 
-                <div style="display: flex; align-items: center; gap: 10px; margin-left: 20px; border-left: 2px solid rgba(255,77,77,0.5); padding-left: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-left: 25px; border-left: 3px solid rgba(255,77,77,0.6); padding-left: 25px;">
                     <div>
-                        <span style="display: block; color: #fff; font-weight: 800; font-size: 20px;">11+ Years</span>
-                        <span style="display: block; color: rgba(255,255,255,0.7); font-size: 12px; text-transform: uppercase;">of Supply Expertise</span>
+                        <span style="display: block; color: #fff; font-weight: 800; font-size: 24px; line-height: 1;">11+ Years</span>
+                        <span style="display: block; color: rgba(255,255,255,0.7); font-size: 13px; text-transform: uppercase; margin-top: 4px;">Supply Expertise</span>
                     </div>
                 </div>
             </div>
