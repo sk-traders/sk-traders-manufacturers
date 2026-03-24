@@ -238,82 +238,113 @@
 </section>
 
    <!-- Mission, Vision & Values Section -->
-<section id="sk-mission-vision" style="padding: 80px 0; background: #f9f9f9; font-family: 'Poppins', sans-serif;">
+<section id="sk-strategic-pillars" style="padding: 100px 0; background: #fdfdfd; background-image: radial-gradient(#e5e5e5 0.5px, transparent 0.5px); background-size: 30px 30px; font-family: 'Poppins', sans-serif; overflow: hidden;">
+    
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-            
-            <div style="flex: 1; min-width: 300px; background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid #ff4d4d;">
-                <div style="font-size: 40px; color: #ff4d4d; margin-bottom: 20px;"><i class="fas fa-bullseye"></i></div>
-                <h3 style="font-size: 24px; font-weight: 800; color: #1a1a1a; margin-bottom: 15px;">Our Mission</h3>
-                <p style="color: #666; line-height: 1.7; font-size: 15px;">
-                    Our mission is to empower Delhi NCR's manufacturing sector with high-quality <strong>Acrabond adhesives</strong> and reliable packaging materials. We focus on delivering application-specific solutions that ensure zero downtime for your production lines.
-                </p>
-            </div>
-
-            <div style="flex: 1; min-width: 300px; background: #111; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-top: 5px solid #ff4d4d; color: #fff;">
-                <div style="font-size: 40px; color: #ff4d4d; margin-bottom: 20px;"><i class="fas fa-eye"></i></div>
-                <h3 style="font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 15px;">Our Vision</h3>
-                <p style="color: #bbb; line-height: 1.7; font-size: 15px;">
-                    To become the most trusted <strong>industrial supply partner</strong> in North India by consistently evolving our supply chain technologies and maintaining a 100% genuine material guarantee for every client.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="sk-values" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%; text-align: center;">
-        <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">The SK Foundation</h4>
-        <h2 style="font-size: 36px; font-weight: 800; color: #1a1a1a; margin-bottom: 60px;">Our Core <span style="color: #ff4d4d;">Values</span></h2>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 90px;">
             
             <style>
-                .value-card {
-                    padding: 40px 25px;
-                    border-radius: 12px;
-                    transition: all 0.4s ease;
-                    border: 1px solid #eee;
-                    text-align: left;
+                @keyframes fadeInUp {
+                    from { opacity: 0; transform: translateY(30px); }
+                    to { opacity: 1; transform: translateY(0); }
                 }
-                .value-card:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-                    border-color: #ff4d4d;
+                .animate-pillar {
+                    animation: fadeInUp 0.8s ease-out forwards;
                 }
-                .value-card i {
-                    font-size: 30px;
-                    color: #ff4d4d;
-                    margin-bottom: 20px;
+                .pillar-card {
+                    flex: 1; 
+                    min-width: 320px; 
+                    padding: 60px 45px; 
+                    border-radius: 25px; 
+                    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    position: relative;
+                }
+                /* Mission: Clean Light Gradient */
+                .mission-box {
+                    background: linear-gradient(135deg, #ffffff 0%, #fffafa 100%);
+                    border-left: 10px solid #ff4d4d;
+                    box-shadow: 0 25px 50px rgba(0,0,0,0.06);
+                }
+                /* Vision: Bold Dark Impact */
+                .vision-box {
+                    background: #1a1a1a;
+                    border-left: 10px solid #ff4d4d;
+                    color: #fff;
+                    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+                }
+                .pillar-card:hover {
+                    transform: scale(1.02);
+                }
+                .pillar-icon {
+                    font-size: 45px; 
+                    color: #ff4d4d; 
+                    margin-bottom: 25px; 
                     display: block;
                 }
             </style>
 
-            <div class="value-card">
-                <i class="fas fa-shield-alt"></i>
-                <h4 style="font-weight: 800; margin-bottom: 15px;">Integrity</h4>
-                <p style="font-size: 14px; color: #666; line-height: 1.6;">Transparent pricing and honest supply commitments across all industrial orders.</p>
+            <div class="pillar-card mission-box animate-pillar">
+                <i class="fas fa-crosshairs pillar-icon"></i>
+                <h3 style="font-size: 30px; font-weight: 900; color: #1a1a1a; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -0.5px;">Our Mission</h3>
+                <p style="color: #444; line-height: 1.8; font-size: 17px; margin: 0;">
+                    To empower Noida’s manufacturing landscape with precision-engineered <strong>Acrabond solutions</strong> and uninterrupted supply chains that drive industrial growth across Delhi NCR.
+                </p>
             </div>
 
-            <div class="value-card">
-                <i class="fas fa-check-double"></i>
-                <h4 style="font-weight: 800; margin-bottom: 15px;">Quality & Reliability</h4>
-                <p style="font-size: 14px; color: #666; line-height: 1.6;">Consistent availability of bulk-ready inventory to prevent production delays.</p>
+            <div class="pillar-card vision-box animate-pillar" style="animation-delay: 0.2s;">
+                <i class="fas fa-rocket pillar-icon"></i>
+                <h3 style="font-size: 30px; font-weight: 900; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -0.5px;">Our Vision</h3>
+                <p style="color: #ccc; line-height: 1.8; font-size: 17px; margin: 0;">
+                    Setting the gold standard in <strong>industrial adhesives and packaging</strong> by 2030 through sustainable innovation, technical expertise, and 100% supply transparency.
+                </p>
             </div>
+        </div>
 
-            <div class="value-card">
-                <i class="fas fa-users"></i>
-                <h4 style="font-weight: 800; margin-bottom: 15px;">Customer-Focused</h4>
-                <p style="font-size: 14px; color: #666; line-height: 1.6;">Responsive support and technical assistance for all bonding and packaging needs.</p>
-            </div>
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 14px; margin-bottom: 10px;">The SK Foundation</h4>
+            <h2 style="font-size: clamp(30px, 5vw, 42px); font-weight: 900; color: #1a1a1a;">Our Core <span style="color: #ff4d4d;">Values</span></h2>
+            <div style="width: 60px; height: 4px; background: #ff4d4d; margin: 20px auto;"></div>
+        </div>
 
-            <div class="value-card">
-                <i class="fas fa-sync-alt"></i>
-                <h4 style="font-weight: 800; margin-bottom: 15px;">Continuous Improvement</h4>
-                <p style="font-size: 14px; color: #666; line-height: 1.6;">Staying aligned with evolving industrial demands and new adhesive technologies.</p>
-            </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+            
+            <style>
+                .value-card-bold {
+                    background: #fff;
+                    padding: 45px 30px;
+                    border-radius: 15px;
+                    border: 1px solid #eee;
+                    transition: 0.3s ease-in-out;
+                    text-align: left;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+                }
+                .value-card-bold:hover {
+                    border-color: #ff4d4d;
+                    transform: translateY(-10px);
+                    box-shadow: 0 20px 40px rgba(255, 77, 77, 0.12);
+                }
+                .value-card-bold i {
+                    font-size: 35px;
+                    color: #ff4d4d;
+                    margin-bottom: 20px;
+                    display: block;
+                }
+                .value-card-bold h4 {
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: #1a1a1a;
+                    margin-bottom: 15px;
+                }
+            </style>
 
+            <div class="value-card-bold"><i class="fas fa-shield-alt"></i><h4>Integrity</h4><p style="font-size: 14px; color: #666; line-height: 1.6;">Zero-compromise transparency in every bulk order and Noida-based supply commitment.</p></div>
+            
+            <div class="value-card-bold"><i class="fas fa-gem"></i><h4>Quality Control</h4><p style="font-size: 14px; color: #666; line-height: 1.6;">Every batch of industrial tape and adhesive undergoes rigorous performance testing.</p></div>
+            
+            <div class="value-card-bold"><i class="fas fa-truck-loading"></i><h4>Reliability</h4><p style="font-size: 14px; color: #666; line-height: 1.6;">Maintaining consistent inventory for Sector 6 hubs to prevent any production downtime.</p></div>
+            
+            <div class="value-card-bold"><i class="fas fa-users-cog"></i><h4>Client Success</h4><p style="font-size: 14px; color: #666; line-height: 1.6;">Tailored technical support to find the exact bonding solution for your facility.</p></div>
         </div>
     </div>
 </section>
