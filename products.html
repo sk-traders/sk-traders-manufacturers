@@ -81,54 +81,65 @@
 <div style="height: 100px;"></div>
 
 <!-- PRODUCT HERO SECTION -->
-<section id="product-hero" style="position: relative; height: 75vh; min-height: 500px; background: url('assets/images/about-hero-factory.jpg') center/cover no-repeat; display: flex; align-items: center; font-family: 'Poppins', sans-serif; overflow: hidden;">
+<section id="product-hero" style="position: relative; height: 75vh; min-height: 550px; background: url('assets/images/product-hero-warehouse.jpg') center/cover no-repeat; display: flex; align-items: center; font-family: 'Poppins', sans-serif; overflow: hidden;">
     
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%); z-index: 1;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 100%); z-index: 1;"></div>
 
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 2; width: 100%;">
         
         <div style="max-width: 850px;">
-            <div style="display: inline-flex; align-items: center; background: rgba(255, 77, 77, 0.15); border: 1px solid #ff4d4d; padding: 8px 15px; border-radius: 50px; margin-bottom: 25px; animation: fadeInUp 0.8s ease-out;">
-                <i class="fas fa-certificate" style="color: #ff4d4d; margin-right: 10px;"></i>
-                <span style="color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+            
+            <style>
+                @keyframes badge-glow {
+                    0% { box-shadow: 0 0 5px rgba(255, 77, 77, 0.2); }
+                    50% { box-shadow: 0 0 20px rgba(255, 77, 77, 0.6); }
+                    100% { box-shadow: 0 0 5px rgba(255, 77, 77, 0.2); }
+                }
+                .auth-badge {
+                    display: inline-flex; 
+                    align-items: center; 
+                    background: rgba(255, 77, 77, 0.1); 
+                    border: 1px solid #ff4d4d; 
+                    padding: 10px 20px; 
+                    border-radius: 50px; 
+                    margin-bottom: 30px; 
+                    animation: badge-glow 3s infinite ease-in-out;
+                }
+            </style>
+
+            <div class="auth-badge">
+                <i class="fas fa-award" style="color: #ff4d4d; margin-right: 12px; font-size: 18px;"></i>
+                <span style="color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
                     Authorized Strategic Partner of Acrabond
                 </span>
             </div>
 
-            <h1 style="font-size: clamp(32px, 5.5vw, 60px); color: #ffffff; font-weight: 900; line-height: 1.1; margin-bottom: 25px; letter-spacing: -1px;">
-                High-Performance <br>
-                <span style="color: #ff4d4d;">Acrabond Adhesives</span> & Industrial Supplies
+            <h1 style="font-size: clamp(34px, 5.8vw, 64px); color: #ffffff; font-weight: 900; line-height: 1.1; margin-bottom: 25px; letter-spacing: -1.5px;">
+                Authorized <span style="color: #ff4d4d;">Acrabond</span> <br>Industrial Hub
             </h1>
 
-            <p style="font-size: clamp(16px, 2.2vw, 20px); color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 40px; font-weight: 400;">
-                S.K. Traders & Manufacturers holds <strong>exclusive distribution rights</strong> for Acrabond branded products across <strong>Delhi, Uttar Pradesh, and Haryana</strong>. Delivering bulk-ready industrial solutions directly from Noida to your facility.
+            <p style="font-size: clamp(16px, 2.2vw, 20px); color: rgba(255,255,255,0.9); line-height: 1.7; margin-bottom: 45px; max-width: 750px;">
+                S.K. Traders & Manufacturers holds <strong>exclusive distribution rights</strong>  to represent <strong>Acrabond Adhesives Pvt Ltd</strong> [cite: 2, 5] across <strong>Delhi, Uttar Pradesh, and Haryana</strong>. Delivering bulk-ready, high-performance bonding solutions directly to your production floor.
             </p>
 
             <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-                <a href="contact.html" style="background: #ff4d4d; color: #fff; padding: 18px 40px; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 16px; transition: 0.4s; box-shadow: 0 15px 30px rgba(255,77,77,0.3);"
-                   onmouseover="this.style.backgroundColor='#800000'; this.style.transform='translateY(-3px)';"
+                <a href="contact.html" style="background: #ff4d4d; color: #fff; padding: 18px 45px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 15px 35px rgba(255,77,77,0.4);"
+                   onmouseover="this.style.backgroundColor='#800000'; this.style.transform='translateY(-5px)';"
                    onmouseout="this.style.backgroundColor='#ff4d4d'; this.style.transform='translateY(0)';"
                    class="animated-btn">
                     Get Wholesale Quote
                 </a>
                 
-                <div style="display: flex; align-items: center; gap: 15px; border-left: 2px solid rgba(255,255,255,0.2); padding-left: 20px; margin-left: 10px;">
-                    <div style="color: #fff; font-size: 13px; line-height: 1.4;">
-                        <strong style="display: block; color: #ff4d4d;">Direct Supply Hub:</strong>
-                        Delhi • Noida • Gurgaon • UP
+                <div style="display: flex; align-items: center; gap: 15px; border-left: 3px solid rgba(255,77,77,0.6); padding-left: 25px; margin-left: 10px;">
+                    <div style="color: #fff; font-size: 14px; line-height: 1.5;">
+                        <strong style="display: block; color: #ff4d4d; text-transform: uppercase; letter-spacing: 1px;">Direct Regional Supply:</strong>
+                        UP • Haryana • Delhi NCR
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<style>
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-</style>
 
 <section class="products-section">
   <h2>Our Products</h2>
