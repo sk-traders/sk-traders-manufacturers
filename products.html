@@ -141,76 +141,164 @@
     </div>
 </section>
 
-<section class="products-section">
-  <h2>Our Products</h2>
-  <p class="section-sub">
-    We supply high-performance Acrabond industrial adhesives and sealants
-    trusted across manufacturing, electrical, automotive, and packaging industries.
-  </p>
+<section id="featured-products" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+        
+        <div style="text-align: center; margin-bottom: 70px;">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 14px; margin-bottom: 10px;">Official Inventory</h4>
+            <h2 style="font-size: clamp(30px, 5vw, 42px); font-weight: 900; color: #1a1a1a;">Our <span style="color: #ff4d4d;">Product</span> Range</h2>
+            <div style="width: 70px; height: 5px; background: #ff4d4d; margin: 20px auto;"></div>
+        </div>
 
-  <div class="products-grid">
+        <style>
+            .product-grid-v3 {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+            }
+            .p-card-premium {
+                background: #fff;
+                border: 1px solid #f0f0f0;
+                padding: 40px 30px;
+                border-radius: 20px;
+                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            }
+            .p-card-premium:hover {
+                transform: translateY(-12px);
+                border-color: #ff4d4d;
+                box-shadow: 0 25px 50px rgba(255, 77, 77, 0.12);
+            }
+            /* Exclusive Ribbon for Certificate Products */
+            .exclusive-tag {
+                position: absolute;
+                top: 20px;
+                right: -35px;
+                background: #ff4d4d;
+                color: #fff;
+                font-size: 10px;
+                font-weight: 800;
+                padding: 5px 40px;
+                transform: rotate(45deg);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                box-shadow: 0 5px 10px rgba(255, 77, 77, 0.2);
+            }
+            .p-icon-box {
+                width: 65px;
+                height: 65px;
+                background: rgba(255, 77, 77, 0.05);
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 25px;
+                transition: 0.3s;
+            }
+            .p-card-premium:hover .p-icon-box {
+                background: #ff4d4d;
+            }
+            .p-card-premium:hover .p-icon-box i {
+                color: #fff;
+            }
+            .p-icon-box i {
+                font-size: 28px;
+                color: #ff4d4d;
+            }
+            .p-title {
+                font-size: 20px;
+                font-weight: 800;
+                color: #1a1a1a;
+                margin-bottom: 15px;
+            }
+            .p-desc {
+                font-size: 14px;
+                color: #666;
+                line-height: 1.7;
+                margin-bottom: 25px;
+            }
+            .p-action-btn {
+                font-weight: 700;
+                color: #ff4d4d;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 14px;
+                transition: 0.3s;
+            }
+            .p-card-premium:hover .p-action-btn {
+                gap: 15px;
+            }
+        </style>
 
-    <div class="product-card">
-      <h3>Acrabond Yellow Bond 973</h3>
-      <p>High-strength yellow adhesive suitable for industrial bonding and assembly applications.</p>
+        <div class="product-grid-v3">
+            
+            <div class="p-card-premium">
+                <div class="exclusive-tag">Exclusive</div>
+                <div class="p-icon-box"><i class="fas fa-fill-drip"></i></div>
+                <h4 class="p-title">Acrabond 997 (0707)</h4>
+                <p class="p-desc">Authorized high-strength polychloroprene rubber adhesive designed for flexible and durable industrial bonding.</p>
+                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="p-card-premium">
+                <div class="exclusive-tag">Exclusive</div>
+                <div class="p-icon-box"><i class="fas fa-vial"></i></div>
+                <h4 class="p-title">Acrabond 978</h4>
+                <p class="p-desc">ROHS-compliant high-performance adhesive, ideal for manufacturing and electrical assembly workflows.</p>
+                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="p-card-premium">
+                <div class="p-icon-box"><i class="fas fa-bolt"></i></div>
+                <h4 class="p-title">Acracyno 415</h4>
+                <p class="p-desc">Premium instant cyanoacrylate adhesive for ultra-fast, high-precision bonding of metals and plastics.</p>
+                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="p-card-premium">
+                <div class="p-icon-box"><i class="fas fa-droplet"></i></div>
+                <h4 class="p-title">Acrabond 4552 (20G)</h4>
+                <p class="p-desc">Rapid-action instant adhesive in a convenient 20G industrial bottle. Perfect for high-speed assembly lines.</p>
+                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="p-card-premium">
+                <div class="p-icon-box"><i class="fas fa-tools"></i></div>
+                <h4 class="p-title">Thread Locker 998</h4>
+                <p class="p-desc">High-strength anaerobic adhesive designed to secure heavy-duty industrial fasteners against vibration.</p>
+                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="p-card-premium">
+                <div class="p-icon-box"><i class="fas fa-flask"></i></div>
+                <h4 class="p-title">Acrabond 973</h4>
+                <p class="p-desc">Structural adhesive specifically engineered for critical assembly bonding and lamination in NCR hubs.</p>
+                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="p-card-premium">
+                <div class="p-icon-box"><i class="fas fa-spray-can"></i></div>
+                <h4 class="p-title">Silicone RTV & Grease</h4>
+                <p class="p-desc">Industrial-grade silicone sealants for high-temperature gasketing, insulation, and protective coatings.</p>
+                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="p-card-premium">
+                <div class="p-icon-box"><i class="fas fa-tape"></i></div>
+                <h4 class="p-title">Mono Filament Tape</h4>
+                <p class="p-desc">Extremely high-tensile packaging tape for heavy-duty load securing and industrial warehousing.</p>
+                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div>
     </div>
-
-    <div class="product-card">
-      <h3>Acrabond Yellow Bond 978</h3>
-      <p>Reliable ROHS-compliant adhesive used in manufacturing and electrical industries.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Acrabond Rubber Adhesive 997 Series</h3>
-      <p>Polychloroprene rubber adhesive for flexible and durable industrial bonding.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Cyanoacrylate Instant Adhesive 4200</h3>
-      <p>Fast-curing instant adhesive ideal for metal, plastic, and rubber bonding.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Cyanoacrylate Instant Adhesive 4500</h3>
-      <p>High-performance instant adhesive for precision and quick assembly work.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Cyanoacrylate Instant Adhesive 4604</h3>
-      <p>Low-viscosity instant adhesive for electronics and industrial applications.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Thread Locking Adhesive Acrabond 26</h3>
-      <p>Medium-strength thread locker preventing loosening due to vibration.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Thread Locking Adhesive Acrabond 998</h3>
-      <p>High-strength thread locking adhesive for heavy-duty industrial fastening.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Epoxy Adhesive – Resin</h3>
-      <p>Industrial epoxy resin system providing strong bonding and structural strength.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>Epoxy Adhesive – Hardener</h3>
-      <p>Compatible hardener for epoxy systems ensuring durability and performance.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>LED Driver Potting Elastomer EN-4554</h3>
-      <p>Protective potting compound for LED drivers and electrical components.</p>
-    </div>
-
-    <div class="product-card">
-      <h3>RTV Silicone Adhesive Sealant</h3>
-      <p>Flexible RTV silicone sealant for sealing, gasketing, and insulation.</p>
-    </div>
-
-  </div>
 </section>
 
 <section class="faq-section">
