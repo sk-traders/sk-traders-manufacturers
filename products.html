@@ -487,6 +487,25 @@
     </div>
 </section>
 
+<script>
+    // FAQ Accordion Toggle Logic
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            
+            // Close other open FAQ items (Optional - for a cleaner feel)
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
 <div class="floating-buttons">
 
     <!-- WhatsApp -->
@@ -588,8 +607,6 @@
     </div>
 </footer>
 
-<script src="js/main.js"></script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -597,34 +614,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Which industrial adhesives do you supply?",
+      "name": "Is S.K. Traders an authorized distributor for Acrabond?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We supply a wide range of Acrabond industrial adhesives including yellow bond, rubber adhesives, cyanoacrylate instant adhesives, epoxy systems, thread lockers, potting compounds, and RTV silicone sealants."
+        "text": "Yes, S.K. Traders & Manufacturers is an Authorized Strategic Partner with exclusive distribution rights for Acrabond Adhesives in Delhi, Uttar Pradesh, and Haryana since 2019."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you supply Acrabond adhesives in bulk?",
+      "name": "Do you provide delivery in Noida and Delhi NCR industrial hubs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we supply Acrabond adhesives in both small packs and bulk industrial packaging for manufacturing and production requirements."
+        "text": "Based in Noida Sector 9, we provide rapid 24 to 48-hour dispatch across all major industrial hubs in Delhi, Noida, Gurgaon, and Haryana to ensure zero production downtime."
       }
     },
     {
       "@type": "Question",
-      "name": "Which industries use your adhesive products?",
+      "name": "Which Acrabond products are available in bulk inventory?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our adhesive products are widely used in manufacturing, electrical and electronics, automotive, packaging, warehousing, and industrial assembly applications."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide delivery in Noida and Delhi NCR?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we provide reliable and timely delivery of industrial adhesives across Noida, Delhi NCR, and nearby industrial locations."
+        "text": "We maintain bulk inventory for top-tier products like Acrabond 997, 978, 973, Acracyno 415, and 4552 to support manufacturing requirements in the NCR region."
       }
     }
   ]
