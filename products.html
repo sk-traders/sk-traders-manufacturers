@@ -382,25 +382,12 @@
                     background: #ff4d4d;
                     transition: transform 0.3s ease;
                 }
-                /* Horizontal line */
-                .faq-icon::before {
-                    width: 100%;
-                    height: 2px;
-                    top: 50%;
-                    left: 0;
-                    transform: translateY(-50%);
-                }
-                /* Vertical line */
-                .faq-icon::after {
-                    width: 2px;
-                    height: 100%;
-                    top: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
+                .faq-icon::before { width: 100%; height: 2px; top: 50%; left: 0; transform: translateY(-50%); }
+                .faq-icon::after { width: 2px; height: 100%; top: 0; left: 50%; transform: translateX(-50%); }
+
                 /* Active State */
                 .faq-item.active .faq-answer {
-                    max-height: 300px; /* Adjust as needed */
+                    max-height: 500px; /* Increased for longer text */
                 }
                 .faq-item.active .faq-icon {
                     transform: rotate(45deg);
@@ -412,19 +399,19 @@
             </style>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <div class="faq-question">
                     Is S.K. Traders an authorized distributor for Acrabond?
                     <div class="faq-icon"></div>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        Yes, S.K. Traders & Manufacturers is an <strong>Authorized Strategic Partner</strong> with exclusive distribution rights for Acrabond Adhesives in Delhi, Uttar Pradesh, and Haryana. We ensure 100% genuine products directly from the manufacturer[cite: 5].
+                        Yes, S.K. Traders & Manufacturers is an <strong>Authorized Strategic Partner</strong> with exclusive distribution rights for Acrabond Adhesives in Delhi, Uttar Pradesh, and Haryana[cite: 5]. We ensure 100% genuine products directly from the manufacturer[cite: 5].
                     </div>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <div class="faq-question">
                     Do you maintain bulk inventory for immediate industrial supply?
                     <div class="faq-icon"></div>
                 </div>
@@ -436,7 +423,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <div class="faq-question">
                     What is the typical delivery timeline for Noida and Delhi NCR?
                     <div class="faq-icon"></div>
                 </div>
@@ -448,7 +435,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <div class="faq-question">
                     Can you help us select the right adhesive for our specific application?
                     <div class="faq-icon"></div>
                 </div>
@@ -460,7 +447,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <div class="faq-question">
                     Are your adhesives compliant with industrial safety standards?
                     <div class="faq-icon"></div>
                 </div>
@@ -472,7 +459,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <div class="faq-question">
                     How can we request wholesale pricing for large procurement?
                     <div class="faq-icon"></div>
                 </div>
@@ -488,20 +475,24 @@
 </section>
 
 <script>
-    // FAQ Accordion Toggle Logic
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-            const item = question.parentElement;
-            
-            // Close other open FAQ items (Optional - for a cleaner feel)
-            document.querySelectorAll('.faq-item').forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
+    // FAQ Accordion Toggle Logic - Clean Version
+    document.addEventListener('DOMContentLoaded', () => {
+        const questions = document.querySelectorAll('.faq-question');
+        
+        questions.forEach(question => {
+            question.addEventListener('click', (e) => {
+                const item = question.parentElement;
+                
+                // Close other open FAQ items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
 
-            // Toggle current item
-            item.classList.toggle('active');
+                // Toggle current item
+                item.classList.toggle('active');
+            });
         });
     });
 </script>
