@@ -179,202 +179,153 @@
 
 <!-- ===== CONTACT CARDS ===== -->
 <style>
-    :root {
-        --sk-red: #ff4d4d;
-        --sk-light-bg: #fdfdfd;
-        --sk-text: #1a1a1a;
-    }
+    :root { --sk-red: #ff4d4d; --sk-bg: #fdfdfd; }
 
-    .sk-final-section {
-        background-color: #ffffff; /* Page Background White */
-        padding: 80px 0;
+    .sk-final-wrapper {
+        background-color: var(--sk-bg);
+        padding: 90px 0;
         font-family: 'Poppins', sans-serif;
-        color: var(--sk-text);
+        color: #1a1a1a;
     }
+    .sk-container { max-width: 1250px; margin: 0 auto; padding: 0 5%; }
 
-    .sk-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 5%;
-    }
-
-    /* SECTION 1: THE CONTACT CARDS (3 COLUMN TOP) */
-    .sk-top-row {
+    /* 1. TOP CARDS (RE-DESIGNED FOR SPACE) */
+    .sk-top-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-        margin-bottom: 50px;
+        gap: 35px;
+        margin-bottom: 70px;
     }
-
-    .sk-contact-card {
+    .sk-stat-card {
         background: #fff;
-        padding: 30px;
+        padding: 40px 25px;
         text-align: center;
         border: 1px solid #eee;
-        transition: 0.3s;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
-    .sk-contact-card:hover {
-        transform: translateY(-8px);
+    .sk-stat-card:hover {
+        transform: translateY(-12px);
         border-color: var(--sk-red);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        box-shadow: 0 20px 40px rgba(255, 77, 77, 0.1);
     }
+    .sk-stat-card i { font-size: 32px; color: var(--sk-red); margin-bottom: 20px; display: block; }
+    .sk-stat-card h3 { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .sk-stat-card p { font-size: 15px; color: #666; margin: 0; }
 
-    .sk-contact-card i {
-        font-size: 28px;
-        color: var(--sk-red);
-        margin-bottom: 15px;
-        display: block;
-    }
-
-    .sk-contact-card h3 {
-        font-size: 16px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-        color: #333;
-    }
-
-    .sk-contact-card p {
-        font-size: 15px;
-        color: #555;
-        margin: 0;
-    }
-
-    /* SECTION 2: THE UNIFIED BLOCK (MAP + FORM) */
-    .sk-bottom-row {
-        background: #fff;
+    /* 2. THE MAIN SPLIT (ANTI-CHIPKO) */
+    .sk-main-split {
         display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.1); /* Floating unified block */
-        border: 1px solid #eee;
-        overflow: hidden;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px; /* Strong separation gap */
+        align-items: stretch;
     }
 
-    /* LEFT SIDE: S.K. TRADERS GMB MAP */
-    .sk-map-side {
-        height: 100%;
-        min-height: 450px;
-    }
-
-    /* RIGHT SIDE: MINIMAL FORM */
-    .sk-form-side {
-        padding: 50px;
-    }
-
-    .sk-form-side h2 {
-        font-weight: 800;
-        margin-bottom: 25px;
-        font-size: 26px;
-        text-transform: uppercase;
-    }
-
-    .sk-input-group { margin-bottom: 15px; }
-    
-    .sk-input-group input, .sk-input-group select, .sk-input-group textarea {
-        width: 100%;
-        padding: 15px;
-        border: 1.5px solid #eee; /* Minimal border */
-        background: #fafafa;
-        font-family: inherit;
-        font-size: 14px;
-        transition: 0.3s;
-    }
-
-    .sk-input-group input:focus, .sk-input-group textarea:focus {
-        border-color: var(--sk-red);
+    /* MAP BOX: GMB RED MARKER LOCKED */
+    .sk-map-outer {
         background: #fff;
+        padding: 12px;
+        border: 1px solid #eee;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+        height: 550px;
+    }
+    .sk-map-outer iframe { width: 100%; height: 100%; border: 0; }
+
+    /* FORM BOX: PREMIUM GLASS FINISH */
+    .sk-form-outer {
+        background: #fff;
+        padding: 55px;
+        border: 1px solid #eee;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+        position: relative;
+    }
+    .sk-form-outer h2 { font-size: 34px; font-weight: 900; margin-bottom: 10px; line-height: 1.1; }
+    .sk-form-outer h2 span { color: var(--sk-red); }
+    .sk-form-outer p { color: #888; margin-bottom: 40px; font-size: 15px; }
+
+    .sk-input-row { margin-bottom: 25px; }
+    .sk-input-row input, .sk-input-row select, .sk-input-row textarea {
+        width: 100%; padding: 16px; border: 1px solid #f0f0f0; background: #fafafa;
+        font-family: inherit; transition: 0.3s; font-size: 15px;
+    }
+    .sk-input-row input:focus, .sk-input-row textarea:focus {
+        border-color: var(--sk-red); background: #fff; outline: none;
     }
 
-    .sk-submit-btn {
-        width: 100%;
-        background: var(--sk-red);
-        color: #fff;
-        padding: 18px;
-        border: none;
-        font-weight: 800;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: 0.4s;
-        letter-spacing: 1px;
+    .sk-btn-premium {
+        width: 100%; background: var(--sk-red); color: #fff; padding: 22px;
+        border: none; font-weight: 800; text-transform: uppercase; cursor: pointer;
+        transition: 0.4s; letter-spacing: 2px;
     }
+    .sk-btn-premium:hover { background: #111; transform: scale(1.02); }
 
-    .sk-submit-btn:hover {
-        background: #111;
-        letter-spacing: 3px;
-    }
+    /* Success Message Animation */
+    #sk-success-layer { display: none; text-align: center; padding: 60px 0; }
 
-    /* SUCCESS MESSAGE (Hidden by default) */
-    #sk-success-view {
-        display: none;
-        text-align: center;
-        padding: 50px 0;
-    }
-    .success-icon { font-size: 60px; color: #2ecc71; margin-bottom: 20px; }
-
-    /* Mobile Responsive */
     @media (max-width: 992px) {
-        .sk-top-row, .sk-bottom-row { grid-template-columns: 1fr; }
-        .sk-map-side { height: 300px; }
+        .sk-top-grid, .sk-main-split { grid-template-columns: 1fr; }
+        .sk-map-outer { height: 350px; }
     }
 </style>
 
-<section class="sk-final-section">
+<section class="sk-final-wrapper">
     <div class="sk-container">
         
-        <div class="sk-top-row">
-            <div class="sk-contact-card">
-                <i class="fa-solid fa-phone"></i>
+        <div class="sk-top-grid">
+            <div class="sk-stat-card">
+                <i class="fa-solid fa-phone-volume"></i>
                 <h3>Direct Line</h3>
                 <p>+91 9871095529</p>
             </div>
-            <div class="sk-contact-card">
-                <i class="fa-solid fa-envelope"></i>
-                <h3>Email Support</h3>
+            <div class="sk-stat-card">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <h3>Technical Mail</h3>
                 <p>sktraders.noida011@gmail.com</p>
             </div>
-            <div class="sk-contact-card">
+            <div class="sk-stat-card">
                 <i class="fa-solid fa-location-dot"></i>
                 <h3>Visit Us</h3>
-                <p>G-17, Sector-6, Noida</p>
+                <p>G-17, Sector-6, Noida, UP</p>
             </div>
         </div>
 
-        <div class="sk-bottom-row">
+        <div class="sk-main-split">
             
-            <div class="sk-map-side">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.4862217088927!2d77.3190886!3d28.5851865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d3fdb9af33%3A0x6ddae75d7cc62ee1!2sS.K%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711380000000!5m2!1sen!2sin" 
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="sk-map-outer">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.456801934937!2d77.30687337533355!3d28.58602627568971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45f782c5f11%3A0xc3f7a6f3b067d020!2sS.K%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711394500000!5m2!1sen!2sin" 
+                allowfullscreen="" loading="lazy"></iframe>
             </div>
 
-            <div class="sk-form-side">
+            <div class="sk-form-outer">
                 <form id="sk-form-final" action="https://formspree.io/f/xojnzldq" method="POST">
-                    <h2>Got a requirement? <span style="color:var(--sk-red)">Let's Bond.</span></h2>
+                    <h2>GOT A REQUIREMENT? <br><span>LET'S BOND.</span></h2>
+                    <p>Connect with Noida's authorized industrial hub for bulk pricing.</p>
                     
-                    <div class="sk-input-group"><input type="text" name="name" placeholder="Full Name / Company Name" required></div>
+                    <div class="sk-input-row"><input type="text" name="name" placeholder="Full Name / Factory Name" required></div>
                     
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-                        <div class="sk-input-group"><input type="tel" name="phone" placeholder="Mobile Number" required></div>
-                        <div class="sk-input-group">
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+                        <div class="sk-input-row"><input type="tel" name="phone" placeholder="Mobile Number" required></div>
+                        <div class="sk-input-row">
                             <select name="product" required>
                                 <option value="" disabled selected>Select Product</option>
                                 <option>Acrabond 997 / 978</option>
                                 <option>Acracyno 415</option>
-                                <option>Thread Locker</option>
+                                <option>Thread Locker / RTV</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="sk-input-group"><input type="email" name="email" placeholder="Email Address" required></div>
-                    <div class="sk-input-group"><textarea name="message" rows="4" placeholder="Briefly describe your industrial requirement..." required></textarea></div>
+                    <div class="sk-input-row"><input type="email" name="email" placeholder="Email Address" required></div>
+                    <div class="sk-input-row"><textarea name="message" rows="4" placeholder="Briefly describe your industrial requirement..." required></textarea></div>
                     
-                    <button type="submit" class="sk-submit-btn" id="sk-submit-btn">SEND MY REQUIREMENTS</button>
+                    <button type="submit" class="sk-btn-premium" id="sk-btn-text">SEND MY REQUIREMENTS</button>
                 </form>
 
-                <div id="sk-success-view">
-                    <div class="success-icon">✓</div>
-                    <h3>Inquiry Received!</h3>
-                    <p>Bhai, thank you. Our team will contact you within 2 hours.</p>
-                    <a href="https://wa.me/919871095529" style="background:#25d366; color:#fff; padding:12px 25px; text-decoration:none; font-weight:700; display:inline-block; margin-top:20px;">WHATSAPP US</a>
+                <div id="sk-success-layer">
+                    <h1 style="color:#2ecc71; font-size:60px;">✓</h1>
+                    <h2 style="margin-bottom:10px;">Enquiry Received!</h2>
+                    <p>Bhai, thank you for contacting <strong>S.K. Traders</strong>. Our Sector 6 team will reach out shortly.</p>
+                    <a href="https://wa.me/919871095529" style="background:#25d366; color:#fff; padding:15px 30px; text-decoration:none; font-weight:800; display:inline-block; margin-top:20px;">WHATSAPP CHAT</a>
                 </div>
             </div>
 
@@ -383,13 +334,13 @@
 </section>
 
 <script>
-    const fm = document.getElementById('sk-form-final');
-    const sc = document.getElementById('sk-success-view');
-    const bt = document.getElementById('sk-submit-btn');
+    const skForm = document.getElementById('sk-form-final');
+    const skSuccess = document.getElementById('sk-success-layer');
+    const skBtn = document.getElementById('sk-btn-text');
 
-    fm.addEventListener('submit', async function(e) {
+    skForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        bt.innerHTML = "PROCESSING...";
+        skBtn.innerHTML = "PROCESSING...";
         
         try {
             const response = await fetch(this.action, {
@@ -398,8 +349,8 @@
                 headers: { 'Accept': 'application/json' }
             });
             if (response.ok) {
-                fm.style.display = 'none';
-                sc.style.display = 'block';
+                skForm.style.display = 'none';
+                skSuccess.style.display = 'block';
             }
         } catch (err) { alert("Check Connection!"); }
     });
