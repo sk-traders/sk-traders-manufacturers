@@ -188,7 +188,6 @@
     }
     .sk-container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 
-    /* 1. TOP CARDS: GLASS & HOVER EFFECTS */
     .sk-cards-row {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -212,22 +211,19 @@
     .sk-glass-card h3 { font-size: 17px; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; }
     .sk-glass-card p { font-size: 15px; color: #555; margin: 0; }
 
-    /* 2. MAIN GRID (NO-CHIPKA-CHIPKI + HEIGHT MATCH) */
     .sk-main-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
-        align-items: stretch; /* Height Match */
+        align-items: stretch;
     }
 
-    /* MAP BOX: USING YOUR EXACT GMB LINK */
     .sk-map-container {
         border: 1px solid #eee;
         box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-        height: 550px; /* Fixed Height */
+        height: 550px;
     }
 
-    /* FORM BOX: PREMIUM LOOK */
     .sk-form-container {
         background: #fff;
         padding: 50px;
@@ -287,10 +283,16 @@
 
         <div class="sk-main-grid">
             
+            <!-- ✅ FIXED MAP SECTION -->
             <div class="sk-map-container">
                 <iframe 
-                    src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.80273668737!2d77.31795627528764!3d28.595728575684877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f379607473%3A0x586447f2c301d13b!2sS.K%20Traders%20%26%20Manufacturers!5e1!3m2!1sen!2sin!4v1774456392061!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1349339395883!2d77.31795627528768!3d28.595728575684884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f379607473%3A0x586447f2c301d13b!2sS.K%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1774455006142!5m2!1sen!2sin"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 
