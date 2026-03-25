@@ -178,83 +178,227 @@
 </section>
 
 <!-- ===== CONTACT CARDS ===== -->
-<section class="contact-cards">
-    <div class="container cards-grid">
+<style>
+    :root {
+        --sk-red: #ff4d4d;
+        --sk-dark: #0f1216;
+        --sk-glass: rgba(255, 255, 255, 0.03);
+        --sk-border: rgba(255, 255, 255, 0.1);
+    }
 
-        <div class="contact-card">
-            <i class="fa-solid fa-phone"></i>
-            <h3>Call Us</h3>
-            <p>+91 9871095529</p>
-            <span>Quick Industrial Enquiries</span>
+    /* 1. NEW BACKGROUND: DARK MESH GRADIENT */
+    .premium-contact-section {
+        background: radial-gradient(circle at top right, #1a1f26, #0f1216);
+        padding: 100px 0;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Mesh Grid Pattern Overlay */
+    .premium-contact-section::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: linear-gradient(var(--sk-border) 1px, transparent 1px), 
+                          linear-gradient(90deg, var(--sk-border) 1px, transparent 1px);
+        background-size: 40px 40px;
+        opacity: 0.2;
+    }
+
+    .container-sk {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5%;
+        position: relative;
+        z-index: 5;
+    }
+
+    /* 2. CARDS DESIGN (TOP ROW) */
+    .premium-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .sk-card-new {
+        background: var(--sk-glass);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border: 1px solid var(--sk-border);
+        border-radius: 2px; /* Sharp Industrial Look */
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .sk-card-new:hover {
+        background: rgba(255, 77, 77, 0.05);
+        border-color: var(--sk-red);
+        transform: translateY(-10px);
+    }
+
+    .sk-card-new i { font-size: 30px; color: var(--sk-red); margin-bottom: 20px; display: block; }
+    .sk-card-new h3 { font-size: 18px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .sk-card-new p { color: #bbb; font-size: 15px; }
+
+    /* 3. GRID: MAP + FORM */
+    .main-grid-sk {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+    .map-wrapper-new {
+        height: 520px;
+        border: 1px solid var(--sk-border);
+        filter: grayscale(1) invert(0.9) contrast(1.2); /* Premium Dark Map Look */
+        transition: 0.5s;
+    }
+    .map-wrapper-new:hover { filter: grayscale(0) invert(0); }
+
+    /* 4. PREMIUM FORM & SUCCESS STATE */
+    .form-container-new {
+        background: #fff;
+        padding: 50px;
+        border-radius: 2px;
+        position: relative;
+        min-height: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #enquiry-form h2 { color: #1a1a1a; font-weight: 900; margin-bottom: 30px; text-transform: uppercase; font-size: 28px; }
+    
+    .input-row-sk { margin-bottom: 20px; }
+    .input-row-sk input, .input-row-sk textarea {
+        width: 100%; padding: 15px; border: 1px solid #eee; background: #f9f9f9;
+        font-family: inherit; font-size: 15px; outline: none; transition: 0.3s;
+    }
+    .input-row-sk input:focus, .input-row-sk textarea:focus { border-color: var(--sk-red); background: #fff; }
+
+    .submit-btn-premium {
+        width: 100%; background: var(--sk-red); color: #fff; padding: 20px;
+        border: none; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;
+        cursor: pointer; transition: 0.4s;
+    }
+    .submit-btn-premium:hover { background: #1a1a1a; letter-spacing: 3px; }
+
+    /* SUCCESS MESSAGE (HIDDEN BY DEFAULT) */
+    #success-box {
+        display: none;
+        text-align: center;
+        animation: fadeIn 0.6s ease-out;
+    }
+    .success-icon { font-size: 80px; color: #2ecc71; margin-bottom: 20px; }
+    .success-box h2 { color: #1a1a1a; margin-bottom: 15px; }
+    .success-box p { color: #666; margin-bottom: 30px; line-height: 1.6; }
+    
+    .whatsapp-followup {
+        background: #25d366; color: #fff; padding: 15px 30px;
+        text-decoration: none; font-weight: 700; display: inline-block;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+    @media (max-width: 992px) {
+        .main-grid-sk { grid-template-columns: 1fr; }
+        .map-wrapper-new { height: 300px; order: 2; }
+    }
+</style>
+
+<section class="premium-contact-section">
+    <div class="container-sk">
+        
+        <div class="premium-cards">
+            <div class="sk-card-new">
+                <i class="fa-solid fa-phone-volume"></i>
+                <h3>Direct Line</h3>
+                <p>+91 9871095529<br>Noida Sector 6 Hub</p>
+            </div>
+            <div class="sk-card-new">
+                <i class="fa-solid fa-microchip"></i>
+                <h3>Technical Support</h3>
+                <p>sktraders.noida011@gmail.com<br>Expert Adhesive Solutions</p>
+            </div>
+            <div class="sk-card-new">
+                <i class="fa-solid fa-warehouse"></i>
+                <h3>Visit Warehouse</h3>
+                <p>G-17, Sector-6, Noida<br>Uttar Pradesh 201301</p>
+            </div>
         </div>
 
-        <div class="contact-card">
-            <i class="fa-solid fa-envelope"></i>
-            <h3>Email Us</h3>
-            <p>sktraders.noida011@gmail.com</p>
-            <span>Bulk Orders & Pricing Support</span>
-        </div>
+        <div class="main-grid-sk">
+            <div class="map-wrapper-new">
+                <iframe src="http://googleusercontent.com/maps.google.com/3" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
 
-        <div class="contact-card">
-            <i class="fa-solid fa-location-dot"></i>
-            <h3>Visit Us</h3>
-            <p>G-17, Sector-6, Noida</p>
-            <span>Delhi NCR Industrial Supplier</span>
-        </div>
+            <div class="form-box-wrapper">
+                <div class="form-container-new">
+                    
+                    <form id="enquiry-form" action="https://formspree.io/f/xojnzldq" method="POST">
+                        <h2>Send Us An Enquiry</h2>
+                        <div class="input-row-sk"><input type="text" name="name" placeholder="Full Name / Company" required></div>
+                        <div class="input-row-sk"><input type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}" required></div>
+                        <div class="input-row-sk"><input type="email" name="email" placeholder="Work Email" required></div>
+                        <div class="input-row-sk"><textarea name="message" rows="4" placeholder="How can we help your production line?" required></textarea></div>
+                        <button type="submit" class="submit-btn-premium" id="submit-btn">Submit Enquiry</button>
+                    </form>
 
+                    <div id="success-box" class="success-box">
+                        <div class="success-icon">✓</div>
+                        <h2>Inquiry Received!</h2>
+                        <p>Bhai, thank you for reaching out to <strong>S.K. Traders</strong>. Our technical expert is reviewing your requirement and will call you within 2 hours.</p>
+                        <a href="https://wa.me/919871095529?text=Hi, I just submitted an inquiry on your website." class="whatsapp-followup">
+                            <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-    <!-- ===== MAP + FORM SECTION ===== -->
-<section class="map-form-section">
-    <div class="container map-form-grid">
+<script>
+    const contactForm = document.getElementById('enquiry-form');
+    const successBox = document.getElementById('success-box');
+    const submitBtn = document.getElementById('submit-btn');
 
-        <!-- LEFT : MAP -->
-        <div class="map-box">
-            <iframe
-                src="https://www.google.com/maps?hl=en&q=SK+Traders+%26+Manufacturers+G-17+Sector+6+Noida+201301&output=embed"
-                width="100%"
-                height="100%"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
-        </div>
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault(); // Default reload stop
+        
+        submitBtn.innerHTML = "SENDING...";
+        submitBtn.style.opacity = "0.6";
 
-        <!-- RIGHT : FORM -->
-        <div class="form-box">
-            <h2>Send Us an Enquiry</h2>
+        const formData = new FormData(this);
+        
+        // Formspree API Call
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
 
-            <form action="https://formspree.io/f/xojnzldq" method="POST">
-
-    <input type="text" name="name" placeholder="Your Name" required>
-
-   <input 
-type="tel" 
-id="phone" 
-name="phone" 
-placeholder="Enter phone number" 
-pattern="[0-9]{10}" 
-title="Please enter a valid 10 digit phone number" 
-required>
-
-    <input 
-    type="email" 
-    name="email" 
-    placeholder="Email Address"
-    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-    title="Please enter a valid email address"
-    required>
-
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
-    <button type="submit" class="submit-btn">Submit Enquiry</button>
-
-</form>
-        </div>
-
-    </div>
-</section>
+            if (response.ok) {
+                // PREMIUM TRANSITION: Hide Form, Show Success
+                contactForm.style.display = 'none';
+                successBox.style.display = 'block';
+            } else {
+                alert("Oops! Something went wrong. Please try again.");
+                submitBtn.innerHTML = "SUBMIT ENQUIRY";
+                submitBtn.style.opacity = "1";
+            }
+        } catch (error) {
+            alert("Connection error. Check your internet.");
+            submitBtn.innerHTML = "SUBMIT ENQUIRY";
+        }
+    });
+</script>
 
   <div class="floating-buttons">
 
