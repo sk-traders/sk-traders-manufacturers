@@ -179,126 +179,140 @@
 
 <!-- ===== CONTACT CARDS ===== -->
 <style>
-    :root { --sk-red: #ff4d4d; --sk-dark: #1a1a1a; }
-    
-    .sk-final-section {
-        background: #ffffff;
-        padding: 60px 0;
+    :root { --sk-red: #ff4d4d; --sk-dark: #111; --sk-bg: #ffffff; }
+
+    .sk-contact-master {
+        background: var(--sk-bg);
+        padding: 90px 0;
         font-family: 'Poppins', sans-serif;
+        color: var(--sk-dark);
     }
     .sk-container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 
-    /* 1. CONTACT CARDS (EXACTLY LIKE YOUR SCREENSHOT) */
-    .sk-top-cards {
+    /* 1. TOP CARDS: PREMIUM ANIMATIONS */
+    .sk-cards-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        margin-bottom: 50px;
+        gap: 30px;
+        margin-bottom: 70px;
     }
-    .sk-card-unit {
+    .sk-premium-card {
         background: #fff;
-        padding: 40px 20px;
+        padding: 45px 30px;
         text-align: center;
-        border: 1px solid #f0f0f0;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-    }
-    .sk-card-unit i { font-size: 30px; color: var(--sk-red); margin-bottom: 15px; display: block; }
-    .sk-card-unit h3 { font-size: 17px; font-weight: 800; margin-bottom: 10px; color: #000; text-transform: uppercase; }
-    .sk-card-unit p { font-size: 15px; color: #555; margin: 0; }
-
-    /* 2. THE MAIN GRID (PERFECTLY ALIGNED) */
-    .sk-main-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        gap: 40px;
-        align-items: stretch; /* Height Matcher */
-    }
-
-    /* MAP BOX - S.K. TRADERS MARKER LOCKED */
-    .sk-map-frame {
-        background: #fff;
-        padding: 0;
         border: 1px solid #eee;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-        min-height: 550px; /* Exact height to match form */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         position: relative;
+        overflow: hidden;
+    }
+    .sk-premium-card:hover {
+        transform: translateY(-15px);
+        border-color: var(--sk-red);
+        box-shadow: 0 20px 50px rgba(255, 77, 77, 0.15);
+    }
+    .sk-premium-card i { font-size: 32px; color: var(--sk-red); margin-bottom: 20px; display: block; }
+    .sk-premium-card h3 { font-size: 17px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
+    .sk-premium-card p { font-size: 15px; color: #666; margin: 0; }
+
+    /* 2. MAIN GRID (NO-CHIPKA-CHIPKI + EQUAL HEIGHT) */
+    .sk-main-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px; /* Perfect Separation */
+        align-items: stretch;
     }
 
-    /* FORM BOX */
-    .sk-form-frame {
+    /* MAP BOX: TERA ASLI BUSINESS MARKER */
+    .sk-map-wrapper {
         background: #fff;
-        padding: 50px;
         border: 1px solid #eee;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        padding: 10px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+        height: 600px; /* Fixed Height to Match Form */
+    }
+    .sk-map-wrapper iframe { width: 100%; height: 100%; border: 0; }
+
+    /* FORM BOX: PREMIUM MINIMALIST */
+    .sk-form-wrapper {
+        background: #fff;
+        padding: 55px;
+        border: 1px solid #eee;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.06);
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+    .sk-form-wrapper h2 { font-size: 36px; font-weight: 900; line-height: 1.1; margin-bottom: 10px; }
+    .sk-form-wrapper h2 span { color: var(--sk-red); }
+    .sk-form-wrapper p { color: #888; margin-bottom: 40px; font-size: 15px; }
 
-    .sk-form-frame h2 { font-size: 34px; font-weight: 900; line-height: 1.1; margin-bottom: 30px; }
-    .sk-form-frame h2 span { color: var(--sk-red); }
-
-    .sk-field { margin-bottom: 20px; }
-    .sk-field input, .sk-field select, .sk-field textarea {
-        width: 100%; padding: 16px; border: 1.5px solid #f0f0f0; background: #fcfcfc;
-        font-family: inherit; font-size: 15px; outline: none; transition: 0.3s;
+    .sk-input-field { margin-bottom: 25px; }
+    .sk-input-field input, .sk-input-field select, .sk-input-field textarea {
+        width: 100%; padding: 18px; border: 1.5px solid #f2f2f2; background: #fafafa;
+        font-family: inherit; font-size: 15px; transition: 0.3s;
     }
-    .sk-field input:focus, .sk-field textarea:focus { border-color: var(--sk-red); background: #fff; }
+    .sk-input-field input:focus, .sk-input-field textarea:focus {
+        border-color: var(--sk-red); background: #fff; outline: none;
+        box-shadow: 0 0 15px rgba(255, 77, 77, 0.1);
+    }
 
-    .sk-submit-btn {
-        width: 100%; background: var(--sk-red); color: #fff; padding: 20px;
+    .sk-submit-trigger {
+        width: 100%; background: var(--sk-red); color: #fff; padding: 22px;
         border: none; font-weight: 800; text-transform: uppercase; cursor: pointer;
-        transition: 0.4s; letter-spacing: 1px;
+        transition: 0.4s; letter-spacing: 2px;
     }
-    .sk-submit-btn:hover { background: #000; }
+    .sk-submit-trigger:hover { background: #000; letter-spacing: 4px; }
 
-    #sk-success-box { display: none; text-align: center; padding: 40px 0; }
+    /* Success Message */
+    #sk-success-screen { display: none; text-align: center; padding: 60px 0; }
 
     @media (max-width: 992px) {
-        .sk-top-cards, .sk-main-grid { grid-template-columns: 1fr; }
-        .sk-map-frame { height: 350px; }
+        .sk-cards-grid, .sk-main-layout { grid-template-columns: 1fr; }
+        .sk-map-wrapper { height: 400px; }
     }
 </style>
 
-<section class="sk-final-section">
+<section class="sk-contact-master">
     <div class="sk-container">
         
-        <div class="sk-top-cards">
-            <div class="sk-card-unit">
-                <i class="fa-solid fa-phone"></i>
+        <div class="sk-cards-grid">
+            <div class="sk-premium-card">
+                <i class="fa-solid fa-phone-volume"></i>
                 <h3>Direct Line</h3>
                 <p>+91 9871095529</p>
             </div>
-            <div class="sk-card-unit">
-                <i class="fa-solid fa-envelope"></i>
+            <div class="sk-premium-card">
+                <i class="fa-solid fa-envelope-open-text"></i>
                 <h3>Technical Mail</h3>
                 <p>sktraders.noida011@gmail.com</p>
             </div>
-            <div class="sk-card-unit">
-                <i class="fa-solid fa-location-dot"></i>
-                <h3>Visit Us</h3>
+            <div class="sk-premium-card">
+                <i class="fa-solid fa-warehouse"></i>
+                <h3>Visit Warehouse</h3>
                 <p>G-17, Sector-6, Noida, UP</p>
             </div>
         </div>
 
-        <div class="sk-main-grid">
+        <div class="sk-main-layout">
             
-            <div class="sk-map-frame">
+            <div class="sk-map-wrapper">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.4636603513233!2d77.30687257616641!3d28.585869675690557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45f782c5f11%3A0xc3f7a6f3b067d020!2sS.K%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711385432120!5m2!1sen!2sin" 
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.468239066601!2d77.306873!3d28.585722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45f782c5f11%3A0xc3f7a6f3b067d020!2sSK%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711395529000!5m2!1sen!2sin" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 
-            <div class="sk-form-frame">
-                <form id="sk-final-form" action="https://formspree.io/f/xojnzldq" method="POST">
+            <div class="sk-form-wrapper">
+                <form id="sk-contact-form" action="https://formspree.io/f/xojnzldq" method="POST">
                     <h2>GOT A REQUIREMENT? <br><span>LET'S BOND.</span></h2>
+                    <p>Connect with Noida's authorized industrial hub for bulk pricing and technical support.</p>
                     
-                    <div class="sk-field"><input type="text" name="name" placeholder="Full Name / Company Name" required></div>
+                    <div class="sk-input-field"><input type="text" name="name" placeholder="Full Name / Factory Name" required></div>
                     
                     <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
-                        <div class="sk-field"><input type="tel" name="phone" placeholder="Mobile Number" required></div>
-                        <div class="sk-field">
+                        <div class="sk-input-field"><input type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}" required></div>
+                        <div class="sk-input-field">
                             <select name="product" required>
                                 <option value="" disabled selected>Select Product</option>
                                 <option>Acrabond 997 / 978</option>
@@ -308,14 +322,14 @@
                         </div>
                     </div>
 
-                    <div class="sk-field"><input type="email" name="email" placeholder="Email Address" required></div>
-                    <div class="sk-field"><textarea name="message" rows="5" placeholder="Briefly describe your industrial requirement..." required></textarea></div>
+                    <div class="sk-input-field"><input type="email" name="email" placeholder="Email Address" required></div>
+                    <div class="sk-input-field"><textarea name="message" rows="5" placeholder="Briefly describe your industrial requirement..." required></textarea></div>
                     
-                    <button type="submit" class="sk-submit-btn" id="sk-btn">SEND MY REQUIREMENTS</button>
+                    <button type="submit" class="sk-submit-trigger" id="sk-submit-btn">SEND MY REQUIREMENTS</button>
                 </form>
 
-                <div id="sk-success-box">
-                    <h1 style="color:#2ecc71;">✓</h1>
+                <div id="sk-success-screen">
+                    <div style="font-size:70px; color:#2ecc71; margin-bottom:20px;">✓</div>
                     <h3>Inquiry Received!</h3>
                     <p>Bhai, thank you for contacting <strong>S.K. Traders</strong>. Our Sector 6 team will reach out shortly.</p>
                     <a href="https://wa.me/919871095529" style="background:#25d366; color:#fff; padding:15px 30px; text-decoration:none; font-weight:800; display:inline-block; margin-top:20px;">WHATSAPP CHAT</a>
@@ -327,22 +341,25 @@
 </section>
 
 <script>
-    const f = document.getElementById('sk-final-form');
-    const s = document.getElementById('sk-success-box');
-    const b = document.getElementById('sk-btn');
+    const contactFm = document.getElementById('sk-contact-form');
+    const successSc = document.getElementById('sk-success-screen');
+    const submitBt = document.getElementById('sk-submit-btn');
 
-    f.addEventListener('submit', async function(e) {
+    contactFm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        b.innerHTML = "SENDING...";
-        const res = await fetch(this.action, {
-            method: 'POST',
-            body: new FormData(this),
-            headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-            f.style.display = 'none';
-            s.style.display = 'block';
-        }
+        submitBt.innerHTML = "PROCESSING...";
+        
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                contactFm.style.display = 'none';
+                successSc.style.display = 'block';
+            }
+        } catch (err) { alert("Check Connection!"); }
     });
 </script>
 
