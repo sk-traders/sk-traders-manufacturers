@@ -79,93 +79,135 @@
 
 <!-- ===== HERO SECTION ===== -->
 <style>
-    /* Hero Base Styling */
-    .contact-hero {
+    /* 1. Reset & Base */
+    .new-hero {
         position: relative;
-        /* Image URL Updated with your assets path */
-        background: url('assets/images/contact-sk-traders-industrial-warehouse.jpg') center/cover no-repeat;
-        padding: 120px 0; /* Vertical Spacing for structure */
-        color: #fff;
-        text-align: left;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        background: #121212; /* Dark Premium Base */
         font-family: 'Poppins', sans-serif;
         overflow: hidden;
     }
 
-    /* Dark Overlay to make text readable */
-    .hero-overlay {
+    /* 2. The Angular Image Section (Right Side) */
+    .hero-image-side {
         position: absolute;
-        top: 0; left: 0; 
-        width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.65); /* 65% transparency */
+        right: -5%;
+        top: 0;
+        width: 60%;
+        height: 100%;
+        background: url('assets/images/contact-sk-traders-industrial-warehouse.jpg') center/cover no-repeat;
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); /* Sharp Industrial Cut */
         z-index: 1;
     }
 
-    /* Content Container */
-    .hero-content-wrapper {
+    /* 3. Content Side (Left) */
+    .hero-text-side {
         position: relative;
-        z-index: 2; /* Ensures text is above overlay */
+        z-index: 2;
         max-width: 1200px;
         margin: 0 auto;
+        width: 100%;
         padding: 0 5%;
     }
 
-    /* Typography */
-    .hero-content-wrapper h1 {
-        font-size: 48px;
+    .content-box {
+        max-width: 650px;
+        background: rgba(255, 255, 255, 0.03); /* Ultra subtle glass effect */
+        backdrop-filter: blur(5px);
+        padding: 40px;
+        border-left: 5px solid #ff4d4d; /* Red Accent Line */
+    }
+
+    /* 4. Typography & Animations */
+    .new-hero h1 {
+        font-size: 56px;
+        line-height: 1.1;
         font-weight: 900;
-        margin-bottom: 20px;
-        line-height: 1.2;
-    }
-
-    .hero-content-wrapper p {
-        font-size: 18px;
-        max-width: 600px;
-        line-height: 1.7;
-        margin-bottom: 35px;
-        color: #ddd;
-    }
-
-    /* Call to Action Button */
-    .call-btn-hero {
-        background: #ff4d4d; /* Red Accent */
         color: #fff;
-        padding: 15px 40px;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 700;
+        margin-bottom: 20px;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
+    }
+
+    .new-hero h1 span {
+        color: #ff4d4d; /* Highlighting SK Traders */
+    }
+
+    .new-hero p {
+        font-size: 19px;
+        color: #ccc;
+        line-height: 1.8;
+        margin-bottom: 35px;
+    }
+
+    /* 5. New Magnetic Button Animation */
+    .mag-button {
+        position: relative;
         display: inline-block;
-        border: 2px solid #ff4d4d;
+        padding: 18px 45px;
+        background: #ff4d4d;
+        color: #fff;
+        font-weight: 800;
+        text-decoration: none;
+        letter-spacing: 1px;
+        border-radius: 0; /* Sharp Edges for Industrial Look */
+        transition: 0.4s cubic-bezier(0.6, 0.01, 0, 1);
+        z-index: 1;
+        border: 1px solid #ff4d4d;
     }
 
-    .call-btn-hero:hover {
-        background: transparent;
+    .mag-button::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 0; height: 100%;
+        background: #fff;
+        transition: 0.4s;
+        z-index: -1;
+    }
+
+    .mag-button:hover {
+        color: #1a1a1a;
+        transform: scale(1.05);
+    }
+
+    .mag-button:hover::before {
+        width: 100%;
+    }
+
+    /* Badge Styles */
+    .location-badge {
+        display: inline-block;
+        background: rgba(255, 77, 77, 0.2);
         color: #ff4d4d;
-        transform: translateY(-3px);
+        padding: 5px 15px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        border: 1px solid rgba(255, 77, 77, 0.3);
     }
 
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .contact-hero { padding: 80px 0; }
-        .hero-content-wrapper h1 { font-size: 36px; }
-        .hero-content-wrapper p { font-size: 16px; }
+    /* Mobile Responsive */
+    @media (max-width: 992px) {
+        .hero-image-side { width: 100%; opacity: 0.3; right: 0; clip-path: none; }
+        .new-hero h1 { font-size: 38px; }
     }
 </style>
 
-<section class="contact-hero">
-    <div class="hero-overlay"></div>
-    
-    <div class="hero-content-wrapper">
-        <h1>Contact SK Traders & Manufacturers</h1>
-        
-        <p>
-            Get in touch with SK Traders & Manufacturers for reliable industrial adhesives,
-            industrial tapes, and packaging materials across Noida Sector 6 and Delhi NCR.
-        </p>
-        
-        <a href="tel:+919871095529" class="call-btn-hero">Call Us Now</a>
+<section class="new-hero">
+    <div class="hero-image-side"></div>
+
+    <div class="hero-text-side">
+        <div class="content-box">
+            <div class="location-badge">📍 NOIDA SECTOR 6 | AUTHORIZED HUB</div>
+            <h1>Reliable <br><span>SK Traders</span> <br>& Manufacturers</h1>
+            <p>Direct Distribution of Industrial Adhesives & Packaging Materials across Delhi NCR & Haryana. Your trusted partner in production excellence since 2019.</p>
+            
+            <a href="tel:+919871095529" class="mag-button">
+                CONNECT WITH US NOW
+            </a>
+        </div>
     </div>
 </section>
 
