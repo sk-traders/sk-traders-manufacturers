@@ -179,171 +179,178 @@
 
 <!-- ===== CONTACT CARDS ===== -->
 <style>
-    :root {
-        --sk-red: #ff4d4d;
-        --sk-bg: #0b0d11; /* Ultra Smooth Deep Dark */
-        --sk-card-bg: rgba(255, 255, 255, 0.04);
-    }
+    :root { --sk-red: #ff4d4d; --sk-dark: #0d0f12; }
 
-    .premium-contact-section {
-        /* Concrete khatam - ab smooth premium gradient */
-        background: linear-gradient(135deg, #0b0d11 0%, #1c1f26 100%);
+    .sk-contact-master {
+        background: #0d0f12; /* Deep solid base */
         padding: 100px 0;
         font-family: 'Poppins', sans-serif;
         color: #fff;
+        position: relative;
     }
 
-    .container-sk { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+    /* Background: Glowing Industrial Spotlights */
+    .sk-contact-master::after {
+        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: radial-gradient(circle at 10% 20%, rgba(255, 77, 77, 0.05) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(255, 77, 77, 0.05) 0%, transparent 40%);
+        pointer-events: none;
+    }
 
-    /* CARDS: Glassmorphism Style */
-    .premium-cards {
+    .sk-wrapper { max-width: 1300px; margin: 0 auto; padding: 0 5%; }
+
+    /* LAYOUT: Asymmetric Grid */
+    .sk-main-layout {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: 0.8fr 1.2fr; /* Purane layout se hat kar */
         gap: 30px;
-        margin-bottom: 70px;
-    }
-
-    .sk-card-new {
-        background: var(--sk-card-bg);
-        backdrop-filter: blur(15px);
-        padding: 45px 30px;
-        border: 1px solid rgba(255,255,255,0.08);
-        text-align: center;
-        transition: 0.4s;
-    }
-
-    .sk-card-new:hover {
-        background: rgba(255, 77, 77, 0.08);
-        border-color: var(--sk-red);
-        transform: translateY(-10px);
-    }
-
-    .sk-card-new i { font-size: 35px; color: var(--sk-red); margin-bottom: 20px; display: block; }
-    .sk-card-new h3 { font-size: 18px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-    .sk-card-new p { color: #aaa; font-size: 15px; line-height: 1.6; }
-
-    /* MAP & FORM GRID */
-    .main-grid-sk {
-        display: grid;
-        grid-template-columns: 1fr 1.1fr;
-        gap: 50px;
         align-items: stretch;
     }
 
-    .map-wrapper-new {
-        border-radius: 4px;
+    /* LEFT: THE GMB & INFO HUB */
+    .sk-info-hub {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sk-gmb-box {
+        height: 100%;
+        background: #15181d;
+        border: 1px solid rgba(255,255,255,0.05);
+        position: relative;
         overflow: hidden;
+    }
+
+    /* Custom Floating Contacts */
+    .sk-quick-strip {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .sk-strip-item {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 25px;
+        border-left: 3px solid var(--sk-red);
+        transition: 0.3s;
+    }
+    .sk-strip-item:hover { background: rgba(255, 77, 77, 0.1); }
+
+    /* RIGHT: THE MODERN GLASS FORM */
+    .sk-form-master {
+        background: linear-gradient(165deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+        backdrop-filter: blur(20px);
+        padding: 60px;
         border: 1px solid rgba(255,255,255,0.1);
-        min-height: 550px;
+        border-right: 4px solid var(--sk-red); /* Unique border accent */
     }
 
-    /* FORM: Clean & Modern */
-    .form-container-new {
-        background: #ffffff;
-        padding: 50px;
-        border-radius: 4px;
-        color: #333;
+    .sk-form-master h2 { font-size: 32px; font-weight: 900; margin-bottom: 40px; text-transform: uppercase; }
+
+    .sk-input-field {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid rgba(255,255,255,0.1);
+        width: 100%;
+        padding: 15px 0;
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 30px;
+        transition: 0.3s;
     }
 
-    .form-container-new h2 { 
-        font-weight: 900; color: #111; margin-bottom: 30px; 
-        text-transform: uppercase; font-size: 26px; border-left: 5px solid var(--sk-red);
-        padding-left: 15px;
+    .sk-input-field:focus {
+        border-bottom-color: var(--sk-red);
+        outline: none;
     }
 
-    .input-row-sk { margin-bottom: 18px; }
-    .input-row-sk input, .input-row-sk select, .input-row-sk textarea {
-        width: 100%; padding: 15px; border: 1.5px solid #eee; 
-        background: #fdfdfd; font-family: inherit; font-size: 15px; transition: 0.3s;
+    .sk-submit-trigger {
+        background: var(--sk-red);
+        color: #fff;
+        padding: 20px 60px;
+        border: none;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.5s;
+        text-transform: uppercase;
+        display: block;
+        margin-left: auto;
     }
 
-    .input-row-sk input:focus, .input-row-sk select:focus, .input-row-sk textarea:focus {
-        border-color: var(--sk-red); outline: none; background: #fff;
+    .sk-submit-trigger:hover {
+        background: #fff;
+        color: var(--sk-dark);
+        letter-spacing: 2px;
     }
 
-    .submit-btn-premium {
-        width: 100%; background: var(--sk-red); color: #fff; padding: 20px;
-        border: none; font-weight: 800; text-transform: uppercase; 
-        cursor: pointer; transition: 0.4s; letter-spacing: 1px;
-    }
-
-    .submit-btn-premium:hover { background: #111; }
-
-    /* Success State */
-    #success-box { display: none; text-align: center; padding: 40px 0; }
-    .success-icon { font-size: 70px; color: #2ecc71; margin-bottom: 20px; }
+    /* Success Logic Same as per your requirement */
 </style>
 
-<section class="premium-contact-section">
-    <div class="container-sk">
-        
-        <div class="premium-cards">
-            <div class="sk-card-new">
-                <i class="fa-solid fa-phone-volume"></i>
-                <h3>Call Support</h3>
-                <p>+91 9871095529<br>Industrial Expert Helpline</p>
-            </div>
-            <div class="sk-card-new">
-                <i class="fa-solid fa-envelope-open-text"></i>
-                <h3>Email Inquiry</h3>
-                <p>sktraders.noida011@gmail.com<br>Response within 2 Hours</p>
-            </div>
-            <div class="sk-card-new">
-                <i class="fa-solid fa-location-arrow"></i>
-                <h3>Our Hub</h3>
-                <p>G-17, Sector-6, Noida<br>UP - 201301, India</p>
-            </div>
-        </div>
-
-        <div class="main-grid-sk">
-            <div class="map-wrapper-new">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.46820465529!2d77.31495367549911!3d28.585732175691062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45f7f91af37%3A0x6ddde45d7cc62ee1!2sS.K%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711410000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-
-            <div class="form-container-new">
-                <form id="enquiry-form" action="https://formspree.io/f/xojnzldq" method="POST">
-                    <h2>Enquire Now</h2>
-                    
-                    <div class="input-row-sk"><input type="text" name="name" placeholder="Full Name / Company Name" required></div>
-                    
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                        <div class="input-row-sk"><input type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}" required></div>
-                        <div class="input-row-sk">
-                            <select name="product" required>
-                                <option value="" disabled selected>Select Product</option>
-                                <option>Acrabond 997 / 978</option>
-                                <option>Acracyno 415</option>
-                                <option>Thread Locker</option>
-                                <option>Potting Compounds</option>
-                            </select>
-                        </div>
+<section class="sk-contact-master">
+    <div class="sk-wrapper">
+        <div class="sk-main-layout">
+            
+            <div class="sk-info-hub">
+                <div class="sk-gmb-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.468200676451!2d77.31976667528711!3d28.5857211862141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce562f791af77%3A0x6d9d3d5d7cc62ee1!2sSK%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711388000000!5m2!1sen!2sin" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <div class="sk-quick-strip">
+                    <div class="sk-strip-item">
+                        <small style="color:var(--sk-red)">CALL</small>
+                        <div style="font-weight:700">+91 9871095529</div>
                     </div>
-
-                    <div class="input-row-sk"><input type="email" name="email" placeholder="Email Address" required></div>
-                    <div class="input-row-sk"><textarea name="message" rows="4" placeholder="Briefly describe your industrial requirement..." required></textarea></div>
-                    
-                    <button type="submit" class="submit-btn-premium" id="submit-btn">SEND MY REQUIREMENTS</button>
-                </form>
-
-                <div id="success-box">
-                    <div class="success-icon">✓</div>
-                    <h3 style="font-weight: 800; margin-bottom: 10px;">Requirement Received!</h3>
-                    <p style="margin-bottom: 25px;">Thanks for choosing <strong>S.K. Traders</strong>. Our Sector 6 team will contact you shortly.</p>
-                    <a href="https://wa.me/919871095529" style="background:#25d366; color:#fff; padding: 12px 25px; text-decoration:none; font-weight:700; display:inline-block;">CHAT ON WHATSAPP</a>
+                    <div class="sk-strip-item">
+                        <small style="color:var(--sk-red)">EMAIL</small>
+                        <div style="font-weight:700">sktraders.noida011@gmail.com</div>
+                    </div>
                 </div>
             </div>
+
+            <div class="sk-form-master">
+                <form id="sk-final-form" action="https://formspree.io/f/xojnzldq" method="POST">
+                    <h2>Got a requirement? <br><span style="color:var(--sk-red)">Let's Bond.</span></h2>
+                    
+                    <input type="text" name="name" class="sk-input-field" placeholder="Full Name / Factory Name" required>
+                    
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:30px">
+                        <input type="tel" name="phone" class="sk-input-field" placeholder="Phone Number" required>
+                        <select name="product" class="sk-input-field" style="background:transparent; color:#aaa;" required>
+                            <option value="" disabled selected>Select Product</option>
+                            <option>Acrabond 997 / 978</option>
+                            <option>Acracyno 415</option>
+                            <option>Thread Locker</option>
+                        </select>
+                    </div>
+                    
+                    <textarea name="message" class="sk-input-field" rows="4" placeholder="How can we help you?"></textarea>
+                    
+                    <button type="submit" class="sk-submit-trigger" id="sk-submit-btn">SEND ENQUIRY</button>
+                </form>
+
+                <div id="sk-success" style="display:none; text-align:center; padding: 50px 0;">
+                    <div style="font-size:60px; color:#2ecc71; margin-bottom:20px;">✓</div>
+                    <h2 style="margin-bottom:10px;">Enquiry Sent!</h2>
+                    <p style="color:#aaa; margin-bottom:30px;">Sector 6 team is preparing your technical quote.</p>
+                    <a href="https://wa.me/919871095529" style="background:#25d366; color:#fff; padding:15px 40px; text-decoration:none; font-weight:800;">OPEN WHATSAPP</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
 <script>
-    const form = document.getElementById('enquiry-form');
-    const success = document.getElementById('success-box');
-    const btn = document.getElementById('submit-btn');
+    const skForm = document.getElementById('sk-final-form');
+    const skSuccess = document.getElementById('sk-success');
+    const skBtn = document.getElementById('sk-submit-btn');
 
-    form.addEventListener('submit', async function(e) {
+    skForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        btn.innerHTML = "PROCESSING...";
+        skBtn.innerHTML = "SENDING...";
         
         try {
             const response = await fetch(this.action, {
@@ -352,10 +359,10 @@
                 headers: { 'Accept': 'application/json' }
             });
             if (response.ok) {
-                form.style.display = 'none';
-                success.style.display = 'block';
+                skForm.style.display = 'none';
+                skSuccess.style.display = 'block';
             }
-        } catch (err) { alert("Something went wrong!"); }
+        } catch (err) { alert("Check your internet connection!"); }
     });
 </script>
 
