@@ -183,11 +183,12 @@
 
     .sk-master-wrapper {
         background: #ffffff;
-        padding: 80px 0;
+        padding: 60px 0;
         font-family: 'Poppins', sans-serif;
     }
-    .sk-container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+    .sk-container { max-width: 1250px; margin: 0 auto; padding: 0 5%; }
 
+    /* 1. TOP CARDS: HOVER & GLASS EFFECTS */
     .sk-cards-row {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -199,36 +200,39 @@
         padding: 40px 20px;
         text-align: center;
         border: 1px solid #eee;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.02);
         transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     .sk-glass-card:hover {
         transform: translateY(-12px);
         border-color: var(--sk-red);
-        box-shadow: 0 20px 50px rgba(255, 77, 77, 0.15);
+        box-shadow: 0 20px 50px rgba(255, 77, 77, 0.1);
     }
-    .sk-glass-card i { font-size: 32px; color: var(--sk-red); margin-bottom: 15px; display: block; }
-    .sk-glass-card h3 { font-size: 17px; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; }
-    .sk-glass-card p { font-size: 15px; color: #555; margin: 0; }
+    .sk-glass-card i { font-size: 30px; color: var(--sk-red); margin-bottom: 15px; display: block; }
+    .sk-glass-card h3 { font-size: 16px; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; }
+    .sk-glass-card p { font-size: 14px; color: #555; margin: 0; }
 
+    /* 2. THE MAIN GRID: HEIGHT MATCHED & SEPARATED */
     .sk-main-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
-        align-items: stretch;
+        align-items: stretch; /* Match height of Map and Form */
     }
 
+    /* MAP CONTAINER: USING YOUR WORKING LINK */
     .sk-map-container {
         border: 1px solid #eee;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-        height: 550px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        min-height: 600px; /* Equalized height */
     }
+    .sk-map-container iframe { width: 100%; height: 100%; border: 0; }
 
+    /* FORM CONTAINER: PREMIUM & CLEAN */
     .sk-form-container {
         background: #fff;
         padding: 50px;
         border: 1px solid #eee;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.05);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -238,10 +242,11 @@
 
     .sk-input-row { margin-bottom: 20px; }
     .sk-input-row input, .sk-input-row select, .sk-input-row textarea {
-        width: 100%; padding: 15px; border: 1.5px solid #f2f2f2; background: #fafafa;
+        width: 100%; padding: 16px; border: 1.5px solid #f2f2f2; background: #fafafa;
         font-family: inherit; font-size: 15px; transition: 0.3s;
+        box-sizing: border-box; /* Fixes mobile width issues */
     }
-    .sk-input-row input:focus, .sk-input-row textarea:focus {
+    .sk-input-row input:focus, .sk-input-row textarea:focus, .sk-input-row select:focus {
         border-color: var(--sk-red); background: #fff; outline: none;
     }
 
@@ -254,9 +259,13 @@
 
     #sk-success { display: none; text-align: center; padding: 40px 0; }
 
+    /* 📱 MOBILE RESPONSIVE FIXES */
     @media (max-width: 992px) {
-        .sk-cards-row, .sk-main-grid { grid-template-columns: 1fr; }
-        .sk-map-container { height: 350px; }
+        .sk-cards-row { grid-template-columns: 1fr; }
+        .sk-main-grid { grid-template-columns: 1fr; gap: 30px; }
+        .sk-map-container { height: 350px; min-height: 350px; }
+        .sk-form-container { padding: 30px 20px; }
+        .sk-input-row-flex { grid-template-columns: 1fr !important; }
     }
 </style>
 
@@ -270,29 +279,23 @@
                 <p>+91 9871095529</p>
             </div>
             <div class="sk-glass-card">
-                <i class="fa-solid fa-envelope-open-text"></i>
+                <i class="fa-solid fa-envelope"></i>
                 <h3>Technical Mail</h3>
                 <p>sktraders.noida011@gmail.com</p>
             </div>
             <div class="sk-glass-card">
-                <i class="fa-solid fa-location-dot"></i>
-                <h3>Visit Us</h3>
+                <i class="fa-solid fa-warehouse"></i>
+                <h3>Visit Warehouse</h3>
                 <p>G-17, Sector-6, Noida, UP</p>
             </div>
         </div>
 
         <div class="sk-main-grid">
             
-            <!-- ✅ FIXED MAP SECTION -->
             <div class="sk-map-container">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1349339395883!2d77.31795627528768!3d28.595728575684884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f379607473%3A0x586447f2c301d13b!2sS.K%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1774455006142!5m2!1sen!2sin"
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.468200676451!2d77.31976667528711!3d28.5857211862141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce562f791af77%3A0x6d9d3d5d7cc62ee1!2sSK%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711388000000!5m2!1sen!2sin5" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 
@@ -300,16 +303,18 @@
                 <form id="sk-form-final" action="https://formspree.io/f/xojnzldq" method="POST">
                     <h2>GOT A REQUIREMENT? <br><span>LET'S BOND.</span></h2>
                     
-                    <div class="sk-input-row"><input type="text" name="name" placeholder="Full Name / Company Name" required></div>
+                    <div class="sk-input-row"><input type="text" name="name" placeholder="Full Name / Factory Name" required></div>
                     
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
-                        <div class="sk-input-row"><input type="tel" name="phone" placeholder="Mobile Number" required></div>
+                    <div class="sk-input-row-flex" style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+                        <div class="sk-input-row"><input type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}" required></div>
                         <div class="sk-input-row">
                             <select name="product" required>
                                 <option value="" disabled selected>Select Product</option>
                                 <option>Acrabond 997 / 978</option>
                                 <option>Acracyno 415</option>
-                                <option>Thread Locker</option>
+                                <option>Thread Locker / RTV</option>
+                                <option>Potting Compounds</option>
+                                <option>Industrial Adhesives</option>
                             </select>
                         </div>
                     </div>
@@ -321,9 +326,9 @@
                 </form>
 
                 <div id="sk-success">
-                    <h1 style="color:#2ecc71;">✓</h1>
+                    <h1 style="color:#2ecc71; font-size:60px;">✓</h1>
                     <h3>Inquiry Received!</h3>
-                    <p>Bhai, thank you. Sector 6 team will reach out shortly.</p>
+                    <p>Bhai, thank you for reaching out. Our team will contact you from Sector 6 shortly.</p>
                     <a href="https://wa.me/919871095529" style="background:#25d366; color:#fff; padding:15px 30px; text-decoration:none; font-weight:800; display:inline-block; margin-top:20px;">WHATSAPP CHAT</a>
                 </div>
             </div>
