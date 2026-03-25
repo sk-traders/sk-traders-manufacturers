@@ -179,163 +179,166 @@
 
 <!-- ===== CONTACT CARDS ===== -->
 <style>
-    :root { --sk-red: #ff4d4d; --sk-dark: #0d0f12; }
+    :root {
+        --sk-red: #ff4d4d;
+        --sk-dark: #1a1c20;
+        --sk-bg: #f9f9f9;
+    }
 
-    .sk-contact-master {
-        background: #0d0f12; /* Deep solid base */
-        padding: 100px 0;
+    .sk-contact-block {
+        background-color: var(--sk-bg);
+        background-image: radial-gradient(#d1d1d1 0.5px, transparent 0.5px);
+        background-size: 20px 20px; /* Industrial Grid Feel */
+        padding: 80px 0;
         font-family: 'Poppins', sans-serif;
-        color: #fff;
-        position: relative;
     }
 
-    /* Background: Glowing Industrial Spotlights */
-    .sk-contact-master::after {
-        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        background: radial-gradient(circle at 10% 20%, rgba(255, 77, 77, 0.05) 0%, transparent 40%),
-                    radial-gradient(circle at 90% 80%, rgba(255, 77, 77, 0.05) 0%, transparent 40%);
-        pointer-events: none;
+    .sk-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5%;
     }
 
-    .sk-wrapper { max-width: 1300px; margin: 0 auto; padding: 0 5%; }
-
-    /* LAYOUT: Asymmetric Grid */
-    .sk-main-layout {
+    /* THE UNIFIED FRAME */
+    .sk-unified-card {
+        background: #fff;
         display: grid;
-        grid-template-columns: 0.8fr 1.2fr; /* Purane layout se hat kar */
-        gap: 30px;
-        align-items: stretch;
+        grid-template-columns: 1fr 1.2fr;
+        box-shadow: 0 30px 100px rgba(0,0,0,0.1);
+        overflow: hidden;
+        border-radius: 4px;
     }
 
-    /* LEFT: THE GMB & INFO HUB */
-    .sk-info-hub {
+    /* LEFT SIDE: MAP & CONTACT INFO */
+    .sk-left-panel {
+        background: var(--sk-dark);
+        color: #fff;
         display: flex;
         flex-direction: column;
-        gap: 20px;
     }
 
-    .sk-gmb-box {
-        height: 100%;
-        background: #15181d;
-        border: 1px solid rgba(255,255,255,0.05);
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* Custom Floating Contacts */
-    .sk-quick-strip {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .sk-strip-item {
-        background: rgba(255, 255, 255, 0.03);
-        padding: 25px;
-        border-left: 3px solid var(--sk-red);
-        transition: 0.3s;
-    }
-    .sk-strip-item:hover { background: rgba(255, 77, 77, 0.1); }
-
-    /* RIGHT: THE MODERN GLASS FORM */
-    .sk-form-master {
-        background: linear-gradient(165deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
-        backdrop-filter: blur(20px);
-        padding: 60px;
-        border: 1px solid rgba(255,255,255,0.1);
-        border-right: 4px solid var(--sk-red); /* Unique border accent */
-    }
-
-    .sk-form-master h2 { font-size: 32px; font-weight: 900; margin-bottom: 40px; text-transform: uppercase; }
-
-    .sk-input-field {
-        background: transparent;
-        border: none;
-        border-bottom: 2px solid rgba(255,255,255,0.1);
+    .sk-map-area {
+        height: 350px;
         width: 100%;
-        padding: 15px 0;
-        color: #fff;
-        font-size: 16px;
-        margin-bottom: 30px;
-        transition: 0.3s;
+        filter: grayscale(1) contrast(1.2) invert(0.9); /* Premium Dark Map */
+        border-bottom: 4px solid var(--sk-red);
     }
 
-    .sk-input-field:focus {
-        border-bottom-color: var(--sk-red);
-        outline: none;
+    .sk-info-strip {
+        padding: 40px;
+        display: grid;
+        gap: 25px;
+    }
+
+    .sk-info-item { display: flex; align-items: center; gap: 15px; }
+    .sk-info-item i { color: var(--sk-red); font-size: 20px; }
+    .sk-info-item div h4 { font-size: 12px; text-transform: uppercase; color: #888; margin: 0; }
+    .sk-info-item div p { font-size: 15px; margin: 0; font-weight: 500; }
+
+    /* RIGHT SIDE: THE FORM */
+    .sk-right-panel {
+        padding: 60px;
+        background: #fff;
+    }
+
+    .sk-right-panel h2 {
+        font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: var(--sk-dark);
+    }
+
+    .sk-right-panel p { color: #666; margin-bottom: 35px; }
+
+    .sk-group { margin-bottom: 20px; }
+    .sk-group input, .sk-group select, .sk-group textarea {
+        width: 100%; padding: 15px; border: 1.5px solid #eee; background: #fafafa;
+        font-family: inherit; transition: 0.3s;
+    }
+
+    .sk-group input:focus, .sk-group textarea:focus {
+        border-color: var(--sk-red); background: #fff; outline: none;
     }
 
     .sk-submit-trigger {
-        background: var(--sk-red);
-        color: #fff;
-        padding: 20px 60px;
-        border: none;
-        font-weight: 800;
-        cursor: pointer;
-        transition: 0.5s;
-        text-transform: uppercase;
-        display: block;
-        margin-left: auto;
+        width: 100%; background: var(--sk-red); color: #fff; padding: 20px;
+        border: none; font-weight: 800; text-transform: uppercase; cursor: pointer;
+        transition: 0.4s; letter-spacing: 1px;
     }
 
-    .sk-submit-trigger:hover {
-        background: #fff;
-        color: var(--sk-dark);
-        letter-spacing: 2px;
-    }
+    .sk-submit-trigger:hover { background: var(--sk-dark); letter-spacing: 3px; }
 
-    /* Success Logic Same as per your requirement */
+    /* SUCCESS MESSAGE */
+    #sk-success-msg {
+        display: none; text-align: center; padding: 60px 0;
+        animation: fadeIn 0.5s ease;
+    }
+    .success-icon { font-size: 60px; color: #2ecc71; margin-bottom: 20px; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    @media (max-width: 992px) {
+        .sk-unified-card { grid-template-columns: 1fr; }
+        .sk-map-area { height: 250px; }
+    }
 </style>
 
-<section class="sk-contact-master">
-    <div class="sk-wrapper">
-        <div class="sk-main-layout">
+<section class="sk-contact-block">
+    <div class="sk-container">
+        <div class="sk-unified-card">
             
-            <div class="sk-info-hub">
-                <div class="sk-gmb-box">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.468200676451!2d77.31976667528711!3d28.5857211862141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce562f791af77%3A0x6d9d3d5d7cc62ee1!2sSK%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711388000000!5m2!1sen!2sin" 
+            <div class="sk-left-panel">
+                <div class="sk-map-area">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.464147424647!2d77.3243934!3d28.5858632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45f74966779%3A0x6dd73d5d7cc62ee1!2sS.K%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711380000000" 
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-                
-                <div class="sk-quick-strip">
-                    <div class="sk-strip-item">
-                        <small style="color:var(--sk-red)">CALL</small>
-                        <div style="font-weight:700">+91 9871095529</div>
+                <div class="sk-info-strip">
+                    <div class="sk-info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div><h4>Helpline</h4><p>+91 9871095529</p></div>
                     </div>
-                    <div class="sk-strip-item">
-                        <small style="color:var(--sk-red)">EMAIL</small>
-                        <div style="font-weight:700">sktraders.noida011@gmail.com</div>
+                    <div class="sk-info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div><h4>Email</h4><p>sktraders.noida011@gmail.com</p></div>
+                    </div>
+                    <div class="sk-info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div><h4>Hub</h4><p>G-17, Sector-6, Noida, UP</p></div>
                     </div>
                 </div>
             </div>
 
-            <div class="sk-form-master">
+            <div class="sk-right-panel">
                 <form id="sk-final-form" action="https://formspree.io/f/xojnzldq" method="POST">
-                    <h2>Got a requirement? <br><span style="color:var(--sk-red)">Let's Bond.</span></h2>
+                    <h2>Let's Bond.</h2>
+                    <p>Direct support from Noida's authorized industrial hub.</p>
                     
-                    <input type="text" name="name" class="sk-input-field" placeholder="Full Name / Factory Name" required>
+                    <div class="sk-group"><input type="text" name="name" placeholder="Full Name / Company Name" required></div>
                     
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:30px">
-                        <input type="tel" name="phone" class="sk-input-field" placeholder="Phone Number" required>
-                        <select name="product" class="sk-input-field" style="background:transparent; color:#aaa;" required>
-                            <option value="" disabled selected>Select Product</option>
-                            <option>Acrabond 997 / 978</option>
-                            <option>Acracyno 415</option>
-                            <option>Thread Locker</option>
-                        </select>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+                        <div class="sk-group"><input type="tel" name="phone" placeholder="Phone Number" required></div>
+                        <div class="sk-group">
+                            <select name="product" required>
+                                <option value="" disabled selected>Select Product</option>
+                                <option>Acrabond 997 / 978</option>
+                                <option>Acracyno 415</option>
+                                <option>Industrial Tapes</option>
+                            </select>
+                        </div>
                     </div>
-                    
-                    <textarea name="message" class="sk-input-field" rows="4" placeholder="How can we help you?"></textarea>
+
+                    <div class="sk-group"><input type="email" name="email" placeholder="Email Address" required></div>
+                    <div class="sk-group"><textarea name="message" rows="4" placeholder="Briefly describe your industrial requirement..." required></textarea></div>
                     
                     <button type="submit" class="sk-submit-trigger" id="sk-submit-btn">SEND ENQUIRY</button>
                 </form>
 
-                <div id="sk-success" style="display:none; text-align:center; padding: 50px 0;">
-                    <div style="font-size:60px; color:#2ecc71; margin-bottom:20px;">✓</div>
-                    <h2 style="margin-bottom:10px;">Enquiry Sent!</h2>
-                    <p style="color:#aaa; margin-bottom:30px;">Sector 6 team is preparing your technical quote.</p>
-                    <a href="https://wa.me/919871095529" style="background:#25d366; color:#fff; padding:15px 40px; text-decoration:none; font-weight:800;">OPEN WHATSAPP</a>
+                <div id="sk-success-msg">
+                    <div class="success-icon">✓</div>
+                    <h2 style="color:var(--sk-dark)">Enquiry Sent!</h2>
+                    <p>Bhai, thank you for reaching out. We will contact you within 2 hours.</p>
+                    <a href="https://wa.me/919871095529" style="background:#25d366; color:#fff; padding:15px 30px; text-decoration:none; font-weight:800; display:inline-block;">WHATSAPP CHAT</a>
                 </div>
             </div>
 
@@ -345,12 +348,12 @@
 
 <script>
     const skForm = document.getElementById('sk-final-form');
-    const skSuccess = document.getElementById('sk-success');
+    const skSuccess = document.getElementById('sk-success-msg');
     const skBtn = document.getElementById('sk-submit-btn');
 
     skForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        skBtn.innerHTML = "SENDING...";
+        skBtn.innerHTML = "PROCESSING...";
         
         try {
             const response = await fetch(this.action, {
@@ -362,7 +365,7 @@
                 skForm.style.display = 'none';
                 skSuccess.style.display = 'block';
             }
-        } catch (err) { alert("Check your internet connection!"); }
+        } catch (err) { alert("Check Connection!"); }
     });
 </script>
 
