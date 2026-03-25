@@ -219,7 +219,7 @@
         align-items: stretch;
     }
 
-    /* MAP CONTAINER: YOUR WORKING LINK INTEGRATED */
+    /* MAP CONTAINER: GMB MARKER LOCKED */
     .sk-map-container {
         border: 1px solid #eee;
         box-shadow: 0 15px 40px rgba(0,0,0,0.05);
@@ -250,6 +250,7 @@
         border-color: var(--sk-red); background: #fff; outline: none;
     }
 
+    /* ✅ FIXED: SUBMIT BUTTON TEXT */
     .sk-submit-btn {
         width: 100%; background: var(--sk-red); color: #fff; padding: 20px;
         border: none; font-weight: 800; text-transform: uppercase; cursor: pointer;
@@ -257,7 +258,18 @@
     }
     .sk-submit-btn:hover { background: #000; letter-spacing: 3px; }
 
-    #sk-success { display: none; text-align: center; padding: 40px 0; }
+    /* ✅ FIXED: SUCCESS MESSAGE (NO WHATSAPP, PROFESSIONAL TEXT) */
+    #sk-success {
+        display: none;
+        text-align: center;
+        padding: 50px 20px;
+        animation: fadeIn 0.5s ease;
+    }
+    #sk-success h1 { color: #2ecc71; font-size: 70px; margin-bottom: 20px; }
+    #sk-success h3 { font-size: 24px; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; color: #111; }
+    #sk-success p { font-size: 16px; color: #666; max-width: 400px; margin: 0 auto; line-height: 1.6; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
     /* MOBILE RESPONSIVE FIXES */
     @media (max-width: 992px) {
@@ -322,14 +334,13 @@
                     <div class="sk-input-row"><input type="email" name="email" placeholder="Email Address" required></div>
                     <div class="sk-input-row"><textarea name="message" rows="5" placeholder="Briefly describe your industrial requirement..." required></textarea></div>
                     
-                    <button type="submit" class="sk-submit-btn" id="sk-btn">SEND MY REQUIREMENTS</button>
+                    <button type="submit" class="sk-submit-btn" id="sk-btn">SUBMIT ENQUIRY</button>
                 </form>
 
                 <div id="sk-success">
-                    <h1 style="color:#2ecc71; font-size:60px;">✓</h1>
-                    <h3>Inquiry Received!</h3>
-                    <p>Bhai, thank you. Sector 6 team will reach out shortly.</p>
-                    <a href="https://wa.me/919871095529" style="background:#25d366; color:#fff; padding:15px 30px; text-decoration:none; font-weight:800; display:inline-block; margin-top:20px;">WHATSAPP CHAT</a>
+                    <h1>✓</h1>
+                    <h3>Enquiry Received</h3>
+                    <p>Bhai, thank you for contacting <strong>S.K. Traders</strong>. We have successfully received your industrial enquiry. Our technical team from Sector 6 Noida hub will review it and contact you shortly.</p>
                 </div>
             </div>
 
@@ -344,7 +355,7 @@
 
     formFinal.addEventListener('submit', async function(e) {
         e.preventDefault();
-        btnText.innerHTML = "SENDING...";
+        btnText.innerHTML = "PROCESSING...";
         const response = await fetch(this.action, {
             method: 'POST',
             body: new FormData(this),
