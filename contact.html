@@ -81,19 +81,18 @@
 <style>
     .sk-hero-final {
         position: relative;
-        height: 90vh; /* Thoda bada aur majestic */
+        height: 85vh;
         display: flex;
         align-items: center;
         background: url('assets/images/contact-sk-traders-industrial-warehouse.jpg') center/cover no-repeat;
         font-family: 'Poppins', sans-serif;
     }
 
-    /* Asli Magic: Left-side dark gradient taaki text pop kare */
     .sk-hero-final::before {
         content: '';
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 100%);
+        background: linear-gradient(to right, rgba(0,0,0,0.9) 25%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0.1) 100%);
         z-index: 1;
     }
 
@@ -110,20 +109,20 @@
         background: #ff4d4d;
         color: #fff;
         padding: 6px 15px;
-        font-size: 12px;
+        font-size: 12.5px;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 2px;
         display: inline-block;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .sk-hero-final h1 {
-        font-size: 64px; /* Big & Bold */
+        font-size: 60px;
         font-weight: 900;
         color: #fff;
-        line-height: 1;
-        margin-bottom: 20px;
+        line-height: 1.1;
+        margin-bottom: 25px;
         text-transform: uppercase;
     }
 
@@ -134,39 +133,36 @@
 
     .sk-hero-final p {
         font-size: 20px;
-        color: #ccc;
-        max-width: 550px;
-        line-height: 1.6;
-        margin-bottom: 40px;
-        border-left: 3px solid #ff4d4d;
+        color: #ddd;
+        max-width: 600px;
+        line-height: 1.7;
+        margin-bottom: 45px;
+        border-left: 4px solid #ff4d4d;
         padding-left: 20px;
     }
 
-    /* Button with a clean 'Glow' effect */
     .sk-btn-primary {
         background: #ff4d4d;
         color: #fff;
-        padding: 20px 45px;
+        padding: 20px 50px;
         font-weight: 800;
         text-decoration: none;
         display: inline-block;
         transition: 0.3s;
-        box-shadow: 0 10px 20px rgba(255, 77, 77, 0.3);
+        border-radius: 0; /* Sharp Industrial Corners */
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     .sk-btn-primary:hover {
         background: #fff;
-        color: #ff4d4d;
+        color: #1a1a1a;
         transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
     }
 
-    /* Mobile Fixing - No more overlap! */
     @media (max-width: 768px) {
-        .sk-hero-final { height: auto; padding: 100px 0; background-position: 70%; }
-        .sk-hero-final::before { background: rgba(0,0,0,0.7); } /* Pure dark on mobile */
-        .sk-hero-final h1 { font-size: 40px; }
-        .sk-hero-final p { font-size: 16px; }
+        .sk-hero-final h1 { font-size: 38px; }
+        .sk-hero-final p { font-size: 17px; }
     }
 </style>
 
@@ -174,8 +170,10 @@
     <div class="hero-container">
         <div class="hero-badge">Noida Sector 6 | Authorized Hub</div>
         <h1>Reliable <span>SK Traders</span> & Manufacturers</h1>
-        <p>Direct Distribution of Industrial Adhesives & Packaging Materials across Delhi NCR & Haryana. Trusted Partner Since 2019.</p>
-        <a href="tel:+919871095529" class="sk-btn-primary">CONNECT WITH US NOW</a>
+        
+        <p>Authorized Strategic Partner for Acrabond Adhesives & Industrial Solutions. Direct distribution across Noida Sector 6, Delhi NCR, and Haryana since 2019.</p>
+        
+        <a href="tel:+919871095529" class="sk-btn-primary">Connect With Us Now</a>
     </div>
 </section>
 
