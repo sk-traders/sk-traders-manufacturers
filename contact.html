@@ -368,6 +368,128 @@
     });
 </script>
 
+    <style>
+    /* 1. BRAND STRIP STYLING */
+    .sk-brand-section {
+        background: #f9f9f9; /* Light Grey Background for Layering */
+        padding: 60px 0;
+        margin-top: 80px; /* Big Gap from Form */
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+    .sk-brand-header {
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 3px;
+        color: #888;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        font-weight: 700;
+    }
+    .sk-brand-flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .sk-brand-logo {
+        max-width: 160px;
+        filter: grayscale(100%); /* Shuru mein Grey */
+        opacity: 0.6;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    .sk-brand-logo:hover {
+        filter: grayscale(0%); /* Hover par Asli Color */
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    /* 2. WHY CHOOSE US (PILLARS) */
+    .sk-pillar-section {
+        padding: 100px 0;
+        background: #fff;
+    }
+    .sk-pillar-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .sk-pillar-item {
+        text-align: center;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    .sk-pillar-item i {
+        font-size: 45px;
+        color: var(--sk-red);
+        margin-bottom: 25px;
+        display: block;
+    }
+    .sk-pillar-item h4 {
+        font-size: 18px;
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: #222;
+        text-transform: uppercase;
+    }
+    .sk-pillar-item p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .sk-brand-flex { gap: 20px; }
+        .sk-brand-logo { max-width: 120px; }
+        .sk-pillar-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+</style>
+
+<section class="sk-brand-section">
+    <div class="sk-container">
+        <h5 class="sk-brand-header">Official Distribution Partners</h5>
+        <div class="sk-brand-flex">
+            <img src="https://via.placeholder.com/180x60?text=ACRABOND" alt="Acrabond" class="sk-brand-logo">
+            <img src="https://via.placeholder.com/180x60?text=ACRACYNO" alt="Acracyno" class="sk-brand-logo">
+            <img src="https://via.placeholder.com/180x60?text=THREAD+LOCKER" alt="Thread Locker" class="sk-brand-logo">
+            <img src="https://via.placeholder.com/180x60?text=INDUSTRIAL+RT" alt="RTV Silicone" class="sk-brand-logo">
+        </div>
+    </div>
+</section>
+
+<section class="sk-pillar-section">
+    <div class="sk-container">
+        <div class="sk-pillar-grid">
+            
+            <div class="sk-pillar-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>100% Genuine Supply</h4>
+                <p>Directly sourced from manufacturers. We guarantee zero duplication and full industrial grade quality in every batch.</p>
+            </div>
+
+            <div class="sk-pillar-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h4>Ready Stock Noida</h4>
+                <p>Our Sector 6 warehouse maintains huge inventory for same-day dispatch. No waiting time for your production lines.</p>
+            </div>
+
+            <div class="sk-pillar-item">
+                <i class="fa-solid fa-microscope"></i>
+                <h4>Technical Advisory</h4>
+                <p>Don't just buy, get solutions. Our experts help you choose the right adhesive for your specific bonding requirements.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
   <div class="floating-buttons">
 
     <!-- WhatsApp -->
