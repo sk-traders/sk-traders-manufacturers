@@ -660,225 +660,136 @@
 <style>
     :root { --sk-red: #ED1C24; --sk-dark: #1a1a1a; }
 
+    /* 1. Section Design */
     .sk-compliance-wrapper {
-        padding: 100px 0;
-        background: #f9f9f9;
+        padding: 80px 0;
+        background: #ffffff;
         font-family: 'Poppins', sans-serif;
+        color: var(--sk-dark);
     }
-    .sk-compliance-header {
-        text-align: center;
-        margin-bottom: 60px;
-    }
+    .sk-compliance-header { text-align: center; margin-bottom: 50px; }
     .sk-location-badge {
-        background: #fff1f1;
-        color: var(--sk-red);
-        padding: 6px 18px;
-        border-radius: 50px;
-        font-size: 12px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border: 1px solid #ffe4e4;
-        display: inline-block;
-        margin-bottom: 15px;
+        background: #fff1f1; color: var(--sk-red);
+        padding: 5px 15px; border-radius: 50px;
+        font-size: 11px; font-weight: 700;
+        text-transform: uppercase; border: 1px solid #ffe4e4;
+        display: inline-block; margin-bottom: 10px;
     }
+    
+    /* 2. Grid & Cards */
     .sk-compliance-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 5%;
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 5%;
     }
-    /* Premium Glassmorphism Card Style */
     .sk-compliance-card {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(237, 28, 36, 0.1);
-        padding: 45px 35px;
-        border-radius: 20px;
-        text-align: left;
-        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-        cursor: pointer;
-        position: relative;
+        background: #fff; border: 1px solid #eee;
+        padding: 40px 30px; border-radius: 15px;
+        transition: 0.4s all ease; cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.02);
     }
     .sk-compliance-card:hover {
-        transform: translateY(-15px);
+        transform: translateY(-10px);
         border-color: var(--sk-red);
-        box-shadow: 0 25px 50px -12px rgba(237, 28, 36, 0.15);
+        box-shadow: 0 15px 30px rgba(237, 28, 36, 0.1);
     }
-    .sk-card-icon {
-        font-size: 45px;
-        color: var(--sk-red);
-        margin-bottom: 25px;
-        display: block;
-    }
-    .sk-compliance-card h4 {
-        font-size: 20px;
-        font-weight: 800;
-        margin-bottom: 15px;
-        color: var(--sk-dark);
-        text-transform: uppercase;
-    }
-    .sk-compliance-card p {
-        font-size: 14px;
-        color: #666;
-        line-height: 1.7;
-        margin-bottom: 25px;
-    }
-    .sk-view-btn {
-        font-size: 12px;
-        font-weight: 800;
-        color: var(--sk-red);
-        text-transform: uppercase;
-        border-bottom: 2px solid var(--sk-red);
-        padding-bottom: 3px;
-        transition: 0.3s;
-    }
-    .sk-compliance-card:hover .sk-view-btn {
-        letter-spacing: 1px;
-    }
+    .sk-card-icon { font-size: 40px; color: var(--sk-red); margin-bottom: 20px; display: block; }
+    .sk-compliance-card h4 { font-size: 19px; font-weight: 800; margin-bottom: 12px; }
+    .sk-compliance-card p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+    .sk-view-link { color: var(--sk-red); font-weight: 700; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
 
-    /* MODAL / LIGHTBOX STYLING */
-    .sk-modal {
-        display: none;
-        position: fixed;
-        z-index: 99999;
-        left: 0; top: 0; width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.92);
-        backdrop-filter: blur(8px);
-        padding-top: 50px;
+    /* 3. LIGHTBOX MODAL (Fixed Conflict) */
+    .sk-modal-overlay {
+        display: none; position: fixed;
+        z-index: 999999; left: 0; top: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.95); /* Deep dark for focus */
+        align-items: center; justify-content: center;
     }
-    .sk-modal-content {
-        margin: auto;
-        display: block;
-        width: 90%;
-        max-width: 650px;
-        border: 5px solid white;
-        border-radius: 10px;
-        box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    .sk-modal-content-wrap {
+        position: relative; width: 90%; max-width: 600px;
+        text-align: center; animation: skZoom 0.3s ease;
     }
-    #sk-caption {
-        text-align: center;
-        color: #fff;
-        padding: 20px 10px;
-        font-family: 'Poppins', sans-serif;
+    @keyframes skZoom { from {transform: scale(0.8); opacity: 0;} to {transform: scale(1); opacity: 1;} }
+    
+    .sk-modal-img {
+        width: 100%; border: 4px solid #fff; border-radius: 8px;
+        max-height: 80vh; object-fit: contain; background: #fff;
     }
-    .sk-close-modal {
-        position: absolute;
-        top: 25px; right: 35px;
-        color: #fff; font-size: 45px; font-weight: bold;
-        cursor: pointer;
+    .sk-close-btn {
+        position: absolute; top: -50px; right: 0;
+        color: #fff; font-size: 40px; cursor: pointer; font-weight: 300;
     }
+    #sk-modal-caption { color: #fff; margin-top: 20px; font-weight: 600; font-size: 16px; }
 
-    /* Mobile View */
-    @media (max-width: 992px) {
-        .sk-compliance-grid { grid-template-columns: 1fr; }
-        .sk-compliance-wrapper { padding: 60px 0; }
-    }
+    @media (max-width: 768px) { .sk-compliance-grid { grid-template-columns: 1fr; } }
 </style>
 
 <section class="sk-compliance-wrapper">
     <div class="sk-compliance-header">
-        <span class="sk-location-badge">📍 Industrial Hub: Sector 6, Noida</span>
-        <h2 style="font-size: 38px; font-weight: 900; color: #1a1a1a; text-transform: uppercase;">
-            Trust & <span style="color: var(--sk-red);">Compliance</span>
-        </h2>
-        <p style="color: #888; margin-top: 10px; font-size: 15px;">S.K. Traders & Manufacturers: Verified credentials for industrial excellence.</p>
+        <span class="sk-location-badge">📍 NOIDA SECTOR 6 HUB</span>
+        <h2 style="font-size: 32px; font-weight: 900; text-transform: uppercase;">Compliance & <span style="color:var(--sk-red)">Trust</span></h2>
     </div>
 
     <div class="sk-compliance-grid">
-        <div class="sk-compliance-card" onclick="openCertModal('gst-cert.png')">
+        <div class="sk-compliance-card" onclick="skOpenModal('gst')">
             <i class="fa-solid fa-stamp sk-card-icon"></i>
-            <h4>GST Compliance</h4>
-            <p>Verified GST registry for transparent B2B billing and government-compliant industrial wholesale supply chains.</p>
-            <div style="display:flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 10px; color: #aaa; font-family: monospace;">GSTIN: 09XXXXX...</span>
-                <span class="sk-view-btn">View Seal</span>
-            </div>
+            <h4>GST Verified</h4>
+            <p>Officially registered for transparent B2B industrial wholesale and billing.</p>
+            <span class="sk-view-link">VIEW SEAL</span>
         </div>
 
-        <div class="sk-compliance-card" onclick="openCertModal('msme-view.png')">
+        <div class="sk-compliance-card" onclick="skOpenModal('msme')">
             <i class="fa-solid fa-industry sk-card-icon"></i>
-            <h4>MSME Registered</h4>
-            <p>Proudly registered under Udyam (MSME) ensuring top-tier manufacturing standards and industrial trade reliability.</p>
-            <span class="sk-view-btn">View Certificate</span>
+            <h4>MSME Udyam</h4>
+            <p>Certified manufacturing excellence and small-scale industry reliability.</p>
+            <span class="sk-view-link">VIEW CERTIFICATE</span>
         </div>
 
-        <div class="sk-compliance-card" onclick="openCertModal('partner-cert.png')">
-            <i class="fa-solid fa-handshake-simple sk-card-icon"></i>
-            <h4>Authorized Partner</h4>
-            <p>Official Strategic Distribution Partner for <strong>Acrabond Industrial Adhesives</strong> - Pan India Network.</p>
-            <span class="sk-view-btn">View Authority Letter</span>
+        <div class="sk-compliance-card" onclick="skOpenModal('partner')">
+            <i class="fa-solid fa-handshake sk-card-icon"></i>
+            <h4>Acrabond Partner</h4>
+            <p>Official strategic distribution partner for Noida & Delhi NCR region.</p>
+            <span class="sk-view-link">VIEW AUTHORITY LETTER</span>
         </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 60px; color: #bbb; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">
-        <i class="fa-solid fa-shield-halved"></i> Privacy Policy: Sensitive identifiers (PAN/Aadhar) are masked for digital compliance.
     </div>
 </section>
 
-<div id="sk-certModal" class="sk-modal">
-    <span class="sk-close-modal" onclick="closeCertModal()">&times;</span>
-    <img class="sk-modal-content" id="sk-modalImg">
-    <div id="sk-caption"></div>
+<div id="skModalOverlay" class="sk-modal-overlay" onclick="skCloseModal()">
+    <div class="sk-modal-content-wrap" onclick="event.stopPropagation()">
+        <span class="sk-close-btn" onclick="skCloseModal()">&times;</span>
+        <img id="skMainImg" class="sk-modal-img" src="" alt="S.K. Traders Certificate">
+        <div id="sk-modal-caption"></div>
+    </div>
 </div>
 
 <script>
-// ================= S.K. TRADERS: MASTER MODAL SCRIPT =================
-function openCertModal(type) {
-    const modal = document.getElementById("sk-certModal");
-    const modalImg = document.getElementById("sk-modalImg");
-    const captionText = document.getElementById("sk-caption");
+    function skOpenModal(type) {
+        const modal = document.getElementById('skModalOverlay');
+        const img = document.getElementById('skMainImg');
+        const cap = document.getElementById('sk-modal-caption');
 
-    modal.style.display = "block";
-    modalImg.style.opacity = "0"; // Smooth fade-in
-    
-    // Mapping images to types
-    if(type === 'gst-img') {
-        modalImg.src = "images/gst-cert.png";
-        captionText.innerHTML = `
-            <strong style="color: #ED1C24;">GST COMPLIANCE</strong><br>
-            <small style="color: #ccc;">S.K. Traders & Manufacturers - Government Verified</small>
-        `;
-    }
-    
-    if(type === 'msme-img') {
-        modalImg.src = "images/msme-cert.png";
-        captionText.innerHTML = `
-            <strong style="color: #ED1C24;">MSME UDYAM REGISTRY</strong><br>
-            <small style="color: #ccc;">Verified Manufacturing Authority for Small Scale Industry</small>
-        `;
-    }
-    
-    if(type === 'partner-img') {
-        modalImg.src = "images/partner-cert.png";
-        captionText.innerHTML = `
-            <strong style="color: #ED1C24;">STRATEGIC PARTNERSHIP</strong><br>
-            <small style="color: #ccc;">Authorized Regional Supply Hub - Noida & Delhi NCR Region</small>
-        `;
+        modal.style.display = 'flex';
+        
+        if(type === 'gst') {
+            img.src = 'assets/images/gst-cert.png';
+            cap.innerText = 'GST REGISTRATION - S.K. TRADERS';
+        } else if(type === 'msme') {
+            img.src = 'assets/images/msme-view.png';
+            cap.innerText = 'MSME UDYAM CERTIFICATE - S.K. TRADERS';
+        } else if(type === 'partner') {
+            img.src = 'assets/images/partner-cert.png';
+            cap.innerText = 'AUTHORIZED PARTNER - DELHI NCR REGION';
+        }
     }
 
-    // Finish Fade-in
-    setTimeout(() => {
-        modalImg.style.transition = "opacity 0.4s ease";
-        modalImg.style.opacity = "1";
-    }, 50);
-}
-
-function closeCertModal() {
-    document.getElementById("sk-certModal").style.display = "none";
-}
-
-// Close when clicking outside the image
-window.onclick = function(event) {
-    const modal = document.getElementById("sk-certModal");
-    if (event.target == modal) {
-        closeCertModal();
+    function skCloseModal() {
+        document.getElementById('skModalOverlay').style.display = 'none';
     }
-}
+
+    // Escape key se band karne ke liye
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape") skCloseModal();
+    });
 </script>
-
  <section id="sk-final-cta-full" style="padding: 80px 0; background: #4a0404; font-family: 'Poppins', sans-serif; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1);">
     
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); pointer-events: none;"></div>
