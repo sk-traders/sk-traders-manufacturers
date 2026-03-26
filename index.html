@@ -657,6 +657,130 @@
     </div>
 </section>
 
+  <style>
+    .sk-compliance-wrapper {
+        padding: 100px 0;
+        background: #fdfdfd; /* Subtle off-white to separate from the grid above */
+        font-family: 'Poppins', sans-serif;
+    }
+    .sk-compliance-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .sk-location-badge {
+        background: #fff1f1;
+        color: #ED1C24;
+        padding: 6px 15px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 1px solid #ffe4e4;
+    }
+    .sk-compliance-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5%;
+    }
+    /* Premium Glassmorphism Card */
+    .sk-compliance-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(237, 28, 36, 0.1);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: left;
+        position: relative;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        cursor: pointer;
+    }
+    .sk-compliance-card:hover {
+        transform: translateY(-15px) rotateX(5deg) rotateY(2deg);
+        border-color: #ED1C24;
+        box-shadow: 0 25px 50px -12px rgba(237, 28, 36, 0.2);
+    }
+    .sk-card-icon {
+        font-size: 40px;
+        color: #ED1C24;
+        margin-bottom: 25px;
+        display: block;
+    }
+    .sk-compliance-card h4 {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: #1a1a1a;
+    }
+    .sk-compliance-card p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    .sk-view-btn {
+        font-size: 12px;
+        font-weight: 700;
+        color: #ED1C24;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ED1C24;
+        padding-bottom: 2px;
+    }
+    /* Safety Disclaimer */
+    .sk-safety-note {
+        margin-top: 60px;
+        text-align: center;
+        font-size: 11px;
+        color: #aaa;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 992px) {
+        .sk-compliance-grid { grid-template-columns: 1fr; }
+    }
+</style>
+
+<section class="sk-compliance-wrapper">
+    <div class="sk-compliance-header">
+        <span class="sk-location-badge">📍 Industrial Hub: Sector 6, Noida</span>
+        <h2 style="font-size: 36px; font-weight: 900; margin-top: 20px;">COMPLIANCE & <span style="color: #ED1C24;">CERTIFICATIONS</span></h2>
+    </div>
+
+    <div class="sk-compliance-grid">
+        <div class="sk-compliance-card" onclick="alert('Masked Certificate Loading...')">
+            <i class="fa-solid fa-stamp sk-card-icon"></i>
+            <h4>GST Compliance</h4>
+            <p>Officially registered under the Govt of India for tax compliance and seamless industrial wholesale supply.</p>
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 10px; color: #bbb;">GSTIN: 09XXXXX...</span>
+                <span class="sk-view-btn">View Seal</span>
+            </div>
+        </div>
+
+        <div class="sk-compliance-card" onclick="alert('MSME Udyam Copy Loading...')">
+            <i class="fa-solid fa-industry sk-card-icon"></i>
+            <h4>MSME Registered</h4>
+            <p>Proudly registered under Udyam (MSME) for manufacturing excellence and industrial trade empowerment.</p>
+            <span class="sk-view-btn">View Certificate</span>
+        </div>
+
+        <div class="sk-compliance-card" onclick="alert('Authorization Letter Loading...')">
+            <i class="fa-solid fa-handshake-simple sk-card-icon"></i>
+            <h4>Authorized Partner</h4>
+            <p>Official Distribution Partner for Acrabond Industrial Adhesives in Noida & Delhi NCR region.</p>
+            <span class="sk-view-btn">View Letter</span>
+        </div>
+    </div>
+
+    <div class="sk-safety-note">
+        <i class="fa-solid fa-user-shield"></i> Privacy Policy: Sensitive identifiers (PAN/DOB) are masked on digital copies for security and compliance.
+    </div>
+</section>
+
  <section id="sk-final-cta-full" style="padding: 80px 0; background: #4a0404; font-family: 'Poppins', sans-serif; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1);">
     
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); pointer-events: none;"></div>
