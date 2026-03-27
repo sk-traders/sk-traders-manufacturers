@@ -383,25 +383,21 @@
         
         .product-card-body:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(255, 77, 77, 0.15); border-color: #ff4d4d; }
         
-       <style>
-    /* ZOOM LEVEL BALANCED HERE */
-    .product-img-frame { 
-        width: 100%; height: 280px; overflow: hidden; background: #fff; 
-        display: flex; align-items: center; justify-content: center; border-bottom: 2px solid #eaeaea; 
-        padding: 15px; /* Added some breathing room */
-    }
-    
-    .product-img-frame img { 
-        width: 100%; height: 100%; 
-        object-fit: contain; /* Phir se contain kar diya taaki product kategi nahi */
-        transition: 0.6s ease; 
-        transform: scale(1.05); /* Sirf halka sa zoom taaki border touch na ho */
-    }
-    
-    .product-card-body:hover .product-img-frame img { 
-        transform: scale(1.15); /* Hover par thoda aur zoom hoga clear dikhne ke liye */
-    }
-</style>
+        /* FIXED ZOOM & ALIGNMENT */
+        .product-img-frame { 
+            width: 100%; height: 280px; overflow: hidden; background: #fff; 
+            display: flex; align-items: center; justify-content: center; border-bottom: 2px solid #eaeaea; 
+            padding: 20px; 
+        }
+        
+        .product-img-frame img { 
+            max-width: 100%; max-height: 100%; 
+            object-fit: contain; /* Professional look, no cropping */
+            transition: 0.6s ease; 
+            transform: scale(1.05); /* Subtle zoom for clarity */
+        }
+        
+        .product-card-body:hover .product-img-frame img { transform: scale(1.15); }
 
         .product-info-box { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
         .product-title { font-size: 22px; color: #1a1a1a; font-weight: 700; margin-bottom: 5px; }
@@ -419,7 +415,7 @@
         
         .product-wholesale-btn:hover { background-color: #ff4d4d; box-shadow: 0 5px 15px rgba(128,0,0,0.3); }
         
-        @media (max-width: 768px) { .product-column { max-width: 100%; } .product-img-frame { height: 220px; } }
+        @media (max-width: 768px) { .product-column { max-width: 100%; } .product-img-frame { height: 220px; padding: 10px; } }
     </style>
 </section>
 
