@@ -1004,85 +1004,94 @@
 <!-- ================= FOOTER ================= -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<footer id="sk-premium-footer" style="background: #111 !important; color: #fff !important; padding: 60px 0 30px 0 !important; font-family: 'Poppins', sans-serif !important; border-top: 4px solid #ff4d4d !important;">
+<footer id="sk-premium-footer" style="background: #0a0a0a !important; color: #fff !important; padding: 70px 0 0 0 !important; font-family: 'Poppins', sans-serif !important; border-top: 5px solid #ED1C24 !important; position: relative; z-index: 20;">
     
     <style>
-        #sk-premium-footer a { transition: all 0.3s ease !important; }
-        #sk-premium-footer a:hover { transform: translateY(-3px); color: #ff4d4d !important; }
+        #sk-premium-footer a { transition: all 0.3s ease !important; text-decoration: none !important; }
+        #sk-premium-footer a:hover { color: #ff4d4d !important; padding-left: 5px; }
         
-        .footer-column { 
-            flex: 1; 
-            min-width: 250px; 
-            padding: 0 25px; 
-            position: relative;
+        .footer-column { flex: 1; min-width: 280px; padding: 0 30px; margin-bottom: 40px; }
+
+        /* SEO Keyword Cloud Style */
+        .footer-tag {
+            display: inline-block; background: rgba(255,255,255,0.05); color: #888;
+            padding: 4px 10px; border-radius: 4px; font-size: 11px; margin: 0 5px 8px 0;
+            border: 1px solid #222; text-transform: uppercase; letter-spacing: 0.5px;
         }
 
-        /* Desktop Dividers */
+        /* Desktop Vertical Dividers */
         @media (min-width: 992px) {
-            .footer-column:not(:last-child)::after {
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 10%;
-                height: 80%;
-                width: 1px;
-                background: rgba(255,255,255,0.1);
-            }
+            .footer-column:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.08); }
         }
 
-        /* Mobile View: FORCE LEFT ALIGNMENT */
+        /* Mobile Optimization */
         @media (max-width: 768px) {
-            .footer-column { 
-                padding: 0 20px !important; 
-                text-align: left !important; /* Force Left */
-                border-bottom: 1px solid #222; 
-                padding-bottom: 30px;
-                margin-bottom: 20px;
-            }
+            .footer-column { border-right: none !important; border-bottom: 1px solid #1a1a1a; padding-bottom: 30px; }
             .footer-column:last-child { border-bottom: none; }
-            .social-icons-wrapper { justify-content: flex-start !important; } /* Force Left */
-            #sk-premium-footer div { align-items: flex-start !important; }
+            .sk-contact-link { font-size: 14px !important; }
         }
     </style>
 
-    <div style="max-width: 1250px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <div style="max-width: 1300px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
         
         <div class="footer-column">
-            <img src="assets/images/logo.png" style="height: 70px; background: white; padding: 8px; border-radius: 5px; margin-bottom: 20px;" alt="SK Traders">
-            <p style="color: #bbb; font-size: 14px; line-height: 1.6;">Noida's premier supplier for Industrial Adhesives and Packaging solutions. Quality & Reliability guaranteed since 2026.</p>
+            <img src="assets/images/logo.png" style="height: 75px; background: #fff; padding: 10px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);" alt="SK Traders & Manufacturers Noida">
+            <p style="color: #999; font-size: 14px; line-height: 1.8; margin-bottom: 25px;">
+                Authorized Hub for **Industrial Adhesives** & **Bulk Packaging Solutions**. Providing High-Performance Acrabond supply across Noida, Delhi NCR & Pan-India since 2015.
+            </p>
             
-            <div class="social-icons-wrapper" style="display: flex; gap: 15px; margin-top: 25px;">
-                <a href="https://www.facebook.com/share/18HMdKh2vN/" target="_blank" style="color: #fff; background: #3b5998; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/sk_traders_manufacturers011?igsh=enUzbWxsY2VjbTkw" target="_blank" style="color: #fff; background: #e4405f; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-instagram"></i></a>
-                <a href="https://share.google/kbMkRaPjOZeJocJut" target="_blank" style="color: #fff; background: #4285F4; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-google"></i></a>
+            <div style="display: flex; gap: 12px;">
+                <a href="https://www.facebook.com/share/18HMdKh2vN/" target="_blank" style="color: #fff; background: #3b5998; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/sk_traders_manufacturers011" target="_blank" style="color: #fff; background: #e4405f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-instagram"></i></a>
+                <a href="https://share.google/kbMkRaPjOZeJocJut" target="_blank" style="color: #fff; background: #4285F4; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fab fa-google"></i></a>
             </div>
         </div>
 
         <div class="footer-column">
-            <h4 style="color: #ff4d4d; margin-bottom: 25px; font-size: 19px; text-transform: uppercase;">Links</h4>
-            <ul style="list-style: none; padding: 0; line-height: 2.5; font-size: 15px;">
-                <li><a href="index.html" style="color: #bbb; text-decoration: none;">Home</a></li>
-                <li><a href="about.html" style="color: #bbb; text-decoration: none;">About Us</a></li>
-                <li><a href="products.html" style="color: #bbb; text-decoration: none;">Products</a></li>
-                <li><a href="contact.html" style="color: #bbb; text-decoration: none;">Contact Us</a></li>
+            <h4 style="color: #ED1C24; margin-bottom: 30px; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Quick Links</h4>
+            <ul style="list-style: none; padding: 0; line-height: 2.8; font-size: 15px;">
+                <li><a href="index.html" style="color: #bbb;">🏠 Home Page</a></li>
+                <li><a href="about.html" style="color: #bbb;">🏭 About S.K. Traders</a></li>
+                <li><a href="products.html" style="color: #bbb;">🛠️ Product Catalogue</a></li>
+                <li><a href="contact.html" style="color: #bbb;">📞 Contact Wholesale Desk</a></li>
             </ul>
         </div>
 
         <div class="footer-column" style="flex: 1.2;">
-            <h4 style="color: #ff4d4d; margin-bottom: 25px; font-size: 19px; text-transform: uppercase;">Reach Us</h4>
+            <h4 style="color: #ED1C24; margin-bottom: 30px; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Direct Reach</h4>
             <div style="font-size: 15px; color: #bbb;">
-                <p style="margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="color:#ff4d4d; margin-right: 12px;"></i> G-17, Sector 6, Noida, UP 201301</p>
-                <p style="margin-bottom: 15px;"><i class="fas fa-phone-alt" style="color:#ff4d4d; margin-right: 12px;"></i> +91 9871095529</p>
-                <p style="margin-bottom: 20px;"><i class="fas fa-envelope" style="color:#ff4d4d; margin-right: 12px;"></i> sktraders.noida011@gmail.com</p>
+                <p style="margin-bottom: 18px; display: flex; align-items: flex-start;">
+                    <i class="fas fa-map-marker-alt" style="color:#ED1C24; margin-top: 5px; margin-right: 15px;"></i> 
+                    <span>G-17, Ground Floor, Sector 6, Noida, <br>Gautam Buddha Nagar, UP 201301</span>
+                </p>
+                <p style="margin-bottom: 18px;">
+                    <a href="tel:+919871095529" style="color: #bbb; display: flex; align-items: center;">
+                        <i class="fas fa-phone-alt" style="color:#ED1C24; margin-right: 15px;"></i> +91 9871095529
+                    </a>
+                </p>
+                <p style="margin-bottom: 25px;">
+                    <a href="mailto:sktraders.noida011@gmail.com" style="color: #bbb; display: flex; align-items: center;">
+                        <i class="fas fa-envelope" style="color:#ED1C24; margin-right: 15px;"></i> sktraders.noida011@gmail.com
+                    </a>
+                </p>
             </div>
-            <a href="https://share.google/kbMkRaPjOZeJocJut" target="_blank" style="display: inline-block; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; color: #fff; text-decoration: none; font-size: 13px; font-weight: 600; background: rgba(255,255,255,0.05);">
-                <i class="fas fa-directions" style="margin-right: 8px;"></i> View on Google Maps
+            
+            <a href="https://share.google/kbMkRaPjOZeJocJut" target="_blank" style="display: inline-block; border: 1px solid #ED1C24; padding: 12px 25px; border-radius: 6px; color: #fff; font-size: 14px; font-weight: 700; background: rgba(237, 28, 36, 0.1); text-transform: uppercase;">
+                <i class="fas fa-directions" style="margin-right: 10px;"></i> Navigate via Google Maps
             </a>
         </div>
     </div>
 
-    <div style="text-align: center; border-top: 1px solid #222; margin-top: 50px; padding-top: 25px; font-size: 13px; color: #666;">
-        <p>© 2026 SK Traders & Manufacturers. Trusted Partner in Noida & PAN India.</p>
+    <div style="max-width: 1300px; margin: 20px auto 0; padding: 0 30px; text-align: center;">
+        <span class="footer-tag">Acrabond 973 Distributor</span>
+        <span class="footer-tag">Industrial Adhesives Noida</span>
+        <span class="footer-tag">BOPP Tapes Wholesale India</span>
+        <span class="footer-tag">Structural Bonding Solutions</span>
+        <span class="footer-tag">MRO Supply NCR</span>
+    </div>
+
+    <div style="text-align: center; border-top: 1px solid #1a1a1a; margin-top: 40px; padding: 25px 0; font-size: 13px; color: #555; background: #050505;">
+        <p>© 2026 **SK Traders & Manufacturers**. Authorized Channel Partner. <br> Serving Noida & PAN India Logistics.</p>
     </div>
 </footer>
 </body>
