@@ -709,33 +709,96 @@
     @media (max-width: 768px) { .sk-compliance-grid { grid-template-columns: 1fr; } .sk-zoom-controls { top: -110px; flex-direction: row; } }
 </style>
 
+<style>
+    :root { --sk-red: #ED1C24; --sk-dark: #1a1a1a; }
+
+    /* 1. Seamless Section Gap Fix */
+    .sk-compliance-wrapper {
+        padding: 50px 0;
+        background: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        color: var(--sk-dark);
+        margin-top: -50px; /* Why Choose Us se chipka diya */
+        position: relative;
+    }
+    .sk-compliance-header { text-align: center; margin-bottom: 40px; }
+    .sk-location-badge {
+        background: #fff1f1; color: var(--sk-red);
+        padding: 6px 16px; border-radius: 50px;
+        font-size: 11px; font-weight: 700;
+        text-transform: uppercase; border: 1px solid #ffe4e4;
+        display: inline-block; margin-bottom: 12px;
+    }
+    
+    /* 2. Professional Grid & Clean Cards */
+    .sk-compliance-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 5%;
+    }
+    .sk-compliance-card {
+        background: #fff; border: 1px solid #eee;
+        padding: 40px 30px; border-radius: 15px;
+        transition: 0.3s ease; cursor: pointer; text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    }
+    .sk-compliance-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--sk-red);
+        box-shadow: 0 15px 30px rgba(237, 28, 36, 0.08);
+    }
+    .sk-card-icon { font-size: 42px; color: var(--sk-red); margin-bottom: 20px; display: block; }
+    .sk-compliance-card h4 { font-size: 19px; font-weight: 800; margin-bottom: 12px; }
+    .sk-compliance-card p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+    .sk-view-link { 
+        color: var(--sk-red); font-weight: 700; font-size: 12px; 
+        text-decoration: underline; text-underline-offset: 4px;
+        text-transform: uppercase;
+    }
+
+    /* 3. SIMPLE LIGHTBOX (NO BUTTONS) */
+    .sk-modal-overlay {
+        display: none; position: fixed;
+        z-index: 999999; left: 0; top: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.9); align-items: center; justify-content: center;
+    }
+    .sk-modal-content-wrap {
+        position: relative; width: 90%; max-width: 700px;
+        text-align: center; animation: skFade 0.3s ease;
+    }
+    .sk-modal-img {
+        width: 100%; border: 4px solid #fff; border-radius: 8px;
+        max-height: 85vh; object-fit: contain; background: #fff;
+    }
+    .sk-close-btn {
+        position: absolute; top: -50px; right: 0;
+        color: #fff; font-size: 45px; cursor: pointer;
+    }
+    @keyframes skFade { from {opacity: 0; transform: scale(0.95);} to {opacity: 1; transform: scale(1);} }
+    @media (max-width: 768px) { .sk-compliance-grid { grid-template-columns: 1fr; } }
+</style>
+
 <section class="sk-compliance-wrapper">
     <div class="sk-compliance-header">
         <span class="sk-location-badge">📍 NOIDA SECTOR 6 HUB</span>
-        <h2 style="font-size: clamp(28px, 4vw, 40px); font-weight: 900; text-transform: uppercase; letter-spacing: -1px;">
-            Compliance & <span style="color:var(--sk-red)">Trust</span>
-        </h2>
-        <p style="max-width: 600px; margin: 15px auto 0; color: #666; font-size: 15px;">Verified Industrial Certifications & Authorized Distribution Letters.</p>
+        <h2 style="font-size: 32px; font-weight: 900; text-transform: uppercase;">Compliance & <span style="color:var(--sk-red)">Trust</span></h2>
+        <p style="color: #666; font-size: 15px; margin-top: 10px;">Verified Industrial Certifications & Authorized Distribution Letters.</p>
     </div>
 
     <div class="sk-compliance-grid">
         <div class="sk-compliance-card" onclick="skOpenModal('gst')">
-            <i class="fa-solid fa-stamp sk-card-icon"></i>
-            <h4>GST Verified</h4>
-            <p>Officially registered for transparent B2B industrial wholesale, GST billing, and Tax compliance.</p>
+            <i class="fa-solid fa-file-invoice sk-card-icon"></i> <h4>GST Verified</h4>
+            <p>Officially registered for transparent B2B industrial wholesale, billing, and tax compliance.</p>
             <span class="sk-view-link">VIEW SEAL</span>
         </div>
 
         <div class="sk-compliance-card" onclick="skOpenModal('msme')">
-            <i class="fa-solid fa-industry sk-card-icon"></i>
-            <h4>MSME Udyam</h4>
+            <i class="fa-solid fa-award sk-card-icon"></i> <h4>MSME Udyam</h4>
             <p>Government certified manufacturing excellence and small-scale industry reliability for 11+ years.</p>
             <span class="sk-view-link">VIEW CERTIFICATE</span>
         </div>
 
         <div class="sk-compliance-card" onclick="skOpenModal('partner')">
-            <i class="fa-solid fa-handshake sk-card-icon"></i>
-            <h4>Acrabond Partner</h4>
+            <i class="fa-solid fa-certificate sk-card-icon"></i> <h4>Acrabond Partner</h4>
             <p>Official Authorized Channel Partner & Strategic Distributor for Acrabond Adhesives in Delhi NCR.</p>
             <span class="sk-view-link">VIEW AUTHORITY LETTER</span>
         </div>
@@ -745,62 +808,31 @@
 <div id="skModalOverlay" class="sk-modal-overlay" onclick="skCloseModal()">
     <div class="sk-modal-content-wrap" onclick="event.stopPropagation()">
         <span class="sk-close-btn" onclick="skCloseModal()">&times;</span>
-        
-        <div class="sk-zoom-controls">
-            <button class="sk-zoom-btn" onclick="skAdjustZoom(0.2)">ZOOM IN +</button>
-            <button class="sk-zoom-btn" onclick="skAdjustZoom(-0.2)">ZOOM OUT -</button>
-            <button class="sk-zoom-btn" onclick="skResetZoom()">RESET</button>
-        </div>
-
-        <div class="sk-modal-img-container">
-            <img id="skMainImg" class="sk-modal-img" src="" alt="S.K. Traders Certificate">
-        </div>
-        <div id="sk-modal-caption" style="color: #fff; margin-top: 20px; font-weight: 600; letter-spacing: 1px;"></div>
+        <img id="skMainImg" class="sk-modal-img" src="">
+        <div id="sk-modal-caption" style="color: #fff; margin-top: 15px; font-weight: 600; font-size: 16px;"></div>
     </div>
 </div>
 
 <script>
-    let currentZoom = 1;
-
     function skOpenModal(type) {
         const modal = document.getElementById('skModalOverlay');
         const img = document.getElementById('skMainImg');
         const cap = document.getElementById('sk-modal-caption');
-
         modal.style.display = 'flex';
-        skResetZoom(); // Always start with fresh zoom
         
         if(type === 'gst') {
             img.src = 'assets/images/gst-cert.png';
-            cap.innerText = 'GST REGISTRATION - S.K. TRADERS NOIDA';
+            cap.innerText = 'GST REGISTRATION - S.K. TRADERS';
         } else if(type === 'msme') {
             img.src = 'assets/images/msme-view.png';
             cap.innerText = 'MSME UDYAM CERTIFICATE - S.K. TRADERS';
         } else if(type === 'partner') {
             img.src = 'assets/images/partner-cert.png';
-            cap.innerText = 'AUTHORIZED ACRABOND CHANNEL PARTNER LETTER';
+            cap.innerText = 'AUTHORIZED PARTNER - DELHI NCR REGION';
         }
     }
-
-    function skAdjustZoom(value) {
-        currentZoom += value;
-        if(currentZoom < 0.5) currentZoom = 0.5; // Limit min zoom
-        if(currentZoom > 3) currentZoom = 3;     // Limit max zoom
-        document.getElementById('skMainImg').style.transform = `scale(${currentZoom})`;
-    }
-
-    function skResetZoom() {
-        currentZoom = 1;
-        document.getElementById('skMainImg').style.transform = `scale(1)`;
-    }
-
-    function skCloseModal() {
-        document.getElementById('skModalOverlay').style.display = 'none';
-    }
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === "Escape") skCloseModal();
-    });
+    function skCloseModal() { document.getElementById('skModalOverlay').style.display = 'none'; }
+    document.addEventListener('keydown', function(e) { if (e.key === "Escape") skCloseModal(); });
 </script>
   
  <section id="sk-final-cta-full" style="padding: 80px 0; background: #4a0404; font-family: 'Poppins', sans-serif; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1);">
