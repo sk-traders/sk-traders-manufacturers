@@ -33,70 +33,89 @@
 <body>
 
 <!-- ================= HEADER ================= -->
-<header id="sk-premium-header" style="position: fixed !important; top: 0; left: 0; width: 100%; z-index: 99999; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 12px 0;">
+<div id="sk-top-bar" style="background: #4a0404; color: #fff; padding: 8px 0; font-family: 'Poppins', sans-serif; font-size: 13px; position: fixed; top: 0; width: 100%; z-index: 100000;">
+    <div style="max-width: 1250px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 20px; flex-wrap: wrap;">
+        <div style="font-weight: 500;">📍 Authorized Acrabond Distributor - Noida Sector 6</div>
+        <div style="display: flex; gap: 20px;">
+            <a href="tel:+919871095529" style="color: #fff; text-decoration: none;"><i class="fas fa-phone-alt" style="color: #ff4d4d;"></i> +91 9871095529</a>
+            <a href="mailto:sktraders.noida011@gmail.com" style="color: #fff; text-decoration: none;"><i class="fas fa-envelope" style="color: #ff4d4d;"></i> sktraders.noida011@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<header id="sk-premium-header" style="position: fixed !important; top: 35px; left: 0; width: 100%; z-index: 99999; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 15px 0;">
     <div style="max-width: 1250px; margin: 0 auto; display: flex !important; flex-direction: row !important; justify-content: space-between !important; align-items: center !important; padding: 0 20px; position: relative;">
         
         <div style="flex: 0 0 auto;">
-            <a href="index.html">
-                <img src="assets/images/logo.png" style="height: 75px !important; width: auto !important; display: block !important; transition: 0.3s;" alt="SK Traders">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="assets/images/logo.png" style="height: 85px !important; width: auto !important; display: block !important; transition: 0.3s; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" alt="S.K. Traders & Manufacturers - Industrial Adhesive Wholesale Noida">
             </a>
         </div>
 
-        <div id="sk-desktop-menu" class="nav-links-container">
+        <nav id="sk-desktop-menu" class="nav-links-container">
             <style>
-                /* Desktop Menu Styling */
-                .nav-links-container { display: flex !important; gap: 30px !important; }
-                .nav-links-container a { text-decoration: none !important; color: #333 !important; font-weight: 600 !important; font-family: 'Poppins', sans-serif !important; font-size: 16px !important; transition: 0.3s; }
-                .nav-links-container a:hover { color: #ff4d4d !important; }
+                .nav-links-container { display: flex !important; gap: 35px !important; align-items: center; }
+                .nav-links-container a { 
+                    text-decoration: none !important; color: #1a1a1a !important; 
+                    font-weight: 700 !important; font-family: 'Poppins', sans-serif !important; 
+                    font-size: 15px !important; text-transform: uppercase; letter-spacing: 0.5px;
+                    position: relative; transition: 0.3s;
+                }
+                .nav-links-container a::after {
+                    content: ''; position: absolute; bottom: -5px; left: 0; width: 0; 
+                    height: 2px; background: #ED1C24; transition: 0.3s;
+                }
+                .nav-links-container a:hover::after { width: 100%; }
+                .nav-links-container a:hover { color: #ED1C24 !important; }
 
-                /* Mobile Menu Styles */
                 @media (max-width: 991px) {
+                    #sk-top-bar { display: none; }
+                    #sk-premium-header { top: 0 !important; }
                     .nav-links-container { 
-                        display: none !important; 
-                        position: absolute; top: 100%; left: 0; width: 100%; 
-                        background: white; flex-direction: column !important; 
-                        padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); gap: 15px !important;
+                        display: none !important; position: absolute; top: 100%; left: 0; width: 100%; 
+                        background: white; flex-direction: column !important; padding: 30px; 
+                        box-shadow: 0 15px 25px rgba(0,0,0,0.1); gap: 20px !important;
                     }
                     .nav-links-container.active { display: flex !important; }
-                    #hamburger-icon { display: flex !important; }
                 }
 
-                /* Bubble Animation for Get Quote */
-                @keyframes bubble-effect {
-                    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
-                    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 77, 77, 0); }
-                    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+                @keyframes pulse-red {
+                    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(237, 28, 36, 0.4); }
+                    70% { transform: scale(1.03); box-shadow: 0 0 0 12px rgba(237, 28, 36, 0); }
+                    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(237, 28, 36, 0); }
                 }
-                .btn-animate { animation: bubble-effect 2s infinite !important; transition: 0.3s; }
-                .btn-animate:hover { background: #800000 !important; transform: scale(1.1) !important; }
+                .btn-quote { 
+                    animation: pulse-red 2.5s infinite !important; 
+                    background: #ED1C24 !important; color: white !important; 
+                    padding: 14px 28px !important; border-radius: 4px !important; 
+                    text-decoration: none !important; font-weight: 800 !important; 
+                    font-size: 13px !important; text-transform: uppercase; transition: 0.3s;
+                }
+                .btn-quote:hover { background: #1a1a1a !important; transform: translateY(-3px) !important; }
             </style>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="contact.html">Contact Us</a>
-        </div>
+            
+            <a href="contact.html" class="btn-quote">Get Quote</a>
+        </nav>
 
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <a href="contact.html" class="btn-animate" style="background: #ff4d4d !important; color: white !important; padding: 12px 24px !important; border-radius: 5px !important; text-decoration: none !important; font-weight: 700 !important; font-family: sans-serif !important; font-size: 14px !important; display: inline-block !important;">
-                Get Quote
-            </a>
-
-            <div id="hamburger-icon" onclick="toggleMenu()" style="display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px;">
-                <span style="width: 25px; height: 3px; background: #333;"></span>
-                <span style="width: 25px; height: 3px; background: #333;"></span>
-                <span style="width: 25px; height: 3px; background: #333;"></span>
-            </div>
+        <div id="hamburger-icon" onclick="toggleMenu()" style="display: none; flex-direction: column; gap: 6px; cursor: pointer;">
+            <span style="width: 30px; height: 3px; background: #1a1a1a;"></span>
+            <span style="width: 30px; height: 3px; background: #1a1a1a;"></span>
+            <span style="width: 30px; height: 3px; background: #1a1a1a;"></span>
         </div>
     </div>
 </header>
 
+<div style="height: 140px;" class="header-spacer"></div>
+
 <script>
     function toggleMenu() {
-        const menu = document.getElementById('sk-desktop-menu');
-        menu.classList.toggle('active');
+        document.getElementById('sk-desktop-menu').classList.toggle('active');
     }
 </script>
-<div style="height: 100px;"></div>
 
 <!-- ================= HERO ================= -->
 <section class="hero-section" style="
