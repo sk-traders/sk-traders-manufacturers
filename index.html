@@ -777,6 +777,77 @@
     @media (max-width: 768px) { .sk-compliance-grid { grid-template-columns: 1fr; } }
 </style>
 
+<style>
+    :root { --sk-red: #ED1C24; --sk-dark: #1a1a1a; }
+
+    .sk-compliance-wrapper {
+        padding: 50px 0;
+        background: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        color: var(--sk-dark);
+        margin-top: -50px; /* Why Choose Us se gap fix */
+        position: relative;
+    }
+    .sk-compliance-header { text-align: center; margin-bottom: 40px; }
+    .sk-location-badge {
+        background: #fff1f1; color: var(--sk-red);
+        padding: 6px 16px; border-radius: 50px;
+        font-size: 11px; font-weight: 700;
+        text-transform: uppercase; border: 1px solid #ffe4e4;
+        display: inline-block; margin-bottom: 12px;
+    }
+    
+    .sk-compliance-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 5%;
+    }
+    .sk-compliance-card {
+        background: #fff; border: 1px solid #eee;
+        padding: 40px 30px; border-radius: 15px;
+        transition: 0.3s ease; cursor: pointer; text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    }
+    .sk-compliance-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--sk-red);
+        box-shadow: 0 15px 30px rgba(237, 28, 36, 0.08);
+    }
+
+    /* ICONS FIXED HERE */
+    .sk-card-icon { font-size: 45px; color: var(--sk-red); margin-bottom: 20px; display: block; }
+    
+    .sk-compliance-card h4 { font-size: 19px; font-weight: 800; margin-bottom: 12px; }
+    .sk-compliance-card p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+    .sk-view-link { 
+        color: var(--sk-red); font-weight: 700; font-size: 12px; 
+        text-decoration: underline; text-underline-offset: 4px;
+        text-transform: uppercase;
+    }
+
+    /* LIGHTBOX SIMPLE (NO BUTTONS) */
+    .sk-modal-overlay {
+        display: none; position: fixed;
+        z-index: 999999; left: 0; top: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.9); align-items: center; justify-content: center;
+    }
+    .sk-modal-content-wrap {
+        position: relative; width: 90%; max-width: 700px;
+        text-align: center; animation: skFade 0.3s ease;
+    }
+    .sk-modal-img {
+        width: 100%; border: 4px solid #fff; border-radius: 8px;
+        max-height: 85vh; object-fit: contain; background: #fff;
+    }
+    .sk-close-btn {
+        position: absolute; top: -50px; right: 0;
+        color: #fff; font-size: 45px; cursor: pointer;
+    }
+    @keyframes skFade { from {opacity: 0; transform: scale(0.95);} to {opacity: 1; transform: scale(1);} }
+    @media (max-width: 768px) { .sk-compliance-grid { grid-template-columns: 1fr; } }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <section class="sk-compliance-wrapper">
     <div class="sk-compliance-header">
         <span class="sk-location-badge">📍 NOIDA SECTOR 6 HUB</span>
@@ -786,19 +857,21 @@
 
     <div class="sk-compliance-grid">
         <div class="sk-compliance-card" onclick="skOpenModal('gst')">
-            <i class="fa-solid fa-file-invoice sk-card-icon"></i> <h4>GST Verified</h4>
+            <i class="fas fa-file-contract sk-card-icon"></i>
+            <h4>GST Verified</h4>
             <p>Officially registered for transparent B2B industrial wholesale, billing, and tax compliance.</p>
             <span class="sk-view-link">VIEW SEAL</span>
         </div>
 
         <div class="sk-compliance-card" onclick="skOpenModal('msme')">
-            <i class="fa-solid fa-award sk-card-icon"></i> <h4>MSME Udyam</h4>
+            <i class="fas fa-industry sk-card-icon"></i>
+            <h4>MSME Udyam</h4>
             <p>Government certified manufacturing excellence and small-scale industry reliability for 11+ years.</p>
             <span class="sk-view-link">VIEW CERTIFICATE</span>
         </div>
 
         <div class="sk-compliance-card" onclick="skOpenModal('partner')">
-            <i class="fa-solid fa-certificate sk-card-icon"></i> <h4>Acrabond Partner</h4>
+            <i class="fas fa-handshake-angle sk-card-icon"></i> <h4>Acrabond Partner</h4>
             <p>Official Authorized Channel Partner & Strategic Distributor for Acrabond Adhesives in Delhi NCR.</p>
             <span class="sk-view-link">VIEW AUTHORITY LETTER</span>
         </div>
