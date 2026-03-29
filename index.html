@@ -37,10 +37,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-    /* 1. DESKTOP DESIGN (LOCKED - NO CHANGES) */
-    #sk-master-header { font-family: 'Poppins', sans-serif !important; position: fixed; top: 0; left: 0; width: 100%; z-index: 999999; background: #fff; }
+    /* 1. DESKTOP DESIGN (LOCKED & IMPROVED FONTS) */
+    #sk-master-header { 
+        font-family: 'Poppins', sans-serif !important; 
+        position: fixed; top: 0; left: 0; width: 100%; 
+        z-index: 999999; background: #fff; 
+    }
+    
     .sk-top-bar { background: #4a0404; color: #fff; padding: 10px 0; font-size: 13px; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .sk-container { max-width: 1250px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+    
     .sk-top-info { display: flex; gap: 20px; align-items: center; }
     .sk-top-info a { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 500; }
     .sk-top-info i { color: #4a0404; background: #fff; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; }
@@ -48,44 +54,64 @@
     .sk-main-nav { background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 12px 0; }
     .sk-logo img { height: 75px; width: auto; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
     
+    /* IMPROVED MENU FONTS */
     .sk-menu { display: flex; align-items: center; gap: 35px; list-style: none; margin: 0; padding: 0; }
-    .sk-menu a { text-decoration: none; color: #1a1a1a; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; position: relative; padding: 5px 0; transition: 0.3s; }
+    .sk-menu a { 
+        text-decoration: none; color: #1a1a1a; 
+        font-weight: 600; /* Sharp & Professional */
+        font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; 
+        position: relative; padding: 5px 0; transition: 0.3s; 
+    }
     .sk-menu a:hover { color: #ED1C24; }
     .sk-menu a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #ED1C24; transition: 0.4s; }
     .sk-menu a:hover::after { width: 100%; }
 
+    /* IMPROVED GET QUOTE BUTTON */
     @keyframes pulse-red {
         0% { box-shadow: 0 0 0 0 rgba(237, 28, 36, 0.4); }
         70% { box-shadow: 0 0 0 10px rgba(237, 28, 36, 0); }
         100% { box-shadow: 0 0 0 0 rgba(237, 28, 36, 0); }
     }
-    .sk-btn-quote { background: #ED1C24 !important; color: #fff !important; padding: 12px 24px; border-radius: 4px; font-weight: 800; font-size: 14px; text-transform: uppercase; text-decoration: none; transition: 0.3s; animation: pulse-red 2.5s infinite; border: none; cursor: pointer; display: inline-block; }
+    .sk-btn-quote { 
+        background: #ED1C24 !important; color: #fff !important; 
+        padding: 12px 26px; border-radius: 4px; 
+        font-weight: 700; font-size: 14px; /* Better Weight */
+        text-transform: uppercase; text-decoration: none; 
+        transition: 0.3s; animation: pulse-red 2.5s infinite; 
+        border: none; cursor: pointer; display: inline-block; 
+    }
     .sk-btn-quote:hover { background: #1a1a1a !important; transform: translateY(-3px); }
 
     .sk-hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
     .sk-hamburger span { width: 28px; height: 3px; background: #1a1a1a; border-radius: 2px; }
 
-    /* 2. MOBILE VIEW (THE REAL FIX) */
+    /* 2. MOBILE VIEW (THE REAL REPAIR) */
     @media (max-width: 991px) {
-        .sk-top-bar { font-size: 10px; padding: 8px 0; }
+        .sk-top-bar { font-size: 10px; padding: 8px 0; height: auto !important; }
         .sk-container { flex-direction: column !important; gap: 5px; text-align: center; }
         .sk-top-email { display: none; } 
         
         .sk-main-nav { padding: 10px 0; position: relative; }
-        /* Logo aur Hamburger ko ek line mein laane ke liye */
-        .sk-main-nav .sk-container { flex-direction: row !important; justify-content: space-between !important; display: flex !important; }
+        /* Ensuring Logo and Hamburger are in ONE ROW */
+        .sk-main-nav .sk-container { 
+            flex-direction: row !important; 
+            justify-content: space-between !important; 
+            display: flex !important; 
+            align-items: center !important; 
+        }
         
-        .sk-logo img { height: 45px !important; display: block !important; } 
-        .sk-hamburger { display: flex !important; }
+        .sk-logo img { height: 45px !important; display: block !important; visibility: visible !important; } 
+        .sk-hamburger { display: flex !important; visibility: visible !important; }
 
         .sk-menu { 
-            display: none !important; position: absolute; top: 100%; left: 0; width: 100%; 
+            display: none; position: absolute; top: 100%; left: 0; width: 100%; 
             background: #fff; flex-direction: column; padding: 15px 0; 
             box-shadow: 0 10px 20px rgba(0,0,0,0.1); gap: 0; border-top: 1px solid #eee;
+            z-index: 1000;
         }
         .sk-menu.active { display: flex !important; }
-        .sk-menu li { width: 100%; }
-        .sk-menu a { width: 100%; padding: 15px 25px; border-bottom: 1px solid #f5f5f5; text-align: left; display: block; }
+        .sk-menu li { width: 100%; border-bottom: 1px solid #f5f5f5; }
+        .sk-menu a { width: 100%; padding: 15px 25px; text-align: left; display: block; border: none; }
         .sk-menu .sk-btn-quote { margin: 15px 25px; width: calc(100% - 50px); text-align: center; animation: none; }
     }
 </style>
@@ -122,7 +148,7 @@
     </nav>
 </div>
 
-<div style="height: 145px;"></div>
+<div style="height: 145px;" class="sk-header-spacer"></div>
 
 <script>
     function toggleSkMenu() {
