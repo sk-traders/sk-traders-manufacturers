@@ -5432,3 +5432,22 @@ body .hero-btns {
     width: 100% !important;
   }
 }
+
+  /* ===== SK HEADER MOBILE FINAL FIX ===== */
+@media (max-width: 991px) {
+
+  /* FIX 1: Authorized line show karo */
+  #sk-header-main .sk-top-left .sk-addr-text {
+    display: inline !important;
+    font-size: 10px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 160px !important;
+  }
+
+  /* FIX 2: Get Quote button mobile menu se hatao */
+  #sk-header-main .sk-menu li:last-child {
+    display: none !important;
+  }
+}
