@@ -5405,3 +5405,30 @@ body .hero-btns {
     box-shadow: 0 4px 14px rgba(237,28,36,0.3) !important;
   }
 }
+
+  /* ===== FIX 1: LOCATION ICON ===== */
+#sk-header-main .sk-top-left i.fa-map-marker-alt {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  display: inline-block !important;
+}
+
+/* ===== FIX 2: MOBILE MENU ALIGNMENT ===== */
+@media (max-width: 991px) {
+  #sk-header-main .sk-menu li {
+    border-bottom: 1px solid #f2f2f2 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  #sk-header-main .sk-menu li:last-child {
+    border-bottom: none !important;
+    padding: 14px 16px !important;
+  }
+  #sk-header-main .sk-menu li a:not(.sk-btn-quote) {
+    padding: 15px 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+}
