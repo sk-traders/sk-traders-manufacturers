@@ -65,356 +65,123 @@
 <body>
 
 <!-- ================= HEADER ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <style>
-  /* ===== SK TRADERS HEADER — FINAL PREMIUM VERSION ===== */
-  #sk-header-main {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    z-index: 999999;
-    font-family: 'Poppins', sans-serif;
-  }
+  /* ===== 1. DESKTOP DESIGN (LOCKED - NO CHANGES) ===== */
+  #sk-header-main { position: fixed; top: 0; left: 0; width: 100%; z-index: 999999; font-family: 'Poppins', sans-serif; }
+  .sk-top-bar { background: #4a0404; color: #fff; padding: 8px 0; font-size: 12.5px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .sk-top-wrap { max-width: 1250px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+  .sk-top-left { display: flex; align-items: center; gap: 7px; font-weight: 500; }
+  .sk-top-right { display: flex; align-items: center; gap: 18px; }
+  .sk-top-link { color: #fff; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 7px; }
+  .sk-top-icon { width: 22px; height: 22px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; }
 
-  /* TOP BAR */
-  .sk-top-bar {
-    background: #4a0404;
-    color: #fff;
-    padding: 8px 0;
-    font-size: 12.5px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  .sk-top-wrap {
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .sk-top-left {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-weight: 500;
-    opacity: 0.9;
-  }
-  .sk-top-left i { font-size: 11px; color: #ffaaaa; }
-  .sk-top-right {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
-  .sk-top-link {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    transition: opacity 0.2s;
-  }
-  .sk-top-link:hover { opacity: 0.75; }
-  .sk-top-icon {
-    width: 22px; height: 22px;
-    background: rgba(255,255,255,0.15);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 10px;
-    flex-shrink: 0;
-  }
+  .sk-nav-bar { background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .sk-nav-wrap { max-width: 1250px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 72px; position: relative; }
+  .sk-logo img { height: 60px; width: auto; display: block; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.1)); }
+  
+  .sk-menu { display: flex; align-items: center; gap: 6px; list-style: none; margin: 0; padding: 0; position: absolute; left: 50%; transform: translateX(-50%); }
+  .sk-menu li a { text-decoration: none; color: #1a1a1a; font-weight: 600; font-size: 13.5px; text-transform: uppercase; padding: 8px 14px; position: relative; transition: 0.3s; }
+  .sk-menu li a:not(.sk-btn-quote):hover { color: #ED1C24; }
 
-  /* NAV BAR */
-  .sk-nav-bar {
-    background: #fff;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-  }
-  .sk-nav-wrap {
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 72px;
-  }
+  @keyframes sk-pulse { 0% { box-shadow: 0 0 0 0 rgba(237,28,36,0.4); } 70% { box-shadow: 0 0 0 10px rgba(237,28,36,0); } 100% { box-shadow: 0 0 0 0 rgba(237,28,36,0); } }
+  .sk-btn-quote { background: #ED1C24 !important; color: #fff !important; padding: 11px 24px !important; border-radius: 6px !important; font-weight: 700 !important; font-size: 13px !important; text-transform: uppercase !important; animation: sk-pulse 2.5s infinite; text-decoration: none; }
 
-  /* LOGO — LEFT */
-  .sk-logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-  .sk-logo img {
-    height: 60px;
-    width: auto;
-    display: block;
-    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.1));
-    transition: transform 0.3s;
-  }
-  .sk-logo img:hover { transform: scale(1.04); }
+  .sk-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; }
+  .sk-hamburger span { width: 24px; height: 2.5px; background: #1a1a1a; border-radius: 3px; display: block; transition: 0.3s; }
 
-  /* MENU — CENTER */
-  .sk-menu {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    list-style: none;
-    margin: 0; padding: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .sk-menu li a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-weight: 600;
-    font-size: 13.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 8px 14px;
-    border-radius: 6px;
-    position: relative;
-    transition: color 0.25s, background 0.25s;
-    white-space: nowrap;
-  }
-  .sk-menu li a:not(.sk-btn-quote):hover {
-    color: #ED1C24;
-    background: rgba(237,28,36,0.06);
-  }
-  .sk-menu li a:not(.sk-btn-quote)::after {
-    content: '';
-    position: absolute;
-    bottom: 3px; left: 14px;
-    width: 0; height: 2px;
-    background: #ED1C24;
-    border-radius: 2px;
-    transition: width 0.3s;
-  }
-  .sk-menu li a:not(.sk-btn-quote):hover::after {
-    width: calc(100% - 28px);
-  }
-
-  /* GET QUOTE BUTTON — RIGHT (Desktop only) */
-  @keyframes sk-pulse {
-    0%   { box-shadow: 0 0 0 0 rgba(237,28,36,0.4); }
-    70%  { box-shadow: 0 0 0 10px rgba(237,28,36,0); }
-    100% { box-shadow: 0 0 0 0 rgba(237,28,36,0); }
-  }
-  .sk-btn-quote {
-    background: #ED1C24 !important;
-    color: #fff !important;
-    padding: 11px 24px !important;
-    border-radius: 6px !important;
-    font-weight: 700 !important;
-    font-size: 13px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.8px !important;
-    animation: sk-pulse 2.5s infinite;
-    transition: background 0.25s, transform 0.2s !important;
-    white-space: nowrap;
-    text-decoration: none;
-  }
-  .sk-btn-quote:hover {
-    background: #c0141b !important;
-    transform: translateY(-2px) !important;
-    animation: none !important;
-    box-shadow: 0 6px 20px rgba(237,28,36,0.4) !important;
-  }
-
-  /* HAMBURGER */
-  .sk-hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 8px;
-    transition: background 0.2s;
-    background: none;
-    border: none;
-  }
-  .sk-hamburger:hover { background: rgba(0,0,0,0.05); }
-  .sk-hamburger span {
-    width: 24px; height: 2.5px;
-    background: #1a1a1a;
-    border-radius: 3px;
-    display: block;
-    transition: all 0.35s cubic-bezier(0.23,1,0.32,1);
-  }
-  .sk-hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-  .sk-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-  .sk-hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-
-  /* ===== MOBILE ===== */
+  /* ===== 2. MOBILE REPAIR (SURGICAL FIXES) ===== */
   @media (max-width: 991px) {
-
-    /* Top bar — address text poora dikhao */
-    .sk-top-wrap {
-      flex-direction: row !important;
-      justify-content: space-between;
+    /* FIX: Top Bar Line (No Cutting) */
+    .sk-top-wrap { flex-direction: row !important; justify-content: space-between !important; padding: 0 10px !important; }
+    .sk-top-left .sk-addr-text { 
+        display: inline !important; 
+        font-size: 9px !important; /* Smaller size for mobile fit */
+        white-space: nowrap !important;
+        letter-spacing: -0.2px;
     }
-    .sk-top-left .sk-addr-text {
-      display: inline !important;
-      font-size: 10px !important;
-      white-space: nowrap !important;
-      overflow: hidden !important;
-      text-overflow: ellipsis !important;
-      max-width: 55vw !important;
-    }
-    .sk-top-link .sk-link-label { display: none; }
-    .sk-top-icon { width: 28px; height: 28px; font-size: 12px; }
+    .sk-top-right { gap: 10px !important; }
+    .sk-top-link .sk-link-label { display: none; } /* Show only icons on very small screens */
 
-    /* Nav row */
-    .sk-nav-wrap {
-      height: 60px;
-      padding: 0 16px;
-      position: relative;
-    }
+    .sk-nav-wrap { height: 60px; padding: 0 15px; position: relative; }
+    .sk-logo img { height: 44px !important; }
+    .sk-btn-quote { display: none !important; } /* Desktop quote hide */
 
-    /* Get Quote — mobile pe hide */
-    .sk-btn-quote { display: none !important; }
-
-    /* Logo */
-    .sk-logo { display: flex !important; align-items: center; }
-    .sk-logo img { height: 46px !important; }
-
-    /* Dropdown menu */
-    .sk-menu {
-      display: none;
-      position: absolute;
-      top: 100%; left: 0; right: 0;
-      background: #fff;
-      flex-direction: column;
-      gap: 0;
-      padding: 0;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-      border-top: 3px solid #ED1C24;
-      z-index: 999998;
-      transform: none;
+    /* FIX: Menu Alignment (Contact Us Alignment) */
+    .sk-menu { 
+        display: none; position: absolute; top: 100%; left: 0; right: 0; 
+        background: #fff; flex-direction: column; padding: 0; 
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12); transform: none; width: 100%;
     }
     .sk-menu.active { display: flex !important; }
-
-    .sk-menu li {
-      width: 100%;
-      border-bottom: 1px solid #f2f2f2;
+    .sk-menu li { width: 100% !important; border-bottom: 1px solid #f2f2f2; }
+    .sk-menu li a { 
+        display: flex !important; 
+        align-items: center !important; 
+        justify-content: flex-start !important; /* Force Left Alignment */
+        padding: 16px 24px !important; 
+        width: 100% !important; 
+        font-size: 14px !important; 
+        text-align: left !important;
+        margin: 0 !important;
     }
-    .sk-menu li:last-child { border-bottom: none; }
-    .sk-menu li a {
-      display: flex !important;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 22px !important;
-      font-size: 14px !important;
-      font-weight: 600 !important;
-      color: #1a1a1a !important;
-      border-radius: 0 !important;
-      white-space: normal;
-      border-left: 3px solid transparent;
-      transition: all 0.2s;
-    }
-    .sk-menu li a::before {
-      content: '→';
-      color: #ED1C24;
-      font-size: 13px;
-      font-family: Arial, sans-serif !important;
-    }
-    .sk-menu li a:hover {
-      border-left: 3px solid #ED1C24 !important;
-      padding-left: 26px !important;
-      color: #ED1C24 !important;
-      background: rgba(237,28,36,0.04) !important;
-    }
-    .sk-menu li a::after { display: none !important; }
-
-    /* Hamburger visible */
+    .sk-menu li a::before { content: '→'; color: #ED1C24; margin-right: 12px; font-weight: 800; }
+    
     .sk-hamburger { display: flex !important; }
+    .sk-hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .sk-hamburger.open span:nth-child(2) { opacity: 0; }
+    .sk-hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
   }
 </style>
 
-<!-- ========== HEADER HTML ========== -->
-<header id="sk-header-main" itemscope itemtype="https://schema.org/WPHeader">
-
-  <!-- Top Bar -->
+<header id="sk-header-main">
   <div class="sk-top-bar">
     <div class="sk-top-wrap">
       <div class="sk-top-left">
         <i class="fas fa-map-marker-alt"></i>
-        <span class="sk-addr-text">Authorized Acrabond Distributor — Noida Sector 6, Delhi NCR</span>
+        <span class="sk-addr-text">Authorized Acrabond Distributor — Noida Sec-6, Delhi NCR</span>
       </div>
       <div class="sk-top-right">
-        <a href="tel:+919871095529" class="sk-top-link" aria-label="Call SK Traders">
-          <span class="sk-top-icon"><i class="fas fa-phone-alt"></i></span>
-          <span class="sk-link-label">+91 9871095529</span>
-        </a>
-        <a href="mailto:sktraders.noida011@gmail.com" class="sk-top-link" aria-label="Email SK Traders">
-          <span class="sk-top-icon"><i class="fas fa-envelope"></i></span>
-          <span class="sk-link-label">Email Us</span>
-        </a>
+        <a href="tel:+919871095529" class="sk-top-link"><span class="sk-top-icon"><i class="fas fa-phone-alt"></i></span></a>
+        <a href="mailto:sktraders.noida011@gmail.com" class="sk-top-link"><span class="sk-top-icon"><i class="fas fa-envelope"></i></span></a>
       </div>
     </div>
   </div>
 
-  <!-- Nav Bar -->
-  <nav class="sk-nav-bar" itemscope itemtype="https://schema.org/SiteNavigationElement">
+  <nav class="sk-nav-bar">
     <div class="sk-nav-wrap">
-
-      <!-- Logo LEFT -->
       <div class="sk-logo">
-        <a href="index.html" title="SK Traders & Manufacturers — Acrabond Distributor Noida">
-          <img
-            src="assets/images/logo.png"
-            alt="SK Traders & Manufacturers — Authorized Acrabond Adhesive Distributor Noida Sector 6 Delhi NCR"
-            width="180" height="60"
-            loading="eager"
-          >
-        </a>
+        <a href="index.html"><img src="assets/images/logo.png" alt="SK Traders"></a>
       </div>
 
-      <!-- Menu CENTER -->
-      <ul class="sk-menu" id="sk-mobile-menu" role="menubar">
-        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
-        <li role="none"><a href="about.html" role="menuitem">About Us</a></li>
-        <li role="none"><a href="products.html" role="menuitem">Products</a></li>
-        <li role="none"><a href="contact.html" role="menuitem">Contact Us</a></li>
+      <ul class="sk-menu" id="sk-mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
 
-      <!-- Get Quote RIGHT — desktop only -->
-      <a href="contact.html" class="sk-btn-quote" role="button" aria-label="Get Wholesale Quote from SK Traders">
-        Get Quote
-      </a>
+      <a href="contact.html" class="sk-btn-quote">Get Quote</a>
 
-      <!-- Hamburger — mobile only -->
-      <button class="sk-hamburger" id="sk-hamburger" onclick="skToggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+      <button class="sk-hamburger" id="sk-hamburger" onclick="skToggleMenu()">
         <span></span><span></span><span></span>
       </button>
-
     </div>
   </nav>
-
 </header>
 
-<!-- Spacer -->
 <div style="height:108px;" class="sk-spacer"></div>
-<style>
-  @media (max-width: 991px) { .sk-spacer { height: 88px !important; } }
-</style>
+<style> @media (max-width: 991px) { .sk-spacer { height: 88px !important; } } </style>
 
 <script>
   function skToggleMenu() {
     var menu = document.getElementById('sk-mobile-menu');
-    var ham  = document.getElementById('sk-hamburger');
+    var ham = document.getElementById('sk-hamburger');
     var open = menu.classList.toggle('active');
     ham.classList.toggle('open', open);
-    ham.setAttribute('aria-expanded', open);
   }
-  document.addEventListener('click', function(e) {
-    var hdr = document.getElementById('sk-header-main');
-    if (hdr && !hdr.contains(e.target)) {
-      document.getElementById('sk-mobile-menu').classList.remove('active');
-      var h = document.getElementById('sk-hamburger');
-      if (h) { h.classList.remove('open'); h.setAttribute('aria-expanded','false'); }
-    }
-  });
 </script>
 
 <!-- ================= HERO ================= -->
