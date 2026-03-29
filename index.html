@@ -65,9 +65,6 @@
 <body>
 
 <!-- ================= HEADER ================= -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 <style>
   /* ===== SK TRADERS HEADER — FINAL PREMIUM VERSION ===== */
   #sk-header-main {
@@ -197,7 +194,7 @@
     width: calc(100% - 28px);
   }
 
-  /* GET QUOTE BUTTON — RIGHT */
+  /* GET QUOTE BUTTON — RIGHT (Desktop only) */
   @keyframes sk-pulse {
     0%   { box-shadow: 0 0 0 0 rgba(237,28,36,0.4); }
     70%  { box-shadow: 0 0 0 10px rgba(237,28,36,0); }
@@ -215,6 +212,7 @@
     animation: sk-pulse 2.5s infinite;
     transition: background 0.25s, transform 0.2s !important;
     white-space: nowrap;
+    text-decoration: none;
   }
   .sk-btn-quote:hover {
     background: #c0141b !important;
@@ -250,12 +248,19 @@
   /* ===== MOBILE ===== */
   @media (max-width: 991px) {
 
-    /* Top bar — single clean row */
+    /* Top bar — address text poora dikhao */
     .sk-top-wrap {
       flex-direction: row !important;
       justify-content: space-between;
     }
-    .sk-top-left .sk-addr-text { display: none; }
+    .sk-top-left .sk-addr-text {
+      display: inline !important;
+      font-size: 10px !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      max-width: 55vw !important;
+    }
     .sk-top-link .sk-link-label { display: none; }
     .sk-top-icon { width: 28px; height: 28px; font-size: 12px; }
 
@@ -266,11 +271,14 @@
       position: relative;
     }
 
-    /* Logo visible */
+    /* Get Quote — mobile pe hide */
+    .sk-btn-quote { display: none !important; }
+
+    /* Logo */
     .sk-logo { display: flex !important; align-items: center; }
     .sk-logo img { height: 46px !important; }
 
-    /* Center menu — hidden on mobile, becomes dropdown */
+    /* Dropdown menu */
     .sk-menu {
       display: none;
       position: absolute;
@@ -278,7 +286,7 @@
       background: #fff;
       flex-direction: column;
       gap: 0;
-      padding: 8px 0 16px;
+      padding: 0;
       box-shadow: 0 12px 30px rgba(0,0,0,0.12);
       border-top: 3px solid #ED1C24;
       z-index: 999998;
@@ -286,25 +294,37 @@
     }
     .sk-menu.active { display: flex !important; }
 
-    .sk-menu li { width: 100%; }
+    .sk-menu li {
+      width: 100%;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    .sk-menu li:last-child { border-bottom: none; }
     .sk-menu li a {
-      display: block;
-      padding: 13px 24px;
-      font-size: 14px;
-      border-radius: 0;
+      display: flex !important;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 22px !important;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      color: #1a1a1a !important;
+      border-radius: 0 !important;
       white-space: normal;
+      border-left: 3px solid transparent;
+      transition: all 0.2s;
     }
-    .sk-menu li a:not(.sk-btn-quote)::after { display: none; }
-    .sk-menu li a:not(.sk-btn-quote):hover { padding-left: 30px; }
-    .sk-menu li:last-child { padding: 10px 16px 0; }
-    .sk-menu .sk-btn-quote {
-      display: block !important;
-      text-align: center !important;
-      border-radius: 8px !important;
-      padding: 13px 20px !important;
-      animation: none !important;
-      box-shadow: 0 4px 14px rgba(237,28,36,0.3) !important;
+    .sk-menu li a::before {
+      content: '→';
+      color: #ED1C24;
+      font-size: 13px;
+      font-family: Arial, sans-serif !important;
     }
+    .sk-menu li a:hover {
+      border-left: 3px solid #ED1C24 !important;
+      padding-left: 26px !important;
+      color: #ED1C24 !important;
+      background: rgba(237,28,36,0.04) !important;
+    }
+    .sk-menu li a::after { display: none !important; }
 
     /* Hamburger visible */
     .sk-hamburger { display: flex !important; }
@@ -358,7 +378,7 @@
         <li role="none"><a href="contact.html" role="menuitem">Contact Us</a></li>
       </ul>
 
-      <!-- Get Quote RIGHT -->
+      <!-- Get Quote RIGHT — desktop only -->
       <a href="contact.html" class="sk-btn-quote" role="button" aria-label="Get Wholesale Quote from SK Traders">
         Get Quote
       </a>
@@ -373,7 +393,7 @@
 
 </header>
 
-<!-- Spacer so content doesn't hide behind fixed header -->
+<!-- Spacer -->
 <div style="height:108px;" class="sk-spacer"></div>
 <style>
   @media (max-width: 991px) { .sk-spacer { height: 88px !important; } }
@@ -387,7 +407,6 @@
     ham.classList.toggle('open', open);
     ham.setAttribute('aria-expanded', open);
   }
-  // Close on outside click
   document.addEventListener('click', function(e) {
     var hdr = document.getElementById('sk-header-main');
     if (hdr && !hdr.contains(e.target)) {
