@@ -5310,3 +5310,28 @@ body .hero-btns {
     padding: 0 16px !important;
   }
 }
+
+  /* ===== MOBILE MENU PREMIUM ===== */
+@media (max-width: 991px) {
+  #sk-header-main .sk-menu {
+    padding: 0 !important;
+  }
+  #sk-header-main .sk-menu li a:not(.sk-btn-quote) {
+    padding: 16px 24px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  #sk-header-main .sk-menu li a:not(.sk-btn-quote)::before {
+    content: '→';
+    color: #ED1C24;
+    font-size: 14px;
+  }
+  #sk-header-main .sk-menu li:last-child {
+    padding: 16px !important;
+  }
+}
