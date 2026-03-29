@@ -37,85 +37,52 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-    /* DESKTOP DESIGN - LOCKED & UNTOUCHED */
+    /* DESKTOP (LOCKED - NO CHANGES) */
     #sk-master-header { font-family: 'Poppins', sans-serif !important; position: fixed; top: 0; left: 0; width: 100%; z-index: 999999; background: #fff; }
-    
-    .sk-top-bar { background: #4a0404; color: #fff; padding: 10px 0; font-size: 13px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .sk-top-bar { background: #4a0404; color: #fff; padding: 10px 0; font-size: 13px; }
     .sk-container { max-width: 1250px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
     .sk-top-info { display: flex; gap: 20px; align-items: center; }
     .sk-top-info a { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 500; }
     .sk-top-info i { color: #4a0404; background: #fff; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; }
 
     .sk-main-nav { background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 12px 0; }
-    .sk-logo img { height: 80px; width: auto; display: block; transition: 0.3s; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
+    .sk-logo img { height: 75px; width: auto; display: block; }
     
     .sk-menu { display: flex; align-items: center; gap: 30px; list-style: none; margin: 0; padding: 0; }
-    .sk-menu li { display: inline-block; }
-    .sk-menu a { text-decoration: none; color: #1a1a1a; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; position: relative; padding: 5px 0; }
+    .sk-menu a { text-decoration: none; color: #1a1a1a; font-weight: 700; font-size: 15px; text-transform: uppercase; }
     .sk-menu a:hover { color: #ED1C24; }
-    .sk-menu a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #ED1C24; transition: 0.4s; }
-    .sk-menu a:hover::after { width: 100%; }
 
-    /* Desktop Get Quote Button */
-    @keyframes pulse-red {
-        0% { box-shadow: 0 0 0 0 rgba(237, 28, 36, 0.4); }
-        70% { box-shadow: 0 0 0 10px rgba(237, 28, 36, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(237, 28, 36, 0); }
-    }
-    .sk-btn-quote { background: #ED1C24 !important; color: #fff !important; padding: 12px 24px; border-radius: 4px; font-weight: 800; font-size: 14px; text-transform: uppercase; text-decoration: none; transition: 0.3s; animation: pulse-red 2.5s infinite; border: none; cursor: pointer; display: inline-block; }
-    .sk-btn-quote:hover { background: #1a1a1a !important; transform: translateY(-3px); }
+    .sk-btn-quote { background: #ED1C24 !important; color: #fff !important; padding: 12px 24px; border-radius: 4px; font-weight: 800; font-size: 14px; text-transform: uppercase; text-decoration: none; display: inline-block; }
 
-    .sk-hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
-    .sk-hamburger span { width: 28px; height: 3px; background: #1a1a1a; border-radius: 2px; }
+    .sk-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .sk-hamburger span { width: 25px; height: 3px; background: #333; }
 
-    /* 📱 MOBILE VIEW - SURGICAL REPAIR */
+    /* MOBILE FIX (ONLY ALIGNMENT) */
     @media (max-width: 991px) {
-        .sk-top-bar { font-size: 10px; padding: 8px 0; }
-        .sk-container { flex-direction: column !important; gap: 5px; text-align: center; }
-        .sk-top-email { display: none; } 
-        
-        .sk-main-nav { padding: 10px 0; position: relative; }
+        .sk-top-bar { font-size: 10px; }
+        .sk-top-info a:last-child { display: none; } /* Email hide for space */
         .sk-main-nav .sk-container { flex-direction: row !important; justify-content: space-between !important; }
+        .sk-logo img { height: 45px !important; } /* Logo visible and scaled */
+        .sk-hamburger { display: flex !important; } /* Hamburger visible */
         
-        /* Logo size fix for mobile */
-        .sk-logo img { height: 42px !important; } 
-
-        /* Mobile specific Get Quote - Visible in Header */
-        .sk-menu .sk-btn-quote { 
-            display: inline-block !important; 
-            padding: 8px 12px !important; 
-            font-size: 11px !important; 
-            margin: 0 !important; 
-            animation: none; 
-            position: relative;
-            z-index: 10;
-        }
-
-        .sk-hamburger { display: flex; order: 3; }
-
-        /* Dropdown Menu */
         .sk-menu { 
             display: none; position: absolute; top: 100%; left: 0; width: 100%; 
-            background: #fff; flex-direction: column; padding: 15px 0; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); gap: 0; border-top: 1px solid #eee;
-            z-index: 9999;
+            background: #fff; flex-direction: column; padding: 20px; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
         }
         .sk-menu.active { display: flex; }
-        .sk-menu li { width: 100%; }
-        .sk-menu a { width: 100%; padding: 15px 25px; border-bottom: 1px solid #f5f5f5; text-align: left; display: block; }
-        
-        /* Inside dropdown, hide the extra button to keep it clean */
-        .sk-menu li:last-child { display: none; } 
+        .sk-menu li { padding: 10px 0; border-bottom: 1px solid #eee; width: 100%; }
+        .sk-menu .sk-btn-quote { width: 100%; text-align: center; margin-top: 10px; }
     }
 </style>
 
 <div id="sk-master-header">
     <div class="sk-top-bar">
         <div class="sk-container">
-            <div style="font-weight: 500;">📍 Authorized Acrabond Distributor - Noida Sector 6</div>
+            <div>📍 Authorized Acrabond Distributor - Noida 6</div>
             <div class="sk-top-info">
                 <a href="tel:+919871095529"><i class="fas fa-phone-alt"></i> +91 9871095529</a>
-                <a href="mailto:sktraders.noida011@gmail.com" class="sk-top-email"><i class="fas fa-envelope"></i> Email Us</a>
+                <a href="mailto:sktraders.noida011@gmail.com"><i class="fas fa-envelope"></i> Email</a>
             </div>
         </div>
     </div>
@@ -141,7 +108,7 @@
     </nav>
 </div>
 
-<div style="height: 145px;" class="sk-header-spacer"></div>
+<div style="height: 140px;"></div>
 
 <script>
     function toggleSkMenu() {
