@@ -36,65 +36,82 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<div style="background: #4a0404; color: #fff; padding: 10px 0; font-family: 'Inter', sans-serif; font-size: 13px; position: fixed; top: 0; width: 100%; z-index: 100000; border-bottom: 1px solid rgba(255,255,255,0.1);">
-    <div style="max-width: 1250px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; flex-wrap: wrap;">
-        <div style="font-weight: 600; letter-spacing: 0.5px;">📍 Authorized Acrabond Distributor - Noida Sector 6</div>
-        <div style="display: flex; gap: 25px;">
-            <a href="tel:+919871095529" style="color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                <i class="fas fa-phone-alt" style="color: #ff4d4d; font-size: 12px;"></i> +91 9871095529
-            </a>
-            <a href="mailto:sktraders.noida011@gmail.com" style="color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                <i class="fas fa-envelope" style="color: #ff4d4d; font-size: 12px;"></i> sktraders.noida011@gmail.com
-            </a>
+<div id="sk-top-bar" style="background: #4a0404; color: #fff; padding: 6px 0; font-family: 'Inter', sans-serif; font-size: 11px; position: fixed; top: 0; width: 100%; z-index: 100001; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <div style="max-width: 1250px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px;">
+        <div style="font-weight: 600; letter-spacing: 0.3px;" class="top-bar-text">📍 Noida Sector 6 Hub</div>
+        <div style="display: flex; gap: 15px;">
+            <a href="tel:+919871095529" style="color: #fff; text-decoration: none;"><i class="fas fa-phone-alt" style="color: #ff4d4d;"></i> Call Us</a>
+            <a href="mailto:sktraders.noida011@gmail.com" style="color: #fff; text-decoration: none;" class="top-email"><i class="fas fa-envelope" style="color: #ff4d4d;"></i> Email</a>
         </div>
     </div>
 </div>
 
-<header id="sk-main-header" style="position: fixed; top: 38px; left: 0; width: 100%; z-index: 99999; background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.08); padding: 10px 0;">
-    <div style="max-width: 1250px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+<header id="sk-main-header" style="position: fixed; top: 30px; left: 0; width: 100%; z-index: 99999; background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.1); padding: 8px 0; height: 70px; display: flex; align-items: center;">
+    <div style="max-width: 1250px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 15px;">
         
         <div style="flex: 0 0 auto;">
             <a href="index.html">
-                <img src="assets/images/logo.png" style="height: 80px; width: auto; display: block;" alt="SK Traders Logo">
+                <img src="assets/images/logo.png" id="sk-logo-img" style="height: 55px; width: auto; transition: 0.3s;" alt="SK Traders Logo">
             </a>
         </div>
 
-        <nav class="sk-nav">
+        <nav class="sk-nav" id="sk-nav-menu">
             <style>
-                .sk-nav { display: flex; align-items: center; gap: 35px; }
+                .sk-nav { display: flex; align-items: center; gap: 25px; }
                 .sk-nav a { 
                     text-decoration: none !important; color: #1a1a1a !important; 
                     font-weight: 700; font-family: 'Inter', sans-serif; 
-                    font-size: 15px; text-transform: uppercase; transition: 0.3s;
+                    font-size: 14px; text-transform: uppercase; transition: 0.3s;
                 }
                 .sk-nav a:hover { color: #ED1C24 !important; }
 
-                /* Get Quote Button - Text Visibility Optimized */
+                /* Mobile View Fixes */
+                @media (max-width: 991px) {
+                    #sk-logo-img { height: 45px !important; } /* Reducing logo size on mobile */
+                    #sk-main-header { height: 60px !important; top: 28px !important; }
+                    .top-bar-text { font-size: 10px; }
+                    .top-email { display: none; } /* Hide email on tiny screens to save space */
+                    
+                    .sk-nav { 
+                        display: none !important; position: absolute; top: 60px; left: 0; width: 100%; 
+                        background: white; flex-direction: column !important; padding: 20px 0; 
+                        box-shadow: 0 10px 20px rgba(0,0,0,0.1); gap: 0 !important;
+                    }
+                    .sk-nav a { width: 100%; padding: 15px 25px; border-bottom: 1px solid #f5f5f5; }
+                    .sk-nav.active { display: flex !important; }
+                    .hamburger { display: flex !important; }
+                }
+
                 .sk-btn-quote { 
                     background: #ED1C24 !important; color: #ffffff !important; 
-                    padding: 14px 28px !important; border-radius: 4px; 
-                    font-weight: 800 !important; font-size: 14px !important;
-                    text-transform: uppercase; border: none; cursor: pointer;
-                    transition: 0.3s; display: inline-block; text-align: center;
-                }
-                .sk-btn-quote:hover { background: #333 !important; transform: translateY(-2px); }
-
-                @media (max-width: 991px) {
-                    .sk-nav { display: none; }
-                    /* Mobile hamburger logic remains same as per your previous setup */
+                    padding: 10px 20px !important; border-radius: 4px; 
+                    font-weight: 800 !important; font-size: 13px !important;
+                    text-transform: uppercase; transition: 0.3s;
                 }
             </style>
+            
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="contact.html">Contact Us</a>
-            
-            <a href="contact.html" class="sk-btn-quote">Get Quote</a>
+            <a href="contact.html" class="sk-btn-quote" style="border:none;">Get Quote</a>
         </nav>
+
+        <div class="hamburger" onclick="toggleMenu()" style="display: none; flex-direction: column; gap: 5px; cursor: pointer;">
+            <span style="width: 25px; height: 3px; background: #333; border-radius: 2px;"></span>
+            <span style="width: 25px; height: 3px; background: #333; border-radius: 2px;"></span>
+            <span style="width: 25px; height: 3px; background: #333; border-radius: 2px;"></span>
+        </div>
     </div>
 </header>
 
-<div style="height: 140px;"></div>
+<div style="height: 100px;"></div>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('sk-nav-menu').classList.toggle('active');
+    }
+</script>
 
 <!-- ================= HERO ================= -->
 <section class="hero-section" style="
