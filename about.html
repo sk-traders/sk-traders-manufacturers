@@ -243,91 +243,88 @@
   <section id="sk-identity" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif; overflow: hidden;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%; display: flex; flex-wrap: wrap; align-items: center; gap: 70px;">
         
-        <div style="flex: 1; min-width: 320px; position: relative;" class="reveal-left">
-            <style>
-                @keyframes slideInLeft {
-                    from { opacity: 0; transform: translateX(-50px); }
-                    to { opacity: 1; transform: translateX(0); }
-                }
-                @keyframes lineGrow {
-                    from { width: 0; }
-                    to { width: 100px; }
-                }
-                .reveal-left {
-                    animation: slideInLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-                }
-                .image-frame {
-                    position: relative;
-                    padding: 15px;
-                    border: 2px solid #f0f0f0;
-                    border-radius: 20px;
-                }
-                .experience-badge-new {
-                    position: absolute;
-                    top: -20px;
-                    right: -20px;
-                    background: #1a1a1a;
-                    color: #fff;
-                    padding: 20px;
-                    border-radius: 50%;
-                    width: 100px;
-                    height: 100px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    border: 4px solid #fff;
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-                    z-index: 5;
-                }
-            </style>
-
-            <div class="image-frame">
-                <img src="assets/images/factory-workers-production-floor.jpg" alt="SK Traders Factory Floor" style="width: 100%; border-radius: 15px; display: block;">
+        <div id="identity-img-box" style="flex: 1; min-width: 320px; opacity: 0; transform: translateX(-100px); transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+            <div style="position: relative; padding: 10px; border-left: 5px solid #ff4d4d;">
+                <img src="assets/images/factory-workers-production-floor.jpg" alt="SK Traders Authorized Acrabond Distributor" style="width: 100%; border-radius: 4px; box-shadow: 20px 20px 60px rgba(0,0,0,0.08); display: block;">
                 
-                <div class="experience-badge-new">
-                    <span style="font-size: 24px; font-weight: 900; color: #ff4d4d;">11+</span>
-                    <span style="font-size: 10px; text-transform: uppercase; font-weight: 700; text-align: center;">Years</span>
+                <div style="position: absolute; bottom: 20px; right: -10px; background: #1a1a1a; color: #fff; padding: 15px 25px; transform: rotate(-90deg); transform-origin: right bottom; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 12px;">
+                    Since 2015 <span style="color:#ff4d4d; margin-left:10px;">★</span>
                 </div>
             </div>
         </div>
 
-        <div style="flex: 1.2; min-width: 320px;">
+        <div id="identity-content-box" style="flex: 1.2; min-width: 320px; opacity: 0; transform: translateY(50px); transition: all 1s ease-out 0.3s;">
             <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                <div style="height: 3px; background: #ff4d4d; animation: lineGrow 1.5s ease-out forwards;"></div>
-                <span style="color: #ff4d4d; text-transform: uppercase; font-weight: 800; letter-spacing: 3px; font-size: 13px;">Market Leaders Since 2015</span>
+                <span style="width: 40px; height: 2px; background: #ff4d4d;"></span>
+                <span style="color: #ff4d4d; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; font-size: 13px;">Our Industrial Identity</span>
             </div>
 
-            <h2 style="font-size: clamp(30px, 4.5vw, 45px); color: #1a1a1a; font-weight: 900; line-height: 1.1; margin-bottom: 30px; letter-spacing: -1px;">
-                Noida's Trusted <span style="color: #ff4d4d; position: relative;">Powerhouse
-                    <svg style="position: absolute; bottom: -5px; left: 0; width: 100%; height: 10px;" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 0 50 5 T 100 5" stroke="#ff4d4d" stroke-width="4" fill="transparent" stroke-linecap="round"/></svg>
-                </span> for Industrial Adhesives
+            <h2 style="font-size: clamp(28px, 4.5vw, 42px); color: #1a1a1a; font-weight: 900; line-height: 1.2; margin-bottom: 30px;">
+                Powering North India's <br> <span style="color: #ff4d4d;">Production Lines</span> with Precision
             </h2>
 
-            <p style="color: #444; font-size: 17px; line-height: 1.9; margin-bottom: 40px; font-weight: 400;">
-                At <strong>S.K. Traders & Manufacturers</strong>, we don't just supply; we fortify. Based in <strong>Noida Sector 6</strong>, we are the <strong>Authorized Acrabond Distributor</strong> that industries rely on for high-tack <strong>BOPP Tapes</strong> and bulk packaging excellence.
+            <p style="color: #555; font-size: 17px; line-height: 1.9; margin-bottom: 40px;">
+                Located in **Noida Sector 6**, S.K. Traders & Manufacturers is an **Authorized Acrabond Distributor**. We specialize in providing bulk **BOPP Tapes** and industrial adhesives that ensure 100% reliability for Delhi NCR's manufacturing hubs.
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
-                <div style="background: #fff; padding: 20px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.02);" onmouseover="this.style.borderColor='#ff4d4d'; this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='#eee'; this.style.transform='translateY(0)'">
-                    <div style="background: #fff5f5; width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                        <i class="fas fa-shield-alt" style="color: #ff4d4d; font-size: 20px;"></i>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px;">
+                
+                <div style="display: flex; gap: 15px;">
+                    <div style="color: #ff4d4d; font-size: 24px;"><i class="fas fa-check-double"></i></div>
+                    <div>
+                        <h5 style="margin: 0 0 5px; font-weight: 800; color: #1a1a1a; font-size: 16px;">Authorized Partner</h5>
+                        <p style="margin: 0; font-size: 14px; color: #777;">Genuine Acrabond adhesives directly from the source.</p>
                     </div>
-                    <h5 style="margin: 0 0 8px; font-size: 16px; font-weight: 800; color: #1a1a1a;">Authorized Quality</h5>
-                    <p style="margin: 0; font-size: 14px; color: #777;">Genuine Acrabond products direct from the source.</p>
                 </div>
 
-                <div style="background: #fff; padding: 20px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.02);" onmouseover="this.style.borderColor='#ff4d4d'; this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='#eee'; this.style.transform='translateY(0)'">
-                    <div style="background: #fff5f5; width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                        <i class="fas fa-shipping-fast" style="color: #ff4d4d; font-size: 20px;"></i>
+                <div style="display: flex; gap: 15px;">
+                    <div style="color: #ff4d4d; font-size: 24px;"><i class="fas fa-warehouse"></i></div>
+                    <div>
+                        <h5 style="margin: 0 0 5px; font-weight: 800; color: #1a1a1a; font-size: 16px;">Bulk Inventory</h5>
+                        <p style="margin: 0; font-size: 14px; color: #777;">Ready-to-ship stock for massive packaging needs.</p>
                     </div>
-                    <h5 style="margin: 0 0 8px; font-size: 16px; font-weight: 800; color: #1a1a1a;">Swift Logistics</h5>
-                    <p style="margin: 0; font-size: 14px; color: #777;">Same-day dispatch for critical Noida/NCR orders.</p>
                 </div>
+
+                <div style="display: flex; gap: 15px;">
+                    <div style="color: #ff4d4d; font-size: 24px;"><i class="fas fa-truck-moving"></i></div>
+                    <div>
+                        <h5 style="margin: 0 0 5px; font-weight: 800; color: #1a1a1a; font-size: 16px;">Precision Logistics</h5>
+                        <p style="margin: 0; font-size: 14px; color: #777;">Scheduled deliveries across Noida & Delhi NCR.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 15px;">
+                    <div style="color: #ff4d4d; font-size: 24px;"><i class="fas fa-tools"></i></div>
+                    <div>
+                        <h5 style="margin: 0 0 5px; font-weight: 800; color: #1a1a1a; font-size: 16px;">Custom Solutions</h5>
+                        <p style="margin: 0; font-size: 14px; color: #777;">Packaging materials tailored to factory specs.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if(entry.target.id === 'identity-img-box') {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                }
+                if(entry.target.id === 'identity-content-box') {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(document.getElementById('identity-img-box'));
+    observer.observe(document.getElementById('identity-content-box'));
+</script>
 
 <section id="sk-stats-dark" style="padding: 100px 0; background: #111; color: #fff; font-family: 'Poppins', sans-serif; position: relative;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%; display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
