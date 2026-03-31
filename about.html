@@ -439,144 +439,128 @@
 </script>
 
    <!-- Mission, Vision & Values Section -->
-<section id="sk-strategic-pillars" style="padding: 100px 0; background: #fdfdfd; background-image: radial-gradient(#e5e5e5 0.5px, transparent 0.5px); background-size: 30px 30px; font-family: 'Poppins', sans-serif; overflow: hidden;">
-    
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+<section id="sk-mission-vision" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif; overflow: hidden;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%; display: flex; flex-wrap: wrap; gap: 40px;">
         
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 90px;">
-            
-            <style>
-                @keyframes fadeInUp {
-                    from { opacity: 0; transform: translateY(30px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-                .animate-pillar {
-                    animation: fadeInUp 0.8s ease-out forwards;
-                }
-                .pillar-card {
-                    flex: 1; 
-                    min-width: 320px; 
-                    padding: 60px 45px; 
-                    border-radius: 25px; 
-                    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                    position: relative;
-                }
-                /* Mission: Clean Light Gradient */
-                .mission-box {
-                    background: linear-gradient(135deg, #ffffff 0%, #fffafa 100%);
-                    border-left: 10px solid #ff4d4d;
-                    box-shadow: 0 25px 50px rgba(0,0,0,0.06);
-                }
-                /* Vision: Bold Dark Impact */
-                .vision-box {
-                    background: #1a1a1a;
-                    border-left: 10px solid #ff4d4d;
-                    color: #fff;
-                    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-                }
-                .pillar-card:hover {
-                    transform: scale(1.02);
-                }
-                .pillar-icon {
-                    font-size: 45px; 
-                    color: #ff4d4d; 
-                    margin-bottom: 25px; 
-                    display: block;
-                }
-            </style>
+        <style>
+            .reveal-card { opacity: 0; transform: perspective(1000px) rotateY(-20px); transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1); flex: 1; min-width: 300px; padding: 50px; border-radius: 20px; position: relative; }
+            .reveal-card.active { opacity: 1; transform: perspective(1000px) rotateY(0deg); }
+            .mission-bg { background: #f9f9f9; border-bottom: 5px solid #ff4d4d; }
+            .vision-bg { background: #1a1a1a; color: #fff; border-bottom: 5px solid #ff4d4d; }
+            .glow-icon { font-size: 50px; color: #ff4d4d; margin-bottom: 25px; filter: drop-shadow(0 0 10px rgba(255,77,77,0.3)); }
+        </style>
 
-            <div class="pillar-card mission-box animate-pillar">
-                <i class="fas fa-crosshairs pillar-icon"></i>
-                <h3 style="font-size: 30px; font-weight: 900; color: #1a1a1a; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -0.5px;">Our Mission</h3>
-                <p style="color: #444; line-height: 1.8; font-size: 17px; margin: 0;">
-                    To empower Noida’s manufacturing landscape with precision-engineered <strong>Acrabond solutions</strong> and uninterrupted supply chains that drive industrial growth across Delhi NCR.
-                </p>
-            </div>
-
-            <div class="pillar-card vision-box animate-pillar" style="animation-delay: 0.2s;">
-                <i class="fas fa-rocket pillar-icon"></i>
-                <h3 style="font-size: 30px; font-weight: 900; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -0.5px;">Our Vision</h3>
-                <p style="color: #ccc; line-height: 1.8; font-size: 17px; margin: 0;">
-                    Setting the gold standard in <strong>industrial adhesives and packaging</strong> by 2030 through sustainable innovation, technical expertise, and 100% supply transparency.
-                </p>
-            </div>
+        <div class="reveal-card mission-bg" id="mission-card">
+            <i class="fas fa-bullseye glow-icon"></i>
+            <h3 style="font-size: 28px; font-weight: 900; margin-bottom: 15px; text-transform: uppercase;">Our Mission</h3>
+            <p style="color: #555; line-height: 1.8; font-size: 16px;">
+                Empowering **Noida’s industrial landscape** with precision **Acrabond adhesive solutions**. We aim to eliminate supply chain friction by providing high-tack **BOPP Tapes** and reliable packaging materials across **Delhi NCR**.
+            </p>
         </div>
 
-        <div style="text-align: center; margin-bottom: 60px;">
-            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 14px; margin-bottom: 10px;">The SK Foundation</h4>
-            <h2 style="font-size: clamp(30px, 5vw, 42px); font-weight: 900; color: #1a1a1a;">Our Core <span style="color: #ff4d4d;">Values</span></h2>
-            <div style="width: 60px; height: 4px; background: #ff4d4d; margin: 20px auto;"></div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
-            
-            <style>
-                .value-card-bold {
-                    background: #fff;
-                    padding: 45px 30px;
-                    border-radius: 15px;
-                    border: 1px solid #eee;
-                    transition: 0.3s ease-in-out;
-                    text-align: left;
-                    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
-                }
-                .value-card-bold:hover {
-                    border-color: #ff4d4d;
-                    transform: translateY(-10px);
-                    box-shadow: 0 20px 40px rgba(255, 77, 77, 0.12);
-                }
-                .value-card-bold i {
-                    font-size: 35px;
-                    color: #ff4d4d;
-                    margin-bottom: 20px;
-                    display: block;
-                }
-                .value-card-bold h4 {
-                    font-size: 20px;
-                    font-weight: 800;
-                    color: #1a1a1a;
-                    margin-bottom: 15px;
-                }
-            </style>
-
-            <div class="value-card-bold"><i class="fas fa-shield-alt"></i><h4>Integrity</h4><p style="font-size: 14px; color: #666; line-height: 1.6;">Zero-compromise transparency in every bulk order and Noida-based supply commitment.</p></div>
-            
-            <div class="value-card-bold"><i class="fas fa-gem"></i><h4>Quality Control</h4><p style="font-size: 14px; color: #666; line-height: 1.6;">Every batch of industrial tape and adhesive undergoes rigorous performance testing.</p></div>
-            
-            <div class="value-card-bold"><i class="fas fa-truck-loading"></i><h4>Reliability</h4><p style="font-size: 14px; color: #666; line-height: 1.6;">Maintaining consistent inventory for Sector 6 hubs to prevent any production downtime.</p></div>
-            
-            <div class="value-card-bold"><i class="fas fa-users-cog"></i><h4>Client Success</h4><p style="font-size: 14px; color: #666; line-height: 1.6;">Tailored technical support to find the exact bonding solution for your facility.</p></div>
+        <div class="reveal-card vision-bg" id="vision-card" style="transition-delay: 0.3s;">
+            <i class="fas fa-rocket glow-icon"></i>
+            <h3 style="font-size: 28px; font-weight: 900; margin-bottom: 15px; text-transform: uppercase;">Our Vision</h3>
+            <p style="color: #bbb; line-height: 1.8; font-size: 16px;">
+                To become the gold standard in **Industrial Packaging** by 2030. We focus on sustainable **Adhesive Technology** and 100% supply transparency, ensuring **S.K. Traders** remains the top-ranked **Wholesale Supplier** in India.
+            </p>
         </div>
     </div>
 </section>
-  
-  <section style="padding: 80px 0; background: #1a1a1a; text-align: center; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;">
-    
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); pointer-events: none;"></div>
 
-    <div style="max-width: 900px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 2;">
-        <h2 style="font-size: clamp(28px, 4.5vw, 42px); color: #fff; font-weight: 800; margin-bottom: 20px; line-height: 1.2;">
-            Partner with Noida's <span style="color: #ff4d4d;">Supply Chain Experts</span>
+<section id="sk-values-stack" style="padding: 100px 0; background: #f4f4f4; font-family: 'Poppins', sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h4 style="color: #ff4d4d; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; font-size: 13px;">The SK Foundation</h4>
+            <h2 style="font-size: 40px; font-weight: 900; color: #1a1a1a;">Core <span style="color: #ff4d4d;">Values</span> & Ethics</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+            <style>
+                .stack-card {
+                    background: #fff; padding: 40px; border-radius: 15px; border: 1px solid #eee;
+                    position: relative; overflow: hidden; transition: 0.5s; cursor: pointer;
+                }
+                /* The Laser Scan Effect */
+                .stack-card::after {
+                    content: ""; position: absolute; top: -100%; left: 0; width: 100%; height: 5px;
+                    background: #ff4d4d; box-shadow: 0 0 15px #ff4d4d; opacity: 0; transition: none;
+                }
+                .stack-card:hover::after {
+                    animation: laserScan 1.5s linear infinite; opacity: 1;
+                }
+                @keyframes laserScan {
+                    0% { top: -10%; }
+                    100% { top: 110%; }
+                }
+                .stack-card:hover { transform: translateY(-10px); border-color: #ff4d4d; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+                .v-icon { background: #fff5f5; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #ff4d4d; font-size: 24px; }
+            </style>
+
+            <div class="stack-card">
+                <div class="v-icon"><i class="fas fa-shield-check"></i></div>
+                <h4 style="font-weight: 800; margin-bottom: 10px;">Unmatched Integrity</h4>
+                <p style="font-size: 14px; color: #666;">Absolute transparency in **Bulk Industrial Orders** across **Noida Sector 6**.</p>
+            </div>
+            <div class="stack-card">
+                <div class="v-icon"><i class="fas fa-microscope"></i></div>
+                <h4 style="font-weight: 800; margin-bottom: 10px;">Quality Control</h4>
+                <p style="font-size: 14px; color: #666;">Every batch of **Acrabond Adhesive** undergoes rigorous stress testing.</p>
+            </div>
+            <div class="stack-card">
+                <div class="v-icon"><i class="fas fa-clock"></i></div>
+                <h4 style="font-weight: 800; margin-bottom: 10px;">24H Reliability</h4>
+                <p style="font-size: 14px; color: #666;">Maintaining massive inventory for **BOPP Tapes** to prevent production downtime.</p>
+            </div>
+            <div class="stack-card">
+                <div class="v-icon"><i class="fas fa-handshake-angle"></i></div>
+                <h4 style="font-weight: 800; margin-bottom: 10px;">Client Success</h4>
+                <p style="font-size: 14px; color: #666;">Tailored **Industrial Packaging** solutions for Delhi NCR’s manufacturing hubs.</p>
+            </div>
+            <div class="stack-card">
+                <div class="v-icon"><i class="fas fa-lightbulb-on"></i></div>
+                <h4 style="font-weight: 800; margin-bottom: 10px;">Innovation Edge</h4>
+                <p style="font-size: 14px; color: #666;">Adopting the latest **Self-Adhesive Technology** for superior bonding strength.</p>
+            </div>
+            <div class="stack-card">
+                <div class="v-icon"><i class="fas fa-leaf"></i></div>
+                <h4 style="font-weight: 800; margin-bottom: 10px;">Eco-Sustainability</h4>
+                <p style="font-size: 14px; color: #666;">Promoting recyclable **Packaging Materials** for a greener industrial future.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sk-final-cta" style="padding: 100px 0; background: #0f0f0f; text-align: center; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, #1a1a1a 10%, transparent 10%); background-size: 20px 20px; opacity: 0.2;"></div>
+    
+    <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 5;">
+        <h2 style="font-size: clamp(30px, 5vw, 45px); color: #fff; font-weight: 900; margin-bottom: 25px;">
+            Partner with Noida's <span style="color: #ff4d4d; border-bottom: 3px solid #ff4d4d;">Supply Chain</span> Experts
         </h2>
-        <p style="color: #bbb; font-size: 18px; margin-bottom: 40px; line-height: 1.7;">
-            Whether you need bulk industrial tapes or specialized Acrabond adhesives, we ensure your production never stops. Let’s build a reliable supply chain together.
+        <p style="color: #999; font-size: 18px; margin-bottom: 40px; line-height: 1.8;">
+            As an **Authorized Acrabond Distributor**, we ensure your assembly lines never stop. Secure your **Bulk Adhesive** supply today.
         </p>
 
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-            <a href="contact.html" style="background: #ff4d4d; color: #fff; padding: 18px 45px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; transition: 0.3s; box-shadow: 0 10px 25px rgba(255,77,77,0.3);"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.backgroundColor='#d43d3d';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='#ff4d4d';">
-                Request a Quote
-            </a>
-            
-            <a href="https://wa.me/919871095529" style="background: transparent; border: 2px solid rgba(255,255,255,0.2); color: #fff; padding: 16px 45px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; transition: 0.3s;"
-               onmouseover="this.style.borderColor='#ff4d4d'; this.style.color='#ff4d4d';"
-               onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.color='#fff';">
-                Chat with Specialist
-            </a>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <a href="contact.html" style="background: #ff4d4d; color: #fff; padding: 18px 50px; text-decoration: none; font-weight: 800; border-radius: 5px; box-shadow: 0 10px 30px rgba(255,77,77,0.4); transition: 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">REQUEST QUOTE</a>
+            <a href="tel:+919871095529" style="background: transparent; border: 2px solid #333; color: #fff; padding: 18px 50px; text-decoration: none; font-weight: 800; border-radius: 5px; transition: 0.3s;" onmouseover="this.style.borderColor='#ff4d4d'; this.style.color='#ff4d4d'" onmouseout="this.style.borderColor='#333'; this.style.color='#fff'">CALL SPECIALIST</a>
         </div>
     </div>
 </section>
+
+<script>
+    const observerOptions = { threshold: 0.2 };
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-card').forEach(card => scrollObserver.observe(card));
+</script>
 
   </main>
 
