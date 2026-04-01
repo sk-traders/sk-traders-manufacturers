@@ -519,33 +519,70 @@ function updateCatalog(type) {
 </script>
 </section>
 
-<section style="padding: 60px 0; background: #1a1a1a; color: #fff; font-family: 'Poppins', sans-serif; overflow: hidden;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+<section id="trust-features" style="padding: 100px 0; background: #ffffff; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;">
+    
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#ff4d4d15 1px, transparent 1px); background-size: 30px 30px; opacity: 0.5;"></div>
+
+    <div style="max-width: 1300px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 5;">
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; text-align: center;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
             
-            <div style="padding: 20px; transition: 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                <i class="fas fa-shipping-fast" style="font-size: 40px; color: #ff4d4d; margin-bottom: 15px; display: block;"></i>
-                <h5 style="font-size: 18px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Direct Factory Supply</h5>
-                <p style="font-size: 13px; color: #bbb; line-height: 1.6;">100% Genuine Acrabond inventory sourced directly for Noida & NCR units.</p>
+            <style>
+                .trust-card {
+                    background: #fff; border: 1px solid #eee; padding: 45px 30px; border-radius: 20px;
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-align: center;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.03); position: relative;
+                }
+                .trust-card:hover {
+                    transform: translateY(-15px); border-color: #ff4d4d;
+                    box-shadow: 0 25px 50px rgba(255, 77, 77, 0.15);
+                }
+                .trust-card i {
+                    font-size: 45px; color: #ff4d4d; margin-bottom: 25px; display: inline-block;
+                    transition: 0.5s;
+                }
+                .trust-card:hover i { transform: rotateY(360deg); }
+                .trust-title { 
+                    font-size: 19px; font-weight: 900; color: #1a1a1a; margin-bottom: 15px; 
+                    text-transform: uppercase; letter-spacing: 1px;
+                }
+                .trust-text { font-size: 14px; color: #666; line-height: 1.7; }
+                
+                /* Decorative Number/Index */
+                .card-index {
+                    position: absolute; top: 20px; right: 25px; font-size: 40px; 
+                    font-weight: 900; color: rgba(0,0,0,0.03); transition: 0.3s;
+                }
+                .trust-card:hover .card-index { color: rgba(255, 77, 77, 0.1); }
+            </style>
+
+            <div class="trust-card">
+                <span class="card-index">01</span>
+                <i class="fas fa-industry"></i>
+                <h5 class="trust-title">Direct Factory Supply</h5>
+                <p class="trust-text">Sourced directly from <strong>Acrabond Manufacturing</strong> plants. 100% genuine industrial inventory for Noida units.</p>
             </div>
 
-            <div style="padding: 20px; transition: 0.3s; border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                <i class="fas fa-map-marked-alt" style="font-size: 40px; color: #ff4d4d; margin-bottom: 15px; display: block;"></i>
-                <h5 style="font-size: 18px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Regional Exclusive</h5>
-                <p style="font-size: 13px; color: #bbb; line-height: 1.6;">Strategic distribution rights for <strong>Delhi, Uttar Pradesh, and Haryana</strong> regions.</p>
+            <div class="trust-card">
+                <span class="card-index">02</span>
+                <i class="fas fa-medal"></i>
+                <h5 class="trust-title">Regional Exclusive</h5>
+                <h5 class="trust-title" style="font-size: 12px; color: #ff4d4d; margin-top: -10px;">Delhi | UP | Haryana</h5>
+                <p class="trust-text">Strategic distribution rights ensuring <strong>premium availability</strong> across Northern India's manufacturing hubs.</p>
             </div>
 
-            <div style="padding: 20px; transition: 0.3s; border-right: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                <i class="fas fa-boxes" style="font-size: 40px; color: #ff4d4d; margin-bottom: 15px; display: block;"></i>
-                <h5 style="font-size: 18px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Bulk Inventory</h5>
-                <p style="font-size: 13px; color: #bbb; line-height: 1.6;">Ready-to-dispatch buffer maintained at our Noida hub for zero downtime.</p>
+            <div class="trust-card">
+                <span class="card-index">03</span>
+                <i class="fas fa-warehouse"></i>
+                <h5 class="trust-title">Ready Bulk Inventory</h5>
+                <p class="trust-text">Largest buffer stock of <strong>973, 978, & 997 Adhesives</strong> maintained at our Sector 6 Noida hub for zero downtime.</p>
             </div>
 
-            <div style="padding: 20px; transition: 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                <i class="fas fa-user-cog" style="font-size: 40px; color: #ff4d4d; margin-bottom: 15px; display: block;"></i>
-                <h5 style="font-size: 18px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Expert Consultancy</h5>
-                <p style="font-size: 13px; color: #bbb; line-height: 1.6;">Application-focused technical guidance for high-performance bonding.</p>
+            <div class="trust-card">
+                <span class="card-index">04</span>
+                <i class="fas fa-headset"></i>
+                <h5 class="trust-title">Expert Consultancy</h5>
+                <p class="trust-text">24/7 technical guidance for <strong>high-performance bonding</strong> and specialized packaging material applications.</p>
             </div>
 
         </div>
