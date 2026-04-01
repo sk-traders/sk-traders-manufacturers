@@ -454,39 +454,39 @@
     </div>
 
     <script>
-        function updateCatalog(type) {
-            const aGrid = document.getElementById('grid-adhesives');
-            const tGrid = document.getElementById('grid-tapes');
-            const aBtn = document.getElementById('btn-adhesives');
-            const tBtn = document.getElementById('btn-tapes');
-            
-            const sub = document.getElementById('dynamic-sub');
-            const h2 = document.getElementById('dynamic-h2');
-            const p = document.getElementById('dynamic-p');
+function updateCatalog(type) {
+    const aGrid = document.getElementById('grid-adhesives');
+    const tGrid = document.getElementById('grid-tapes');
+    const aBtn = document.getElementById('btn-adhesives');
+    const tBtn = document.getElementById('btn-tapes');
+    
+    const sub = document.getElementById('dynamic-sub');
+    const h2 = document.getElementById('dynamic-h2');
+    const p = document.getElementById('dynamic-p');
 
-            if(type === 'adhesives') {
-                aGrid.style.display = 'grid';
-                tGrid.style.display = 'none';
-                aBtn.style.background = '#ff4d4d'; aBtn.style.color = '#fff';
-                tBtn.style.background = 'transparent'; tBtn.style.color = '#888';
-                
-                // Adhesives SEO Update
-                sub.innerText = "Authorized Acrabond Distribution Hub";
-                h2.innerHTML = 'Leading <span style="color: #ff4d4d;">Adhesive Supplier</span> in Noida & Delhi NCR';
-                p.innerHTML = "S.K. Traders & Manufacturers: delivering certified high-performance <strong>Acrabond Adhesives (973, 978, 997)</strong> and <strong>Industrial Sealants</strong> to manufacturing hubs across India.";
-            } else {
-                aGrid.style.display = 'none';
-                tGrid.style.display = 'grid';
-                tBtn.style.background = '#ff4d4d'; tBtn.style.color = '#fff';
-                aBtn.style.background = 'transparent'; aBtn.style.color = '#888';
-                
-                // Tapes & Packaging Material SEO Update
-                sub.innerText = "Bulk Packaging Material PAN India";
-                h2.innerHTML = '#1 Industrial <span style="color: #ff4d4d;">Tapes & Packaging Material</span> Supplier';
-                p.innerHTML = "Wholesale supply of <strong>BOPP Tapes, Filament Tapes, and Aluminum Jumbo Rolls</strong>. High-tensile <strong>packaging material solutions</strong> for heavy-duty logistics and industrial warehousing in Delhi NCR.";
-            }
-        }
-    </script>
+    if(type === 'adhesives') {
+        aGrid.style.display = 'grid';
+        tGrid.style.display = 'none';
+        aBtn.style.background = '#ff4d4d'; aBtn.style.color = '#fff';
+        tBtn.style.background = 'transparent'; tBtn.style.color = '#888';
+        
+        // Adhesives SEO Mode
+        sub.innerText = "Authorized Acrabond Distribution Hub";
+        h2.innerHTML = 'Leading <span style="color: #ff4d4d;">Adhesive Supplier</span> in Noida & Delhi NCR';
+        p.innerHTML = "S.K. Traders & Manufacturers: delivering certified high-performance <strong>Acrabond Adhesives (973, 978, 997)</strong> and <strong>Industrial Sealants</strong> to manufacturing hubs across India.";
+    } else {
+        aGrid.style.display = 'none';
+        tGrid.style.display = 'grid';
+        tBtn.style.background = '#ff4d4d'; tBtn.style.color = '#fff';
+        aBtn.style.background = 'transparent'; aBtn.style.color = '#888';
+        
+        // Tapes & Packaging Material SEO Mode (Location Added)
+        sub.innerText = "Bulk Packaging Material PAN India";
+        h2.innerHTML = '#1 Industrial <span style="color: #ff4d4d;">Tapes & Packaging Material</span> Supplier in Noida';
+        p.innerHTML = "Authorized wholesale supply of <strong>BOPP Tapes, Filament Tapes, and Aluminum Jumbo Rolls</strong>. High-tensile <strong>packaging material solutions</strong> for industrial warehousing in <strong>Delhi NCR & PAN India</strong>.";
+    }
+}
+</script>
 </section>
 
 <section style="padding: 60px 0; background: #1a1a1a; color: #fff; font-family: 'Poppins', sans-serif; overflow: hidden;">
