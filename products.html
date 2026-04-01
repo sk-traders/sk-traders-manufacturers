@@ -190,79 +190,88 @@
 </script>
 
 <!-- PRODUCT HERO SECTION -->
-<section id="product-hero" style="position: relative; height: 85vh; min-height: 600px; background: url('assets/images/product-hero-warehouse.jpg') center/cover no-repeat; display: flex; align-items: center; font-family: 'Poppins', sans-serif; overflow: hidden; background-attachment: fixed; background-color: #0a0a0a;">
+<section id="product-hero" style="position: relative; height: 90vh; min-height: 650px; background: url('assets/images/product-hero-warehouse.jpg') center/cover no-repeat; display: flex; align-items: center; font-family: 'Poppins', sans-serif; overflow: hidden; background-attachment: fixed; background-color: #050505;">
     
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.7) 50%, rgba(255,77,77,0.05) 100%); z-index: 1;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.8) 50%, rgba(255,77,77,0.08) 100%); z-index: 1;"></div>
     
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(255,77,77,0.2) 1px, transparent 1px); background-size: 35px 35px; z-index: 1; opacity: 0.6;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(255,77,77,0.1) 1px, transparent 1px); background-size: 30px 30px; z-index: 1; opacity: 0.8;"></div>
 
-    <div style="max-width: 1350px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center;">
+    <div style="max-width: 1350px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
         
-        <div class="hero-content">
+        <div class="hero-content-left">
             <style>
                 @keyframes scanner {
-                    0% { left: -100%; }
-                    100% { left: 100%; }
+                    0% { left: -120%; }
+                    100% { left: 120%; }
                 }
-                .auth-badge-new {
+                .auth-badge-supreme {
                     display: inline-flex; align-items: center; background: rgba(255, 77, 77, 0.1); 
-                    border: 1px solid rgba(255, 77, 77, 0.5); padding: 10px 20px; border-radius: 4px; margin-bottom: 30px;
+                    border: 1px solid rgba(255, 77, 77, 0.6); padding: 12px 24px; border-radius: 4px; margin-bottom: 35px;
                     position: relative; overflow: hidden; backdrop-filter: blur(10px);
                 }
-                .auth-badge-new::before {
-                    content: ''; position: absolute; top: 0; width: 50px; height: 100%;
-                    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                .auth-badge-supreme::before {
+                    content: ''; position: absolute; top: 0; width: 60px; height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
                     animation: scanner 3s infinite linear;
                 }
-                .main-h1 { font-size: clamp(40px, 6.5vw, 75px); color: #fff; font-weight: 900; line-height: 1; margin-bottom: 25px; letter-spacing: -2.5px; }
-                .hero-desc { font-size: 19px; color: #bbb; line-height: 1.8; margin-bottom: 45px; max-width: 650px; border-left: 4px solid #ff4d4d; padding-left: 25px; }
+                .supreme-h1 { font-size: clamp(42px, 6.8vw, 78px); color: #fff; font-weight: 900; line-height: 1; margin-bottom: 30px; letter-spacing: -2.5px; }
+                .supreme-desc { font-size: 20px; color: #bbb; line-height: 1.8; margin-bottom: 50px; max-width: 600px; border-left: 4px solid #ff4d4d; padding-left: 25px; }
             </style>
 
-            <div class="auth-badge-new">
-                <i class="fas fa-check-double" style="color: #ff4d4d; margin-right: 12px; font-size: 18px;"></i>
-                <span style="color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Authorized Acrabond Distribution Hub</span>
+            <div class="auth-badge-supreme">
+                <i class="fas fa-user-shield" style="color: #ff4d4d; margin-right: 15px; font-size: 20px;"></i>
+                <span style="color: #fff; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Authorized Acrabond Distribution Hub</span>
             </div>
 
-            <h1 class="main-h1">
-                Premium <span style="color: #ff4d4d;">Adhesives</span> & <br>Packaging Solutions
+            <h1 class="supreme-h1">
+                Authorized <span style="color: #ff4d4d;">Acrabond<small style="font-size: 16px; position: absolute; top: 12px; right: -28px; color: rgba(255,255,255,0.4);">®</small></span><br>B2B Industrial Supplier
             </h1>
 
-            <p class="hero-desc">
-                S.K. Traders & Manufacturers: Your strategic partner for <strong>Acrabond 973, 978</strong> and high-micron <strong>BOPP Packaging Tapes</strong>. Engineered for Delhi NCR’s toughest industrial floors.
+            <p class="supreme-desc">
+                S.K. Traders & Manufacturers: delivering certified high-performance <strong>Acrabond 973, 978 Adhesives</strong> and bulk-ready <strong>BOPP Tapes</strong> directly to Delhi NCR's production floors.
             </p>
 
-            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                <a href="#catalog" style="background: #ff4d4d; color: #fff; padding: 22px 45px; border-radius: 5px; text-decoration: none; font-weight: 800; font-size: 16px; letter-spacing: 1px; display: flex; align-items: center; gap: 15px; transition: 0.4s; box-shadow: 0 20px 40px rgba(255,77,77,0.3);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 25px 50px rgba(255,77,77,0.5)';" onmouseout="this.style.transform='translateY(0)';">
-                    BROWSE CATALOG <i class="fas fa-layer-group"></i>
-                </a>
-            </div>
+            <a href="contact.html" style="background: #ff4d4d; color: #fff; padding: 22px 50px; border-radius: 5px; text-decoration: none; font-weight: 800; font-size: 17px; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 15px; transition: 0.4s; box-shadow: 0 20px 40px rgba(255,77,77,0.4);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 25px 50px rgba(255,77,77,0.6)';" onmouseout="this.style.transform='translateY(0)';">
+                REQUEST BULK QUOTE <i class="fas fa-file-invoice-dollar"></i>
+            </a>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 20px; position: relative;">
+        <div class="hero-content-right" style="display: flex; flex-direction: column; gap: 25px; align-items: flex-end;">
             <style>
-                .glass-card {
-                    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); 
-                    padding: 25px; border-radius: 15px; backdrop-filter: blur(20px);
-                    transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+                .supreme-card {
+                    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); 
+                    padding: 30px; border-radius: 15px; backdrop-filter: blur(25px);
+                    transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1); width: 85%;
+                    display: grid; grid-template-columns: 50px 1fr; gap: 20px; align-items: center;
                 }
-                .glass-card:hover { background: rgba(255,77,77,0.08); border-color: #ff4d4d; transform: scale(1.05) translateX(-10px); }
+                .supreme-card:hover { background: rgba(255,77,77,0.1); border-color: #ff4d4d; transform: translateX(-15px) scale(1.03); }
+                .card-title { color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 5px; }
+                .card-sub { color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
             </style>
             
-            <div class="glass-card" style="width: 280px; align-self: flex-end;">
-                <div style="color: #ff4d4d; font-size: 32px; font-weight: 900;">B2B</div>
-                <div style="color: #eee; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Direct Factory Supply</div>
+            <div class="supreme-card">
+                <i class="fas fa-shield-alt" style="color: #ff4d4d; font-size: 35px;"></i>
+                <div>
+                    <div class="card-title">Authorized <span style="color: #ff4d4d;">Acrabond</span> Hub</div>
+                    <div class="card-sub">Verified Strategic Channel Partner</div>
+                </div>
             </div>
 
-            <div class="glass-card" style="width: 300px; margin-right: 50px;">
-                <div style="color: #fff; font-size: 32px; font-weight: 900;">NCR <span style="color: #ff4d4d;">#1</span></div>
-                <div style="color: #eee; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Sector 6 Noida Logistics</div>
+            <div class="supreme-card">
+                <i class="fas fa-box-open" style="color: #ff4d4d; font-size: 35px;"></i>
+                <div>
+                    <div class="card-title">Bulk Packaging & <span style="color: #ff4d4d;">Tapes</span></div>
+                    <div class="card-sub">NCR Logistics Sector 6 Noida</div>
+                </div>
+            </div>
+            
+            <div style="width: 85%; display: flex; justify-content: space-between; padding: 10px 0;">
+                <a href="#catalog" onclick="if(typeof switchTab === 'function') switchTab('adhesives')" style="color: #ff4d4d; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase;">View Adhesives</a>
+                <a href="#catalog" onclick="if(typeof switchTab === 'function') switchTab('tapes')" style="color: #888; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase;">View Packaging</a>
             </div>
 
-            <div class="glass-card" style="width: 260px; align-self: flex-end; border-bottom: 4px solid #ff4d4d;">
-                <div style="color: #ff4d4d; font-size: 32px; font-weight: 900;">BULK</div>
-                <div style="color: #eee; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Ready-to-Ship Inventory</div>
-            </div>
         </div>
+
     </div>
 </section>
 
