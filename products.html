@@ -276,186 +276,128 @@
     </script>
 </section>
 
-<section id="featured-products" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+<section id="catalog" style="padding: 100px 0; background: #050505; font-family: 'Poppins', sans-serif; position: relative; overflow: hidden;">
+    
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(255,77,77,0.08) 1.5px, transparent 1.5px); background-size: 40px 40px; opacity: 0.5;"></div>
+
+    <div style="max-width: 1300px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 5;">
         
         <div style="text-align: center; margin-bottom: 70px;">
-            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 14px; margin-bottom: 10px;">Official Inventory</h4>
-            <h2 style="font-size: clamp(30px, 5vw, 42px); font-weight: 900; color: #1a1a1a;">Our <span style="color: #ff4d4d;">Product</span> Range</h2>
-            <div style="width: 70px; height: 5px; background: #ff4d4d; margin: 20px auto;"></div>
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 4px; font-size: 13px; margin-bottom: 15px;">Official Pan-India Distribution</h4>
+            <h2 style="font-size: clamp(32px, 5vw, 50px); font-weight: 900; color: #fff; line-height: 1.2;">
+                Leading <span style="color: #ff4d4d;">Adhesive Supplier</span> in Noida & Delhi NCR
+            </h2>
+            <p style="color: #888; max-width: 700px; margin: 25px auto; font-size: 16px; line-height: 1.8;">
+                S.K. Traders & Manufacturers: Your trusted destination for <strong>bulk industrial adhesives</strong> and <strong>packaging solutions</strong>. Serving manufacturing hubs across India with certified Acrabond technology.
+            </p>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <div style="background: rgba(255,255,255,0.03); padding: 8px; border-radius: 12px; display: flex; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                <button onclick="switchTab('adhesives')" id="btn-adhesives" style="padding: 15px 35px; border-radius: 8px; border: none; cursor: pointer; font-weight: 700; transition: 0.4s; background: #ff4d4d; color: #fff; text-transform: uppercase; font-size: 13px; letter-spacing: 1px;">
+                    <i class="fas fa-flask" style="margin-right: 10px;"></i> Industrial Adhesives
+                </button>
+                <button onclick="switchTab('tapes')" id="btn-tapes" style="padding: 15px 35px; border-radius: 8px; border: none; cursor: pointer; font-weight: 700; transition: 0.4s; background: transparent; color: #888; text-transform: uppercase; font-size: 13px; letter-spacing: 1px;">
+                    <i class="fas fa-box-open" style="margin-right: 10px;"></i> Packaging & Tapes
+                </button>
+            </div>
         </div>
 
         <style>
-            .product-grid-v3 {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 30px;
+            .industrial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+            .glass-product-card {
+                background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08);
+                padding: 40px 30px; border-radius: 20px; transition: 0.5s; position: relative; overflow: hidden;
+                backdrop-filter: blur(15px); display: flex; flex-direction: column;
             }
-            .p-card-premium {
-                background: #fff;
-                border: 1px solid #f0f0f0;
-                padding: 40px 30px;
-                border-radius: 20px;
-                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                position: relative;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            .glass-product-card:hover {
+                transform: translateY(-15px) scale(1.02); border-color: #ff4d4d;
+                background: rgba(255,77,77,0.05); box-shadow: 0 30px 60px rgba(0,0,0,0.5);
             }
-            .p-card-premium:hover {
-                transform: translateY(-12px);
-                border-color: #ff4d4d;
-                box-shadow: 0 25px 50px rgba(255, 77, 77, 0.12);
+            .live-indicator {
+                position: absolute; top: 20px; right: 20px; width: 10px; height: 10px;
+                background: #ff4d4d; border-radius: 50%; box-shadow: 0 0 10px #ff4d4d;
+                animation: pulse 1.5s infinite;
             }
-            /* Exclusive Ribbon for Certificate Products */
-            .exclusive-tag {
-                position: absolute;
-                top: 20px;
-                right: -35px;
-                background: #ff4d4d;
-                color: #fff;
-                font-size: 10px;
-                font-weight: 800;
-                padding: 5px 40px;
-                transform: rotate(45deg);
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                box-shadow: 0 5px 10px rgba(255, 77, 77, 0.2);
+            @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.3); } 100% { opacity: 1; transform: scale(1); } }
+            .p-meta { font-size: 11px; font-weight: 700; color: #ff4d4d; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; display: block; }
+            .p-name { color: #fff; font-size: 24px; font-weight: 800; margin-bottom: 15px; letter-spacing: -0.5px; }
+            .p-info { color: #888; font-size: 14px; line-height: 1.7; margin-bottom: 25px; flex-grow: 1; }
+            .p-btn {
+                background: #1a1a1a; color: #fff; padding: 15px; text-align: center; border-radius: 8px;
+                text-decoration: none; font-weight: 700; border: 1px solid #333; transition: 0.3s; font-size: 14px;
             }
-            .p-icon-box {
-                width: 65px;
-                height: 65px;
-                background: rgba(255, 77, 77, 0.05);
-                border-radius: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 25px;
-                transition: 0.3s;
-            }
-            .p-card-premium:hover .p-icon-box {
-                background: #ff4d4d;
-            }
-            .p-card-premium:hover .p-icon-box i {
-                color: #fff;
-            }
-            .p-icon-box i {
-                font-size: 28px;
-                color: #ff4d4d;
-            }
-            .p-title {
-                font-size: 20px;
-                font-weight: 800;
-                color: #1a1a1a;
-                margin-bottom: 15px;
-            }
-            .p-desc {
-                font-size: 14px;
-                color: #666;
-                line-height: 1.7;
-                margin-bottom: 25px;
-            }
-            .p-action-btn {
-                font-weight: 700;
-                color: #ff4d4d;
-                text-decoration: none;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                font-size: 14px;
-                transition: 0.3s;
-            }
-            .p-card-premium:hover .p-action-btn {
-                gap: 15px;
-            }
+            .glass-product-card:hover .p-btn { background: #ff4d4d; border-color: #ff4d4d; box-shadow: 0 10px 20px rgba(255,77,77,0.3); }
         </style>
 
-        <div class="product-grid-v3">
-            
-            <div class="p-card-premium">
-                <div class="exclusive-tag">Exclusive</div>
-                <div class="p-icon-box"><i class="fas fa-fill-drip"></i></div>
-                <h4 class="p-title">Acrabond 997 (0707)</h4>
-                <p class="p-desc">Authorized high-strength polychloroprene rubber adhesive designed for flexible and durable industrial bonding.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+        <div id="adhesives-grid" class="industrial-grid">
+            <div class="glass-product-card">
+                <div class="live-indicator"></div>
+                <span class="p-meta">Authorized Distributor</span>
+                <h3 class="p-name">Acrabond 973 / 978</h3>
+                <p class="p-info">Industrial-grade anaerobic adhesives engineered for high-strength thread locking and substrate bonding in assembly lines.</p>
+                <a href="https://wa.me/919871095529?text=Acrabond%20973/978%20Bulk%20Inquiry" class="p-btn">REQUEST WHOLESALE QUOTE</a>
             </div>
-
-            <div class="p-card-premium">
-                <div class="exclusive-tag">Exclusive</div>
-                <div class="p-icon-box"><i class="fas fa-vial"></i></div>
-                <h4 class="p-title">Acrabond 978</h4>
-                <p class="p-desc">ROHS-compliant high-performance adhesive, ideal for manufacturing and electrical assembly workflows.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+            <div class="glass-product-card">
+                <div class="live-indicator"></div>
+                <span class="p-meta">Sealing Expert</span>
+                <h3 class="p-name">Silicone RTV Series</h3>
+                <p class="p-info">High-temperature RTV sealants (KE-45, -98, Transparent) for gasketing and insulation in electronics and automotive sectors.</p>
+                <a href="https://wa.me/919871095529?text=Silicone%20RTV%20Bulk%20Inquiry" class="p-btn">GET BULK PRICING</a>
             </div>
-
-            <div class="p-card-premium">
-                <div class="p-icon-box"><i class="fas fa-bolt"></i></div>
-                <h4 class="p-title">Acracyno 415</h4>
-                <p class="p-desc">Premium instant cyanoacrylate adhesive for ultra-fast, high-precision bonding of metals and plastics.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
+             <div class="glass-product-card">
+                <span class="p-meta">New Arrival</span>
+                <h3 class="p-name">Acrasil EV Series</h3>
+                <p class="p-info">Specialized refrigerator and appliance adhesives designed for advanced bonding in extreme temperature conditions.</p>
+                <a href="https://wa.me/919871095529?text=Acrasil%20EV%20Inquiry" class="p-btn">VIEW TECHNICAL SPECS</a>
             </div>
-
-            <div class="p-card-premium">
-                <div class="p-icon-box"><i class="fas fa-droplet"></i></div>
-                <h4 class="p-title">Acrabond 4552 (20G)</h4>
-                <p class="p-desc">Rapid-action instant adhesive in a convenient 20G industrial bottle. Perfect for high-speed assembly lines.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="p-card-premium">
-                <div class="p-icon-box"><i class="fas fa-tools"></i></div>
-                <h4 class="p-title">Thread Locker 998</h4>
-                <p class="p-desc">High-strength anaerobic adhesive designed to secure heavy-duty industrial fasteners against vibration.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="p-card-premium">
-                <div class="p-icon-box"><i class="fas fa-flask"></i></div>
-                <h4 class="p-title">Acrabond 973</h4>
-                <p class="p-desc">Structural adhesive specifically engineered for critical assembly bonding and lamination in NCR hubs.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="p-card-premium">
-                <div class="p-icon-box"><i class="fas fa-spray-can"></i></div>
-                <h4 class="p-title">Silicone RTV & Grease</h4>
-                <p class="p-desc">Industrial-grade silicone sealants for high-temperature gasketing, insulation, and protective coatings.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="p-card-premium">
-                <div class="p-icon-box"><i class="fas fa-tape"></i></div>
-                <h4 class="p-title">Mono Filament Tape</h4>
-                <p class="p-desc">Extremely high-tensile packaging tape for heavy-duty load securing and industrial warehousing.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-          <div class="p-card-premium">
-                <div class="exclusive-tag">Exclusive</div>
-                <div class="p-icon-box"><i class="fas fa-flask"></i></div>
-                <h4 class="p-title">Acrabond 970</h4>
-                <p class="p-desc">High-performance adhesive certified for specialized regional industrial assembly and bonding.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="p-card-premium">
-                <div class="p-icon-box"><i class="fas fa-industry"></i></div>
-                <h4 class="p-title">Acrasil E V</h4>
-                <p class="p-desc">Authorized industrial compound engineered for advanced manufacturing workflows and protection.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="p-card-premium">
-                <div class="p-icon-box"><i class="fas fa-pump-soap"></i></div>
-                <h4 class="p-title">Min Cream</h4>
-                <p class="p-desc">Professional-grade maintenance cream for industrial equipment cleaning and surface care.</p>
-                <a href="contact.html" class="p-action-btn">Get Bulk Price <i class="fas fa-arrow-right"></i></a>
-            </div>
-
         </div>
+
+        <div id="tapes-grid" class="industrial-grid" style="display: none;">
+            <div class="glass-product-card">
+                <div class="live-indicator"></div>
+                <span class="p-meta">High-Tensile</span>
+                <h3 class="p-name">BOPP & Filament Tapes</h3>
+                <p class="p-info">40-55 Micron heavy-duty packaging tapes and Mono/Synthetic filament tapes for industrial reinforcement.</p>
+                <a href="https://wa.me/919871095529?text=BOPP%20Tapes%20Bulk%20Order" class="p-btn">GET JUMBO ROLL QUOTE</a>
+            </div>
+            <div class="glass-product-card">
+                <span class="p-meta">Variety Pack</span>
+                <h3 class="p-name">PVC Specialty Tapes</h3>
+                <h3 class="p-name" style="font-size: 16px; color: #ff4d4d; margin-top: -10px;">Electric, Fancy, Polyester</h3>
+                <p class="p-info">Complete range of electrical insulation, masking, and surface protection tapes in multi-color options.</p>
+                <a href="https://wa.me/919871095529?text=PVC%20Tapes%20Inquiry" class="p-btn">ORDER WHOLESALE</a>
+            </div>
+            <div class="glass-product-card">
+                <span class="p-meta">Industrial Wrapping</span>
+                <h3 class="p-name">LLDPE Stretch Film</h3>
+                <p class="p-info">Premium pallet wrapping stretch films with high puncture resistance for secure logistics and warehousing.</p>
+                <a href="https://wa.me/919871095529?text=Stretch%20Film%20Inquiry" class="p-btn">GET FACTORY PRICE</a>
+            </div>
+        </div>
+
     </div>
+
+    <script>
+        function switchTab(type) {
+            const aGrid = document.getElementById('adhesives-grid');
+            const tGrid = document.getElementById('tapes-grid');
+            const aBtn = document.getElementById('btn-adhesives');
+            const tBtn = document.getElementById('btn-tapes');
+
+            if(type === 'adhesives') {
+                aGrid.style.display = 'grid';
+                tGrid.style.display = 'none';
+                aBtn.style.background = '#ff4d4d'; aBtn.style.color = '#fff';
+                tBtn.style.background = 'transparent'; tBtn.style.color = '#888';
+            } else {
+                aGrid.style.display = 'none';
+                tGrid.style.display = 'grid';
+                tBtn.style.background = '#ff4d4d'; tBtn.style.color = '#fff';
+                aBtn.style.background = 'transparent'; aBtn.style.color = '#888';
+            }
+        }
+    </script>
 </section>
 
 <section style="padding: 60px 0; background: #1a1a1a; color: #fff; font-family: 'Poppins', sans-serif; overflow: hidden;">
