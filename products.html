@@ -521,72 +521,124 @@ function updateCatalog(type) {
 
 <section id="trust-features" style="padding: 100px 0; background: #ffffff; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;">
     
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#ff4d4d15 1px, transparent 1px); background-size: 30px 30px; opacity: 0.5;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#ff4d4d12 1px, transparent 1px); background-size: 35px 35px; opacity: 0.6;"></div>
 
     <div style="max-width: 1300px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 5;">
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-            
+        <div style="text-align: center; margin-bottom: 70px;">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 13px; margin-bottom: 10px;">The SK Advantage</h4>
+            <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 900; color: #1a1a1a;">Why Industrial Giants <span style="color: #ff4d4d;">Trust Us</span></h2>
+            <div style="width: 60px; height: 4px; background: #ff4d4d; margin: 20px auto;"></div>
+        </div>
+
+        <div class="beast-grid-container">
             <style>
-                .trust-card {
-                    background: #fff; border: 1px solid #eee; padding: 45px 30px; border-radius: 20px;
-                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-align: center;
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.03); position: relative;
+                .beast-grid-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 25px;
                 }
-                .trust-card:hover {
-                    transform: translateY(-15px); border-color: #ff4d4d;
-                    box-shadow: 0 25px 50px rgba(255, 77, 77, 0.15);
+
+                /* --- NEW ENTRANCE ANIMATION (SCROLL REVEAL) --- */
+                .trust-card-beast {
+                    background: #fff; border: 1px solid #f0f0f0; padding: 45px 30px; border-radius: 20px;
+                    text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+                    position: relative; opacity: 0; transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 }
-                .trust-card i {
-                    font-size: 45px; color: #ff4d4d; margin-bottom: 25px; display: inline-block;
-                    transition: 0.5s;
-                }
-                .trust-card:hover i { transform: rotateY(360deg); }
-                .trust-title { 
-                    font-size: 19px; font-weight: 900; color: #1a1a1a; margin-bottom: 15px; 
-                    text-transform: uppercase; letter-spacing: 1px;
-                }
-                .trust-text { font-size: 14px; color: #666; line-height: 1.7; }
+
+                /* Direction Classes */
+                .slide-from-left { transform: translateX(-80px); }
+                .slide-from-right { transform: translateX(80px); }
                 
-                /* Decorative Number/Index */
-                .card-index {
-                    position: absolute; top: 20px; right: 25px; font-size: 40px; 
-                    font-weight: 900; color: rgba(0,0,0,0.03); transition: 0.3s;
+                /* Active Class (Triggered by JS) */
+                .reveal-active { opacity: 1 !important; transform: translate(0) !important; }
+
+                /* --- PREVIOUS HOVER EFFECTS (PRESERVED) --- */
+                .trust-card-beast:hover {
+                    transform: translateY(-15px) !important;
+                    border-color: #ff4d4d;
+                    box-shadow: 0 30px 60px rgba(255, 77, 77, 0.12);
                 }
-                .trust-card:hover .card-index { color: rgba(255, 77, 77, 0.1); }
+
+                .trust-card-beast i { font-size: 42px; color: #ff4d4d; margin-bottom: 25px; transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); display: inline-block; }
+                .trust-card-beast:hover i { transform: rotateY(360deg); }
+                
+                .trust-title { font-size: 18px; font-weight: 900; color: #1a1a1a; margin-bottom: 10px; text-transform: uppercase; }
+                .red-tag { color: #ff4d4d; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+                .trust-text { font-size: 13.5px; color: #666; line-height: 1.7; }
+                .card-index { position: absolute; top: 15px; right: 25px; font-size: 45px; font-weight: 900; color: rgba(0,0,0,0.03); z-index: 0; }
+
+                /* Mobile Fix: No horizontal sliding to avoid scroll-bar issues */
+                @media (max-width: 768px) {
+                    .slide-from-left, .slide-from-right { transform: translateY(40px); }
+                }
             </style>
 
-            <div class="trust-card">
+            <div class="trust-card-beast slide-from-left">
                 <span class="card-index">01</span>
                 <i class="fas fa-industry"></i>
                 <h5 class="trust-title">Direct Factory Supply</h5>
-                <p class="trust-text">Sourced directly from <strong>Acrabond Manufacturing</strong> plants. 100% genuine industrial inventory for Noida units.</p>
+                <span class="red-tag">Sourced From Acrabond</span>
+                <p class="trust-text">100% genuine industrial inventory sourced directly for Noida & NCR production units.</p>
             </div>
 
-            <div class="trust-card">
+            <div class="trust-card-beast slide-from-right">
                 <span class="card-index">02</span>
                 <i class="fas fa-medal"></i>
                 <h5 class="trust-title">Regional Exclusive</h5>
-                <h5 class="trust-title" style="font-size: 12px; color: #ff4d4d; margin-top: -10px;">Delhi | UP | Haryana</h5>
-                <p class="trust-text">Strategic distribution rights ensuring <strong>premium availability</strong> across Northern India's manufacturing hubs.</p>
+                <span class="red-tag">Delhi | UP | Haryana</span>
+                <p class="trust-text">Strategic distribution rights ensuring premium availability across Northern India's hubs.</p>
             </div>
 
-            <div class="trust-card">
+            <div class="trust-card-beast slide-from-left">
                 <span class="card-index">03</span>
                 <i class="fas fa-warehouse"></i>
                 <h5 class="trust-title">Ready Bulk Inventory</h5>
-                <p class="trust-text">Largest buffer stock of <strong>973, 978, & 997 Adhesives</strong> maintained at our Sector 6 Noida hub for zero downtime.</p>
+                <span class="red-tag">Sector 6 Noida Hub</span>
+                <p class="trust-text">Largest buffer stock of adhesives and tapes maintained for zero operational downtime.</p>
             </div>
 
-            <div class="trust-card">
+            <div class="trust-card-beast slide-from-right">
                 <span class="card-index">04</span>
                 <i class="fas fa-headset"></i>
                 <h5 class="trust-title">Expert Consultancy</h5>
-                <p class="trust-text">24/7 technical guidance for <strong>high-performance bonding</strong> and specialized packaging material applications.</p>
+                <span class="red-tag">24/7 Technical Support</span>
+                <p class="trust-text">Application-focused guidance for high-performance bonding and packaging material.</p>
+            </div>
+
+            <div class="trust-card-beast slide-from-left">
+                <span class="card-index">05</span>
+                <i class="fas fa-truck-moving"></i>
+                <h5 class="trust-title">Fast NCR Logistics</h5>
+                <span class="red-tag">Same Day Dispatch</span>
+                <p class="trust-text">Dedicated fleet for instant delivery within Noida, Greater Noida, and Delhi NCR regions.</p>
+            </div>
+
+            <div class="trust-card-beast slide-from-right">
+                <span class="card-index">06</span>
+                <i class="fas fa-check-double"></i>
+                <h5 class="trust-title">Quality Assurance</h5>
+                <span class="red-tag">Batch Certified Stock</span>
+                <p class="trust-text">Every shipment is batch-tested to meet international industrial bonding standards.</p>
             </div>
 
         </div>
     </div>
+
+    <script>
+        const trustObserverOptions = { threshold: 0.15 };
+        const trustObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, trustObserverOptions);
+
+        document.querySelectorAll('.trust-card-beast').forEach(card => {
+            trustObserver.observe(card);
+        });
+    </script>
 </section>
 
 <section id="industrial-faq" style="padding: 100px 0; background: #f8f9fa; font-family: 'Poppins', sans-serif;">
