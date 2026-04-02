@@ -641,177 +641,113 @@ function updateCatalog(type) {
     </script>
 </section>
 
-<section id="industrial-faq" style="padding: 100px 0; background: #0f0f0f; font-family: 'Poppins', sans-serif; position: relative; overflow: hidden;">
+<section id="industrial-faq" style="padding: 100px 0; background: #0a0a0a; font-family: 'Poppins', sans-serif; position: relative;">
     
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); opacity: 0.05; pointer-events: none;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, #ff4d4d, transparent); animation: scanline 8s infinite linear;"></div>
 
-    <div style="max-width: 1000px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 5;">
+    <div style="max-width: 1300px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 5;">
         
-        <div style="text-align: center; margin-bottom: 70px;">
-            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 4px; font-size: 13px; margin-bottom: 15px;">Expert Support</h4>
-            <h2 style="font-size: clamp(30px, 5vw, 45px); font-weight: 900; color: #fff; line-height: 1.2;">
-                Industrial <span style="color: #ff4d4d;">Intelligence</span> FAQ
-            </h2>
-            <p style="color: #888; margin-top: 15px; font-size: 16px;">Everything you need to know about S.K. Traders' supply chain.</p>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px; flex-wrap: wrap; gap: 20px;">
+            <div style="max-width: 600px;">
+                <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 13px; margin-bottom: 10px;">Operational Intelligence</h4>
+                <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 900; color: #fff; line-height: 1.1;">Common <span style="color: #ff4d4d;">Queries</span> Answered</h2>
+            </div>
+            <div style="color: #666; font-size: 14px; max-width: 300px; border-left: 2px solid #ff4d4d; padding-left: 15px; margin-bottom: 10px;">
+                Direct answers for industrial procurement managers and facility heads.
+            </div>
         </div>
 
-        <div class="faq-beast-container">
+        <div class="faq-grid-system">
             <style>
-                .faq-beast-item {
-                    background: rgba(255, 255, 255, 0.03);
-                    margin-bottom: 20px;
-                    border-radius: 15px;
-                    border: 1px solid rgba(255, 255, 255, 0.08);
-                    overflow: hidden;
+                .faq-grid-system {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+                    gap: 30px;
+                }
+                .faq-beast-card {
+                    background: #111;
+                    border: 1px solid #222;
+                    padding: 35px;
+                    border-radius: 4px; /* Sharp industrial corners look better here */
+                    position: relative;
                     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                }
-                .faq-beast-item:hover {
-                    background: rgba(255, 77, 77, 0.05);
-                    border-color: #ff4d4d;
-                    transform: translateX(10px);
-                }
-                .faq-beast-question {
-                    padding: 28px 35px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
                     cursor: pointer;
-                    font-weight: 700;
-                    color: #fff;
-                    font-size: 17px;
-                    transition: 0.3s;
-                }
-                .faq-beast-item.active .faq-beast-question { color: #ff4d4d; }
-                
-                .faq-beast-answer {
-                    max-height: 0;
                     overflow: hidden;
-                    transition: max-height 0.5s ease-in-out;
-                    background: rgba(0, 0, 0, 0.2);
                 }
-                .faq-beast-content {
-                    padding: 0 35px 30px 35px;
-                    color: #aaa;
-                    line-height: 1.8;
-                    font-size: 15px;
+                .faq-beast-card::before {
+                    content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 100%;
+                    background: #333; transition: 0.4s;
                 }
-                /* NEW MORPHING ICON */
-                .faq-beast-icon {
-                    width: 30px; height: 30px;
-                    border-radius: 50%;
-                    background: rgba(255,255,255,0.05);
-                    display: flex; align-items: center; justify-content: center;
-                    transition: 0.4s;
+                .faq-beast-card:hover {
+                    background: #161616;
+                    border-color: #444;
+                    transform: translateY(-5px);
                 }
-                .faq-beast-icon::before {
-                    content: '+'; font-size: 20px; color: #ff4d4d;
-                }
-                .faq-beast-item.active .faq-beast-icon {
-                    background: #ff4d4d; transform: rotate(135deg);
-                }
-                .faq-beast-item.active .faq-beast-icon::before { color: #fff; }
+                .faq-beast-card:hover::before { background: #ff4d4d; }
+                
+                .faq-beast-card.active { border-color: #ff4d4d; }
+                .faq-beast-card.active::before { background: #ff4d4d; width: 5px; }
 
-                @media (max-width: 768px) {
-                    .faq-beast-question { padding: 20px; font-size: 15px; }
-                    .faq-beast-item:hover { transform: none; }
+                .q-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+                .q-text { color: #fff; font-size: 18px; font-weight: 800; line-height: 1.4; transition: 0.3s; }
+                .faq-beast-card:hover .q-text { color: #ff4d4d; }
+
+                .a-body { 
+                    max-height: 0; overflow: hidden; transition: 0.5s ease-in-out;
+                    color: #999; font-size: 15px; line-height: 1.8; margin-top: 0;
                 }
+                .faq-beast-card.active .a-body { max-height: 300px; margin-top: 20px; }
+                
+                .q-icon { color: #333; font-size: 24px; transition: 0.4s; }
+                .faq-beast-card.active .q-icon { transform: rotate(180deg); color: #ff4d4d; }
+
+                @keyframes scanline { 0% { top: 0; } 100% { top: 100%; } }
+                @media (max-width: 600px) { .faq-grid-system { grid-template-columns: 1fr; } .faq-beast-card { padding: 25px; } }
             </style>
 
-            <div class="faq-beast-item">
-                <div class="faq-beast-question">
-                    Is S.K. Traders an authorized distributor for Acrabond?
-                    <div class="faq-beast-icon"></div>
+            <div class="faq-beast-card" onclick="this.classList.toggle('active')">
+                <div class="q-header">
+                    <span class="q-text">Are you an Authorized Strategic Partner for Acrabond®?</span>
+                    <i class="fas fa-chevron-down q-icon"></i>
                 </div>
-                <div class="faq-beast-answer">
-                    <div class="faq-beast-content">
-                        Yes, S.K. Traders & Manufacturers is an <strong>Authorized Strategic Partner</strong> with exclusive rights for <strong>Noida, Delhi-NCR, and Haryana</strong>. Every batch is direct from the plant, ensuring 100% genuine industrial quality.
-                    </div>
+                <div class="a-body">
+                    Yes. S.K. Traders & Manufacturers holds <strong>Authorized Strategic Distribution</strong> rights. We supply genuine 973, 978, and 997 inventory directly from the manufacturing unit to your facility in Noida & Delhi NCR.
                 </div>
             </div>
 
-            <div class="faq-beast-item">
-                <div class="faq-beast-question">
-                    What is the typical delivery timeline for bulk orders?
-                    <div class="faq-beast-icon"></div>
+            <div class="faq-beast-card" onclick="this.classList.toggle('active')">
+                <div class="q-header">
+                    <span class="q-text">What is the lead time for Bulk Industrial Supply in NCR?</span>
+                    <i class="fas fa-chevron-down q-icon"></i>
                 </div>
-                <div class="faq-beast-answer">
-                    <div class="faq-beast-content">
-                        Since we maintain a massive buffer of <strong>973, 978, and 997 adhesives</strong> at our Sector 6 hub, we offer <strong>same-day dispatch</strong> and 24-48 hour delivery across Delhi-NCR manufacturing zones.
-                    </div>
+                <div class="a-body">
+                    Our <strong>Sector 6 Noida Hub</strong> maintains a massive buffer. We guarantee <strong>Same-Day Dispatch</strong> for standard orders, with a 24-hour delivery window for major industrial zones like Greater Noida and Gurgaon.
                 </div>
             </div>
 
-            <div class="faq-beast-item">
-                <div class="faq-beast-question">
-                    Do you provide technical assistance for adhesive selection?
-                    <div class="faq-beast-icon"></div>
+            <div class="faq-beast-card" onclick="this.classList.toggle('active')">
+                <div class="q-header">
+                    <span class="q-text">Do you offer customized wholesale pricing for OEM?</span>
+                    <i class="fas fa-chevron-down q-icon"></i>
                 </div>
-                <div class="faq-beast-answer">
-                    <div class="faq-beast-content">
-                        Absolutely. Our <strong>Expert Consultancy</strong> team helps you choose the right bonding agent (e.g., Acracyno 415 or RTV Silicone) based on your material substrate and temperature requirements.
-                    </div>
+                <div class="a-body">
+                    Absolutely. We specialize in <strong>B2B Contractual Pricing</strong>. For high-volume procurement in Adhesives or Packaging Material, we provide tiered factory rates that optimize your production costs.
                 </div>
             </div>
 
-            <div class="faq-beast-item">
-                <div class="faq-beast-question">
-                    Are your packaging materials available for wholesale?
-                    <div class="faq-beast-icon"></div>
+            <div class="faq-beast-card" onclick="this.classList.toggle('active')">
+                <div class="q-header">
+                    <span class="q-text">Are your products ROHS & Industrial Safety Compliant?</span>
+                    <i class="fas fa-chevron-down q-icon"></i>
                 </div>
-                <div class="faq-beast-answer">
-                    <div class="faq-beast-content">
-                        Yes, we specialize in bulk procurement for <strong>BOPP Tapes, Filament Tapes, and Aluminum Jumbo Rolls</strong>. We provide tiered wholesale pricing for large-scale industrial packaging needs.
-                    </div>
+                <div class="a-body">
+                    Quality is non-negotiable. Our primary Acrabond range is <strong>ROHS compliant</strong>. We provide all necessary technical data sheets (TDS) and safety certificates required for modern industrial compliance.
                 </div>
             </div>
 
         </div>
     </div>
 </section>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Is S.K. Traders an authorized distributor for Acrabond?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes, S.K. Traders & Manufacturers is an Authorized Strategic Partner with exclusive distribution rights for Acrabond Adhesives in Noida, Delhi-NCR, and Haryana."
-    }
-  }, {
-    "@type": "Question",
-    "name": "What is the delivery timeline for Noida?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "We provide 24 to 48-hour delivery across all major industrial hubs in Delhi-NCR from our Noida Sector 6 facility."
-    }
-  }]
-}
-</script>
-
-<script>
-    document.querySelectorAll('.faq-beast-question').forEach(button => {
-        button.addEventListener('click', () => {
-            const faqItem = button.parentElement;
-            const isOpen = faqItem.classList.contains('active');
-            
-            // Close all others
-            document.querySelectorAll('.faq-beast-item').forEach(item => {
-                item.classList.remove('active');
-                item.querySelector('.faq-beast-answer').style.maxHeight = '0';
-            });
-
-            // Toggle current
-            if (!isOpen) {
-                faqItem.classList.add('active');
-                const answer = faqItem.querySelector('.faq-beast-answer');
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            }
-        });
-    });
-</script>
 
 <div class="floating-buttons">
 
