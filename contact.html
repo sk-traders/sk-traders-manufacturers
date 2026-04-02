@@ -413,52 +413,46 @@
         <div class="sk-cards-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 80px;">
             <style>
                 .sk-beast-card {
-                    background: rgba(255, 255, 255, 0.03);
-                    border: 1px solid rgba(255, 255, 255, 0.08);
-                    padding: 45px 30px; text-align: center; border-radius: 4px;
-                    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative;
+                    background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+                    padding: 45px 30px; text-align: center; border-radius: 4px; transition: 0.4s;
                 }
-                .sk-beast-card::after {
-                    content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px;
-                    background: #ff4d4d; transition: 0.4s; transform: translateX(-50%);
-                }
-                .sk-beast-card:hover { transform: translateY(-10px); background: rgba(255, 77, 77, 0.05); border-color: #ff4d4d; }
-                .sk-beast-card:hover::after { width: 80%; }
-                .sk-beast-card i { font-size: 35px; color: #ff4d4d; margin-bottom: 20px; filter: drop-shadow(0 0 10px rgba(255,77,77,0.3)); }
-                .sk-beast-card h3 { color: #fff; font-size: 17px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px; }
+                .sk-beast-card:hover { transform: translateY(-10px); border-color: #ff4d4d; background: rgba(255, 77, 77, 0.05); }
+                .sk-beast-card i { font-size: 35px; color: #ff4d4d; margin-bottom: 20px; }
+                .sk-beast-card h3 { color: #fff; font-size: 17px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
                 .sk-beast-card p { color: #888; font-size: 15px; margin: 0; }
             </style>
 
-            <div class="sk-beast-card" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <div class="sk-beast-card">
                 <i class="fa-solid fa-phone-volume"></i>
-                <h3>Direct Procurement</h3>
+                <h3>Direct Line</h3>
                 <p itemprop="telephone">+91 9871095529</p>
             </div>
             <div class="sk-beast-card">
                 <i class="fa-solid fa-envelope-open-text"></i>
-                <h3>Technical Support</h3>
+                <h3>Technical Mail</h3>
                 <p itemprop="email">sktraders.noida011@gmail.com</p>
             </div>
             <div class="sk-beast-card">
                 <i class="fa-solid fa-warehouse"></i>
-                <h3>Sector 6 Noida HQ</h3>
-                <p>G-17, G Block, Sector-6, Noida, UP</p>
+                <h3>Visit Warehouse</h3>
+                <p>G-17, Sector-6, Noida, UP</p>
             </div>
         </div>
 
         <div class="sk-main-grid" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: stretch;">
             
-            <div class="sk-map-beast-container" style="position: relative; border-radius: 4px; overflow: hidden; border: 1px solid #222; min-height: 550px;">
+            <div class="sk-map-beast-container" style="position: relative; border-radius: 4px; overflow: hidden; border: 1px solid #222; min-height: 600px;">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.468202521191!2d77.31422131508156!3d28.585724982436214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45f7f383e23%3A0x6b772c847f383e23!2sSK%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
-                    width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(90%);" allowfullscreen="" loading="lazy"></iframe>
-                <a href="https://maps.app.goo.gl/YourExactLink" target="_blank" style="position: absolute; bottom: 20px; right: 20px; background: #ff4d4d; color: #fff; padding: 12px 25px; text-decoration: none; font-weight: 800; font-size: 12px; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">OPEN IN GOOGLE MAPS</a>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.4611599874837!2d77.3115438!3d28.5859345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce50720ef457b%3A0xc314144365793e62!2sSK%20Traders%20%26%20Manufacturers!5e0!3m2!1sen!2sin!4v1711364500000!5m2!1sen!2sin" 
+                    width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(90%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <a href="https://maps.app.goo.gl/uXj99M5eDny2yL9L7" target="_blank" style="position: absolute; bottom: 20px; right: 20px; background: #ff4d4d; color: #fff; padding: 12px 25px; text-decoration: none; font-weight: 800; font-size: 12px; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); z-index: 10;">OPEN IN GOOGLE MAPS</a>
             </div>
 
             <div class="sk-form-beast-container" style="background: #111; padding: 55px; border-radius: 4px; border: 1px solid #222; position: relative;">
                 <form id="sk-form-beast" action="https://formspree.io/f/xojnzldq" method="POST">
-                    <h2 style="color: #fff; font-size: 34px; font-weight: 900; line-height: 1; margin-bottom: 35px;">
-                        BULK PROCUREMENT <br><span style="color: #ff4d4d;">INQUIRY ENGINE</span>
+                    <h2 style="color: #fff; font-size: 34px; font-weight: 900; line-height: 1.1; margin-bottom: 35px;">
+                        GOT A REQUIREMENT? <br><span style="color: #ff4d4d;">LET'S BOND.</span>
                     </h2>
                     
                     <style>
@@ -500,7 +494,7 @@
                 <div id="beast-success" style="display: none; text-align: center; padding: 40px 0;">
                     <div style="font-size: 80px; color: #ff4d4d; margin-bottom: 20px; animation: scaleUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);">✓</div>
                     <h3 style="color: #fff; font-size: 24px; font-weight: 900; margin-bottom: 15px;">MISSION RECEIVED</h3>
-                    <p style="color: #888; line-height: 1.8;">Our technical team from <strong>Noida Sector 6 Hub</strong> will analyze your requirements and reach out within 4 business hours.</p>
+                    <p style="color: #888; line-height: 1.8;">Our technical team from <strong>Noida Sector 6 Hub</strong> will reach out within 4 business hours.</p>
                 </div>
             </div>
         </div>
