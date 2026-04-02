@@ -641,63 +641,108 @@
 
 </div>
 
-    <section class="sk-logistics-footprint" style="padding: 100px 0; background: #050505; border-top: 1px solid #111; font-family: 'Poppins', sans-serif; position: relative;">
-    
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5%; text-align: center;">
+   <section id="contact-details" style="padding: 120px 0; background: #f9f9f9; font-family: 'Poppins', sans-serif; position: relative;">
+    <div style="max-width: 1300px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 5;">
         
-        <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 13px; margin-bottom: 15px;">Global Supply Reach</h4>
-        <h2 style="color: #fff; font-size: clamp(28px, 4vw, 42px); font-weight: 900; margin-bottom: 50px;">Noida Hub to <span style="color: #ff4d4d;">Pan-India</span> Delivery</h2>
+        <div style="text-align: center; margin-bottom: 70px;">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 4px; font-size: 13px; margin-bottom: 15px;">NCR Procurement Hub</h4>
+            <h2 style="font-size: clamp(30px, 5vw, 48px); font-weight: 900; color: #111; line-height: 1.2; letter-spacing: -1.5px;">Strategic <span style="color: #ff4d4d;">Connectivity</span> Zones</h2>
+            <div style="width: 70px; height: 4px; background: #ff4d4d; margin: 25px auto;"></div>
+        </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 60px;">
+        <div class="titan-contact-grid">
             <style>
-                .sk-region-box { 
-                    padding: 25px; background: rgba(255,255,255,0.02); border: 1px solid #111; 
-                    text-align: left; transition: 0.4s; border-radius: 4px;
+                .titan-contact-grid { 
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+                    gap: 30px; 
                 }
-                .sk-region-box:hover { border-color: #ff4d4d; background: #0a0a0a; transform: scale(1.03); }
-                .sk-region-box h5 { color: #fff; font-size: 16px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; }
-                .sk-region-box ul { list-style: none; padding: 0; margin: 0; }
-                .sk-region-box li { color: #666; font-size: 13px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-                .sk-region-box li i { color: #ff4d4d; font-size: 8px; }
+
+                .titan-card-link { 
+                    text-decoration: none; display: block; 
+                    transform: scale(0.9); opacity: 0; 
+                    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+                .titan-card-link.show {
+                    transform: scale(1); opacity: 1;
+                }
+
+                .titan-card { 
+                    background: #fff; padding: 60px 40px; 
+                    text-align: center; border: 1px solid #eee; 
+                    border-radius: 4px; transition: 0.4s; position: relative;
+                }
+
+                .titan-card:hover { 
+                    border-color: #ff4d4d; transform: translateY(-15px); 
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.08), 0 0 20px rgba(255,77,77,0.1);
+                }
+                
+                .titan-card::after {
+                    content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px;
+                    background: #ff4d4d; transition: 0.4s;
+                }
+
+                .titan-card:hover::after { width: 100%; }
+
+                .t-icon-box {
+                    width: 80px; height: 80px; background: #fafafa; border: 1px solid #eee;
+                    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                    color: #ff4d4d; font-size: 30px; margin: 0 auto 30px;
+                    transition: 0.5s;
+                }
+                
+                .titan-card:hover .t-icon-box { background: #ff4d4d; color: #fff; transform: rotateY(360deg); }
+
+                .t-title { color: #111; font-size: 19px; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; }
+                .t-desc { color: #666; font-size: 14.5px; line-height: 1.7; margin: 0; }
+                .t-desc strong { color: #333; }
             </style>
 
-            <div class="sk-region-box">
-                <h5>North India (HQ)</h5>
-                <ul>
-                    <li><i class="fas fa-circle"></i> Delhi NCR & Noida (Sector 6-140)</li>
-                    <li><i class="fas fa-circle"></i> Gurgaon, Faridabad, Ghaziabad</li>
-                    <li><i class="fas fa-circle"></i> Ludhiana & Baddi Industrial Belts</li>
-                </ul>
-            </div>
+            <a href="tel:+919871095529" class="titan-card-link">
+                <div class="titan-card">
+                    <div class="t-icon-box">
+                        <i class="fad fa-phone-office"></i> </div>
+                    <h3 class="t-title">Bulk Hotline</h3>
+                    <p class="t-desc">Connect with our Authorized Procurement Leads for bulk pricing on <strong>Acrabond grades</strong>.</p>
+                </div>
+            </a>
 
-            <div class="sk-region-box">
-                <h5>West & Central</h5>
-                <ul>
-                    <li><i class="fas fa-circle"></i> Ahmedabad & Sanand (Gujarat)</li>
-                    <li><i class="fas fa-circle"></i> Pune, Mumbai & Chakan (Maharashtra)</li>
-                    <li><i class="fas fa-circle"></i> Indore & Pithampur (MP)</li>
-                </ul>
-            </div>
+            <a href="mailto:sktraders.noida011@gmail.com" class="titan-card-link">
+                <div class="titan-card">
+                    <div class="t-icon-box">
+                        <i class="fad fa-mailbox-open"></i> </div>
+                    <h3 class="t-title">Inquiry Mail</h3>
+                    <p class="t-desc">Submit your technical substrate requirements directly to our <strong>Acrabond Experts</strong>.</p>
+                </div>
+            </a>
 
-            <div class="sk-region-box">
-                <h5>South & East</h5>
-                <ul>
-                    <li><i class="fas fa-circle"></i> Chennai & Hosur Automotive Hubs</li>
-                    <li><i class="fas fa-circle"></i> Bangalore & Hyderabad (Tech-Industrial)</li>
-                    <li><i class="fas fa-circle"></i> Jamshedpur & Kolkata Steel Belts</li>
-                </ul>
-            </div>
+            <a href="#map-form-section" class="titan-card-link"> <div class="titan-card">
+                    <div class="t-icon-box">
+                        <i class="fad fa-warehouse-alt"></i> </div>
+                    <h3 class="t-title">Noida Sector 6 Hub</h3>
+                    <p class="t-desc">Click to lock <strong>G-17, Sector-6, Noida, UP</strong> location for rapid NCR dispatch.</p>
+                </div>
+            </a>
 
         </div>
-
-        <div style="background: rgba(255,77,77,0.03); border: 1px dashed rgba(255,77,77,0.2); padding: 30px; border-radius: 4px;">
-            <p style="color: #888; font-size: 14px; line-height: 1.8; margin: 0;">
-                S.K. Traders & Manufacturers operates as a <strong>Strategic Distribution Hub</strong> in Noida, offering seamless logistics for <strong>Acrabond Industrial Adhesives</strong> across 28+ states. From <strong>Same-day dispatch in NCR</strong> to <strong>Rapid Surface Transport for Pan-India clients</strong>, we ensure zero manufacturing delays.
-            </p>
-        </div>
-        
     </div>
 </section>
+
+<script>
+    const titanObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.titan-card-link').forEach(card => {
+        titanObserver.observe(card);
+    });
+</script>
 
 <!-- ================= FOOTER ================= -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
