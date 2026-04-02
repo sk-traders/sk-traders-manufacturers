@@ -520,25 +520,32 @@
     });
 </script>
 
-  <section class="sk-trust-engine" style="padding: 120px 0; background: #050505; font-family: 'Poppins', sans-serif; overflow: hidden; position: relative;">
+  <section class="sk-trust-engine" style="padding: 120px 0; background: radial-gradient(circle at center, #151921 0%, #0a0c10 100%); font-family: 'Poppins', sans-serif; overflow: hidden; position: relative;">
     
-    <div style="position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,77,77,0.08) 0%, transparent 70%); bottom: -200px; left: -100px; z-index: 1;"></div>
-
-    <div class="sk-container" style="max-width: 1300px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 5;">
+    <div class="sk-container" style="max-width: 1300px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 10;">
         
-        <div class="sk-trust-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+        <div style="text-align: center; margin-bottom: 70px;">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 4px; font-size: 13px; margin-bottom: 15px;">Trust Logistics Hub</h4>
+            <h2 style="font-size: clamp(30px, 5vw, 48px); font-weight: 900; color: #fff; line-height: 1.2; letter-spacing: -1.5px;">
+                Authorized <span style="color: #ff4d4d;">Industrial Supply</span> Authority Noida
+            </h2>
+            <div style="width: 60px; height: 3px; background: #ff4d4d; margin: 25px auto;"></div>
+        </div>
+
+        <div class="sk-trust-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
             <style>
                 .trust-card {
-                    background: linear-gradient(145deg, #111, #0a0a0a);
-                    border: 1px solid rgba(255,255,255,0.05);
-                    padding: 60px 40px;
+                    background: rgba(255, 255, 255, 0.02);
+                    border: 1px solid rgba(255, 255, 255, 0.05);
+                    padding: 55px 40px;
                     text-align: center;
-                    border-radius: 4px;
+                    border-radius: 12px;
                     position: relative;
                     transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-                    /* NEW: 3D Animation Initial State */
-                    transform: perspective(1000px) rotateX(30deg) translateY(50px);
+                    /* Animation Logic */
+                    transform: perspective(1000px) rotateX(25deg) translateY(60px);
                     opacity: 0;
+                    backdrop-filter: blur(10px);
                 }
 
                 .trust-card.reveal {
@@ -547,64 +554,56 @@
                 }
 
                 .trust-card:hover {
+                    background: rgba(255, 77, 77, 0.03);
                     border-color: #ff4d4d;
-                    transform: translateY(-15px) scale(1.02) !important;
-                    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 20px rgba(255,77,77,0.1);
+                    transform: translateY(-15px) !important;
+                    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
                 }
 
-                /* Icon Cyber-Circle Effect */
-                .icon-box {
-                    width: 90px; height: 90px; margin: 0 auto 30px;
+                /* Modern Glass Icons with Glow */
+                .icon-glow-box {
+                    width: 100px; height: 100px; margin: 0 auto 35px;
+                    background: #1a1e26;
+                    border-radius: 20px;
                     display: flex; align-items: center; justify-content: center;
+                    box-shadow: inset 5px 5px 10px #0e1116, inset -5px -5px 10px #262b36;
                     position: relative;
+                    transition: 0.4s;
                 }
 
-                .icon-box i { font-size: 50px; color: #ff4d4d; z-index: 2; transition: 0.4s; }
+                .icon-glow-box i { font-size: 42px; color: #ff4d4d; transition: 0.4s; }
 
-                .cyber-border {
-                    position: absolute; width: 100%; height: 100%;
-                    border: 2px dashed rgba(255,77,77,0.2);
-                    border-radius: 50%; animation: rotate-cyber 10s linear infinite;
-                    opacity: 0; transition: 0.4s;
+                .trust-card:hover .icon-glow-box {
+                    box-shadow: 0 0 25px rgba(255, 77, 77, 0.3);
+                    transform: scale(1.1);
                 }
 
-                .trust-card:hover .cyber-border { opacity: 1; border-color: #ff4d4d; }
-                .trust-card:hover i { transform: scale(1.1); filter: drop-shadow(0 0 10px #ff4d4d); }
+                .trust-title { color: #fff; font-size: 21px; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; }
+                .trust-desc { color: #8a8fb0; font-size: 15.5px; line-height: 1.8; margin: 0; }
+                .trust-desc strong { color: #fff; }
 
-                @keyframes rotate-cyber { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-                .trust-title { color: #fff; font-size: 20px; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; }
-                .trust-desc { color: #888; font-size: 15px; line-height: 1.8; margin: 0; }
-                .trust-desc strong { color: #ff4d4d; font-weight: 700; }
-
-                @media (max-width: 768px) { .trust-card { padding: 40px 25px; } }
+                @media (max-width: 768px) { .trust-card { padding: 40px 20px; } }
             </style>
 
             <div class="trust-card" style="transition-delay: 0.1s;">
-                <div class="icon-box">
-                    <div class="cyber-border"></div>
-                    <i class="fa-solid fa-certificate"></i>
-                </div>
-                <h4 class="trust-title">Authorized Source</h4>
-                <p class="trust-desc">Direct factory-gate supply. Every batch of <strong>Acrabond Adhesives</strong> is certified for industrial-grade performance and 100% authenticity.</p>
+                <div class="icon-glow-box">
+                    <i class="fa-solid fa-shield-halved"></i> </div>
+                <h4 class="trust-title">100% Genuine Source</h4>
+                <p class="trust-desc">Direct factory-gate supply chain. Every <strong>Acrabond Adhesive</strong> batch is certified for industrial-grade authenticity and 100% genuine quality.</p>
             </div>
 
             <div class="trust-card" style="transition-delay: 0.3s;">
-                <div class="icon-box">
-                    <div class="cyber-border"></div>
-                    <i class="fa-solid fa-warehouse"></i>
-                </div>
+                <div class="icon-glow-box">
+                    <i class="fa-solid fa-truck-ramp-box"></i> </div>
                 <h4 class="trust-title">Noida Inventory Hub</h4>
-                <p class="trust-desc">Huge ex-stock maintained at our <strong>Sector 6 Noida facility</strong>. Same-day dispatch to prevent production downtime across PAN India.</p>
+                <p class="trust-desc">Huge ex-stock maintained at our <strong>Sector 6 Noida facility</strong>. Same-day dispatch infrastructure ensures zero downtime for NCR machine lines.</p>
             </div>
 
             <div class="trust-card" style="transition-delay: 0.5s;">
-                <div class="icon-box">
-                    <div class="cyber-border"></div>
-                    <i class="fa-solid fa-microscope"></i>
-                </div>
-                <h4 class="trust-title">Bonding Solutions</h4>
-                <p class="trust-desc">Technical advisory for specialized substrates. We provide <strong>expert bonding consultancy</strong>, ensuring the right adhesive for your machine lines.</p>
+                <div class="icon-glow-box">
+                    <i class="fa-solid fa-vial-circle-check"></i> </div>
+                <h4 class="trust-title">Bonding Expert</h4>
+                <p class="trust-desc">Technical advisory for specialized substrates. We provide <strong>expert bonding consultancy</strong> and material testing for high-scale production.</p>
             </div>
 
         </div>
@@ -618,7 +617,7 @@
                 entry.target.classList.add('reveal');
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
 
     document.querySelectorAll('.trust-card').forEach(card => {
         trustObserver.observe(card);
