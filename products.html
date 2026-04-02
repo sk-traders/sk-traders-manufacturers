@@ -793,83 +793,132 @@ function updateCatalog(type) {
 
 </div>
 
-<section id="workflow" style="padding: 100px 0; background: #050505; font-family: 'Poppins', sans-serif; position: relative; border-top: 1px solid #111;">
+<section id="workflow" style="padding: 120px 0; background: #0a0b10; font-family: 'Poppins', sans-serif; position: relative; overflow: hidden;">
     
-    <div style="max-width: 1300px; margin: 0 auto; padding: 0 5%;">
+    <div style="position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,77,77,0.05) 0%, transparent 70%); z-index: 1;"></div>
+
+    <div style="max-width: 1350px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 5;">
         
         <div style="text-align: center; margin-bottom: 80px;">
-            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 13px; margin-bottom: 15px;">Operational Intelligence</h4>
-            <h2 style="font-size: clamp(30px, 5vw, 45px); font-weight: 900; color: #fff; line-height: 1.1;">Our <span style="color: #ff4d4d;">Supply Chain</span> Excellence</h2>
-            <p style="color: #666; margin-top: 20px; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 16px;">
-                Optimized procurement workflow for Noida's high-scale manufacturing units and NCR logistics hubs.
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 4px; font-size: 13px; margin-bottom: 15px;">Operational Intelligence</h4>
+            <h2 style="font-size: clamp(32px, 5.5vw, 52px); font-weight: 900; color: #fff; line-height: 1.1; letter-spacing: -1.5px;">
+                Our <span style="color: #ff4d4d;">Supply Chain</span> Excellence
+            </h2>
+            <div style="width: 80px; height: 4px; background: #ff4d4d; margin: 25px auto;"></div>
+            <p style="color: #8a8fb0; max-width: 750px; margin: 0 auto; font-size: 17px; line-height: 1.8;">
+                Optimized <strong>Noida Supply Chain</strong> infrastructure delivering high-precision adhesives to NCR's largest manufacturing hubs.
             </p>
         </div>
 
-        <div class="workflow-grid">
+        <div class="workflow-quantum-grid">
             <style>
-                .workflow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; position: relative; }
-                
-                .workflow-step { 
-                    position: relative; text-align: center; padding: 40px 25px; 
-                    background: rgba(255,255,255,0.02); border: 1px solid #111;
-                    border-radius: 8px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                .workflow-quantum-grid { 
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+                    gap: 30px; 
                 }
-                
-                /* Connecting Lines for Desktop (Visual Flow) */
-                @media (min-width: 992px) {
-                    .workflow-step:not(:last-child)::after {
-                        content: '→'; position: absolute; top: 40px; right: -25px; 
-                        color: #ff4d4d; font-size: 28px; font-weight: 900; opacity: 0.2;
+
+                .quantum-step { 
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    padding: 50px 35px; 
+                    border-radius: 15px; 
+                    text-align: center;
+                    backdrop-filter: blur(10px);
+                    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    opacity: 0;
+                    transform: scale(0.7) translateY(50px) rotateX(-20deg); /* Initial State */
+                }
+
+                /* Reveal Class */
+                .quantum-reveal {
+                    opacity: 1 !important;
+                    transform: scale(1) translateY(0) rotateX(0) !important;
+                }
+
+                .quantum-step:hover {
+                    background: rgba(255, 77, 77, 0.05);
+                    border-color: #ff4d4d;
+                    transform: translateY(-15px) !important;
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+                }
+
+                .q-number-box {
+                    width: 70px; height: 70px; 
+                    background: #161821; border: 2px solid #ff4d4d;
+                    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                    color: #fff; font-weight: 900; font-size: 24px; margin: 0 auto 30px;
+                    position: relative;
+                    transition: 0.6s;
+                }
+
+                .quantum-step:hover .q-number-box {
+                    background: #ff4d4d;
+                    box-shadow: 0 0 25px rgba(255, 77, 77, 0.5);
+                    transform: rotateY(360deg);
+                }
+
+                .q-title { color: #fff; font-size: 20px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+                .q-desc { color: #8a8fb0; font-size: 14.5px; line-height: 1.8; }
+                .q-desc strong { color: #fff; }
+
+                /* Arrow Connector for Desktop */
+                @media (min-width: 1200px) {
+                    .quantum-step:not(:last-child)::after {
+                        content: '\f105'; font-family: "Font Awesome 5 Free"; font-weight: 900;
+                        position: absolute; top: 50%; right: -25px; transform: translateY(-50%);
+                        color: rgba(255,77,77,0.2); font-size: 30px;
                     }
                 }
 
-                .step-number {
-                    width: 65px; height: 65px; background: rgba(255,77,77,0.05); border: 2px solid #ff4d4d;
-                    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-                    color: #fff; font-weight: 900; font-size: 22px; margin: 0 auto 30px;
-                    transition: 0.5s; box-shadow: 0 0 15px rgba(255,77,77,0.1);
-                }
-                
-                .workflow-step:hover { background: #080808; border-color: #333; transform: translateY(-10px); }
-                .workflow-step:hover .step-number { background: #ff4d4d; transform: rotateY(360deg); box-shadow: 0 0 30px rgba(255,77,77,0.4); }
-                
-                .step-title { color: #fff; font-size: 19px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-                .step-desc { color: #888; font-size: 14px; line-height: 1.7; }
-                .step-desc strong { color: #ccc; }
-
-                /* Mobile Optimization */
-                @media (max-width: 768px) { 
-                    .workflow-grid { grid-template-columns: 1fr; } 
-                    .workflow-step { padding: 30px 20px; }
+                @media (max-width: 768px) {
+                    .quantum-step { padding: 40px 25px; transform: scale(0.9) translateY(30px); }
                 }
             </style>
 
-            <div class="workflow-step">
-                <div class="step-number">01</div>
-                <h3 class="step-title">Inquiry & Analysis</h3>
-                <p class="step-desc">Share your industrial requirements. We analyze the specific <a href="#catalog" style="color:#ff4d4d; text-decoration:none;">Acrabond® Grade</a> needed for your substrate.</p>
+            <div class="quantum-step">
+                <div class="q-number-box">01</div>
+                <h3 class="q-title">Inquiry Analysis</h3>
+                <p class="q-desc">Analyzing substrate compatibility to prescribe the exact <strong>Acrabond® Industrial Grade</strong> for your production line.</p>
             </div>
 
-            <div class="workflow-step">
-                <div class="step-number">02</div>
-                <h3 class="step-title">Quality Assurance</h3>
-                <p class="step-desc">Rigorous <strong>Safety Checks (ROHS)</strong> conducted at our Sector 6 Noida facility to ensure batch consistency.</p>
+            <div class="quantum-step">
+                <div class="q-number-box">02</div>
+                <h3 class="q-title">Quality Audit</h3>
+                <p class="q-desc">Stringent <strong>ROHS Compliance</strong> checks at our Noida facility, ensuring batch-to-batch adhesive consistency.</p>
             </div>
 
-            <div class="workflow-step">
-                <div class="step-number">03</div>
-                <h3 class="step-title">Bulk Buffer Prep</h3>
-                <p class="step-desc">Strategic inventory management to support <strong>JIT (Just-in-Time)</strong> supply chains and eliminate production downtime.</p>
+            <div class="quantum-step">
+                <div class="q-number-box">03</div>
+                <h3 class="q-title">Inventory Prep</h3>
+                <p class="q-desc">Managing <strong>Bulk Buffer Stocks</strong> to eliminate lead times and support JIT manufacturing for NCR units.</p>
             </div>
 
-            <div class="workflow-step">
-                <div class="step-number">04</div>
-                <h3 class="step-title">Rapid NCR Dispatch</h3>
-                <p class="step-desc">Direct fulfillment via our <strong>Fast-Track Logistics</strong> across Delhi, Haryana, and Uttar Pradesh industrial zones.</p>
+            <div class="quantum-step">
+                <div class="q-number-box">04</div>
+                <h3 class="q-title">Noida Logistics</h3>
+                <p class="q-desc">Final <strong>Authorized Fulfillment</strong> across Delhi, UP, and Haryana via our optimized fast-track transport network.</p>
             </div>
 
         </div>
     </div>
+
+    <script>
+        const workflowObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Staggered delay for each card
+                    setTimeout(() => {
+                        entry.target.classList.add('quantum-reveal');
+                    }, index * 150); 
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.quantum-step').forEach(card => {
+            workflowObserver.observe(card);
+        });
+    </script>
 </section>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
