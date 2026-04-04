@@ -421,6 +421,14 @@
                 .sk-beast-card h3 { color: #fff; font-size: 17px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
                 .sk-beast-card p { color: #888; font-size: 15px; margin: 0; line-height: 1.6; }
                 .sk-beast-card strong { color: #fff; }
+
+                /* MOBILE VIEW FIX: Cards, Map & Form Stack */
+                @media (max-width: 991px) {
+                    .sk-main-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+                    .sk-map-container { height: 400px !important; order: 2; }
+                    .sk-form-container { padding: 30px !important; order: 1; }
+                    .sk-input-beast-row { grid-template-columns: 1fr !important; }
+                }
             </style>
 
             <div class="sk-beast-card">
@@ -459,6 +467,7 @@
                         .sk-input-beast {
                             width: 100%; background: #0a0a0a; border: 1px solid #333; padding: 18px; 
                             color: #fff; font-family: inherit; margin-bottom: 20px; outline: none; transition: 0.3s;
+                            box-sizing: border-box;
                         }
                         .sk-input-beast:focus { border-color: #ff4d4d; background: #000; }
                         .sk-submit-beast {
@@ -467,20 +476,21 @@
                             letter-spacing: 2px;
                         }
                         .sk-submit-beast:hover { background: #fff; color: #000; transform: translateY(-5px); }
+                        .sk-input-beast-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
                     </style>
 
-                    <input type="text" name="name" class="sk-input-beast" placeholder="Full Name / Company Name" required>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                        <input type="tel" name="phone" class="sk-input-beast" placeholder="Mobile Number" required>
-                        <select name="product" class="sk-input-beast" style="color: #888;" required>
+                    <input type="text" name="Company_Name" class="sk-input-beast" placeholder="Full Name / Company Name" required>
+                    <div class="sk-input-beast-row">
+                        <input type="tel" name="Mobile" class="sk-input-beast" placeholder="Mobile Number" required>
+                        <select name="Selected_Product" class="sk-input-beast" style="color: #888;" required>
                             <option value="" disabled selected>Select Product</option>
-                            <option>Acrabond Industrial Series</option>
-                            <option>Packaging Tapes & Rolls</option>
-                            <option>Technical Consultancy</option>
+                            <option value="Industrial Series">Acrabond Industrial Series</option>
+                            <option value="Packaging Tapes">Packaging Tapes & Rolls</option>
+                            <option value="Consultancy">Technical Consultancy</option>
                         </select>
                     </div>
-                    <input type="email" name="email" class="sk-input-beast" placeholder="Official Email Address" required>
-                    <textarea name="message" class="sk-input-beast" rows="4" placeholder="Briefly describe your industrial requirement..." required></textarea>
+                    <input type="email" name="Official_Email" class="sk-input-beast" placeholder="Official Email Address" required>
+                    <textarea name="Industrial_Requirement" class="sk-input-beast" rows="4" placeholder="Briefly describe your industrial requirement..." required></textarea>
                     
                     <button type="submit" class="sk-submit-beast" id="beast-btn">LAUNCH INQUIRY</button>
                 </form>
@@ -508,14 +518,24 @@
     formB.addEventListener('submit', async function(e) {
         e.preventDefault();
         beastBtn.innerHTML = "SYNCING...";
-        const response = await fetch(this.action, {
-            method: 'POST',
-            body: new FormData(this),
-            headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-            formB.style.display = 'none';
-            successB.style.display = 'block';
+        beastBtn.disabled = true; // Prevent double clicks
+        
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                formB.style.display = 'none';
+                successB.style.display = 'block';
+            } else {
+                beastBtn.innerHTML = "ERROR - RETRY";
+                beastBtn.disabled = false;
+            }
+        } catch (error) {
+            beastBtn.innerHTML = "CONNECTION ERROR";
+            beastBtn.disabled = false;
         }
     });
 </script>
