@@ -794,6 +794,119 @@
     </style>
 </section>
 
+    <section id="sk-industrial-faq-hub" style="padding: 100px 0; background: #ffffff; font-family: 'Poppins', sans-serif; position: relative;">
+    <div style="max-width: 1250px; margin: 0 auto; padding: 0 5%; display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start;">
+        
+        <div style="flex: 1; min-width: 320px;" class="sk-area-box">
+            <h4 style="color: #ff4d4d; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; margin-bottom: 15px; font-size: 13px;">Our Service Footprint</h4>
+            <h2 style="font-size: 36px; font-weight: 900; color: #1a1a1a; line-height: 1.2; margin-bottom: 25px;">
+                Strategic <span style="color: #ff4d4d;">Noida Hub</span> & <br>NCR Coverage
+            </h2>
+            <p style="color: #666; font-size: 16px; line-height: 1.8; margin-bottom: 30px;">
+                Operating from <strong>Sector 6, Noida</strong>, S.K. Traders & Manufacturers ensures zero-downtime supply chains for industrial units across:
+            </p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px;">
+                <span class="sk-area-tag">Noida Sector 6</span>
+                <span class="sk-area-tag">Sector 62/63/80</span>
+                <span class="sk-area-tag">Greater Noida</span>
+                <span class="sk-area-tag">Okhla Industrial Area</span>
+                <span class="sk-area-tag">Faridabad Hub</span>
+                <span class="sk-area-tag">Gurgaon (IMT)</span>
+            </div>
+
+            <div style="background: #f9f9f9; padding: 25px; border-left: 4px solid #800000; border-radius: 4px;">
+                <h5 style="font-weight: 800; margin-bottom: 8px; color: #1a1a1a;">Same-Day NCR Logistics</h5>
+                <p style="font-size: 14px; color: #555; margin: 0;">Our dedicated fleet covers the entire Delhi-NCR industrial belt within 24 hours of order placement.</p>
+            </div>
+        </div>
+
+        <div style="flex: 1.2; min-width: 320px;" class="sk-faq-container">
+            <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 30px; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px;">Industrial <span style="color: #ff4d4d;">FAQ</span></h3>
+            
+            <div class="sk-faq-item" onclick="toggleFaq(this)">
+                <div class="sk-faq-question">
+                    <span>Are you an Authorized Acrabond Distributor?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="sk-faq-answer">
+                    Yes. S.K. Traders is an <strong>Authorized Strategic Distributor</strong> for Acrabond® Adhesives. We supply 100% genuine inventory directly from the manufacturer to industrial units in Noida and North India.
+                </div>
+            </div>
+
+            <div class="sk-faq-item" onclick="toggleFaq(this)">
+                <div class="sk-faq-question">
+                    <span>Do you provide TDS and MSDS documents?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="sk-faq-answer">
+                    Absolutely. As a compliance-focused supplier, we provide <strong>Technical Data Sheets (TDS)</strong> and <strong>MSDS</strong> for all Acrabond 973, 978, and 997 series products for your quality audits.
+                </div>
+            </div>
+
+            <div class="sk-faq-item" onclick="toggleFaq(this)">
+                <div class="sk-faq-question">
+                    <span>Can we get bulk wholesale pricing for BOPP Tapes?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="sk-faq-answer">
+                    Yes. We specialize in <strong>wholesale industrial packaging</strong>. For bulk procurement of BOPP and Filament tapes, we offer tiered pricing structures designed for large-scale manufacturing and logistics companies.
+                </div>
+            </div>
+
+            <div class="sk-faq-item" onclick="toggleFaq(this)">
+                <div class="sk-faq-question">
+                    <span>What is the lead time for Sector 63 or Gr. Noida?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="sk-faq-answer">
+                    Orders within <strong>Noida Industrial Areas</strong> (Sector 6, 62, 63, 80, 81) and <strong>Greater Noida</strong> are typically delivered on the same-day or within 24 hours via our local hub.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        .sk-area-tag {
+            background: #fff1f1; color: #800000; padding: 8px 15px; border-radius: 4px;
+            font-size: 13px; font-weight: 700; border: 1px solid #ffe4e4;
+            transition: 0.3s; cursor: default;
+        }
+        .sk-area-tag:hover { background: #800000; color: #fff; }
+
+        /* ACCORDION STYLES */
+        .sk-faq-item { border-bottom: 1px solid #eee; margin-bottom: 10px; cursor: pointer; transition: 0.3s; }
+        .sk-faq-question {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 0; font-weight: 700; color: #1a1a1a; font-size: 16px;
+        }
+        .sk-faq-question i { color: #ff4d4d; transition: 0.4s; font-size: 14px; }
+        .sk-faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out;
+            color: #666; font-size: 15px; line-height: 1.7; padding-bottom: 0;
+        }
+        .sk-faq-item.active .sk-faq-answer { max-height: 200px; padding-bottom: 25px; }
+        .sk-faq-item.active .sk-faq-question i { transform: rotate(45deg); color: #800000; }
+        
+        @media (max-width: 768px) { #sk-industrial-faq-hub { padding: 60px 0; } .sk-area-box { text-align: center; } .sk-area-tag { justify-content: center; } }
+    </style>
+
+    <script>
+        function toggleFaq(element) {
+            const isActive = element.classList.contains('active');
+            // Close all other FAQs
+            document.querySelectorAll('.sk-faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            // Open clicked if not already open
+            if (!isActive) {
+                element.classList.add('active');
+            }
+        }
+    </script>
+</section>
+
   <div class="floating-buttons">
 
     <!-- WhatsApp -->
