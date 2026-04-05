@@ -604,16 +604,17 @@
     </style>
 </section>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <style>
     :root { --sk-red: #ED1C24; --sk-dark: #1a1a1a; }
 
-    /* 1. Gap Fix & Section Design */
     .sk-compliance-wrapper {
-        padding: 60px 0; /* Balanced padding */
+        padding: 80px 0;
         background: #ffffff;
         font-family: 'Poppins', sans-serif;
         color: var(--sk-dark);
-        margin-top: -50px; /* Fixing the gap from Why Choose Us */
+        margin-top: -50px; /* Seamless gap fix */
         position: relative;
         z-index: 10;
     }
@@ -627,7 +628,6 @@
         letter-spacing: 1px;
     }
     
-    /* 2. Grid & Authority Cards */
     .sk-compliance-grid {
         display: grid; grid-template-columns: repeat(3, 1fr);
         gap: 30px; max-width: 1250px; margin: 0 auto; padding: 0 5%;
@@ -655,7 +655,7 @@
     }
     .sk-compliance-card:hover .sk-view-link { background: var(--sk-red); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; }
 
-    /* 3. PRO LIGHTBOX WITH ZOOM CONTROLS */
+    /* LIGHTBOX SYSTEM */
     .sk-modal-overlay {
         display: none; position: fixed;
         z-index: 999999; left: 0; top: 0; width: 100%; height: 100%;
@@ -663,202 +663,49 @@
         backdrop-filter: blur(5px);
     }
     .sk-modal-content-wrap {
-        position: relative; width: 90%; max-width: 800px;
+        position: relative; width: 90%; max-width: 700px;
         text-align: center; animation: skZoom 0.3s ease;
     }
-    
-    /* Zoom Buttons Styling */
-    .sk-zoom-controls {
-        position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
-        display: flex; gap: 15px; z-index: 1000000;
-    }
-    .sk-zoom-btn {
-        background: var(--sk-red); color: #fff; border: none; padding: 10px 20px;
-        border-radius: 5px; cursor: pointer; font-weight: 700; font-size: 14px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.2s;
-    }
-    .sk-zoom-btn:hover { background: #fff; color: var(--sk-red); }
-
-    .sk-modal-img-container {
-        overflow: auto; max-height: 80vh; background: #fff; border-radius: 10px;
-        border: 5px solid #fff; box-shadow: 0 0 50px rgba(0,0,0,0.5);
-    }
     .sk-modal-img {
-        width: 100%; transition: transform 0.3s ease; cursor: zoom-in;
+        width: 100%; border: 5px solid #fff; border-radius: 10px;
+        max-height: 80vh; object-fit: contain; background: #fff;
     }
     .sk-close-btn {
-        position: absolute; top: -60px; right: -20px;
-        color: #fff; font-size: 50px; cursor: pointer; line-height: 1;
+        position: absolute; top: -60px; right: 0;
+        color: #fff; font-size: 50px; cursor: pointer;
     }
-
     @keyframes skZoom { from {transform: scale(0.9); opacity: 0;} to {transform: scale(1); opacity: 1;} }
-    @media (max-width: 768px) { .sk-compliance-grid { grid-template-columns: 1fr; } .sk-zoom-controls { top: -110px; flex-direction: row; } }
-</style>
-
-<style>
-    :root { --sk-red: #ED1C24; --sk-dark: #1a1a1a; }
-
-    /* 1. Seamless Section Gap Fix */
-    .sk-compliance-wrapper {
-        padding: 50px 0;
-        background: #ffffff;
-        font-family: 'Poppins', sans-serif;
-        color: var(--sk-dark);
-        margin-top: -50px; /* Why Choose Us se chipka diya */
-        position: relative;
-    }
-    .sk-compliance-header { text-align: center; margin-bottom: 40px; }
-    .sk-location-badge {
-        background: #fff1f1; color: var(--sk-red);
-        padding: 6px 16px; border-radius: 50px;
-        font-size: 11px; font-weight: 700;
-        text-transform: uppercase; border: 1px solid #ffe4e4;
-        display: inline-block; margin-bottom: 12px;
-    }
-    
-    /* 2. Professional Grid & Clean Cards */
-    .sk-compliance-grid {
-        display: grid; grid-template-columns: repeat(3, 1fr);
-        gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 5%;
-    }
-    .sk-compliance-card {
-        background: #fff; border: 1px solid #eee;
-        padding: 40px 30px; border-radius: 15px;
-        transition: 0.3s ease; cursor: pointer; text-align: center;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-    }
-    .sk-compliance-card:hover {
-        transform: translateY(-8px);
-        border-color: var(--sk-red);
-        box-shadow: 0 15px 30px rgba(237, 28, 36, 0.08);
-    }
-    .sk-card-icon { font-size: 42px; color: var(--sk-red); margin-bottom: 20px; display: block; }
-    .sk-compliance-card h4 { font-size: 19px; font-weight: 800; margin-bottom: 12px; }
-    .sk-compliance-card p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
-    .sk-view-link { 
-        color: var(--sk-red); font-weight: 700; font-size: 12px; 
-        text-decoration: underline; text-underline-offset: 4px;
-        text-transform: uppercase;
-    }
-
-    /* 3. SIMPLE LIGHTBOX (NO BUTTONS) */
-    .sk-modal-overlay {
-        display: none; position: fixed;
-        z-index: 999999; left: 0; top: 0; width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.9); align-items: center; justify-content: center;
-    }
-    .sk-modal-content-wrap {
-        position: relative; width: 90%; max-width: 700px;
-        text-align: center; animation: skFade 0.3s ease;
-    }
-    .sk-modal-img {
-        width: 100%; border: 4px solid #fff; border-radius: 8px;
-        max-height: 85vh; object-fit: contain; background: #fff;
-    }
-    .sk-close-btn {
-        position: absolute; top: -50px; right: 0;
-        color: #fff; font-size: 45px; cursor: pointer;
-    }
-    @keyframes skFade { from {opacity: 0; transform: scale(0.95);} to {opacity: 1; transform: scale(1);} }
     @media (max-width: 768px) { .sk-compliance-grid { grid-template-columns: 1fr; } }
 </style>
-
-<style>
-    :root { --sk-red: #ED1C24; --sk-dark: #1a1a1a; }
-
-    .sk-compliance-wrapper {
-        padding: 50px 0;
-        background: #ffffff;
-        font-family: 'Poppins', sans-serif;
-        color: var(--sk-dark);
-        margin-top: -50px; /* Why Choose Us se gap fix */
-        position: relative;
-    }
-    .sk-compliance-header { text-align: center; margin-bottom: 40px; }
-    .sk-location-badge {
-        background: #fff1f1; color: var(--sk-red);
-        padding: 6px 16px; border-radius: 50px;
-        font-size: 11px; font-weight: 700;
-        text-transform: uppercase; border: 1px solid #ffe4e4;
-        display: inline-block; margin-bottom: 12px;
-    }
-    
-    .sk-compliance-grid {
-        display: grid; grid-template-columns: repeat(3, 1fr);
-        gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 5%;
-    }
-    .sk-compliance-card {
-        background: #fff; border: 1px solid #eee;
-        padding: 40px 30px; border-radius: 15px;
-        transition: 0.3s ease; cursor: pointer; text-align: center;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-    }
-    .sk-compliance-card:hover {
-        transform: translateY(-8px);
-        border-color: var(--sk-red);
-        box-shadow: 0 15px 30px rgba(237, 28, 36, 0.08);
-    }
-
-    /* ICONS FIXED HERE */
-    .sk-card-icon { font-size: 45px; color: var(--sk-red); margin-bottom: 20px; display: block; }
-    
-    .sk-compliance-card h4 { font-size: 19px; font-weight: 800; margin-bottom: 12px; }
-    .sk-compliance-card p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
-    .sk-view-link { 
-        color: var(--sk-red); font-weight: 700; font-size: 12px; 
-        text-decoration: underline; text-underline-offset: 4px;
-        text-transform: uppercase;
-    }
-
-    /* LIGHTBOX SIMPLE (NO BUTTONS) */
-    .sk-modal-overlay {
-        display: none; position: fixed;
-        z-index: 999999; left: 0; top: 0; width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.9); align-items: center; justify-content: center;
-    }
-    .sk-modal-content-wrap {
-        position: relative; width: 90%; max-width: 700px;
-        text-align: center; animation: skFade 0.3s ease;
-    }
-    .sk-modal-img {
-        width: 100%; border: 4px solid #fff; border-radius: 8px;
-        max-height: 85vh; object-fit: contain; background: #fff;
-    }
-    .sk-close-btn {
-        position: absolute; top: -50px; right: 0;
-        color: #fff; font-size: 45px; cursor: pointer;
-    }
-    @keyframes skFade { from {opacity: 0; transform: scale(0.95);} to {opacity: 1; transform: scale(1);} }
-    @media (max-width: 768px) { .sk-compliance-grid { grid-template-columns: 1fr; } }
-</style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <section class="sk-compliance-wrapper">
     <div class="sk-compliance-header">
-        <span class="sk-location-badge">📍 NOIDA SECTOR 6 HUB</span>
-        <h2 style="font-size: 32px; font-weight: 900; text-transform: uppercase;">Compliance & <span style="color:var(--sk-red)">Trust</span></h2>
-        <p style="color: #666; font-size: 15px; margin-top: 10px;">Verified Industrial Certifications & Authorized Distribution Letters.</p>
+        <span class="sk-location-badge">📍 NOIDA SECTOR 6 DISTRIBUTION HUB</span>
+        <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 900; text-transform: uppercase;">Compliance & <span style="color:var(--sk-red)">Industrial Trust</span></h2>
+        <p style="color: #666; font-size: 16px; margin-top: 15px; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Verified B2B certifications ensuring 100% <strong>industrial safety compliance</strong> and authorized strategic distribution for Delhi-NCR.
+        </p>
     </div>
 
     <div class="sk-compliance-grid">
         <div class="sk-compliance-card" onclick="skOpenModal('gst')">
-            <i class="fas fa-file-contract sk-card-icon"></i>
-            <h4>GST Verified</h4>
-            <p>Officially registered for transparent B2B industrial wholesale, billing, and tax compliance.</p>
+            <i class="fas fa-file-invoice-dollar sk-card-icon"></i>
+            <h4>GST Verified Hub</h4>
+            <p>Officially registered for transparent <strong>B2B industrial wholesale</strong>, ensuring seamless tax compliance and billing for manufacturing units.</p>
             <span class="sk-view-link">VIEW SEAL</span>
         </div>
 
         <div class="sk-compliance-card" onclick="skOpenModal('msme')">
-            <i class="fas fa-industry sk-card-icon"></i>
-            <h4>MSME Udyam</h4>
-            <p>Government certified manufacturing excellence and small-scale industry reliability for 11+ years.</p>
+            <i class="fas fa-microchip sk-card-icon"></i>
+            <h4>MSME Udyam certified</h4>
+            <p>Government certified <strong>manufacturing reliability</strong> with 11+ years of legacy in industrial supply chain management across NCR.</p>
             <span class="sk-view-link">VIEW CERTIFICATE</span>
         </div>
 
         <div class="sk-compliance-card" onclick="skOpenModal('partner')">
-            <i class="fas fa-handshake-angle sk-card-icon"></i> <h4>Acrabond Partner</h4>
-            <p>Official Authorized Channel Partner & Strategic Distributor for Acrabond Adhesives in Delhi NCR.</p>
+            <i class="fas fa-certificate sk-card-icon"></i>
+            <h4>Acrabond Partner</h4>
+            <p>Official <strong>Authorized Channel Partner</strong> & Strategic Distributor for Acrabond® Adhesives in Noida & Delhi NCR region.</p>
             <span class="sk-view-link">VIEW AUTHORITY LETTER</span>
         </div>
     </div>
@@ -868,7 +715,7 @@
     <div class="sk-modal-content-wrap" onclick="event.stopPropagation()">
         <span class="sk-close-btn" onclick="skCloseModal()">&times;</span>
         <img id="skMainImg" class="sk-modal-img" src="">
-        <div id="sk-modal-caption" style="color: #fff; margin-top: 15px; font-weight: 600; font-size: 16px;"></div>
+        <div id="sk-modal-caption" style="color: #fff; margin-top: 15px; font-weight: 700; font-size: 18px; font-family: 'Orbitron'; letter-spacing: 1px;"></div>
     </div>
 </div>
 
@@ -884,10 +731,10 @@
             cap.innerText = 'GST REGISTRATION - S.K. TRADERS';
         } else if(type === 'msme') {
             img.src = 'assets/images/msme-view.png';
-            cap.innerText = 'MSME UDYAM CERTIFICATE - S.K. TRADERS';
+            cap.innerText = 'MSME UDYAM CERTIFICATE';
         } else if(type === 'partner') {
             img.src = 'assets/images/partner-cert.png';
-            cap.innerText = 'AUTHORIZED PARTNER - DELHI NCR REGION';
+            cap.innerText = 'AUTHORIZED STRATEGIC PARTNER LETTER';
         }
     }
     function skCloseModal() { document.getElementById('skModalOverlay').style.display = 'none'; }
