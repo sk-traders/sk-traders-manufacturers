@@ -3,104 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industrial Blog | Acrabond Adhesives & Packaging Insights | SK Traders Noida</title>
+    <title>Industrial Blog | SK Traders Noida</title>
     
-    <meta name="description" content="Expert industrial insights on Acrabond 997, 978, and 973 adhesives. Professional packaging guides for manufacturing units in Noida and Delhi NCR by S.K. Traders & Manufacturers.">
-    <meta name="keywords" content="Acrabond 997 Noida, Acrabond 973 Supplier, Industrial Adhesives Guide, SK Traders Manufacturers, Packaging Material Noida, BOPP Tapes Wholesale Delhi NCR">
-    <link rel="canonical" href="https://www.sktradersmanufacturers.com/blog.html" />
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        /* ===== GLOBAL & HEADER ===== */
-        body { background-color: #fbfbfb; margin: 0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        #sk-header-main { position: fixed; top: 0; left: 0; width: 100%; z-index: 999999; font-family: 'Poppins', sans-serif; }
-        .sk-top-bar { background: #1a1a1a; color: #fff; padding: 8px 0; font-size: 12.5px; border-bottom: 2px solid #ED1C24; }
-        .sk-top-wrap { max-width: 1250px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
-        .sk-nav-bar { background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
-        .sk-nav-wrap { max-width: 1250px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 80px; }
-        .sk-logo img { height: 60px; }
-        .sk-menu { display: flex; align-items: center; gap: 5px; list-style: none; margin: 0; padding: 0; }
-        .sk-menu li a { text-decoration: none; color: #1a1a1a; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 10px 18px; transition: 0.3s; }
-        .sk-menu li a:hover, .active-link { color: #ED1C24 !important; }
-        .sk-btn-quote { background: #ED1C24 !important; color: #fff !important; padding: 12px 26px !important; border-radius: 4px !important; font-weight: 700; font-size: 13px !important; text-decoration: none; text-transform: uppercase; }
+        /* CSS RESET - Page ko halka rakhne ke liye */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #fbfbfb; font-family: 'Inter', sans-serif; overflow-x: hidden; color: #333; }
 
-        /* ===== HERO SECTION ===== */
+        /* HEADER */
+        #sk-header-main { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .sk-top-bar { background: #1a1a1a; color: #fff; padding: 8px 24px; font-size: 12px; display: flex; justify-content: space-between; border-bottom: 2px solid #ED1C24; }
+        .sk-nav-bar { height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; max-width: 1250px; margin: 0 auto; }
+        .sk-logo img { height: 50px; }
+        .sk-menu { display: flex; list-style: none; gap: 20px; }
+        .sk-menu li a { text-decoration: none; color: #1a1a1a; font-weight: 600; font-size: 14px; text-transform: uppercase; }
+        .sk-btn-quote { background: #ED1C24; color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 12px; }
+
+        /* HERO - Simple background, no heavy effects */
         .hero-banner { 
-            height: 380px; 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/industrial-packaging-warehouse-banner.jpg');
-            background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; margin-top: 110px; 
+            height: 350px; 
+            background: #222 url('assets/images/industrial-packaging-warehouse-banner.jpg') no-repeat center;
+            background-size: cover; 
+            display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; margin-top: 100px;
         }
-        .hero-content h1 { font-family: 'Poppins'; font-size: 48px; font-weight: 800; margin: 0; letter-spacing: 2px; }
-        .hero-content p { font-size: 15px; margin-top: 10px; font-weight: 500; }
-        .hero-content p a { color: #fff; text-decoration: none; }
+        .hero-content h1 { font-family: 'Poppins'; font-size: 45px; font-weight: 800; }
 
-        /* ===== BLOG GRID (FIXED RAFTAR & ALIGNMENT) ===== */
-        .blog-section { max-width: 1200px; margin: -60px auto 80px; padding: 0 20px; position: relative; z-index: 10; }
-        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        /* BLOG GRID - 3 Columns */
+        .blog-section { max-width: 1200px; margin: -50px auto 50px; padding: 0 20px; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
         
         .blog-card { 
-            background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.07); 
-            display: flex; flex-direction: column; text-decoration: none; 
-            /* GOLI KI RAFTAR ANIMATION */
-            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out !important; 
-            opacity: 0; transform: translateY(15px); 
-            animation: fadeInUp 0.3s ease-out forwards;
+            background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            display: flex; flex-direction: column; text-decoration: none; color: inherit;
+            transition: transform 0.2s ease; /* Sirf halka sa hover rakha hai */
         }
-
-        /* Staggered Delay - Ultra Fast */
-        .blog-card:nth-child(1) { animation-delay: 0.05s; }
-        .blog-card:nth-child(2) { animation-delay: 0.1s; }
-        .blog-card:nth-child(3) { animation-delay: 0.15s; }
-
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-
-        /* Hover Reaction - Zero Delay */
-        .blog-card:hover { 
-            transform: translateY(-8px) !important; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12); 
-            transition-delay: 0s !important;
-        }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
         
-        .card-img-wrap { width: 100%; height: 200px; overflow: hidden; }
-        .card-img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s; }
-        .blog-card:hover .card-img { transform: scale(1.06); }
+        /* IMAGE FIX - "Wooden table" issue solve karne ke liye background hata diya */
+        .card-img-wrap { width: 100%; height: 210px; background: #eee; overflow: hidden; }
+        .card-img { width: 100%; height: 100%; object-fit: cover; border: none; }
         
-        .card-body { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
-        .card-date { color: #ED1C24; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
-        .card-title { font-size: 18px; color: #1a1a1a; font-weight: 700; line-height: 1.4; margin-bottom: 12px; height: 50px; overflow: hidden; }
-        .card-desc { color: #666; font-size: 14.5px; line-height: 1.6; margin-bottom: 20px; }
-        
-        .card-btn { 
-            display: inline-block; border-bottom: 2px solid #ED1C24; color: #1a1a1a; 
-            padding-bottom: 2px; font-weight: 700; font-size: 13px; align-self: flex-start; transition: 0.2s;
-        }
-        .blog-card:hover .card-btn { color: #ED1C24; }
+        .card-body { padding: 20px; flex-grow: 1; }
+        .card-date { color: #ED1C24; font-size: 12px; font-weight: 700; margin-bottom: 8px; display: block; }
+        .card-title { font-size: 18px; font-weight: 700; margin-bottom: 10px; line-height: 1.4; color: #1a1a1a; }
+        .card-desc { color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 15px; }
+        .card-btn { color: #ED1C24; font-weight: 700; font-size: 13px; text-decoration: underline; }
 
-        /* ===== FOOTER ===== */
-        #sk-footer { background: #111; color: #fff; padding: 70px 0 30px; }
-        .footer-wrap { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 40px; padding: 0 20px; }
-        .footer-logo img { height: 55px; background: #fff; padding: 8px; border-radius: 4px; margin-bottom: 15px; }
-        .footer-about p { color: #aaa; font-size: 14px; line-height: 1.7; }
-        .footer-links h4 { font-size: 17px; margin-bottom: 20px; border-left: 3px solid #ED1C24; padding-left: 12px; }
-        .footer-links ul { list-style: none; padding: 0; }
-        .footer-links ul li { margin-bottom: 10px; }
-        .footer-links ul li a { color: #aaa; text-decoration: none; font-size: 14px; transition: 0.3s; }
-        .footer-links ul li a:hover { color: #ED1C24; padding-left: 5px; }
+        /* FOOTER */
+        #sk-footer { background: #111; color: #fff; padding: 50px 20px; text-align: center; }
+        .footer-logo img { height: 50px; background: #fff; padding: 5px; border-radius: 4px; margin-bottom: 15px; }
 
-        /* MOBILE & TABLET OPTIMIZATION */
-        @media (max-width: 991px) {
-            .blog-grid { grid-template-columns: 1fr 1fr; }
-            .footer-wrap { grid-template-columns: 1fr; text-align: center; }
-            .footer-links h4 { border-left: none; padding-left: 0; }
-        }
-        @media (max-width: 650px) {
-            .blog-grid { grid-template-columns: 1fr; }
+        @media (max-width: 768px) {
             .hero-content h1 { font-size: 32px; }
-            .hero-banner { height: 300px; margin-top: 80px; }
-            .blog-section { margin-top: -40px; }
+            .blog-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -108,30 +66,23 @@
 
 <header id="sk-header-main">
   <div class="sk-top-bar">
-    <div class="sk-top-wrap">
-      <div class="sk-top-left"><i class="fas fa-certificate" style="color: #ED1C24;"></i> Authorized Acrabond Distributor — Noida & Delhi NCR</div>
-      <div class="sk-top-right"><a href="tel:+919871095529" style="color:#fff; text-decoration:none;"><i class="fas fa-phone-alt"></i> +91 98710 95529</a></div>
-    </div>
+    <div><i class="fas fa-check-circle"></i> Authorized Acrabond Distributor</div>
+    <div><i class="fas fa-phone-alt"></i> +91 98710 95529</div>
   </div>
   <nav class="sk-nav-bar">
-    <div class="sk-nav-wrap">
-      <div class="sk-logo"><a href="index.html"><img src="assets/images/logo.png" alt="SK Traders"></a></div>
-      <ul class="sk-menu">
+    <div class="sk-logo"><img src="assets/images/logo.png" alt="SK Traders"></div>
+    <ul class="sk-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="blog.html" class="active-link">Blog</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-      <a href="contact.html" class="sk-btn-quote">Get Quote</a>
-    </div>
+        <li><a href="blog.html" style="color: #ED1C24;">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="sk-btn-quote">Get Quote</a>
   </nav>
 </header>
 
 <section class="hero-banner">
     <div class="hero-content">
-        <h1>BLOGS</h1>
-        <p><a href="index.html">HOME</a> <i class="fas fa-chevron-right" style="font-size: 10px; margin: 0 8px;"></i> BLOGS</p>
+        <h1>OUR BLOGS</h1>
     </div>
 </section>
 
@@ -139,64 +90,44 @@
     <div class="blog-grid">
         <a href="industrial-packaging-guide.html" class="blog-card">
             <div class="card-img-wrap">
-                <img src="assets/images/acrabond-997-supplier-noida.jpeg" alt="Acrabond 997">
+                <img src="assets/images/acrabond-997-supplier-noida.jpeg" alt="Acrabond 997" class="card-img">
             </div>
             <div class="card-body">
                 <span class="card-date">April 22, 2026</span>
-                <h2 class="card-title">Technical Analysis: Why Acrabond 997 Dominates Heavy Industry</h2>
-                <p class="card-desc">Structural advantages of 997 grade for Noida's industrial units.</p>
+                <h2 class="card-title">Why Acrabond 997 Dominates Heavy Industry</h2>
+                <p class="card-desc">Technical breakdown of Noida's favorite industrial adhesive.</p>
                 <span class="card-btn">READ MORE</span>
             </div>
         </a>
 
         <a href="acrabond-978-973-guide.html" class="blog-card">
             <div class="card-img-wrap">
-                <img src="assets/images/acrabond-973-adhesive-wholesale.jpeg" alt="Acrabond 973">
+                <img src="assets/images/acrabond-973-adhesive-wholesale.jpeg" alt="Acrabond 973" class="card-img">
             </div>
             <div class="card-body">
                 <span class="card-date">April 18, 2026</span>
-                <h2 class="card-title">Comparing Performance: Acrabond 978 vs. 973 Adhesives</h2>
-                <p class="card-desc">Breakdown of heat resistance and open-time variables.</p>
+                <h2 class="card-title">Comparing Performance: Acrabond 978 vs. 973</h2>
+                <p class="card-desc">Heat resistance and open-time variables explained.</p>
                 <span class="card-btn">READ MORE</span>
             </div>
         </a>
 
-        <div class="blog-card" style="opacity: 0.6;">
-            <div class="card-img-wrap" style="background: #eee; display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-plus fa-2x" style="color: #ccc;"></i>
+        <div class="blog-card" style="opacity: 0.7;">
+            <div class="card-img-wrap" style="display: flex; align-items: center; justify-content: center; background: #f0f0f0;">
+                <i class="fas fa-plus fa-3x" style="color: #ccc;"></i>
             </div>
             <div class="card-body">
                 <span class="card-date">Coming Soon</span>
-                <h2 class="card-title">New Technical Guide...</h2>
-                <p class="card-desc">Stay tuned for more industrial insights from SK Traders.</p>
+                <h2 class="card-title">More Industrial Insights...</h2>
+                <p class="card-desc">Stay tuned for upcoming technical guides.</p>
             </div>
         </div>
     </div>
 </div>
 
 <footer id="sk-footer">
-    <div class="footer-wrap">
-        <div class="footer-about">
-            <div class="footer-logo"><img src="assets/images/logo.png" alt="SK Traders"></div>
-            <p>S.K. Traders & Manufacturers is a trusted name in high-performance industrial adhesives and packaging materials across Noida and Delhi NCR.</p>
-        </div>
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="blog.html">Industrial Blog</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="footer-links">
-            <h4>Contact Details</h4>
-            <p style="color: #aaa; font-size: 14px;">
-                <i class="fas fa-map-marker-alt" style="color: #ED1C24;"></i> Noida Sector-6, UP<br><br>
-                <i class="fas fa-phone-alt" style="color: #ED1C24;"></i> +91 98710 95529
-            </p>
-        </div>
-    </div>
+    <div class="footer-logo"><img src="assets/images/logo.png" alt="SK Traders"></div>
+    <p>© 2026 S.K. Traders & Manufacturers. All Rights Reserved.</p>
 </footer>
 
 </body>
