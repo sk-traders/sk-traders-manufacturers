@@ -37,26 +37,36 @@
         .hero-content p { font-size: 15px; margin-top: 10px; font-weight: 500; }
         .hero-content p a { color: #fff; text-decoration: none; }
 
-        /* ===== BLOG GRID (FIXED 3-COLUMN) ===== */
+        /* ===== BLOG GRID (FIXED RAFTAR & ALIGNMENT) ===== */
         .blog-section { max-width: 1200px; margin: -60px auto 80px; padding: 0 20px; position: relative; z-index: 10; }
         .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
         
         .blog-card { 
             background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.07); 
-            display: flex; flex-direction: column; text-decoration: none; transition: 0.3s;
-            opacity: 0; transform: translateY(20px); animation: fadeInUp 0.4s ease-out forwards;
+            display: flex; flex-direction: column; text-decoration: none; 
+            /* GOLI KI RAFTAR ANIMATION */
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out !important; 
+            opacity: 0; transform: translateY(15px); 
+            animation: fadeInUp 0.3s ease-out forwards;
         }
-        .blog-card:nth-child(1) { animation-delay: 0.1s; }
-        .blog-card:nth-child(2) { animation-delay: 0.2s; }
-        .blog-card:nth-child(3) { animation-delay: 0.3s; }
+
+        /* Staggered Delay - Ultra Fast */
+        .blog-card:nth-child(1) { animation-delay: 0.05s; }
+        .blog-card:nth-child(2) { animation-delay: 0.1s; }
+        .blog-card:nth-child(3) { animation-delay: 0.15s; }
 
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
-        .blog-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
+        /* Hover Reaction - Zero Delay */
+        .blog-card:hover { 
+            transform: translateY(-8px) !important; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12); 
+            transition-delay: 0s !important;
+        }
         
         .card-img-wrap { width: 100%; height: 200px; overflow: hidden; }
-        .card-img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .blog-card:hover .card-img { transform: scale(1.08); }
+        .card-img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s; }
+        .blog-card:hover .card-img { transform: scale(1.06); }
         
         .card-body { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
         .card-date { color: #ED1C24; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
@@ -65,7 +75,7 @@
         
         .card-btn { 
             display: inline-block; border-bottom: 2px solid #ED1C24; color: #1a1a1a; 
-            padding-bottom: 2px; font-weight: 700; font-size: 13px; align-self: flex-start; transition: 0.3s;
+            padding-bottom: 2px; font-weight: 700; font-size: 13px; align-self: flex-start; transition: 0.2s;
         }
         .blog-card:hover .card-btn { color: #ED1C24; }
 
@@ -80,14 +90,17 @@
         .footer-links ul li a { color: #aaa; text-decoration: none; font-size: 14px; transition: 0.3s; }
         .footer-links ul li a:hover { color: #ED1C24; padding-left: 5px; }
 
+        /* MOBILE & TABLET OPTIMIZATION */
         @media (max-width: 991px) {
             .blog-grid { grid-template-columns: 1fr 1fr; }
             .footer-wrap { grid-template-columns: 1fr; text-align: center; }
             .footer-links h4 { border-left: none; padding-left: 0; }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             .blog-grid { grid-template-columns: 1fr; }
             .hero-content h1 { font-size: 32px; }
+            .hero-banner { height: 300px; margin-top: 80px; }
+            .blog-section { margin-top: -40px; }
         }
     </style>
 </head>
@@ -126,7 +139,7 @@
     <div class="blog-grid">
         <a href="industrial-packaging-guide.html" class="blog-card">
             <div class="card-img-wrap">
-                <img src="assets/images/acrabond-997-supplier-noida.jpeg" alt="Acrabond 997" class="card-img">
+                <img src="assets/images/acrabond-997-supplier-noida.jpeg" alt="Acrabond 997">
             </div>
             <div class="card-body">
                 <span class="card-date">April 22, 2026</span>
@@ -138,7 +151,7 @@
 
         <a href="acrabond-978-973-guide.html" class="blog-card">
             <div class="card-img-wrap">
-                <img src="assets/images/acrabond-973-adhesive-wholesale.jpeg" alt="Acrabond 973" class="card-img">
+                <img src="assets/images/acrabond-973-adhesive-wholesale.jpeg" alt="Acrabond 973">
             </div>
             <div class="card-body">
                 <span class="card-date">April 18, 2026</span>
