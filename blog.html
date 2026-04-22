@@ -61,46 +61,107 @@
         .hero-content p a { color: #fff; text-decoration: none; transition: 0.3s; }
         .hero-content p a:hover { color: #ED1C24; }
 
-        /* ===== BLOG GRID DESIGN ===== */
-        .blog-section { max-width: 1200px; margin: -60px auto 80px; padding: 0 20px; position: relative; z-index: 10; }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; }
-        
-        .blog-card { 
-            background: #fff; 
-            border-radius: 4px; 
-            overflow: hidden; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-            display: flex; 
-            flex-direction: column; 
-            text-decoration: none; 
-            transition: 0.4s ease;
-            border-bottom: 4px solid transparent;
-        }
-        .blog-card:hover { transform: translateY(-10px); border-bottom: 4px solid #ED1C24; }
-        
-        .card-img-wrap { width: 100%; height: 250px; overflow: hidden; position: relative; }
-        .card-img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .blog-card:hover .card-img { transform: scale(1.1); }
-        
-        .card-body { padding: 30px; flex-grow: 1; }
-        .card-date { color: #888; font-size: 13px; font-weight: 600; display: block; margin-bottom: 10px; }
-        .card-title { font-size: 22px; color: #1a1a1a; font-weight: 700; line-height: 1.4; margin-bottom: 15px; transition: 0.3s; }
-        .blog-card:hover .card-title { color: #ED1C24; }
-        .card-desc { color: #666; font-size: 15px; line-height: 1.7; margin-bottom: 25px; }
-        
-        /* Redx Style Button */
-        .card-btn { 
-            display: inline-block; 
-            background: #ED1C24; 
-            color: #fff; 
-            padding: 10px 22px; 
-            font-weight: 700; 
-            font-size: 12px; 
-            text-transform: uppercase; 
-            border-radius: 2px; 
-            transition: 0.3s;
-        }
-        .blog-card:hover .card-btn { background: #1a1a1a; }
+        <style>
+    /* ===== BLOG SECTION OPTIMIZATION ===== */
+    .blog-section { 
+        max-width: 1200px; 
+        margin: -80px auto 80px; /* Thoda aur upar overlap */
+        padding: 0 20px; 
+        position: relative; 
+        z-index: 10; 
+    }
+
+    /* 3-Column Grid Fix */
+    .blog-grid { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); /* Force 3 columns for desktop */
+        gap: 25px; 
+    }
+
+    .blog-card { 
+        background: #fff; 
+        border-radius: 4px; 
+        overflow: hidden; 
+        box-shadow: 0 8px 25px rgba(0,0,0,0.07); 
+        display: flex; 
+        flex-direction: column; 
+        text-decoration: none; 
+        /* Animation Fast & Snappy */
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.4s ease-out forwards; 
+        border-bottom: 3px solid transparent;
+    }
+
+    /* Staggered Animation (Ek ke baad ek aayenge jaldi se) */
+    .blog-card:nth-child(1) { animation-delay: 0.1s; }
+    .blog-card:nth-child(2) { animation-delay: 0.2s; }
+    .blog-card:nth-child(3) { animation-delay: 0.3s; }
+
+    @keyframes fadeInUp {
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .blog-card:hover { 
+        transform: translateY(-8px) !important; 
+        box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        border-bottom: 3px solid #ED1C24;
+    }
+    
+    /* Card Content Size Fix */
+    .card-img-wrap { width: 100%; height: 200px; overflow: hidden; } /* Image height kam kari hai */
+    .card-body { padding: 20px; } /* Padding tight kari hai */
+    .card-title { font-size: 18px; line-height: 1.4; margin-bottom: 12px; height: 50px; overflow: hidden; } /* Title height fix */
+    .card-desc { font-size: 14px; line-height: 1.6; margin-bottom: 20px; color: #555; }
+
+    /* Mobile Responsive */
+    @media (max-width: 991px) {
+        .blog-grid { grid-template-columns: 1fr 1fr; } /* Tablet pe 2 */
+    }
+    @media (max-width: 600px) {
+        .blog-grid { grid-template-columns: 1fr; } /* Mobile pe 1 */
+        .blog-section { margin-top: 20px; }
+    }
+</style>
+
+<div class="blog-section">
+    <div class="blog-grid">
+        <a href="industrial-packaging-guide.html" class="blog-card">
+            <div class="card-img-wrap">
+                <img src="assets/images/acrabond-997-supplier-noida.jpeg" alt="Acrabond 997" class="card-img">
+            </div>
+            <div class="card-body">
+                <span class="card-date">APRIL 22, 2026</span>
+                <h2 class="card-title">Technical Analysis: Why Acrabond 997 Dominates Heavy Industry</h2>
+                <p class="card-desc">Structural advantages of 997 grade for Noida's industrial units.</p>
+                <span class="card-btn">READ MORE</span>
+            </div>
+        </a>
+
+        <a href="acrabond-978-973-guide.html" class="blog-card">
+            <div class="card-img-wrap">
+                <img src="assets/images/acrabond-973-adhesive-wholesale.jpeg" alt="Acrabond 973" class="card-img">
+            </div>
+            <div class="card-body">
+                <span class="card-date">APRIL 18, 2026</span>
+                <h2 class="card-title">Comparing Performance: Acrabond 978 vs. 973 Adhesives</h2>
+                <p class="card-desc">Breakdown of heat resistance and open-time variables.</p>
+                <span class="card-btn">READ MORE</span>
+            </div>
+        </a>
+
+        <div class="blog-card" style="opacity: 0.5; cursor: default;">
+            <div class="card-img-wrap" style="background: #eee; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-plus fa-2x" style="color: #ccc;"></i>
+            </div>
+            <div class="card-body">
+                <span class="card-date">COMING SOON</span>
+                <h2 class="card-title">New Industrial Guide is on its way...</h2>
+                <p class="card-desc">Stay tuned for more technical insights from SK Traders.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
         /* ===== FOOTER ===== */
         #sk-footer { background: #111; color: #fff; padding: 80px 0 40px; }
